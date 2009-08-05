@@ -1,0 +1,73 @@
+\hypertarget{classSDataImagePointer}{
+\section{Dokumentacja klasy SDataImagePointer}
+\label{classSDataImagePointer}\index{SDataImagePointer@{SDataImagePointer}}
+}
+głowica maszyny obsługująca obraz danych  
+
+
+{\tt \#include $<$sdataimagepointer.h$>$}
+
+Diagram dziedziczenia dla SDataImagePointer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSDataImagePointer}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}{moveLeft} ()
+\begin{CompactList}\small\item\em przesuwa głowicę maszyny danych w lewo \item\end{CompactList}\item 
+int \hyperlink{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}{moveRight} ()
+\begin{CompactList}\small\item\em przesuwa głowicę maszyny danych w prawo \item\end{CompactList}\item 
+\hypertarget{classSDataImagePointer_0cdd7239181d6f12bf6df551defaa769}{
+int \textbf{increaseCellValue} ()}
+\label{classSDataImagePointer_0cdd7239181d6f12bf6df551defaa769}
+
+\item 
+\hypertarget{classSDataImagePointer_0461b9855715a2d296e19865517f7f36}{
+int \textbf{decreaseCellValue} ()}
+\label{classSDataImagePointer_0461b9855715a2d296e19865517f7f36}
+
+\item 
+\hypertarget{classSDataImagePointer_ee071148492c43291fd01fd035f6398a}{
+int \textbf{zeroCellValue} ()}
+\label{classSDataImagePointer_ee071148492c43291fd01fd035f6398a}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+głowica maszyny obsługująca obraz danych 
+
+Obiekt klasy \hyperlink{classSDataImagePointer}{SDataImagePointer} jest swoistym wskaźnikiem na daną komórkę obrazu danych. Maszyna danych (\hyperlink{classSDataMachine}{SDataMachine}) wykorzystuje głowicę, by dzięki niej odczytywać wartości z obrazu danych (SDataImage) oraz by na tym obrazie zapisywać nowe wartości. Dodatkowo, maszyna kodu (SCodeMachine) może zlecić wykonanie instrukcji przesunięcia dowolnej głowicy (czyli również głowicę obrazu danych, \hyperlink{classSDataImagePointer}{SDataImagePointer}, druga głowica, SCodeImagePointer, należy do maszyny kodu, SCodeMachine). 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}{
+\index{SDataImagePointer@{SDataImagePointer}!moveLeft@{moveLeft}}
+\index{moveLeft@{moveLeft}!SDataImagePointer@{SDataImagePointer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveLeft ()}}
+\label{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}
+
+
+przesuwa głowicę maszyny danych w lewo 
+
+Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w lewo, następnie głowica przesuwana jest o jedno pole (w ustalonym kierunku). Efektem przesunięcia głowicy jest zmiana jej współrzędnych względem obrazu danych. \begin{Desc}
+\item[Zwraca:]? \end{Desc}
+\hypertarget{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}{
+\index{SDataImagePointer@{SDataImagePointer}!moveRight@{moveRight}}
+\index{moveRight@{moveRight}!SDataImagePointer@{SDataImagePointer}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveRight ()}}
+\label{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}
+
+
+przesuwa głowicę maszyny danych w prawo 
+
+Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w prawo, następnie głowica przesuwana jest o jedno pole (w ustalonym kierunku). Efektem przesunięcia głowicy jest zmiana jej współrzędnych względem obrazu danych. \begin{Desc}
+\item[Zwraca:]? \end{Desc}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{sdataimagepointer_8h}{sdataimagepointer.h}\item 
+src/core/sdataimagepointer.cpp\end{CompactItemize}

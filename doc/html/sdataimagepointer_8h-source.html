@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Salvador Project: Plik źródłowy src/core/sdataimagepointer.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+<h1>src/core/sdataimagepointer.h</h1><a href="sdataimagepointer_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef S_DATA_IMAGE_POINTER</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define S_DATA_IMAGE_POINTER</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="comment">// salvador core</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="senums_8h.html" title="wszystkie enumeracje">senums.h</a>"</span>
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="sabstractpointer_8h.html" title="plik nagłówkowy klasy SAbstractPointer">sabstractpointer.h</a>"</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="comment">// C++</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="comment">// STL</span>
+<a name="l00014"></a>00014 
+<a name="l00025"></a><a class="code" href="classSDataImagePointer.html">00025</a> <span class="keyword">class </span><a class="code" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a> : <span class="keyword">public</span> SAbstractPointer
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027 
+<a name="l00028"></a>00028         <span class="keyword">public</span>:
+<a name="l00029"></a>00029 
+<a name="l00030"></a>00030                 <a class="code" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>();
+<a name="l00031"></a>00031                 ~<a class="code" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>();
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033                 <span class="keywordtype">int</span> <a class="code" href="classSDataImagePointer.html#87bb92d4bb0336b4723c64d03df9987c" title="przesuwa głowicę maszyny danych w lewo">moveLeft</a>(); <span class="comment">// &lt;&lt;</span>
+<a name="l00034"></a>00034                 <span class="keywordtype">int</span> <a class="code" href="classSDataImagePointer.html#9cc51881224c9e157e96d5e36189e54a" title="przesuwa głowicę maszyny danych w prawo">moveRight</a>(); <span class="comment">// &gt;&gt;</span>
+<a name="l00035"></a>00035                 <span class="keywordtype">int</span> increaseCellValue(); <span class="comment">// S</span>
+<a name="l00036"></a>00036                 <span class="keywordtype">int</span> decreaseCellValue(); <span class="comment">// P</span>
+<a name="l00037"></a>00037                 <span class="keywordtype">int</span> zeroCellValue(); <span class="comment">// Z</span>
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039                 <span class="comment">// jakaś metoda do pobrania wartości wskazywanej przez głowicę: SDataValue readValue();</span>
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 };
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Salvador Project: Plik źródłowy src/core/senums.h</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+<h1>src/core/senums.h</h1><a href="senums_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef ENUMS</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define ENUMS</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 
+<a name="l00012"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">00012</a> <span class="keyword">enum</span> <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e" title="operacje obu maszyn">SInstructions</a> {
+<a name="l00013"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e588ba427e04989bf53a93412a2e78105">00013</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e588ba427e04989bf53a93412a2e78105">instr_data_left</a>, 
+<a name="l00014"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e4c4d47d2e41ec7fd2a2184de5da32846">00014</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e4c4d47d2e41ec7fd2a2184de5da32846">instr_data_right</a>, 
+<a name="l00015"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e9517e7847e087508d60d61075fcaef62">00015</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e9517e7847e087508d60d61075fcaef62">instr_data_zero</a>, 
+<a name="l00016"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e708ee0cff952986aa1aa07ebf85d2272">00016</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e708ee0cff952986aa1aa07ebf85d2272">instr_data_succ</a>, 
+<a name="l00017"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e4b3f0e3f0a0d8554c8da402022ed30ee">00017</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e4b3f0e3f0a0d8554c8da402022ed30ee">instr_data_pred</a>, 
+<a name="l00018"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e5455b98af0055445e5978d68092f7ed6">00018</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e5455b98af0055445e5978d68092f7ed6">instr_code_left</a>, 
+<a name="l00019"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1ee7aa8ba497124978df37ad05cce604d7">00019</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1ee7aa8ba497124978df37ad05cce604d7">instr_code_right</a>, 
+<a name="l00020"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e4848c4dc1b4b022e79e32fa3e2ac3f3b">00020</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e4848c4dc1b4b022e79e32fa3e2ac3f3b">instr_code_up</a>, 
+<a name="l00021"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e1555ab56cafe78f6dfda8f0f35e695f5">00021</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e1555ab56cafe78f6dfda8f0f35e695f5">instr_code_down</a>, 
+<a name="l00022"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e976c2b601db012d1fe4f5edab965ccff">00022</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e976c2b601db012d1fe4f5edab965ccff">instr_code_null</a>, 
+<a name="l00023"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1ec08a20c027a787a0cf9b286d99b494ee">00023</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1ec08a20c027a787a0cf9b286d99b494ee">instr_code_jump</a>, 
+<a name="l00024"></a><a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e9648796e5218249c766e448160e56e6d">00024</a>         <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e9648796e5218249c766e448160e56e6d">instr_code_break</a> 
+<a name="l00025"></a>00025  };
+<a name="l00026"></a>00026 
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f656">00029</a> <span class="keyword">enum</span> <a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f656" title="operacje maszyny danych">SDataInstructions</a> {
+<a name="l00030"></a><a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f656ed55095f67fcc14293e5207ee6094d6b">00030</a>         <a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f656ed55095f67fcc14293e5207ee6094d6b">data_left</a>, 
+<a name="l00031"></a><a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f65606918c7266785009c098418a1cbe0b7c">00031</a>         <a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f65606918c7266785009c098418a1cbe0b7c">data_right</a>, 
+<a name="l00032"></a><a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f656992c2c1ae851dd7f9bda1522e68e8791">00032</a>         <a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f656992c2c1ae851dd7f9bda1522e68e8791">data_zero</a>, 
+<a name="l00033"></a><a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f6560aa2117c641b98951a5c164a353fe027">00033</a>         <a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f6560aa2117c641b98951a5c164a353fe027">data_succ</a>, 
+<a name="l00034"></a><a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f6563549262fb0cd9e1f576c7fe82745c952">00034</a>         <a class="code" href="senums_8h.html#db73cbebccb0826376dc08f509c0f6563549262fb0cd9e1f576c7fe82745c952">data_pred</a> 
+<a name="l00035"></a>00035 };
+<a name="l00036"></a>00036 
+<a name="l00038"></a>00038 
+<a name="l00039"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea2">00039</a> <span class="keyword">enum</span> <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea2" title="operacje maszyny kodu">SCodeInstructions</a> {
+<a name="l00040"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea29e6fe3782050f058fd0c178107788730">00040</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea29e6fe3782050f058fd0c178107788730">code_left</a>, 
+<a name="l00041"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea2399dab8bc958f2de2d27192c309c2a96">00041</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea2399dab8bc958f2de2d27192c309c2a96">code_right</a>, 
+<a name="l00042"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea23de6a5662428c06c60eb507ddbe13394">00042</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea23de6a5662428c06c60eb507ddbe13394">code_up</a>, 
+<a name="l00043"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea2044f5069a7bf79d9b80929f06d1d7ffc">00043</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea2044f5069a7bf79d9b80929f06d1d7ffc">code_down</a>, 
+<a name="l00044"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea24980de401922f0827d98c31befac020f">00044</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea24980de401922f0827d98c31befac020f">code_null</a>, 
+<a name="l00045"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea22c59cabcf059c4c157883f23f0890edc">00045</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea22c59cabcf059c4c157883f23f0890edc">code_jump</a>, 
+<a name="l00046"></a><a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea25a9777cb771f9382a8e847b173b7a085">00046</a>         <a class="code" href="senums_8h.html#a44d3c540b1c1449b63942ef022e5ea25a9777cb771f9382a8e847b173b7a085">code_break</a> 
+<a name="l00047"></a>00047 };
+<a name="l00048"></a>00048 
+<a name="l00050"></a>00050 
+<a name="l00051"></a><a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e">00051</a> <span class="keyword">enum</span> <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> {
+<a name="l00052"></a><a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e620a31d3a677faaa9e000fb23967a473">00052</a>         <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e620a31d3a677faaa9e000fb23967a473">ready</a>, 
+<a name="l00053"></a><a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7eb514bba77fe136c3a3b6f56b818f7b0c">00053</a>         <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7eb514bba77fe136c3a3b6f56b818f7b0c">running</a>, 
+<a name="l00054"></a><a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7eaf38e35232eb6728664f98c8110d11a4">00054</a>         <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7eaf38e35232eb6728664f98c8110d11a4">finished</a> 
+<a name="l00055"></a>00055 };
+<a name="l00056"></a>00056 
+<a name="l00058"></a>00058 
+<a name="l00059"></a><a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">00059</a> <span class="keyword">enum</span> <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a> {
+<a name="l00060"></a><a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf06f57550ef6c5280730bd683cf70e4649">00060</a>         <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf06f57550ef6c5280730bd683cf70e4649">dir_up</a>, 
+<a name="l00061"></a><a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf05c98bd9a958d03d67629873efc6e9676">00061</a>         <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf05c98bd9a958d03d67629873efc6e9676">dir_right</a>, 
+<a name="l00062"></a><a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0301bb0debb0390d3f2a9153ef4874d34">00062</a>         <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0301bb0debb0390d3f2a9153ef4874d34">dir_down</a>, 
+<a name="l00063"></a><a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0095236e777e3d0531285918282845117">00063</a>         <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0095236e777e3d0531285918282845117">dir_left</a> 
+<a name="l00064"></a>00064 };
+<a name="l00065"></a>00065 
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="senums_8h.html#d5a976b8d6502045096f8b5d0524ef32">00068</a> <span class="keyword">enum</span> <a class="code" href="senums_8h.html#d5a976b8d6502045096f8b5d0524ef32" title="zachowanie maszyny w przypadku gdy głowica kodu miałaby wyjść poza granice rysunku...">SBeyondBorderBehavior</a> {
+<a name="l00069"></a><a class="code" href="senums_8h.html#d5a976b8d6502045096f8b5d0524ef3216399c6f024242fb63435ec6c7e591f4">00069</a>         <a class="code" href="senums_8h.html#d5a976b8d6502045096f8b5d0524ef3216399c6f024242fb63435ec6c7e591f4">beh_bounce</a>, 
+<a name="l00070"></a><a class="code" href="senums_8h.html#d5a976b8d6502045096f8b5d0524ef32f079271596b6643b7ecc0e71d7ce2ecc">00070</a>         <a class="code" href="senums_8h.html#d5a976b8d6502045096f8b5d0524ef32f079271596b6643b7ecc0e71d7ce2ecc">beh_stop</a>, 
+<a name="l00071"></a>00071 };
+<a name="l00072"></a>00072 
+<a name="l00074"></a>00074 <span class="comment">// ?????????????????????????????????</span>
+<a name="l00076"></a><a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c">00076</a> <span class="comment"></span><span class="keyword">enum</span> <a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c" title="źródła kodu wirtualnych maszyn.">SMachineSources</a> {
+<a name="l00077"></a><a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c03f82f310866e19680e8e9a32f066654">00077</a>         <a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c03f82f310866e19680e8e9a32f066654">src_graphics</a>, 
+<a name="l00078"></a><a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8cc2df522fede54757d4134f50cfdeee5b">00078</a>         <a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8cc2df522fede54757d4134f50cfdeee5b">src_text</a>, 
+<a name="l00079"></a>00079 };
+<a name="l00080"></a>00080 
+<a name="l00082"></a>00082 <span class="comment">// ????????????????????????????????</span>
+<a name="l00084"></a><a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043">00084</a> <span class="comment"></span><span class="keyword">enum</span> <a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043" title="źródła kodu wirtualnych maszyn.">SCodeTypes</a> {
+<a name="l00085"></a><a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043ed167c9fca411888b5463a1895119075">00085</a>         <a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043ed167c9fca411888b5463a1895119075">tp_graphics</a>, 
+<a name="l00086"></a><a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043e605b6b2d2cd19922bea9c105df225b5">00086</a>         <a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043e605b6b2d2cd19922bea9c105df225b5">tp_text</a>, 
+<a name="l00087"></a>00087 };
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

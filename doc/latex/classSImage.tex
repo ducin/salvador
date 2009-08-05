@@ -1,0 +1,89 @@
+\hypertarget{classSImage}{
+\section{Dokumentacja klasy SImage}
+\label{classSImage}\index{SImage@{SImage}}
+}
+rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie  
+
+
+{\tt \#include $<$simage.h$>$}
+
+Dziedziczona przez SCodeImage i SDataImage.
+
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSImage_76e408c8c9d80017ab4bcdcb4788de15}{SImage} ()
+\begin{CompactList}\small\item\em konstruktor \item\end{CompactList}\item 
+\hyperlink{classSImage_615b1cbc644a5d8b88fd6ec1efa8c732}{$\sim$SImage} ()
+\begin{CompactList}\small\item\em destruktor \item\end{CompactList}\item 
+void \hyperlink{classSImage_d5707899d17b97884f85d3ea42bd548d}{paintRectangle} (int, int, int, int, QColor)
+\begin{CompactList}\small\item\em wyświetla niewypełniony prostokąt \item\end{CompactList}\item 
+void \hyperlink{classSImage_dc89f8b2607722f6fbf52f481103bf71}{paintFilledRectangle} (int, int, int, int, QColor, QColor)
+\begin{CompactList}\small\item\em wyświetla wypełniony prostokąt \item\end{CompactList}\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie 
+
+Klasa \hyperlink{classSImage}{SImage} udostępnia metody rysujące na bitmapie różne kształy, np. prostokąty. Metody te są wywoływane w metodach klas dziedziczących po \hyperlink{classSImage}{SImage} (czyli SDataImage i SCodeImage). Przykładowo, aby SDataImage wyświetlił swój obraz danych, wielokrotnie będzie uzywał metody paintFilledRectangle do wyświetlenia każdej danej z osobna. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSImage_76e408c8c9d80017ab4bcdcb4788de15}{
+\index{SImage@{SImage}!SImage@{SImage}}
+\index{SImage@{SImage}!SImage@{SImage}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SImage::SImage ()}}
+\label{classSImage_76e408c8c9d80017ab4bcdcb4788de15}
+
+
+konstruktor 
+
+Żadne dodatkowe operacje nie są wykonywane. \hypertarget{classSImage_615b1cbc644a5d8b88fd6ec1efa8c732}{
+\index{SImage@{SImage}!$\sim$SImage@{$\sim$SImage}}
+\index{$\sim$SImage@{$\sim$SImage}!SImage@{SImage}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SImage::$\sim$SImage ()}}
+\label{classSImage_615b1cbc644a5d8b88fd6ec1efa8c732}
+
+
+destruktor 
+
+Żadne dodatkowe operacje nie są wykonywane. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSImage_d5707899d17b97884f85d3ea42bd548d}{
+\index{SImage@{SImage}!paintRectangle@{paintRectangle}}
+\index{paintRectangle@{paintRectangle}!SImage@{SImage}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SImage::paintRectangle (int {\em start\_\-X}, \/  int {\em start\_\-Y}, \/  int {\em size\_\-X}, \/  int {\em size\_\-Y}, \/  QColor {\em border\_\-color})}}
+\label{classSImage_d5707899d17b97884f85d3ea42bd548d}
+
+
+wyświetla niewypełniony prostokąt 
+
+Wyświetla na bitmapie obramowanie prostokąta. Jako argumenty podawany jest punkt (bazowy, od którego rozpoczyna się wyświetlanie), podawane są długość i wysokość prostokąta oraz kolor obramowania \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em start\_\-X}]współrzędna X punktu od którego rozpoczyna się wyświetlanie prostokąta. \item[{\em start\_\-Y}]współrzędna Y punktu od którego rozpoczyna się wyświetlanie prostokąta. \item[{\em size\_\-X}]rozmiar prostokąta w poziomie (wliczając punkt początkowy). \item[{\em size\_\-Y}]rozmiar prostokąta w pionie (wliczając punkt początkowy). \item[{\em border\_\-color}]kolor obramowania. \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]void. \end{Desc}
+\hypertarget{classSImage_dc89f8b2607722f6fbf52f481103bf71}{
+\index{SImage@{SImage}!paintFilledRectangle@{paintFilledRectangle}}
+\index{paintFilledRectangle@{paintFilledRectangle}!SImage@{SImage}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}void SImage::paintFilledRectangle (int {\em start\_\-X}, \/  int {\em start\_\-Y}, \/  int {\em size\_\-X}, \/  int {\em size\_\-Y}, \/  QColor {\em border\_\-color}, \/  QColor {\em fill\_\-color})}}
+\label{classSImage_dc89f8b2607722f6fbf52f481103bf71}
+
+
+wyświetla wypełniony prostokąt 
+
+Wyświetla na bitmapie obramowanie prostokąta. Jako argumenty podawany jest punkt (bazowy, od którego rozpoczyna się wyświetlanie), podawane są długość i wysokość prostokąta oraz kolor obramowania \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em start\_\-X}]współrzędna X punktu od którego rozpoczyna się wyświetlanie prostokąta \item[{\em start\_\-Y}]współrzędna Y punktu od którego rozpoczyna się wyświetlanie prostokąta \item[{\em size\_\-X}]rozmiar prostokąta w poziomie (wliczając punkt początkowy) \item[{\em size\_\-Y}]rozmiar prostokąta w pionie (wliczając punkt początkowy) \item[{\em border\_\-color}]kolor obramowania \item[{\em fill\_\-color}]kolor wypełnienia \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]void. \end{Desc}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{simage_8h}{simage.h}\item 
+src/core/simage.cpp\end{CompactItemize}

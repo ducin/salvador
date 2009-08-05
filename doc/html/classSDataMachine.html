@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Salvador Project: Dokumentacja klasy SDataMachine</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja klasy SDataMachine</h1><!-- doxytag: class="SDataMachine" --><!-- doxytag: inherits="SAbstractMachine" -->maszyna danych, obsługująca obraz danych  
+<a href="#_details">Więcej...</a>
+<p>
+<code>#include &lt;<a class="el" href="sdatamachine_8h-source.html">sdatamachine.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla SDataMachine</div>
+<div class="dynsection">
+
+<p><center><img src="classSDataMachine.png" usemap="#SDataMachine_map" border="0" alt=""></center>
+<map name="SDataMachine_map">
+</map>
+</div>
+
+<p>
+<a href="classSDataMachine-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataMachine.html#3d894df00bd2283c717a827e27138812">SDataMachine</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">konstruktor  <a href="#3d894df00bd2283c717a827e27138812"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataMachine.html#59bc85b25930729cbe3046e81f49f909">~SDataMachine</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">destruktor  <a href="#59bc85b25930729cbe3046e81f49f909"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="705d76e9ab6ba1c7a0a5b73fd6f3cc2b"></a><!-- doxytag: member="SDataMachine::clearStats" ref="705d76e9ab6ba1c7a0a5b73fd6f3cc2b" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>clearStats</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="06c12baf5a7a4f50dd8f43cc9794dafd"></a><!-- doxytag: member="SDataMachine::clearImage" ref="06c12baf5a7a4f50dd8f43cc9794dafd" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>clearImage</b> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+maszyna danych, obsługująca obraz danych 
+<p>
+Obiekt klasy <a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a> to tzw. "maszyna danych" która obsługuje dane programu wykonywanego przez Wirtualną Maszynę Salvadora. Maszyna ta posiada swój log (dziennik wszystkich wykonywanych operacji) w obiekcie klasy <a class="el" href="classSDataStats.html" title="informacje o działaniu maszyny danych">SDataStats</a> oraz posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu.<p>
+Maszyna danych jest częściowo zależna od maszyny kodu, jakoże to ona wymusza na niej wykonywanie określonych operacji. Maszyna kodu odczytuje z obrazu kodu jaka operacja ma zostać wykonana i - jeśli następuje jakaś zmiana w danych programu - zostaje wysłane polecenie do maszyny danych, by te zmiany wprowadzić. <hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="3d894df00bd2283c717a827e27138812"></a><!-- doxytag: member="SDataMachine::SDataMachine" ref="3d894df00bd2283c717a827e27138812" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDataMachine::SDataMachine           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+konstruktor 
+<p>
+Tworzy 3 obiekty, do których ma zapisane referencje:<ul>
+<li>log operacji maszyny danych (<a class="el" href="classSDataStats.html" title="informacje o działaniu maszyny danych">SDataStats</a>)</li><li>obraz danych (SDataImage)</li><li>głowica maszyny danych (<a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>) Maszyna danych w trakcie swojego działania będzie z nich cały czas korzystać </li></ul>
+
+</div>
+</div><p>
+<a class="anchor" name="59bc85b25930729cbe3046e81f49f909"></a><!-- doxytag: member="SDataMachine::~SDataMachine" ref="59bc85b25930729cbe3046e81f49f909" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDataMachine::~SDataMachine           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td width="100%"></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+destruktor 
+<p>
+Niszczy 3 obiekty, niezbędne do działania maszyny:<ul>
+<li>log operacji maszyny danych (<a class="el" href="classSDataStats.html" title="informacje o działaniu maszyny danych">SDataStats</a>)</li><li>obraz danych (SDataImage)</li><li>głowica maszyny danych (<a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>) </li></ul>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/core/<a class="el" href="sdatamachine_8h-source.html">sdatamachine.h</a><li>src/core/sdatamachine.cpp</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:34 2008 dla Salvador Project programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>

@@ -1,0 +1,83 @@
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{times}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+
+\usepackage{doxygen}
+\makeindex
+\setcounter{tocdepth}{1}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Salvador Project \\[1ex]\large wersja 1.0 }\\
+\vspace*{1cm}
+{\large Wygenerowano przez Doxygen 1.5.5}\\
+\vspace*{0.5cm}
+{\small Sat Aug 16 12:25:33 2008}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{Indeks klas}
+\input{hierarchy}
+\chapter{Indeks klas}
+\input{annotated}
+\chapter{Indeks plików}
+\input{files}
+\chapter{Dokumentacja klas}
+\input{classSCodeGrid}
+\include{classSDataImagePointer}
+\include{classSDataMachine}
+\include{classSDataStats}
+\include{classSImage}
+\include{classSVirtualMachine}
+\chapter{Dokumentacja plików}
+\input{sabstractmachine_8h}
+\include{sabstractpointer_8h}
+\include{saction_8h}
+\include{scodegrid_8h}
+\include{scodeimage_8h}
+\include{scodeimagepointer_8h}
+\include{scodemachine_8h}
+\include{scodestats_8h}
+\include{sdataimage_8h}
+\include{sdataimagepointer_8h}
+\include{sdatamachine_8h}
+\include{sdatastats_8h}
+\include{senums_8h}
+\include{simage_8h}
+\include{svirtualmachine_8h}
+\include{debug_8h}
+\printindex
+\end{document}

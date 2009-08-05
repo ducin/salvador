@@ -1,0 +1,70 @@
+\hypertarget{classSDataMachine}{
+\section{Dokumentacja klasy SDataMachine}
+\label{classSDataMachine}\index{SDataMachine@{SDataMachine}}
+}
+maszyna danych, obsługująca obraz danych  
+
+
+{\tt \#include $<$sdatamachine.h$>$}
+
+Diagram dziedziczenia dla SDataMachine:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSDataMachine}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSDataMachine_3d894df00bd2283c717a827e27138812}{SDataMachine} ()
+\begin{CompactList}\small\item\em konstruktor \item\end{CompactList}\item 
+\hyperlink{classSDataMachine_59bc85b25930729cbe3046e81f49f909}{$\sim$SDataMachine} ()
+\begin{CompactList}\small\item\em destruktor \item\end{CompactList}\item 
+\hypertarget{classSDataMachine_705d76e9ab6ba1c7a0a5b73fd6f3cc2b}{
+void \textbf{clearStats} ()}
+\label{classSDataMachine_705d76e9ab6ba1c7a0a5b73fd6f3cc2b}
+
+\item 
+\hypertarget{classSDataMachine_06c12baf5a7a4f50dd8f43cc9794dafd}{
+void \textbf{clearImage} ()}
+\label{classSDataMachine_06c12baf5a7a4f50dd8f43cc9794dafd}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+maszyna danych, obsługująca obraz danych 
+
+Obiekt klasy \hyperlink{classSDataMachine}{SDataMachine} to tzw. \char`\"{}maszyna danych\char`\"{} która obsługuje dane programu wykonywanego przez Wirtualną Maszynę Salvadora. Maszyna ta posiada swój log (dziennik wszystkich wykonywanych operacji) w obiekcie klasy \hyperlink{classSDataStats}{SDataStats} oraz posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu.
+
+Maszyna danych jest częściowo zależna od maszyny kodu, jakoże to ona wymusza na niej wykonywanie określonych operacji. Maszyna kodu odczytuje z obrazu kodu jaka operacja ma zostać wykonana i - jeśli następuje jakaś zmiana w danych programu - zostaje wysłane polecenie do maszyny danych, by te zmiany wprowadzić. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSDataMachine_3d894df00bd2283c717a827e27138812}{
+\index{SDataMachine@{SDataMachine}!SDataMachine@{SDataMachine}}
+\index{SDataMachine@{SDataMachine}!SDataMachine@{SDataMachine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::SDataMachine ()}}
+\label{classSDataMachine_3d894df00bd2283c717a827e27138812}
+
+
+konstruktor 
+
+Tworzy 3 obiekty, do których ma zapisane referencje:\begin{itemize}
+\item log operacji maszyny danych (\hyperlink{classSDataStats}{SDataStats})\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) Maszyna danych w trakcie swojego działania będzie z nich cały czas korzystać \end{itemize}
+\hypertarget{classSDataMachine_59bc85b25930729cbe3046e81f49f909}{
+\index{SDataMachine@{SDataMachine}!$\sim$SDataMachine@{$\sim$SDataMachine}}
+\index{$\sim$SDataMachine@{$\sim$SDataMachine}!SDataMachine@{SDataMachine}}
+\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::$\sim$SDataMachine ()}}
+\label{classSDataMachine_59bc85b25930729cbe3046e81f49f909}
+
+
+destruktor 
+
+Niszczy 3 obiekty, niezbędne do działania maszyny:\begin{itemize}
+\item log operacji maszyny danych (\hyperlink{classSDataStats}{SDataStats})\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) \end{itemize}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{sdatamachine_8h}{sdatamachine.h}\item 
+src/core/sdatamachine.cpp\end{CompactItemize}

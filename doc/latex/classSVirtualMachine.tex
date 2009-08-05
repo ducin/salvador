@@ -1,0 +1,68 @@
+\hypertarget{classSVirtualMachine}{
+\section{Dokumentacja klasy SVirtualMachine}
+\label{classSVirtualMachine}\index{SVirtualMachine@{SVirtualMachine}}
+}
+wirtualna maszyna Salvadora - najbardziej \char`\"{}zewnętrzna\char`\"{} klasa całego projektu  
+
+
+{\tt \#include $<$svirtualmachine.h$>$}
+
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSVirtualMachine_9aa8763ce9817a6f96152c9bb707b082}{
+\textbf{SVirtualMachine} (std::string filename, \hyperlink{senums_8h_77022c8b228fdaa8e10b3843791b7b8c}{SMachineSources} src\_\-type)}
+\label{classSVirtualMachine_9aa8763ce9817a6f96152c9bb707b082}
+
+\item 
+\hypertarget{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}{
+void \textbf{executeAllInstr} ()}
+\label{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}
+
+\item 
+\hypertarget{classSVirtualMachine_200c4aae4eedf52ba7a3754295505186}{
+void \textbf{executeInstr} ()}
+\label{classSVirtualMachine_200c4aae4eedf52ba7a3754295505186}
+
+\item 
+\hypertarget{classSVirtualMachine_468c60a939cdefc44129d0dcf44adb67}{
+\hyperlink{classSImage}{SImage} $\ast$ \textbf{getCodeImage} ()}
+\label{classSVirtualMachine_468c60a939cdefc44129d0dcf44adb67}
+
+\item 
+\hypertarget{classSVirtualMachine_3c9a0fef8891c18d087ff7c506a090b2}{
+SCodeStats $\ast$ \textbf{getCodeStats} ()}
+\label{classSVirtualMachine_3c9a0fef8891c18d087ff7c506a090b2}
+
+\item 
+\hypertarget{classSVirtualMachine_73da810ed568a89a2d1f4ed211efb7e7}{
+\hyperlink{classSImage}{SImage} $\ast$ \textbf{getDataImage} ()}
+\label{classSVirtualMachine_73da810ed568a89a2d1f4ed211efb7e7}
+
+\item 
+\hypertarget{classSVirtualMachine_dee2d626a3312a4b38b91f5b550b2663}{
+\hyperlink{classSDataStats}{SDataStats} $\ast$ \textbf{getDataStats} ()}
+\label{classSVirtualMachine_dee2d626a3312a4b38b91f5b550b2663}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+wirtualna maszyna Salvadora - najbardziej \char`\"{}zewnętrzna\char`\"{} klasa całego projektu 
+
+Wirtualna maszyna Salvadora jest czymś w stylu opakowania, które kryje w sobie wszystkie mechanizmy interpretera. Do działania używa dwóch pozostałych maszyn: maszyny kodu (SCodeMachine) oraz maszyny danych (\hyperlink{classSDataMachine}{SDataMachine}); zarządza czasem życia obu z nich.
+
+Działanie wirtualnej maszyny Salvadora:
+
+Maszyna musi być ustawiona w stanie 'ready' (SMachineStates, jest to możliwe przy pomocy metody XXX lub od razu po wywołaniu konstruktora). Metoda YYY przełącza wirtualną maszynę w stan działania (SMachineStates, 'running'). Następnie przy pomocy metody ZZZ można zlecać maszynie wykonanie pojedynczej instrukcji intepretera.
+
+Wykonanie pojedynczej instrukcji:
+
+\begin{itemize}
+\item wirtualna maszyna zleca maszynie kodu (SCodeMachine) sprawdzenie jaka instrukcja (SCodeInstructions, SDataInstructions) ma zostać wykonana.\item maszyna kodu (SCodeMachine) zwraca maszynie wirtualnej informację o instrukcji\item w zależności od rodzaju instrukcji, maszyna wirtualna zleca jej wykonanie maszynie kodu (SCodeMachine, SCodeInstructions) lub maszynie danych (\hyperlink{classSDataMachine}{SDataMachine}, SDataInstructions)\item maszyna wykonująca instrukcję, zapisuje ją w swoim logu (SCodeStats, \hyperlink{classSDataStats}{SDataStats})\item maszyna kodu (SCodeMachine) przesuwa swoją głowicę (SCodeImagePointer) w dotychczasowym kierunku \end{itemize}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{svirtualmachine_8h}{svirtualmachine.h}\item 
+src/core/svirtualmachine.cpp\end{CompactItemize}

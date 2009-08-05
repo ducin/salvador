@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Salvador Project: Dokumentacja klasy SVirtualMachine</title>
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+<link href="tabs.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja klasy SVirtualMachine</h1><!-- doxytag: class="SVirtualMachine" -->wirtualna maszyna Salvadora - najbardziej "zewnętrzna" klasa całego projektu  
+<a href="#_details">Więcej...</a>
+<p>
+<code>#include &lt;<a class="el" href="svirtualmachine_8h-source.html">svirtualmachine.h</a>&gt;</code>
+<p>
+
+<p>
+<a href="classSVirtualMachine-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9aa8763ce9817a6f96152c9bb707b082"></a><!-- doxytag: member="SVirtualMachine::SVirtualMachine" ref="9aa8763ce9817a6f96152c9bb707b082" args="(std::string filename, SMachineSources src_type)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>SVirtualMachine</b> (std::string filename, <a class="el" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c">SMachineSources</a> src_type)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f3874f10dac15f27b23dc4b976271413"></a><!-- doxytag: member="SVirtualMachine::executeAllInstr" ref="f3874f10dac15f27b23dc4b976271413" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>executeAllInstr</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="200c4aae4eedf52ba7a3754295505186"></a><!-- doxytag: member="SVirtualMachine::executeInstr" ref="200c4aae4eedf52ba7a3754295505186" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>executeInstr</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="468c60a939cdefc44129d0dcf44adb67"></a><!-- doxytag: member="SVirtualMachine::getCodeImage" ref="468c60a939cdefc44129d0dcf44adb67" args="()" -->
+<a class="el" href="classSImage.html">SImage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getCodeImage</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3c9a0fef8891c18d087ff7c506a090b2"></a><!-- doxytag: member="SVirtualMachine::getCodeStats" ref="3c9a0fef8891c18d087ff7c506a090b2" args="()" -->
+SCodeStats *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getCodeStats</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="73da810ed568a89a2d1f4ed211efb7e7"></a><!-- doxytag: member="SVirtualMachine::getDataImage" ref="73da810ed568a89a2d1f4ed211efb7e7" args="()" -->
+<a class="el" href="classSImage.html">SImage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getDataImage</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="dee2d626a3312a4b38b91f5b550b2663"></a><!-- doxytag: member="SVirtualMachine::getDataStats" ref="dee2d626a3312a4b38b91f5b550b2663" args="()" -->
+<a class="el" href="classSDataStats.html">SDataStats</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getDataStats</b> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+wirtualna maszyna Salvadora - najbardziej "zewnętrzna" klasa całego projektu 
+<p>
+Wirtualna maszyna Salvadora jest czymś w stylu opakowania, które kryje w sobie wszystkie mechanizmy interpretera. Do działania używa dwóch pozostałych maszyn: maszyny kodu (SCodeMachine) oraz maszyny danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>); zarządza czasem życia obu z nich.<p>
+Działanie wirtualnej maszyny Salvadora:<p>
+Maszyna musi być ustawiona w stanie 'ready' (SMachineStates, jest to możliwe przy pomocy metody XXX lub od razu po wywołaniu konstruktora). Metoda YYY przełącza wirtualną maszynę w stan działania (SMachineStates, 'running'). Następnie przy pomocy metody ZZZ można zlecać maszynie wykonanie pojedynczej instrukcji intepretera.<p>
+Wykonanie pojedynczej instrukcji:<p>
+<ul>
+<li>wirtualna maszyna zleca maszynie kodu (SCodeMachine) sprawdzenie jaka instrukcja (SCodeInstructions, SDataInstructions) ma zostać wykonana.</li><li>maszyna kodu (SCodeMachine) zwraca maszynie wirtualnej informację o instrukcji</li><li>w zależności od rodzaju instrukcji, maszyna wirtualna zleca jej wykonanie maszynie kodu (SCodeMachine, SCodeInstructions) lub maszynie danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>, SDataInstructions)</li><li>maszyna wykonująca instrukcję, zapisuje ją w swoim logu (SCodeStats, <a class="el" href="classSDataStats.html" title="informacje o działaniu maszyny danych">SDataStats</a>)</li><li>maszyna kodu (SCodeMachine) przesuwa swoją głowicę (SCodeImagePointer) w dotychczasowym kierunku </li></ul>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/core/<a class="el" href="svirtualmachine_8h-source.html">svirtualmachine.h</a><li>src/core/svirtualmachine.cpp</ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:34 2008 dla Salvador Project programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+</body>
+</html>
