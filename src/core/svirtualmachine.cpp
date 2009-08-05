@@ -53,17 +53,17 @@ SVirtualMachine::~SVirtualMachine()
 
 bool SVirtualMachine::isRunning()
 {
-	return (state == running);
+	return (state == state_running);
 }
 
 bool SVirtualMachine::isReady()
 {
-	return (state == ready);
+	return (state == state_ready);
 }
 
 void SVirtualMachine::startMachine()
 {
-	setState(running);
+	setState(state_running);
 }
 
 void SVirtualMachine::restartMachine()
@@ -98,7 +98,7 @@ SMachineStates SVirtualMachine::prepareToExecute()
 	data_machine->clearPointer();
 
 	// ustaw stan maszyny na "gotowy"
-	setState(ready);
+	setState(state_ready);
 
 	// zwróć stan maszyny w którym znajdowała się dotychczas
 	return old;
@@ -132,7 +132,7 @@ void SVirtualMachine::setState(SMachineStates state)
  */
 void SVirtualMachine::executeAllInstr()
 {
-	while (getState() != finished)
+	while (getState() != state_finished)
 		executeInstr();
 }
 
@@ -179,7 +179,7 @@ void SVirtualMachine::executeInstr()
 			// else zignoruj całość (tak jakbys wykonywał nulla)
 			break;
 		case instr_code_break:
-			setState(finished);
+			setState(state_finished);
 			break;
 	}
 	if (isRunning())// jeśli maszyna nadal działa, przesuń głowicę maszyny kodu do przodu
@@ -212,11 +212,11 @@ std::string SVirtualMachine::__dev__transformBinaryStateToString(SMachineStates 
 {
 	switch(state)
 	{
-		case ready:
+		case state_ready:
 			return "ready";
-		case running:
+		case state_running:
 			return "running";
-		case finished:
+		case state_finished:
 			return "finished";
 		default:
 			return "error";

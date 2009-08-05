@@ -1,5 +1,5 @@
-#ifndef ENUMS
-#define ENUMS
+#ifndef S_ENUMS
+#define S_ENUMS
 
 /** \file senums.h
  * \brief wszystkie enumeracje
@@ -22,14 +22,14 @@ enum SInstructions {
 	instr_code_null, /*!< <b>.</b>, instrukcja pusta */
 	instr_code_jump, /*!< <b>?</b>, <b>sprawdź</b> czy wartość komórki wskazywanej przez głowicę maszyny danych jest liczbą niezerową; <b>jeśli tak</b> - przesuń głowicę maszyny kodu w dotychczasowym kierunku o jedną komórkę i wykonuj dalej polecenia; <b>jeśli nie</b> - przesuń (analogicznie) o 2 komórki i wykonuj dalej polecenia */
 	instr_code_break /*!< <b>#</b>, <b>zakończ</b> pracę maszyny kodu */
- };
+};
 
 //! stany wirtualnej maszyny Salvadora (SVirtualMachine)
 /*! Wirtualna maszyna Salvadora (SVirtualMachine) w kazdej chwili istnienia ma określony stan. Nie wpływa to bezpośrednio na przebieg wykonywania instrukcji języka Salvador, ale znacząco ułatwia wykorzystywanie interpretera przez UI, np komponenty graficzne. */
 enum SMachineStates {
-	ready, /*!< maszyna jest gotowa do rozpoczęcia pracy */
-	running, /*!< maszyna jest w trakcie pracy */
-	finished /*!< maszyna zakończyła działanie */
+	state_ready, /*!< maszyna jest gotowa do rozpoczęcia pracy */
+	state_running, /*!< maszyna jest w trakcie pracy */
+	state_finished /*!< maszyna zakończyła działanie */
 };
 
 //! kierunki głowicy maszyny kodu
