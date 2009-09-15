@@ -13,7 +13,7 @@ int runMenu()
 	std::cout << "wybierz opcję:" << std::endl;
 	std::cout << "1. uruchom maszynę" << std::endl;
 	std::cout << "2. zrestartuj maszynę" << std::endl;
-	std::cout << "3. wykonaj instrukcję" << std::endl;
+	std::cout << "3. wykonuj instrukcje po enterze" << std::endl;
 	std::cout << "4. wykonaj podaną ilość instrukcji" << std::endl;
 	std::cout << "5. cofnij ostatnią instrukcję" << std::endl;
 	std::cout << "6. cofnij o podaną ilość kroków" << std::endl;
@@ -31,9 +31,11 @@ int runMenu()
 int runProgram()
 {
 	int continued = 1, choice;
+	int step = 0;
 
 	while (continued)
 	{
+		std::cout << "step: " << step << std::endl;
 		m->__dev__printConsole();
 
 		choice = runMenu();
@@ -47,7 +49,14 @@ int runProgram()
 				m->restartMachine();
 				break;
 			case 3:
-				m->executeInstr();
+				int C;
+				std::cin >> C;
+				for(int ind = 0; ind < C; ind++)
+				{
+				    m->executeInstr();
+				    m->__dev__printConsole();
+				}
+				step += (C-1);
 				break;
 			case 4:
 				// spytaj ile instrukcji do przodu ma pójść
@@ -65,6 +74,8 @@ int runProgram()
 				m->stopMachine();
 				break;
 		}
+		
+		step++;
 		
 		continued = (choice != 9) && (m->isRunning() || m->isReady());
 	}
