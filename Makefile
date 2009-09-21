@@ -38,7 +38,7 @@ MKDIR         = mkdir -p
 
 ####### Output directory
 
-OBJECTS_DIR   = ./
+OBJECTS_DIR   = obj/
 
 ####### Files
 
@@ -53,17 +53,17 @@ SOURCES       = src/test.cpp \
 		src/core/sdataimagepointer.cpp \
 		src/core/sdatamachine.cpp \
 		src/core/svirtualmachine.cpp 
-OBJECTS       = test.o \
-		sabstractgrid.o \
-		sabstractmachine.o \
-		sabstractpointer.o \
-		scodegrid.o \
-		scodeimagepointer.o \
-		scodemachine.o \
-		sdatagrid.o \
-		sdataimagepointer.o \
-		sdatamachine.o \
-		svirtualmachine.o
+OBJECTS       = obj/test.o \
+		obj/sabstractgrid.o \
+		obj/sabstractmachine.o \
+		obj/sabstractpointer.o \
+		obj/scodegrid.o \
+		obj/scodeimagepointer.o \
+		obj/scodemachine.o \
+		obj/sdatagrid.o \
+		obj/sdataimagepointer.o \
+		obj/sdatamachine.o \
+		obj/svirtualmachine.o
 DIST          = /usr/share/qt4/mkspecs/common/g++.conf \
 		/usr/share/qt4/mkspecs/common/unix.conf \
 		/usr/share/qt4/mkspecs/common/linux.conf \
@@ -200,7 +200,7 @@ compiler_clean:
 
 ####### Compile
 
-test.o: src/test.cpp src/core/svirtualmachine.h \
+obj/test.o: src/test.cpp src/core/svirtualmachine.h \
 		src/core/senums.h \
 		src/core/sdatamachine.h \
 		src/core/sabstractmachine.h \
@@ -211,38 +211,38 @@ test.o: src/test.cpp src/core/svirtualmachine.h \
 		src/core/scodeimagepointer.h \
 		src/core/scodegrid.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test.o src/test.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/test.o src/test.cpp
 
-sabstractgrid.o: src/core/sabstractgrid.cpp src/core/sabstractgrid.h \
+obj/sabstractgrid.o: src/core/sabstractgrid.cpp src/core/sabstractgrid.h \
 		src/core/senums.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sabstractgrid.o src/core/sabstractgrid.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/sabstractgrid.o src/core/sabstractgrid.cpp
 
-sabstractmachine.o: src/core/sabstractmachine.cpp src/core/sabstractmachine.h \
+obj/sabstractmachine.o: src/core/sabstractmachine.cpp src/core/sabstractmachine.h \
 		src/core/senums.h \
 		src/core/sabstractpointer.h \
 		src/core/sabstractgrid.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sabstractmachine.o src/core/sabstractmachine.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/sabstractmachine.o src/core/sabstractmachine.cpp
 
-sabstractpointer.o: src/core/sabstractpointer.cpp src/core/sabstractpointer.h \
+obj/sabstractpointer.o: src/core/sabstractpointer.cpp src/core/sabstractpointer.h \
 		src/core/senums.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sabstractpointer.o src/core/sabstractpointer.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/sabstractpointer.o src/core/sabstractpointer.cpp
 
-scodegrid.o: src/core/scodegrid.cpp src/core/scodegrid.h \
+obj/scodegrid.o: src/core/scodegrid.cpp src/core/scodegrid.h \
 		src/core/senums.h \
 		src/core/sabstractgrid.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o scodegrid.o src/core/scodegrid.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/scodegrid.o src/core/scodegrid.cpp
 
-scodeimagepointer.o: src/core/scodeimagepointer.cpp src/core/scodeimagepointer.h \
+obj/scodeimagepointer.o: src/core/scodeimagepointer.cpp src/core/scodeimagepointer.h \
 		src/core/senums.h \
 		src/core/sabstractpointer.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o scodeimagepointer.o src/core/scodeimagepointer.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/scodeimagepointer.o src/core/scodeimagepointer.cpp
 
-scodemachine.o: src/core/scodemachine.cpp src/core/scodemachine.h \
+obj/scodemachine.o: src/core/scodemachine.cpp src/core/scodemachine.h \
 		src/core/senums.h \
 		src/core/sabstractmachine.h \
 		src/core/sabstractpointer.h \
@@ -250,21 +250,21 @@ scodemachine.o: src/core/scodemachine.cpp src/core/scodemachine.h \
 		src/core/scodeimagepointer.h \
 		src/core/scodegrid.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o scodemachine.o src/core/scodemachine.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/scodemachine.o src/core/scodemachine.cpp
 
-sdatagrid.o: src/core/sdatagrid.cpp src/core/sdatagrid.h \
+obj/sdatagrid.o: src/core/sdatagrid.cpp src/core/sdatagrid.h \
 		src/core/senums.h \
 		src/core/sabstractgrid.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sdatagrid.o src/core/sdatagrid.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/sdatagrid.o src/core/sdatagrid.cpp
 
-sdataimagepointer.o: src/core/sdataimagepointer.cpp src/core/sdataimagepointer.h \
+obj/sdataimagepointer.o: src/core/sdataimagepointer.cpp src/core/sdataimagepointer.h \
 		src/core/senums.h \
 		src/core/sabstractpointer.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sdataimagepointer.o src/core/sdataimagepointer.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/sdataimagepointer.o src/core/sdataimagepointer.cpp
 
-sdatamachine.o: src/core/sdatamachine.cpp src/core/sdatamachine.h \
+obj/sdatamachine.o: src/core/sdatamachine.cpp src/core/sdatamachine.h \
 		src/core/senums.h \
 		src/core/sabstractmachine.h \
 		src/core/sabstractpointer.h \
@@ -272,9 +272,9 @@ sdatamachine.o: src/core/sdatamachine.cpp src/core/sdatamachine.h \
 		src/core/sdataimagepointer.h \
 		src/debug.h \
 		src/core/sdatagrid.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o sdatamachine.o src/core/sdatamachine.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/sdatamachine.o src/core/sdatamachine.cpp
 
-svirtualmachine.o: src/core/svirtualmachine.cpp src/core/svirtualmachine.h \
+obj/svirtualmachine.o: src/core/svirtualmachine.cpp src/core/svirtualmachine.h \
 		src/core/senums.h \
 		src/core/sdatamachine.h \
 		src/core/sabstractmachine.h \
@@ -285,7 +285,7 @@ svirtualmachine.o: src/core/svirtualmachine.cpp src/core/svirtualmachine.h \
 		src/core/scodeimagepointer.h \
 		src/core/scodegrid.h \
 		src/debug.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o svirtualmachine.o src/core/svirtualmachine.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/svirtualmachine.o src/core/svirtualmachine.cpp
 
 ####### Install
 
