@@ -1,10 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Salvador Project: Plik źródłowy src/core/scodegrid.h</title>
-<link href="doxygen.css" rel="stylesheet" type="text/css">
+<title>Projekt Salvador: Plik źródłowy src/core/scodegrid.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
-<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
@@ -13,41 +13,57 @@
       <li class="current"><a href="files.html"><span>Pliki</span></a></li>
     </ul>
   </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&nbsp;plików</span></a></li>
+    </ul>
+  </div>
 <h1>src/core/scodegrid.h</h1><a href="scodegrid_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef S_CODE_GRID</span>
 <a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define S_CODE_GRID</span>
 <a name="l00003"></a>00003 <span class="preprocessor"></span>
 <a name="l00005"></a>00005 
 <a name="l00006"></a>00006 <span class="comment">// salvador core</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="senums_8h.html" title="wszystkie enumeracje">senums.h</a>"</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a>00009 <span class="comment">// C++</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;string&gt;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="comment">// STL</span>
-<a name="l00013"></a>00013 
-<a name="l00027"></a><a class="code" href="classSCodeGrid.html">00027</a> <span class="keyword">class </span><a class="code" href="classSCodeGrid.html" title="siatka kodu języka Salvador">SCodeGrid</a>
-<a name="l00028"></a>00028 {
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030         <span class="keyword">private</span>:
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032                 <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e" title="operacje obu maszyn">SInstructions</a> **instruction_grid;
-<a name="l00033"></a>00033                 <span class="keywordtype">int</span> size_x, size_y;
+<a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="sabstractgrid_8h.html" title="Plik nagłówkowy klasy SAbstractGrid.">sabstractgrid.h</a>"</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="comment">// C++</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00012"></a>00012 
+<a name="l00013"></a>00013 <span class="comment">// STL</span>
+<a name="l00014"></a>00014 
+<a name="l00028"></a><a class="code" href="classSCodeGrid.html">00028</a> <span class="keyword">class </span><a class="code" href="classSCodeGrid.html" title="siatka kodu">SCodeGrid</a> : <span class="keyword">public</span> <a class="code" href="classSAbstractGrid.html" title="Sbstrakcyjna siatka.">SAbstractGrid</a>
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         <span class="keyword">protected</span>:
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033                 <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e" title="operacje obu maszyn (SCodeMachine i SDataMachine)">SInstructions</a> **instruction_grid;
 <a name="l00034"></a>00034 
-<a name="l00035"></a>00035                 <span class="keywordtype">void</span> constructGrid();
-<a name="l00036"></a>00036                 <span class="keywordtype">void</span> destructGrid();
-<a name="l00037"></a>00037                 <span class="keywordtype">int</span> readGridFromFile(std::string filename);
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039         <span class="keyword">public</span>:
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041                 <a class="code" href="classSCodeGrid.html" title="siatka kodu języka Salvador">SCodeGrid</a>();
-<a name="l00042"></a>00042                 ~<a class="code" href="classSCodeGrid.html" title="siatka kodu języka Salvador">SCodeGrid</a>();
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 };
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
+<a name="l00035"></a>00035                 <span class="keywordtype">int</span> <a class="code" href="classSCodeGrid.html#46ed88ad7346788efb14c40cbd836981">readFromFile</a>(std::string);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037                 <span class="keywordtype">void</span> constructGrid();
+<a name="l00038"></a>00038                 <span class="keywordtype">void</span> destructGrid();
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040         <span class="keyword">public</span>:
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042                 <a class="code" href="classSCodeGrid.html#e430762ac9855cd60f8d5a57c46428b9">SCodeGrid</a>(std::string, <a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043" title="rodzaje kodów wirtualnych maszyn">SCodeTypes</a>);
+<a name="l00043"></a>00043                 <a class="code" href="classSCodeGrid.html#c150afdd8f27785b5ddf5669a4d90332">~SCodeGrid</a>();
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045                 <span class="keywordtype">int</span> getValueAt(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047         <span class="comment">// development:</span>
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049                 <span class="keywordtype">void</span> __dev__printConsole(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051                 <span class="keywordtype">int</span> __dev__transformCharToBinary(<span class="keywordtype">char</span>);
+<a name="l00052"></a>00052                 <span class="keywordtype">char</span> __dev__transformBinaryToChar(<span class="keywordtype">int</span>);
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 };
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
-<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
 </html>

@@ -1,0 +1,110 @@
+\hypertarget{classSCodeMachine}{
+\section{Dokumentacja klasy SCodeMachine}
+\label{classSCodeMachine}\index{SCodeMachine@{SCodeMachine}}
+}
+maszyna danych, obsługująca obraz danych  
+
+
+{\tt \#include $<$scodemachine.h$>$}
+
+Diagram dziedziczenia dla SCodeMachine:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSCodeMachine}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSCodeMachine_bb85f472be7c8e2112bbe5d6643f99b7}{SCodeMachine} (\hyperlink{senums_8h_1a2ae45552936d27425f99e1c187b043}{SCodeTypes})
+\item 
+\hyperlink{classSCodeMachine_67d39a3662fc2640aa506a581766a9b8}{$\sim$SCodeMachine} ()
+\item 
+\hyperlink{senums_8h_b1c3fa9dccd3f8afa81e14a98d9a7d1e}{SInstructions} \hyperlink{classSCodeMachine_3c851e80ec35cbebeb78ec8ceed8c5ca}{getPointedInstruction} ()
+\item 
+void \hyperlink{classSCodeMachine_d8415a221140a08a9383a595336cdf69}{executeTurnLeft} ()
+\item 
+void \hyperlink{classSCodeMachine_d48065e7bf42eef9e3a0f81fbb17f301}{executeTurnRight} ()
+\item 
+void \hyperlink{classSCodeMachine_f2867d02414db096844e4801f9895650}{executeTurnUp} ()
+\item 
+void \hyperlink{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{executeTurnDown} ()
+\item 
+\hypertarget{classSCodeMachine_c016cfcdf0700d5a0829d497a79eb259}{
+int \textbf{\_\-\_\-dev\_\-\_\-readGridFromTextFile} (std::string)}
+\label{classSCodeMachine_c016cfcdf0700d5a0829d497a79eb259}
+
+\item 
+\hypertarget{classSCodeMachine_c9345e02c8383585cf1738c653f83cfd}{
+void \textbf{\_\-\_\-dev\_\-\_\-destroyGrid} ()}
+\label{classSCodeMachine_c9345e02c8383585cf1738c653f83cfd}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+maszyna danych, obsługująca obraz danych 
+
+Obiekt klasy \hyperlink{classSCodeMachine}{SCodeMachine} to tzw. \char`\"{}maszyna kodu\char`\"{} która obsługuje dane programu wykonywanego przez wirtualną maszynę Salvadora. Maszyna ta posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSCodeMachine_bb85f472be7c8e2112bbe5d6643f99b7}{
+\index{SCodeMachine@{SCodeMachine}!SCodeMachine@{SCodeMachine}}
+\index{SCodeMachine@{SCodeMachine}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{SCodeMachine}]{\setlength{\rightskip}{0pt plus 5cm}SCodeMachine::SCodeMachine ({\bf SCodeTypes} {\em CODE\_\-TYPE})}}
+\label{classSCodeMachine_bb85f472be7c8e2112bbe5d6643f99b7}
+
+
+Konstruktor maszyny kodu. Tworzy obiekty głowicy obrazu kodu oraz sam obraz kodu. \hypertarget{classSCodeMachine_67d39a3662fc2640aa506a581766a9b8}{
+\index{SCodeMachine@{SCodeMachine}!$\sim$SCodeMachine@{$\sim$SCodeMachine}}
+\index{$\sim$SCodeMachine@{$\sim$SCodeMachine}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{$\sim$SCodeMachine}]{\setlength{\rightskip}{0pt plus 5cm}SCodeMachine::$\sim$SCodeMachine ()}}
+\label{classSCodeMachine_67d39a3662fc2640aa506a581766a9b8}
+
+
+Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kodu. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{
+\index{SCodeMachine@{SCodeMachine}!executeTurnDown@{executeTurnDown}}
+\index{executeTurnDown@{executeTurnDown}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{executeTurnDown}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnDown ()}}
+\label{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}
+
+
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ \hypertarget{classSCodeMachine_d8415a221140a08a9383a595336cdf69}{
+\index{SCodeMachine@{SCodeMachine}!executeTurnLeft@{executeTurnLeft}}
+\index{executeTurnLeft@{executeTurnLeft}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{executeTurnLeft}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnLeft ()}}
+\label{classSCodeMachine_d8415a221140a08a9383a595336cdf69}
+
+
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO \hypertarget{classSCodeMachine_d48065e7bf42eef9e3a0f81fbb17f301}{
+\index{SCodeMachine@{SCodeMachine}!executeTurnRight@{executeTurnRight}}
+\index{executeTurnRight@{executeTurnRight}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{executeTurnRight}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnRight ()}}
+\label{classSCodeMachine_d48065e7bf42eef9e3a0f81fbb17f301}
+
+
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO \hypertarget{classSCodeMachine_f2867d02414db096844e4801f9895650}{
+\index{SCodeMachine@{SCodeMachine}!executeTurnUp@{executeTurnUp}}
+\index{executeTurnUp@{executeTurnUp}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{executeTurnUp}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnUp ()}}
+\label{classSCodeMachine_f2867d02414db096844e4801f9895650}
+
+
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ \hypertarget{classSCodeMachine_3c851e80ec35cbebeb78ec8ceed8c5ca}{
+\index{SCodeMachine@{SCodeMachine}!getPointedInstruction@{getPointedInstruction}}
+\index{getPointedInstruction@{getPointedInstruction}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{getPointedInstruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SInstructions} SCodeMachine::getPointedInstruction ()}}
+\label{classSCodeMachine_3c851e80ec35cbebeb78ec8ceed8c5ca}
+
+
+Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. \begin{Desc}
+\item[Zwraca:]instrukcja wskazywana przez głowicę \end{Desc}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{scodemachine_8h}{scodemachine.h}\item 
+src/core/\hyperlink{scodemachine_8cpp}{scodemachine.cpp}\end{CompactItemize}

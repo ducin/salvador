@@ -14,17 +14,28 @@
 
 // STL
 
-SAbstractPointer::SAbstractPointer()
+/** \file sabstractpointer.cpp
+ * \brief Plik z kodem źródłowym klasy SAbstractPointer
+ *
+ * Plik zawiera kod źródłowy klasy SAbstractPointer.
+ */
+
+/**
+ * Konstruktor głowicy abstrakcyjnej. Ustala atrybuty głowicy (współrzędne, kierunek poruszania itp.) na wartości domyślne.
+ */
+ SAbstractPointer::SAbstractPointer()
 {
 	debug("CONSTRUCTOR ----* abstract-pointer START\n");
 	clear(); // ustawienie współrzędnych i kierunku poruszania na wartości domyślne
 	debug("CONSTRUCTOR ----* abstract-pointer END\n");
 }
 
+/**
+ * Destruktor głowicy abstrakcyjnej. Nie robi nic szczególnego.
+ */
 SAbstractPointer::~SAbstractPointer()
 {
 	debug("DESTRUCTOR ----* abstract-pointer START\n");
-
 	debug("DESTRUCTOR ----* abstract-pointer END\n");
 }
 
@@ -94,16 +105,6 @@ std::string SAbstractPointer::__dev__transformBinaryDirectionToString(SDirection
 
 void SAbstractPointer::__dev__printConsoleCoords()
 {
-	std::cout << std::endl << "POINTER" << std::endl;
-	std::cout << "[X:" << coord_x << ", Y:" << coord_y << "] [DIR:" << __dev__transformBinaryDirectionToString(direction) << "]" << std::endl;
+	std::cout << "[X:" << coord_x << ", Y:" << coord_y << "] [DIR:" << __dev__transformBinaryDirectionToString(direction) << "]";
 }
 
-int SAbstractPointer::__dev__getCoordX()
-{
-	return coord_x;
-}
-
-int SAbstractPointer::__dev__getCoordY()
-{
-	return coord_y;
-}

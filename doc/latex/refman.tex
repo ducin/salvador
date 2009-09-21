@@ -31,17 +31,17 @@
 
 \usepackage{doxygen}
 \makeindex
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{3}
 \renewcommand{\footrulewidth}{0.4pt}
 \begin{document}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}
-{\Large Salvador Project \\[1ex]\large wersja 1.0 }\\
+{\Large Projekt Salvador \\[1ex]\large wersja 1.0 }\\
 \vspace*{1cm}
-{\large Wygenerowano przez Doxygen 1.5.5}\\
+{\large Wygenerowano przez Doxygen 1.5.8}\\
 \vspace*{0.5cm}
-{\small Sat Aug 16 12:25:33 2008}\\
+{\small Fri Sep 18 04:23:48 2009}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -49,6 +49,8 @@
 \tableofcontents
 \clearemptydoublepage
 \pagenumbering{arabic}
+\chapter{Dokumentacja kodu projektu Salvador}
+\label{index}\hypertarget{index}{}\input{main}
 \chapter{Indeks klas}
 \input{hierarchy}
 \chapter{Indeks klas}
@@ -56,28 +58,42 @@
 \chapter{Indeks plików}
 \input{files}
 \chapter{Dokumentacja klas}
-\input{classSCodeGrid}
+\input{classSAbstractGrid}
+\include{classSAbstractMachine}
+\include{classSAbstractPointer}
+\include{classSCodeGrid}
+\include{classSCodeImagePointer}
+\include{classSCodeMachine}
+\include{classSDataGrid}
 \include{classSDataImagePointer}
 \include{classSDataMachine}
-\include{classSDataStats}
 \include{classSImage}
 \include{classSVirtualMachine}
 \chapter{Dokumentacja plików}
-\input{sabstractmachine_8h}
+\input{sabstractgrid_8cpp}
+\include{sabstractgrid_8h}
+\include{sabstractmachine_8cpp}
+\include{sabstractmachine_8h}
+\include{sabstractpointer_8cpp}
 \include{sabstractpointer_8h}
-\include{saction_8h}
+\include{scodegrid_8cpp}
 \include{scodegrid_8h}
 \include{scodeimage_8h}
+\include{scodeimagepointer_8cpp}
 \include{scodeimagepointer_8h}
+\include{scodemachine_8cpp}
 \include{scodemachine_8h}
-\include{scodestats_8h}
-\include{sdataimage_8h}
+\include{sdatagrid_8cpp}
+\include{sdatagrid_8h}
+\include{sdataimagepointer_8cpp}
 \include{sdataimagepointer_8h}
+\include{sdatamachine_8cpp}
 \include{sdatamachine_8h}
-\include{sdatastats_8h}
 \include{senums_8h}
 \include{simage_8h}
+\include{svirtualmachine_8cpp}
 \include{svirtualmachine_8h}
 \include{debug_8h}
+\include{test_8cpp}
 \printindex
 \end{document}

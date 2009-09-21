@@ -15,6 +15,15 @@
 // STL
 // none
 
+/** \file scodegrid.cpp
+ * \brief Plik z kodem źródłowym klasy SCodeGrid
+ *
+ * Plik zawiera kod źródłowy klasy SCodeGrid.
+ */
+
+/**
+ * Konstruktor siatki kodu.
+ */
 SCodeGrid::SCodeGrid(std::string filename, SCodeTypes CODE_TYPE)
 {
 	debug("CONSTRUCTOR code-grid START\n");
@@ -30,6 +39,9 @@ SCodeGrid::SCodeGrid(std::string filename, SCodeTypes CODE_TYPE)
 	debug("CONSTRUCTOR code-grid END\n");
 }
 
+/**
+ * Destruktor siatki kodu.
+ */
 SCodeGrid::~SCodeGrid()
 {
 	debug("DESTRUCTOR code-grid START\n");
@@ -87,7 +99,7 @@ int SCodeGrid::readFromFile(std::string filename)
 		for(int x = 0; x < size_x; x++)
 		{
 			fin >> tmp;
-			instruction_grid[y][x] = __dev__transformCharToBinary(tmp);
+			instruction_grid[y][x] = (SInstructions) __dev__transformCharToBinary(tmp);
 		}
 	}
 	fin.close();

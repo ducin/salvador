@@ -15,16 +15,28 @@
 // STL
 // none
 
+/** \file sdatagrid.cpp
+ * \brief Plik z kodem źródłowym klasy SDataGrid
+ *
+ * Plik zawiera kod źródłowy klasy SDataGrid.
+ */
+
+/**
+ * Konstruktor siatki danych.
+ */
 SDataGrid::SDataGrid()
 {
 	debug("CONSTRUCTOR data-grid START\n");
-	size_x = 8;
-	size_y = 2;
+	size_x = 4;
+	size_y = 1;
 	constructGrid();
 	zeroGrid();
 	debug("CONSTRUCTOR data-grid END\n");
 }
 
+/**
+ * Destruktor siatki danych.
+ */
 SDataGrid::~SDataGrid()
 {
 	debug("DESTRUCTOR data-grid START\n");
@@ -89,15 +101,19 @@ int SDataGrid::performPredAt(int coord_x, int coord_y)
 
 void SDataGrid::__dev__printConsole(int ptr_x, int ptr_y)
 {
-	std::cout << std::endl << "GRID" << std::endl;
-	std::cout << "[X:" << size_x << ", Y:" << size_y << "]" << std::endl;
+//	std::cout << std::endl << "GRID" << std::endl;
+//	std::cout << "[X:" << size_x << ", Y:" << size_y << "]" << std::endl;
+	std::cout << "; dane: ";
 	for(int y = 0; y < size_y; y++)
 	{
 		for(int x = 0; x < size_x; x++)
+		{
 			if (ptr_x == x && ptr_y == y)
 				std::cout << '<' << getValueAt(x,y) << '>';
 			else
-				std::cout << '[' << getValueAt(x,y) << ']';
+				std::cout << /*'[' <<*/ getValueAt(x,y) /*<< ']'*/;
+			std::cout << ' ';
+		}
 		std::cout << std::endl;
 	}
 }

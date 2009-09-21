@@ -5,7 +5,6 @@
 
 // salvador core
 #include "senums.h"
-#include "simage.h"
 
 // C++
 #include <string>
@@ -19,7 +18,7 @@
  * Plik zawiera definicję klasy SCodeImage. Obiekt tej klasy jest tworzony dla Wirtualnej Maszyny Salvadora i jest graficzną reprezentacją obrazu kodu.
  */
 
-class SCodeImage : public SImage
+class SCodeImage
 {
 
 	public:

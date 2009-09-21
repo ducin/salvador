@@ -7,7 +7,6 @@
 #include "senums.h"
 #include "sabstractmachine.h"
 
-#include "scodestats.h"
 #include "scodeimage.h"
 #include "scodeimagepointer.h"
 #include "scodegrid.h"
@@ -25,7 +24,7 @@
 
 /** \brief maszyna danych, obsługująca obraz danych
  *
- * Obiekt klasy SCodeMachine to tzw. "maszyna kodu" która obsługuje dane programu wykonywanego przez wirtualną maszynę Salvadora. Maszyna ta posiada swój log (dziennik wszystkich wykonywanych operacji) w obiekcie klasy SCodeStats oraz posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu.
+ * Obiekt klasy SCodeMachine to tzw. "maszyna kodu" która obsługuje dane programu wykonywanego przez wirtualną maszynę Salvadora. Maszyna ta posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu.
  *
  */
 class SCodeMachine : public SAbstractMachine
@@ -35,17 +34,23 @@ class SCodeMachine : public SAbstractMachine
 
 		SCodeTypes code_type; // czy kod jest z obrazka czy z siatki kodu
 
-		SCodeStats *stats;
 		SCodeImage *image;
+
+		/**
+		 * Pole logiczne definiujące tryb gadatliwy.
+		 */
+		bool verbose;
 
 	public:
 
 		SCodeMachine(SCodeTypes);
 		~SCodeMachine();
 
-		void clearStats();
+		void setVerbosity(bool);
 
 		SInstructions getPointedInstruction(); // zwraca wskazywaną wskaxnikiem instrukcję obrazu kodu
+
+		void pushPointer();
 
 		void executeTurnLeft();
 		void executeTurnRight();
@@ -59,6 +64,11 @@ class SCodeMachine : public SAbstractMachine
 
 		int __dev__readGridFromTextFile(std::string); // TESTOWE // wczytanie siatki kodu z pliku
 		void __dev__destroyGrid(); // TESTOWE // niszczenie grida
+
+		void __dev__printConsole();
+		void __dev__printPointer();
+		void __dev__printGrid();
+		void __dev__printPointedInstruction();
 
 };
 

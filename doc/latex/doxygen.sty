@@ -10,8 +10,8 @@
         {\fancyplain{}{\bfseries\rightmark}}
 \rhead[\fancyplain{}{\bfseries\leftmark}]
         {\fancyplain{}{\bfseries\thepage}}
-\rfoot[\fancyplain{}{\bfseries\scriptsize Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem Doxygen }]{}
-\lfoot[]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem Doxygen }}
+\rfoot[\fancyplain{}{\bfseries\scriptsize Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem Doxygen }]{}
+\lfoot[]{\fancyplain{}{\bfseries\scriptsize Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem Doxygen }}
 \cfoot{}
 \newenvironment{Code}
 {\footnotesize}
@@ -76,3 +76,11 @@
 \addtocounter{secnumdepth}{1}
 \sloppy
 \usepackage[T1]{fontenc}
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{0ex}%
+   {-3.25ex plus -1ex minus -0.2ex}%
+   {1.5ex plus 0.2ex}%
+   {\normalfont\normalsize\bfseries}}
+\makeatother
+\stepcounter{secnumdepth}
+\stepcounter{tocdepth}

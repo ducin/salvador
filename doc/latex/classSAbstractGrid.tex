@@ -1,0 +1,109 @@
+\hypertarget{classSAbstractGrid}{
+\section{Dokumentacja klasy SAbstractGrid}
+\label{classSAbstractGrid}\index{SAbstractGrid@{SAbstractGrid}}
+}
+Sbstrakcyjna siatka.  
+
+
+{\tt \#include $<$sabstractgrid.h$>$}
+
+Diagram dziedziczenia dla SAbstractGrid:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSAbstractGrid}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSAbstractGrid_2df5b6a5bd2a11d9015104f3dd6afc20}{SAbstractGrid} ()
+\item 
+virtual \hyperlink{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}{$\sim$SAbstractGrid} ()
+\item 
+\hypertarget{classSAbstractGrid_1c10a9c322c321b3fc2c9a5195e817ba}{
+virtual int \textbf{\_\-\_\-dev\_\-\_\-transformCharToBinary} (char)=0}
+\label{classSAbstractGrid_1c10a9c322c321b3fc2c9a5195e817ba}
+
+\item 
+\hypertarget{classSAbstractGrid_6fc913c575c7d1b87b422084129db978}{
+virtual char \textbf{\_\-\_\-dev\_\-\_\-transformBinaryToChar} (int)=0}
+\label{classSAbstractGrid_6fc913c575c7d1b87b422084129db978}
+
+\item 
+\hypertarget{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{
+virtual void \textbf{\_\-\_\-dev\_\-\_\-printConsole} (int, int)=0}
+\label{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}
+
+\end{CompactItemize}
+\subsection*{Metody chronione}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}{
+virtual void \textbf{constructGrid} ()=0}
+\label{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}
+
+\item 
+\hypertarget{classSAbstractGrid_fb63d8cf5210c3606a3b7add19f06833}{
+virtual void \textbf{destructGrid} ()=0}
+\label{classSAbstractGrid_fb63d8cf5210c3606a3b7add19f06833}
+
+\item 
+\hypertarget{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{
+virtual int \textbf{getValueAt} (int, int)=0}
+\label{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}
+
+\end{CompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSAbstractGrid_f0b1916fda47bbd921fc1b5b5abadb72}{
+int \textbf{size\_\-x}}
+\label{classSAbstractGrid_f0b1916fda47bbd921fc1b5b5abadb72}
+
+\item 
+\hypertarget{classSAbstractGrid_b9fddbe2004e7242dff69aa20da8a3c3}{
+int \textbf{size\_\-y}}
+\label{classSAbstractGrid_b9fddbe2004e7242dff69aa20da8a3c3}
+
+\end{CompactItemize}
+\subsection*{Przyjaciele}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSAbstractGrid_13f503f5e1b3625e973ac350880b3a31}{
+class \hyperlink{classSAbstractGrid_13f503f5e1b3625e973ac350880b3a31}{SCodeMachine}}
+\label{classSAbstractGrid_13f503f5e1b3625e973ac350880b3a31}
+
+\item 
+\hypertarget{classSAbstractGrid_b064517f75c184bae39efba1df818a12}{
+class \hyperlink{classSAbstractGrid_b064517f75c184bae39efba1df818a12}{SDataMachine}}
+\label{classSAbstractGrid_b064517f75c184bae39efba1df818a12}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Sbstrakcyjna siatka. 
+
+Siatka jest narzędziem które ułatwia przetrzymywanie pewnych danych w pamięci i udostępnia proste metody wyświetlające te dane na konsolę. Po klasie \hyperlink{classSAbstractGrid}{SAbstractGrid} dziedziczą dwie klasy: \hyperlink{classSCodeGrid}{SCodeGrid} - siatka kodu oraz \hyperlink{classSDataGrid}{SDataGrid} - siatka danych. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSAbstractGrid_2df5b6a5bd2a11d9015104f3dd6afc20}{
+\index{SAbstractGrid@{SAbstractGrid}!SAbstractGrid@{SAbstractGrid}}
+\index{SAbstractGrid@{SAbstractGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{SAbstractGrid}]{\setlength{\rightskip}{0pt plus 5cm}SAbstractGrid::SAbstractGrid ()}}
+\label{classSAbstractGrid_2df5b6a5bd2a11d9015104f3dd6afc20}
+
+
+Konstruktor abstrakcyjnej siatki. Nie robi nic szczególnego. \hypertarget{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}{
+\index{SAbstractGrid@{SAbstractGrid}!$\sim$SAbstractGrid@{$\sim$SAbstractGrid}}
+\index{$\sim$SAbstractGrid@{$\sim$SAbstractGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{$\sim$SAbstractGrid}]{\setlength{\rightskip}{0pt plus 5cm}SAbstractGrid::$\sim$SAbstractGrid ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}
+
+
+Destruktor abstrakcyjnej siatki. Nie robi nic szczególnego. 
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{sabstractgrid_8h}{sabstractgrid.h}\item 
+src/core/\hyperlink{sabstractgrid_8cpp}{sabstractgrid.cpp}\end{CompactItemize}

@@ -34,14 +34,6 @@ class SCodeImagePointer : public SAbstractPointer
 		void turnDown(); // v
 		void turnLeft(); // <
 		void turnRight(); // >
-/*
-		int ifInstr();
-		int reactToIfInstrPositive(); // ?
-		int reactToIfInstrNegative(); // ?
-
-		int nullInstr(); // .
-		int stopInstr(); // #
-*/
 };
 
 #endif

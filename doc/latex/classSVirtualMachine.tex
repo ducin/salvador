@@ -10,47 +10,81 @@ wirtualna maszyna Salvadora - najbardziej \char`\"{}zewnętrzna\char`\"{} klasa 
 \subsection*{Metody publiczne}
 \begin{CompactItemize}
 \item 
-\hypertarget{classSVirtualMachine_9aa8763ce9817a6f96152c9bb707b082}{
-\textbf{SVirtualMachine} (std::string filename, \hyperlink{senums_8h_77022c8b228fdaa8e10b3843791b7b8c}{SMachineSources} src\_\-type)}
-\label{classSVirtualMachine_9aa8763ce9817a6f96152c9bb707b082}
+\hypertarget{classSVirtualMachine_020a4e9202a688dffed1e0d8951f9164}{
+\textbf{SVirtualMachine} (std::string, \hyperlink{senums_8h_1a2ae45552936d27425f99e1c187b043}{SCodeTypes})}
+\label{classSVirtualMachine_020a4e9202a688dffed1e0d8951f9164}
 
 \item 
-\hypertarget{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}{
-void \textbf{executeAllInstr} ()}
-\label{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}
+\hypertarget{classSVirtualMachine_09f1f983396791f84947f80097351862}{
+bool \textbf{isRunning} ()}
+\label{classSVirtualMachine_09f1f983396791f84947f80097351862}
 
+\item 
+\hypertarget{classSVirtualMachine_86dfbb99cbccd36729253cf34835c805}{
+bool \textbf{isReady} ()}
+\label{classSVirtualMachine_86dfbb99cbccd36729253cf34835c805}
+
+\item 
+\hypertarget{classSVirtualMachine_3c530338eaccb6bc585ba689ace469a7}{
+void \textbf{startMachine} ()}
+\label{classSVirtualMachine_3c530338eaccb6bc585ba689ace469a7}
+
+\item 
+\hypertarget{classSVirtualMachine_6b2dedbf7e71aeb57c89ada07141a2d1}{
+void \textbf{restartMachine} ()}
+\label{classSVirtualMachine_6b2dedbf7e71aeb57c89ada07141a2d1}
+
+\item 
+\hypertarget{classSVirtualMachine_47097e43ad093ef4900df2d888043da6}{
+void \textbf{stopMachine} ()}
+\label{classSVirtualMachine_47097e43ad093ef4900df2d888043da6}
+
+\item 
+\hypertarget{classSVirtualMachine_85f2b4a688a077283010a11145289110}{
+void \textbf{clean} ()}
+\label{classSVirtualMachine_85f2b4a688a077283010a11145289110}
+
+\item 
+void \hyperlink{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}{executeAllInstr} ()
 \item 
 \hypertarget{classSVirtualMachine_200c4aae4eedf52ba7a3754295505186}{
 void \textbf{executeInstr} ()}
 \label{classSVirtualMachine_200c4aae4eedf52ba7a3754295505186}
 
 \item 
-\hypertarget{classSVirtualMachine_468c60a939cdefc44129d0dcf44adb67}{
-\hyperlink{classSImage}{SImage} $\ast$ \textbf{getCodeImage} ()}
-\label{classSVirtualMachine_468c60a939cdefc44129d0dcf44adb67}
+\hypertarget{classSVirtualMachine_2a2a23e279ef7df99fbcdd798a5385cf}{
+bool \textbf{revokeInstr} ()}
+\label{classSVirtualMachine_2a2a23e279ef7df99fbcdd798a5385cf}
 
 \item 
-\hypertarget{classSVirtualMachine_3c9a0fef8891c18d087ff7c506a090b2}{
-SCodeStats $\ast$ \textbf{getCodeStats} ()}
-\label{classSVirtualMachine_3c9a0fef8891c18d087ff7c506a090b2}
+\hypertarget{classSVirtualMachine_c8d0c7a837c157b0a1efaf80ffeee486}{
+bool \textbf{goBack} (int)}
+\label{classSVirtualMachine_c8d0c7a837c157b0a1efaf80ffeee486}
 
 \item 
-\hypertarget{classSVirtualMachine_73da810ed568a89a2d1f4ed211efb7e7}{
-\hyperlink{classSImage}{SImage} $\ast$ \textbf{getDataImage} ()}
-\label{classSVirtualMachine_73da810ed568a89a2d1f4ed211efb7e7}
+\hypertarget{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}{
+std::string \textbf{\_\-\_\-dev\_\-\_\-transformBinaryStateToString} (\hyperlink{senums_8h_c31b206c0c7cd52b9a0b18204f373c7e}{SMachineStates})}
+\label{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}
 
 \item 
-\hypertarget{classSVirtualMachine_dee2d626a3312a4b38b91f5b550b2663}{
-\hyperlink{classSDataStats}{SDataStats} $\ast$ \textbf{getDataStats} ()}
-\label{classSVirtualMachine_dee2d626a3312a4b38b91f5b550b2663}
+\hypertarget{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}{
+void \textbf{\_\-\_\-dev\_\-\_\-printConsole} ()}
+\label{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}
 
-\end{CompactItemize}
+\item 
+\hypertarget{classSVirtualMachine_cf39eaf295cf709c43b8754aed84286f}{
+void \textbf{\_\-\_\-dev\_\-\_\-destroyGrid} ()}
+\label{classSVirtualMachine_cf39eaf295cf709c43b8754aed84286f}
+
+\item 
+void \hyperlink{classSVirtualMachine_d07f353daaf626f5efeb8bd34818db75}{\_\-\_\-dev\_\-\_\-runProgram} ()
+\begin{CompactList}\small\item\em symulacja działania wirtualnej maszyny \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Opis szczegółowy}
 wirtualna maszyna Salvadora - najbardziej \char`\"{}zewnętrzna\char`\"{} klasa całego projektu 
 
-Wirtualna maszyna Salvadora jest czymś w stylu opakowania, które kryje w sobie wszystkie mechanizmy interpretera. Do działania używa dwóch pozostałych maszyn: maszyny kodu (SCodeMachine) oraz maszyny danych (\hyperlink{classSDataMachine}{SDataMachine}); zarządza czasem życia obu z nich.
+Wirtualna maszyna Salvadora jest czymś w stylu opakowania, które kryje w sobie wszystkie mechanizmy interpretera. Do działania używa dwóch pozostałych maszyn: maszyny kodu (\hyperlink{classSCodeMachine}{SCodeMachine}) oraz maszyny danych (\hyperlink{classSDataMachine}{SDataMachine}); zarządza czasem życia obu z nich.
 
 Działanie wirtualnej maszyny Salvadora:
 
@@ -59,10 +93,31 @@ Maszyna musi być ustawiona w stanie 'ready' (SMachineStates, jest to możliwe p
 Wykonanie pojedynczej instrukcji:
 
 \begin{itemize}
-\item wirtualna maszyna zleca maszynie kodu (SCodeMachine) sprawdzenie jaka instrukcja (SCodeInstructions, SDataInstructions) ma zostać wykonana.\item maszyna kodu (SCodeMachine) zwraca maszynie wirtualnej informację o instrukcji\item w zależności od rodzaju instrukcji, maszyna wirtualna zleca jej wykonanie maszynie kodu (SCodeMachine, SCodeInstructions) lub maszynie danych (\hyperlink{classSDataMachine}{SDataMachine}, SDataInstructions)\item maszyna wykonująca instrukcję, zapisuje ją w swoim logu (SCodeStats, \hyperlink{classSDataStats}{SDataStats})\item maszyna kodu (SCodeMachine) przesuwa swoją głowicę (SCodeImagePointer) w dotychczasowym kierunku \end{itemize}
+\item wirtualna maszyna zleca maszynie kodu (\hyperlink{classSCodeMachine}{SCodeMachine}) sprawdzenie jaka instrukcja (SCodeInstructions, SDataInstructions) ma zostać wykonana.\item maszyna kodu (\hyperlink{classSCodeMachine}{SCodeMachine}) zwraca maszynie wirtualnej informację o instrukcji\item w zależności od rodzaju instrukcji, maszyna wirtualna zleca jej wykonanie maszynie kodu (\hyperlink{classSCodeMachine}{SCodeMachine}, SCodeInstructions) lub maszynie danych (\hyperlink{classSDataMachine}{SDataMachine}, SDataInstructions)\item maszyna wykonująca instrukcję, zapisuje ją w swoim logu (SCodeStats, SDataStats)\item maszyna kodu (\hyperlink{classSCodeMachine}{SCodeMachine}) przesuwa swoją głowicę (\hyperlink{classSCodeImagePointer}{SCodeImagePointer}) w dotychczasowym kierunku \end{itemize}
 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSVirtualMachine_d07f353daaf626f5efeb8bd34818db75}{
+\index{SVirtualMachine@{SVirtualMachine}!\_\-\_\-dev\_\-\_\-runProgram@{\_\-\_\-dev\_\-\_\-runProgram}}
+\index{\_\-\_\-dev\_\-\_\-runProgram@{\_\-\_\-dev\_\-\_\-runProgram}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-runProgram}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::\_\-\_\-dev\_\-\_\-runProgram ()}}
+\label{classSVirtualMachine_d07f353daaf626f5efeb8bd34818db75}
+
+
+symulacja działania wirtualnej maszyny 
+
+DEVELOPMENT
+
+Konsolowo symyluje przebieg działania maszyny. Najpierw wyświetla dane obu maszyn, następnie po każdym kroku wyświetla wynik na konsoli. Przy każdym kroku użytkownik ma możliwość zastopowania działania maszyny, wpisując frazę \char`\"{}no\char`\"{}. Metoda kończy działanie, kiedy maszyna skończy swoje działanie. \hypertarget{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}{
+\index{SVirtualMachine@{SVirtualMachine}!executeAllInstr@{executeAllInstr}}
+\index{executeAllInstr@{executeAllInstr}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{executeAllInstr}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::executeAllInstr ()}}
+\label{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}
+
+
+Wykonuje wszystkie instrukcje 
 
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
 \item 
 src/core/\hyperlink{svirtualmachine_8h}{svirtualmachine.h}\item 
-src/core/svirtualmachine.cpp\end{CompactItemize}
+src/core/\hyperlink{svirtualmachine_8cpp}{svirtualmachine.cpp}\end{CompactItemize}

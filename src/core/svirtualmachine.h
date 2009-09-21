@@ -6,9 +6,7 @@
 // salvador core
 #include "senums.h"
 #include "sdatamachine.h"
-#include "sdatastats.h"
 #include "scodemachine.h"
-#include "scodestats.h"
 
 // C++
 #include <string>
@@ -42,24 +40,31 @@ class SVirtualMachine
 
 	private:
 
-		SDataMachine *data_machine; // obiekt, maszyna danych
-		SImage *getDataImage(); // 
-		SDataStats *getDataStats(); // 
+		SDataMachine *data_machine; // maszyna danych
+		SCodeMachine *code_machine; // maszyna kodu
 
-		SCodeMachine *code_machine; // obiekt, maszyna kodu
-		SImage *getCodeImage(); // 
-		SCodeStats *getCodeStats(); // 
-
-		SMachineStates state; // enum, w jakim stanie jest maszyna
-		SMachineStates getState(); // return: stan maszyny
+		SMachineStates state; // w jakim stanie jest maszyna
+		SMachineStates getState();
 		void setState(SMachineStates);
 
-		SMachineStates prepareToExecute();
+		void prepareToExecute();
+
+		bool verbose;
+		void setVerbosityRecursively(bool);
+
+		int step;
+
+	protected:
+
+		void finish();
 
 	public:
 
 		SVirtualMachine(std::string, SCodeTypes); // konstruktor, params: istniejący plik graficzny bmp
 		~SVirtualMachine(); // destruktor
+
+		bool isVerbose();
+		void toggleVerbosity();
 
 		bool isRunning(); // czy maszyna działa (sprawdzany stan maszyny)
 		bool isReady(); // czy maszyna jest gotowa do rozpoczęcia pracy
@@ -72,9 +77,8 @@ class SVirtualMachine
 		// TODO zastanowic sie jaki typ ma zwracac
 		void executeAllInstr(); // wykonywanie instrukcji do końca działania programu
 		void executeInstr(); // wykonanie jednej instrukcji
-		bool revokeInstr(); // cofniecie jednej instrukcji
-		bool goBack(int);
 
+		bool mergeGridWithImage(std::string);
 
 	// development:
 

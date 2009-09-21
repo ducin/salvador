@@ -7,7 +7,6 @@
 #include "../debug.h"
 #include "senums.h"
 #include "sdatagrid.h"
-#include "sdatastats.h"
 
 // C++
 #include <string>
@@ -15,6 +14,12 @@
 
 // STL
 // none
+
+/** \file sdatamachine.cpp
+ * \brief Plik z kodem źródłowym klasy SDataMachine
+ *
+ * Plik zawiera kod źródłowy klasy SDataMachine.
+ */
 
 /** \brief konstruktor
  *
@@ -28,8 +33,6 @@ SDataMachine::SDataMachine()
 // constructor
 {
 	debug("CONSTRUCTOR --- data-machine START\n");
-	stats = new SDataStats();
-	image = new SDataImage();
 	pointer = new SDataImagePointer();
 	debug("CONSTRUCTOR --- data-machine END\n");
 }
@@ -45,28 +48,34 @@ SDataMachine::~SDataMachine()
 // destructor
 {
 	debug("DESTRUCTOR --- data-machine START\n");
-	stats->~SDataStats();
-	image->~SDataImage();
 // śmierdzące rozwiązanie z C
 // ((SDataImagePointer*) pointer)->~SDataImagePointer();
 	(dynamic_cast<SDataImagePointer *> (pointer))->~SDataImagePointer();
-
 	debug("DESTRUCTOR --- data-machine END\n");
 }
 
-void SDataMachine::clearStats()
+/**
+ * Ustala tryb gadatliwy.
+ * @param verbosity tryb gadatliwy
+ */
+void SDataMachine::setVerbosity(bool verbosity)
 {
-	stats->clear();
+	verbose = verbosity;
 }
 
-void SDataMachine::clearImage()
+void SDataMachine::clearData()
 {
-	image->clear();
+	// ?
 }
 
 int SDataMachine::getPointedValue()
 {
 	return grid->getValueAt(pointer->getCoordX(), pointer->getCoordY());
+}
+
+void SDataMachine::pushPointer()
+{
+	pointer->moveForward(1);
 }
 
 /*==================================================================*/
@@ -116,3 +125,26 @@ void SDataMachine::__dev__destroyGrid()
 	(dynamic_cast<SDataGrid *> (grid))->~SDataGrid();
 //	grid->~SDataGrid();
 }
+
+/////////////////////////
+
+void SDataMachine::__dev__printGrid()
+{
+//	debug("dev print code grid START\n");
+	grid->__dev__printConsole(pointer->getCoordX(),pointer->getCoordY());
+//	debug("dev print code grid END\n");
+}
+
+void SDataMachine::__dev__printPointer()
+{
+//	debug("dev print pointer START\n");
+	pointer->__dev__printConsoleCoords();
+//	debug("dev print pointer END\n");
+}
+
+void SDataMachine::__dev__printConsole()
+{
+//	__dev__printPointer();
+	__dev__printGrid();
+}
+

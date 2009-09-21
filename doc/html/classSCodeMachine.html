@@ -1,0 +1,212 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Projekt Salvador: Dokumentacja klasy SCodeMachine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja klasy SCodeMachine</h1><!-- doxytag: class="SCodeMachine" --><!-- doxytag: inherits="SAbstractMachine" -->maszyna danych, obsługująca obraz danych  
+<a href="#_details">Więcej...</a>
+<p>
+<code>#include &lt;<a class="el" href="scodemachine_8h-source.html">scodemachine.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla SCodeMachine</div>
+<div class="dynsection">
+
+<p><center><img src="classSCodeMachine.png" usemap="#SCodeMachine_map" border="0" alt=""></center>
+<map name="SCodeMachine_map">
+<area href="classSAbstractMachine.html" alt="SAbstractMachine" shape="rect" coords="0,0,116,24">
+</map>
+</div>
+
+<p>
+<a href="classSCodeMachine-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#bb85f472be7c8e2112bbe5d6643f99b7">SCodeMachine</a> (<a class="el" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043">SCodeTypes</a>)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#67d39a3662fc2640aa506a581766a9b8">~SCodeMachine</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">SInstructions</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#3c851e80ec35cbebeb78ec8ceed8c5ca">getPointedInstruction</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#d8415a221140a08a9383a595336cdf69">executeTurnLeft</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#d48065e7bf42eef9e3a0f81fbb17f301">executeTurnRight</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#f2867d02414db096844e4801f9895650">executeTurnUp</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#26b7ba8981d08d594b0c37617aa85277">executeTurnDown</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c016cfcdf0700d5a0829d497a79eb259"></a><!-- doxytag: member="SCodeMachine::__dev__readGridFromTextFile" ref="c016cfcdf0700d5a0829d497a79eb259" args="(std::string)" -->
+int&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__readGridFromTextFile</b> (std::string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c9345e02c8383585cf1738c653f83cfd"></a><!-- doxytag: member="SCodeMachine::__dev__destroyGrid" ref="c9345e02c8383585cf1738c653f83cfd" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__destroyGrid</b> ()</td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+maszyna danych, obsługująca obraz danych 
+<p>
+Obiekt klasy <a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a> to tzw. "maszyna kodu" która obsługuje dane programu wykonywanego przez wirtualną maszynę Salvadora. Maszyna ta posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu. <hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="bb85f472be7c8e2112bbe5d6643f99b7"></a><!-- doxytag: member="SCodeMachine::SCodeMachine" ref="bb85f472be7c8e2112bbe5d6643f99b7" args="(SCodeTypes)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SCodeMachine::SCodeMachine           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043">SCodeTypes</a>&nbsp;</td>
+          <td class="paramname"> <em>CODE_TYPE</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor maszyny kodu. Tworzy obiekty głowicy obrazu kodu oraz sam obraz kodu. 
+</div>
+</div><p>
+<a class="anchor" name="67d39a3662fc2640aa506a581766a9b8"></a><!-- doxytag: member="SCodeMachine::~SCodeMachine" ref="67d39a3662fc2640aa506a581766a9b8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SCodeMachine::~SCodeMachine           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kodu. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="26b7ba8981d08d594b0c37617aa85277"></a><!-- doxytag: member="SCodeMachine::executeTurnDown" ref="26b7ba8981d08d594b0c37617aa85277" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::executeTurnDown           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ 
+</div>
+</div><p>
+<a class="anchor" name="d8415a221140a08a9383a595336cdf69"></a><!-- doxytag: member="SCodeMachine::executeTurnLeft" ref="d8415a221140a08a9383a595336cdf69" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::executeTurnLeft           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO 
+</div>
+</div><p>
+<a class="anchor" name="d48065e7bf42eef9e3a0f81fbb17f301"></a><!-- doxytag: member="SCodeMachine::executeTurnRight" ref="d48065e7bf42eef9e3a0f81fbb17f301" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::executeTurnRight           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO 
+</div>
+</div><p>
+<a class="anchor" name="f2867d02414db096844e4801f9895650"></a><!-- doxytag: member="SCodeMachine::executeTurnUp" ref="f2867d02414db096844e4801f9895650" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::executeTurnUp           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ 
+</div>
+</div><p>
+<a class="anchor" name="3c851e80ec35cbebeb78ec8ceed8c5ca"></a><!-- doxytag: member="SCodeMachine::getPointedInstruction" ref="3c851e80ec35cbebeb78ec8ceed8c5ca" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">SInstructions</a> SCodeMachine::getPointedInstruction           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>instrukcja wskazywana przez głowicę </dd></dl>
+
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/core/<a class="el" href="scodemachine_8h-source.html">scodemachine.h</a><li>src/core/<a class="el" href="scodemachine_8cpp.html">scodemachine.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:49 2009 dla Projekt Salvador programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

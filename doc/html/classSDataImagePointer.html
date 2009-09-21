@@ -1,10 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Salvador Project: Dokumentacja klasy SDataImagePointer</title>
-<link href="doxygen.css" rel="stylesheet" type="text/css">
+<title>Projekt Salvador: Dokumentacja klasy SDataImagePointer</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
-<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
@@ -33,6 +33,7 @@ Diagram dziedziczenia dla SDataImagePointer</div>
 
 <p><center><img src="classSDataImagePointer.png" usemap="#SDataImagePointer_map" border="0" alt=""></center>
 <map name="SDataImagePointer_map">
+<area href="classSAbstractPointer.html" alt="SAbstractPointer" shape="rect" coords="0,0,119,24">
 </map>
 </div>
 
@@ -40,6 +41,10 @@ Diagram dziedziczenia dla SDataImagePointer</div>
 <a href="classSDataImagePointer-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataImagePointer.html#2ffb42e886f442004cd21617a6ea034d">SDataImagePointer</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataImagePointer.html#8f96c4dc8dc25e0ff5cccb2e693ffcc8">~SDataImagePointer</a> ()</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataImagePointer.html#87bb92d4bb0336b4723c64d03df9987c">moveLeft</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">przesuwa głowicę maszyny danych w lewo  <a href="#87bb92d4bb0336b4723c64d03df9987c"></a><br></td></tr>
@@ -59,7 +64,46 @@ int&nbsp;</td><td class="memItemRight" valign="bottom"><b>zeroCellValue</b> ()</
 <hr><a name="_details"></a><h2>Opis szczegółowy</h2>
 głowica maszyny obsługująca obraz danych 
 <p>
-Obiekt klasy <a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a> jest swoistym wskaźnikiem na daną komórkę obrazu danych. Maszyna danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>) wykorzystuje głowicę, by dzięki niej odczytywać wartości z obrazu danych (SDataImage) oraz by na tym obrazie zapisywać nowe wartości. Dodatkowo, maszyna kodu (SCodeMachine) może zlecić wykonanie instrukcji przesunięcia dowolnej głowicy (czyli również głowicę obrazu danych, <a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>, druga głowica, SCodeImagePointer, należy do maszyny kodu, SCodeMachine). <hr><h2>Dokumentacja funkcji składowych</h2>
+Obiekt klasy <a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a> jest swoistym wskaźnikiem na daną komórkę obrazu danych. Maszyna danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>) wykorzystuje głowicę, by dzięki niej odczytywać wartości z obrazu danych (SDataImage) oraz by na tym obrazie zapisywać nowe wartości. <hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="2ffb42e886f442004cd21617a6ea034d"></a><!-- doxytag: member="SDataImagePointer::SDataImagePointer" ref="2ffb42e886f442004cd21617a6ea034d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDataImagePointer::SDataImagePointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor głowicy obrazu danych. Nie robi nic szczególnego. 
+</div>
+</div><p>
+<a class="anchor" name="8f96c4dc8dc25e0ff5cccb2e693ffcc8"></a><!-- doxytag: member="SDataImagePointer::~SDataImagePointer" ref="8f96c4dc8dc25e0ff5cccb2e693ffcc8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDataImagePointer::~SDataImagePointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor głowicy obrazu danych. Nie robi nic szczególnego. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
 <a class="anchor" name="87bb92d4bb0336b4723c64d03df9987c"></a><!-- doxytag: member="SDataImagePointer::moveLeft" ref="87bb92d4bb0336b4723c64d03df9987c" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -69,7 +113,7 @@ Obiekt klasy <a class="el" href="classSDataImagePointer.html" title="głowica ma
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -91,7 +135,7 @@ Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w lewo, następnie g�
           <td>(</td>
           <td class="paramname">          </td>
           <td>&nbsp;)&nbsp;</td>
-          <td width="100%"></td>
+          <td></td>
         </tr>
       </table>
 </div>
@@ -105,10 +149,10 @@ Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w prawo, następnie g
 </div>
 </div><p>
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li>src/core/<a class="el" href="sdataimagepointer_8h-source.html">sdataimagepointer.h</a><li>src/core/sdataimagepointer.cpp</ul>
+<li>src/core/<a class="el" href="sdataimagepointer_8h-source.html">sdataimagepointer.h</a><li>src/core/<a class="el" href="sdataimagepointer_8cpp.html">sdataimagepointer.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:34 2008 dla Salvador Project programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:49 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
-<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
 </html>

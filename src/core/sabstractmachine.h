@@ -14,12 +14,12 @@
 // STL
 
 /** \file sabstractmachine.h
- * \brief plik nagłówkowy klasy SAbstractMachine
+ * \brief Plik nagłówkowy klasy SAbstractMachine
  *
  * Plik zawiera definicję klasy SAbstractMachine. Ma ona zdefiniowane podstawowe operacje na maszynach, dziedziczą po niej dwie najważniejsze klasy projektu: SDataMachine i SCodeMachine.
  */
 
-/** \brief abstrakcyjna maszyna
+/** \brief Abstrakcyjna maszyna
  *
  * Po tej klasie dziedzicza dwie klasy (SCodeMachine, SDataMachine, jedne z najważniejszych w projekcie).
  */
@@ -35,17 +35,12 @@ class SAbstractMachine
 
 		SAbstractMachine();
 		virtual ~SAbstractMachine();
-
-		virtual void clearStats() = 0; // czyści logi
+// może clearPointer zrobić jako czysto wirtualną??
+//		virtual void clearPointer() = 0; // ustawia głowicę na początkową komórkę
 		void clearPointer(); // ustawia głowicę na początkową komórkę
 
-		void pushPointer(); // pointer->moveForward(1)
+		virtual void pushPointer() = 0; // pointer->moveForward(1)
 
-	// development:
-
-		void __dev__grid_printConsole(); // TESTOWE // wyswietlenie siatki
-		void __dev__pointer_printConsole(); // TESTOWE // wyświetlanie głowicy
-		void __dev__printConsole(); // TESTOWE
 };
 
 #endif

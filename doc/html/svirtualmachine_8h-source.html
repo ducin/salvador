@@ -1,16 +1,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Salvador Project: Plik źródłowy src/core/svirtualmachine.h</title>
-<link href="doxygen.css" rel="stylesheet" type="text/css">
+<title>Projekt Salvador: Plik źródłowy src/core/svirtualmachine.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
-<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
       <li><a href="annotated.html"><span>Klasy</span></a></li>
       <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&nbsp;plików</span></a></li>
     </ul>
   </div>
 <h1>src/core/svirtualmachine.h</h1><a href="svirtualmachine_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef VIRTUAL_MACHINE</span>
@@ -20,50 +26,63 @@
 <a name="l00006"></a>00006 <span class="comment">// salvador core</span>
 <a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="senums_8h.html" title="wszystkie enumeracje">senums.h</a>"</span>
 <a name="l00008"></a>00008 <span class="preprocessor">#include "<a class="code" href="sdatamachine_8h.html" title="plik nagłówkowy klasy SDataMachine">sdatamachine.h</a>"</span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="sdatastats_8h.html" title="plik nagłówkowy klasy SDataStats">sdatastats.h</a>"</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include "<a class="code" href="scodemachine_8h.html" title="plik nagłówkowy klasy SCodeMachine">scodemachine.h</a>"</span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include "<a class="code" href="scodestats_8h.html" title="plik nagłówkowy klasy SCodeStats">scodestats.h</a>"</span>
-<a name="l00012"></a>00012 
-<a name="l00013"></a>00013 <span class="comment">// C++</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include "<a class="code" href="scodemachine_8h.html" title="plik nagłówkowy klasy SCodeMachine">scodemachine.h</a>"</span>
+<a name="l00010"></a>00010 
+<a name="l00011"></a>00011 <span class="comment">// C++</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014 <span class="comment">// STL</span>
 <a name="l00015"></a>00015 
-<a name="l00016"></a>00016 <span class="comment">// STL</span>
-<a name="l00017"></a>00017 
-<a name="l00040"></a><a class="code" href="classSVirtualMachine.html">00040</a> <span class="keyword">class </span><a class="code" href="classSVirtualMachine.html" title="wirtualna maszyna Salvadora - najbardziej &amp;quot;zewnętrzna&amp;quot; klasa całego projektu...">SVirtualMachine</a>
-<a name="l00041"></a>00041 {
+<a name="l00038"></a><a class="code" href="classSVirtualMachine.html">00038</a> <span class="keyword">class </span><a class="code" href="classSVirtualMachine.html" title="wirtualna maszyna Salvadora - najbardziej &amp;quot;zewnętrzna&amp;quot; klasa całego projektu...">SVirtualMachine</a>
+<a name="l00039"></a>00039 {
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041         <span class="keyword">private</span>:
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043         <span class="keyword">private</span>:
-<a name="l00044"></a>00044 
-<a name="l00045"></a>00045                 <a class="code" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a> *data_machine; <span class="comment">// obiekt, maszyna danych</span>
-<a name="l00046"></a>00046                 SCodeMachine *code_machine; <span class="comment">// obiekt, maszyna kodu</span>
-<a name="l00047"></a>00047                 <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> state; <span class="comment">// enum, w jakim stanie jest maszyna</span>
+<a name="l00043"></a>00043                 <a class="code" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a> *data_machine; <span class="comment">// obiekt, maszyna danych</span>
+<a name="l00044"></a>00044                 <a class="code" href="classSImage.html" title="rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie">SImage</a> *getDataImage(); <span class="comment">// </span>
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046                 <a class="code" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a> *code_machine; <span class="comment">// obiekt, maszyna kodu</span>
+<a name="l00047"></a>00047                 <a class="code" href="classSImage.html" title="rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie">SImage</a> *getCodeImage(); <span class="comment">// </span>
 <a name="l00048"></a>00048 
-<a name="l00049"></a>00049                 <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> prepareToExecute();
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051                 <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> getState(); <span class="comment">// return: stan maszyny</span>
-<a name="l00052"></a>00052                 <span class="keywordtype">void</span> setState(<a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> state);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054         <span class="keyword">public</span>:
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056                 <a class="code" href="classSVirtualMachine.html" title="wirtualna maszyna Salvadora - najbardziej &amp;quot;zewnętrzna&amp;quot; klasa całego projektu...">SVirtualMachine</a>(std::string filename, <a class="code" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c" title="źródła kodu wirtualnych maszyn.">SMachineSources</a> src_type); <span class="comment">// konstruktor, params: istniejący plik graficzny bmp</span>
-<a name="l00057"></a>00057                 ~<a class="code" href="classSVirtualMachine.html" title="wirtualna maszyna Salvadora - najbardziej &amp;quot;zewnętrzna&amp;quot; klasa całego projektu...">SVirtualMachine</a>(); <span class="comment">// destruktor</span>
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059                 <span class="comment">// TODO zastanowic sie jaki typ ma zwracac</span>
-<a name="l00060"></a>00060                 <span class="keywordtype">void</span> executeAllInstr(); <span class="comment">// wykonywanie instrukcji do końca działania programu</span>
-<a name="l00061"></a>00061                 <span class="keywordtype">void</span> executeInstr(); <span class="comment">// wykonanie jednej instrukcji</span>
-<a name="l00062"></a>00062 
-<a name="l00063"></a>00063                 <a class="code" href="classSImage.html" title="rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie">SImage</a> *getCodeImage(); <span class="comment">// </span>
-<a name="l00064"></a>00064                 SCodeStats *getCodeStats(); <span class="comment">// </span>
-<a name="l00065"></a>00065 
-<a name="l00066"></a>00066                 <a class="code" href="classSImage.html" title="rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie">SImage</a> *getDataImage(); <span class="comment">// </span>
-<a name="l00067"></a>00067                 <a class="code" href="classSDataStats.html" title="informacje o działaniu maszyny danych">SDataStats</a> *getDataStats(); <span class="comment">// </span>
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 };
-<a name="l00070"></a>00070 
-<a name="l00071"></a>00071 <span class="preprocessor">#endif</span>
+<a name="l00049"></a>00049                 <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> state; <span class="comment">// enum, w jakim stanie jest maszyna</span>
+<a name="l00050"></a>00050                 <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> getState(); <span class="comment">// return: stan maszyny</span>
+<a name="l00051"></a>00051                 <span class="keywordtype">void</span> setState(<a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a>);
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053                 <a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a> prepareToExecute();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055         <span class="keyword">public</span>:
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057                 <a class="code" href="classSVirtualMachine.html" title="wirtualna maszyna Salvadora - najbardziej &amp;quot;zewnętrzna&amp;quot; klasa całego projektu...">SVirtualMachine</a>(std::string, <a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043" title="rodzaje kodów wirtualnych maszyn">SCodeTypes</a>); <span class="comment">// konstruktor, params: istniejący plik graficzny bmp</span>
+<a name="l00058"></a>00058                 ~<a class="code" href="classSVirtualMachine.html" title="wirtualna maszyna Salvadora - najbardziej &amp;quot;zewnętrzna&amp;quot; klasa całego projektu...">SVirtualMachine</a>(); <span class="comment">// destruktor</span>
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060                 <span class="keywordtype">bool</span> isRunning(); <span class="comment">// czy maszyna działa (sprawdzany stan maszyny)</span>
+<a name="l00061"></a>00061                 <span class="keywordtype">bool</span> isReady(); <span class="comment">// czy maszyna jest gotowa do rozpoczęcia pracy</span>
+<a name="l00062"></a>00062                 <span class="keywordtype">void</span> startMachine();
+<a name="l00063"></a>00063                 <span class="keywordtype">void</span> restartMachine();
+<a name="l00064"></a>00064                 <span class="keywordtype">void</span> stopMachine();
+<a name="l00065"></a>00065                 
+<a name="l00066"></a>00066                 <span class="keywordtype">void</span> clean(); <span class="comment">// czyszczenie danych maszyny (zwalnianie pamięci pod obiekty)</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068                 <span class="comment">// TODO zastanowic sie jaki typ ma zwracac</span>
+<a name="l00069"></a>00069                 <span class="keywordtype">void</span> <a class="code" href="classSVirtualMachine.html#f3874f10dac15f27b23dc4b976271413">executeAllInstr</a>(); <span class="comment">// wykonywanie instrukcji do końca działania programu</span>
+<a name="l00070"></a>00070                 <span class="keywordtype">void</span> executeInstr(); <span class="comment">// wykonanie jednej instrukcji</span>
+<a name="l00071"></a>00071                 <span class="keywordtype">bool</span> revokeInstr(); <span class="comment">// cofniecie jednej instrukcji</span>
+<a name="l00072"></a>00072                 <span class="keywordtype">bool</span> goBack(<span class="keywordtype">int</span>);
+<a name="l00073"></a>00073 
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075         <span class="comment">// development:</span>
+<a name="l00076"></a>00076 
+<a name="l00077"></a>00077                 std::string __dev__transformBinaryStateToString(<a class="code" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e" title="stany wirtualnej maszyny Salvadora (SVirtualMachine)">SMachineStates</a>);
+<a name="l00078"></a>00078                 <span class="keywordtype">void</span> __dev__printConsole();
+<a name="l00079"></a>00079                 <span class="keywordtype">void</span> __dev__destroyGrid();
+<a name="l00080"></a>00080                 <span class="keywordtype">void</span> <a class="code" href="classSVirtualMachine.html#d07f353daaf626f5efeb8bd34818db75" title="symulacja działania wirtualnej maszyny">__dev__runProgram</a>(); <span class="comment">// TESTOWE // testowa metoda wykonywania programu dla maszyny, która wczytała już swój kod</span>
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082 };
+<a name="l00083"></a>00083 
+<a name="l00084"></a>00084 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
-<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
 </html>

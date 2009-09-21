@@ -30,11 +30,8 @@ class SDataImagePointer : public SAbstractPointer
 		SDataImagePointer();
 		~SDataImagePointer();
 
-		int moveLeft(); // <<
-		int moveRight(); // >>
-		int increaseCellValue(); // S
-		int decreaseCellValue(); // P
-		int zeroCellValue(); // Z
+		void moveLeft(); // <<
+		void moveRight(); // >>
 
 		// jakaś metoda do pobrania wartości wskazywanej przez głowicę: SDataValue readValue();
 

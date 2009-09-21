@@ -1,0 +1,93 @@
+\hypertarget{classSAbstractMachine}{
+\section{Dokumentacja klasy SAbstractMachine}
+\label{classSAbstractMachine}\index{SAbstractMachine@{SAbstractMachine}}
+}
+Abstrakcyjna maszyna.  
+
+
+{\tt \#include $<$sabstractmachine.h$>$}
+
+Diagram dziedziczenia dla SAbstractMachine:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSAbstractMachine}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSAbstractMachine_f0ffb270de2ea44e89123a873bc5660a}{SAbstractMachine} ()
+\item 
+\hypertarget{classSAbstractMachine_2c4c79bd629a2961fb520785ce3adf4b}{
+virtual \hyperlink{classSAbstractMachine_2c4c79bd629a2961fb520785ce3adf4b}{$\sim$SAbstractMachine} ()}
+\label{classSAbstractMachine_2c4c79bd629a2961fb520785ce3adf4b}
+
+\begin{CompactList}\small\item\em Destruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje się niszczeniem głowic, tym zajmują się destruktory klas dziedziczących po \hyperlink{classSAbstractMachine}{SAbstractMachine} (\hyperlink{classSCodeMachine}{SCodeMachine}, \hyperlink{classSDataMachine}{SDataMachine}). \item\end{CompactList}\item 
+void \hyperlink{classSAbstractMachine_87766a003773869a3438e92739d7c9a1}{clearPointer} ()
+\begin{CompactList}\small\item\em ustaw współrzędne głowicy na domyślne \mbox{[}\mbox{[}i kierunek\mbox{]}\mbox{]} \item\end{CompactList}\item 
+\hypertarget{classSAbstractMachine_65a2d69dfa18ead7e26bf8ace4eb356d}{
+void \textbf{pushPointer} ()}
+\label{classSAbstractMachine_65a2d69dfa18ead7e26bf8ace4eb356d}
+
+\item 
+\hypertarget{classSAbstractMachine_f96c7b89921887960bc83516e7784a34}{
+void \textbf{\_\-\_\-dev\_\-\_\-grid\_\-printConsole} ()}
+\label{classSAbstractMachine_f96c7b89921887960bc83516e7784a34}
+
+\item 
+\hypertarget{classSAbstractMachine_fea2851366c3564f67e547b102c195e9}{
+void \textbf{\_\-\_\-dev\_\-\_\-pointer\_\-printConsole} ()}
+\label{classSAbstractMachine_fea2851366c3564f67e547b102c195e9}
+
+\item 
+\hypertarget{classSAbstractMachine_10fea0faba154b2254a33a0ccf865444}{
+void \textbf{\_\-\_\-dev\_\-\_\-printConsole} ()}
+\label{classSAbstractMachine_10fea0faba154b2254a33a0ccf865444}
+
+\end{CompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}{
+\hyperlink{classSAbstractPointer}{SAbstractPointer} $\ast$ \textbf{pointer}}
+\label{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}
+
+\item 
+\hypertarget{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}{
+\hyperlink{classSAbstractGrid}{SAbstractGrid} $\ast$ \textbf{grid}}
+\label{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Abstrakcyjna maszyna. 
+
+Po tej klasie dziedzicza dwie klasy (\hyperlink{classSCodeMachine}{SCodeMachine}, \hyperlink{classSDataMachine}{SDataMachine}, jedne z najważniejszych w projekcie). 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSAbstractMachine_f0ffb270de2ea44e89123a873bc5660a}{
+\index{SAbstractMachine@{SAbstractMachine}!SAbstractMachine@{SAbstractMachine}}
+\index{SAbstractMachine@{SAbstractMachine}!SAbstractMachine@{SAbstractMachine}}
+\subsubsection[{SAbstractMachine}]{\setlength{\rightskip}{0pt plus 5cm}SAbstractMachine::SAbstractMachine ()}}
+\label{classSAbstractMachine_f0ffb270de2ea44e89123a873bc5660a}
+
+
+Konstruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje się tworzeniem głowic, tym zajmują się konstruktory klas dziedziczących po \hyperlink{classSAbstractMachine}{SAbstractMachine} (\hyperlink{classSCodeMachine}{SCodeMachine}, \hyperlink{classSDataMachine}{SDataMachine}). 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSAbstractMachine_87766a003773869a3438e92739d7c9a1}{
+\index{SAbstractMachine@{SAbstractMachine}!clearPointer@{clearPointer}}
+\index{clearPointer@{clearPointer}!SAbstractMachine@{SAbstractMachine}}
+\subsubsection[{clearPointer}]{\setlength{\rightskip}{0pt plus 5cm}void SAbstractMachine::clearPointer ()}}
+\label{classSAbstractMachine_87766a003773869a3438e92739d7c9a1}
+
+
+ustaw współrzędne głowicy na domyślne \mbox{[}\mbox{[}i kierunek\mbox{]}\mbox{]} 
+
+Ustawia współrzędne głowicy na wartości domyślne. Wewnątrz klasy \hyperlink{classSAbstractMachine}{SAbstractMachine} nie zostaje tworzony żaden obiekt głowicy (ani \hyperlink{classSCodeImagePointer}{SCodeImagePointer}, ani \hyperlink{classSDataImagePointer}{SDataImagePointer}). Są one tworzone w konstruktorach klas dziedziczących po \hyperlink{classSAbstractMachine}{SAbstractMachine}, czyli odpowiednio: \hyperlink{classSCodeMachine}{SCodeMachine} lub \hyperlink{classSDataMachine}{SDataMachine}. Jakoże obie głowice dziedziczą po klasie \hyperlink{classSAbstractPointer}{SAbstractPointer} (zdefiniowane są w niej współdzędne), możliwe jest użycie wskaźnika na głowicę (teoretycznie bez jej utworzenia, przynajmniej w tej klasie) 
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{sabstractmachine_8h}{sabstractmachine.h}\item 
+src/core/\hyperlink{sabstractmachine_8cpp}{sabstractmachine.cpp}\end{CompactItemize}

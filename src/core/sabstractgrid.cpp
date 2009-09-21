@@ -15,17 +15,32 @@
 // STL
 // none
 
+/** \file sabstractgrid.cpp
+ * \brief Plik z kodem źródłowym klasy SAbstractGrid
+ *
+ * Plik zawiera kod źródłowy klasy SAbstractGrid.
+ */
+
+/**
+ * Konstruktor abstrakcyjnej siatki. Nie robi nic szczególnego.
+ */
 SAbstractGrid::SAbstractGrid()
 {
 	debug("CONSTRUCTOR abstract-grid START\n");
 	debug("CONSTRUCTOR abstract-grid END\n");
 }
 
+/**
+ * Destruktor abstrakcyjnej siatki. Nie robi nic szczególnego.
+ */
 SAbstractGrid::~SAbstractGrid()
 {
 	debug("DESTRUCTOR abstract-grid START\n");
 	debug("DESTRUCTOR abstract-grid END\n");
 }
 
-
+bool SAbstractGrid::pointInsideGrid(int X, int Y)
+{
+	return ((X <= size_x) && (Y <= size_y));
+}
 

@@ -1,16 +1,22 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Salvador Project: Plik źródłowy src/core/sabstractpointer.h</title>
-<link href="doxygen.css" rel="stylesheet" type="text/css">
+<title>Projekt Salvador: Plik źródłowy src/core/sabstractpointer.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
-<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
       <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
       <li><a href="annotated.html"><span>Klasy</span></a></li>
       <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&nbsp;plików</span></a></li>
     </ul>
   </div>
 <h1>src/core/sabstractpointer.h</h1><a href="sabstractpointer_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef S_ABSTRACT_POINTER</span>
@@ -25,34 +31,48 @@
 <a name="l00011"></a>00011 
 <a name="l00012"></a>00012 <span class="comment">// STL</span>
 <a name="l00013"></a>00013 
-<a name="l00020"></a>00020 <span class="keyword">class </span>SAbstractPointer
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023         <span class="keyword">protected</span>:
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025                 <span class="keywordtype">int</span> coord_x, coord_y; <span class="comment">// współrzędne na które wskazuje głowica</span>
-<a name="l00026"></a>00026                 <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a> direction; <span class="comment">// kierunek poruszania się głowicy</span>
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028                 <span class="keywordtype">void</span> setDirection(<a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a>);
-<a name="l00029"></a>00029 
-<a name="l00030"></a>00030                 <span class="comment">// w jaki sposób głowica powinna mieć dostęp do samego rysunku</span>
+<a name="l00024"></a><a class="code" href="classSAbstractPointer.html">00024</a> <span class="keyword">class </span><a class="code" href="classSAbstractPointer.html" title="abstrakcyjna głowica maszyn">SAbstractPointer</a>
+<a name="l00025"></a>00025 {
+<a name="l00026"></a>00026         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>;
+<a name="l00027"></a>00027         <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029         <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> INIT_coord_x = 0, INIT_coord_y = 0;
+<a name="l00030"></a>00030         <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a> INIT_direction = <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf05c98bd9a958d03d67629873efc6e9676">dir_right</a>;
 <a name="l00031"></a>00031 
-<a name="l00032"></a>00032         <span class="keyword">public</span>:
+<a name="l00032"></a>00032         <span class="keyword">protected</span>:
 <a name="l00033"></a>00033 
-<a name="l00034"></a>00034                 SAbstractPointer();
-<a name="l00035"></a>00035                 <span class="keyword">virtual</span> ~SAbstractPointer();
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037                 <span class="keywordtype">void</span> clearCoords();
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039                 <span class="keywordtype">void</span> moveForward(<span class="keywordtype">int</span>);
+<a name="l00034"></a>00034                 <span class="keywordtype">int</span> coord_x, coord_y; <span class="comment">// współrzędne na które wskazuje głowica</span>
+<a name="l00035"></a>00035                 <span class="keywordtype">int</span> getCoordX();
+<a name="l00036"></a>00036                 <span class="keywordtype">int</span> getCoordY();
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038                 <a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a> direction; <span class="comment">// kierunek poruszania się głowicy</span>
+<a name="l00039"></a>00039                 <span class="keywordtype">void</span> setDirection(<a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a>);
 <a name="l00040"></a>00040 
-<a name="l00041"></a>00041                 <span class="keywordtype">void</span> __dev__printConsoleCoords();
-<a name="l00042"></a>00042 };
-<a name="l00043"></a>00043 
-<a name="l00044"></a>00044 <span class="preprocessor">#endif</span>
+<a name="l00041"></a>00041                 <span class="comment">// w jaki sposób głowica powinna mieć dostęp do samego rysunku</span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         <span class="keyword">public</span>:
+<a name="l00044"></a>00044 
+<a name="l00045"></a>00045                 <a class="code" href="classSAbstractPointer.html#9281c3dba0da68460fa87bd17bd768b4">SAbstractPointer</a>();
+<a name="l00046"></a>00046                 <span class="keyword">virtual</span> <a class="code" href="classSAbstractPointer.html#9973354ecf610b3d48170dd70f0b22ce">~SAbstractPointer</a>();
+<a name="l00047"></a>00047 
+<a name="l00048"></a>00048                 <span class="keywordtype">void</span> clear();
+<a name="l00049"></a>00049 
+<a name="l00050"></a>00050                 <span class="keywordtype">void</span> moveForward(<span class="keywordtype">int</span>);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052         <span class="comment">// development:</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054                 std::string __dev__transformBinaryDirectionToString(<a class="code" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0" title="kierunki głowicy maszyny kodu">SDirections</a>);
+<a name="l00055"></a>00055 
+<a name="l00056"></a>00056                 <span class="keywordtype">void</span> __dev__printConsoleCoords();
+<a name="l00057"></a>00057                 <span class="keywordtype">int</span> __dev__getCoordX();
+<a name="l00058"></a>00058                 <span class="keywordtype">int</span> __dev__getCoordY();
+<a name="l00059"></a>00059 
+<a name="l00060"></a>00060 };
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:33 2008 dla Salvador Project programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
-<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
 </html>

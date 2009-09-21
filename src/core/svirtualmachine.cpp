@@ -14,8 +14,19 @@
 #include <fstream>
 #include <string>
 
-// STL
+// Qt
+#include <QString>
+#include <QImage>
 
+/** \file svirtualmachine.cpp
+ * \brief Plik z kodem źródłowym klasy SVirtualMachine
+ *
+ * Plik zawiera kod źródłowy klasy SVirtualMachine.
+ */
+
+/**
+ * Konstruktor wirtualnej maszyny Salvadora.
+ */
 SVirtualMachine::SVirtualMachine(std::string filename, SCodeTypes CODE_TYPE)
 // constructor
 {
@@ -36,10 +47,11 @@ SVirtualMachine::SVirtualMachine(std::string filename, SCodeTypes CODE_TYPE)
 
 	prepareToExecute();
 	debug("CONSTRUCTOR - virtual-machine END\n");
-
-// TODO parametr filename
 }
 
+/**
+ * Destruktor wirtualnej maszyny Salvadora.
+ */
 SVirtualMachine::~SVirtualMachine()
 // destructor
 {
@@ -81,17 +93,10 @@ void SVirtualMachine::stopMachine()
  * Metoda używana w celu przygotowania wirtualnej maszyny do uruchomienia. Maszyna mogła być w trakcie działania, mogła zakończyć działanie lub być gotowa do rozpoczęcia pracy. Bez względu na dotychczasowy stan, 
  * \return stan w jakim znajdowała się maszyna (SMachineStates)
  */
-SMachineStates SVirtualMachine::prepareToExecute()
+void SVirtualMachine::prepareToExecute()
 {
-	// zapamiętaj dotychczasowy stan
-	SMachineStates old = getState();
-
-	// wyczyść logi obu pod-maszyn
-	code_machine->clearStats();
-	data_machine->clearStats();
-
 	// wyczyść obraz danych
-	data_machine->clearImage();
+	data_machine->clearData();
 
 	// ustaw wskaźniki obu pod-maszyn na inicjalne
 	code_machine->clearPointer();
@@ -100,8 +105,7 @@ SMachineStates SVirtualMachine::prepareToExecute()
 	// ustaw stan maszyny na "gotowy"
 	setState(state_ready);
 
-	// zwróć stan maszyny w którym znajdowała się dotychczas
-	return old;
+	step = 0;
 }
 
 //=============================================================================
@@ -123,6 +127,36 @@ SMachineStates SVirtualMachine::getState()
 void SVirtualMachine::setState(SMachineStates state)
 {
 	this->state = state;
+}
+
+//=========================================================
+
+void SVirtualMachine::setVerbosityRecursively(bool verbosity)
+{
+	verbose = verbosity;
+	code_machine->setVerbosity(verbosity);
+	code_machine->setVerbosity(verbosity);
+}
+
+/**
+ * Sprawdza, czy maszyna ma włączony tryb gadatliwy
+ * @return tryb gadatliwy
+ */
+bool SVirtualMachine::isVerbose()
+{
+	return verbose;
+}
+
+/**
+ * Przełącza tryb gadatliwy na przeciwny. Przełącza tryb we wszystkich podrzędnych obiektach.
+ */
+void SVirtualMachine::toggleVerbosity()
+{
+	if (verbose) {
+		setVerbosityRecursively(false);
+	} else {
+		setVerbosityRecursively(true);
+	}
 }
 
 //=============================================================================
@@ -179,27 +213,43 @@ void SVirtualMachine::executeInstr()
 			// else zignoruj całość (tak jakbys wykonywał nulla)
 			break;
 		case instr_code_break:
-			setState(state_finished);
+			finish();
 			break;
 	}
-	if (isRunning())// jeśli maszyna nadal działa, przesuń głowicę maszyny kodu do przodu
+	if (isRunning()) // jeśli maszyna nadal działa, przesuń głowicę maszyny kodu do przodu
 		code_machine->pushPointer();
-}
-
-bool SVirtualMachine::revokeInstr()
-{
-//
-}
-
-bool SVirtualMachine::goBack(int count)
-{
-//
+	step++;
 }
 
 void SVirtualMachine::clean()
 {
-    code_machine->__dev__destroyGrid();
-    data_machine->__dev__destroyGrid();
+	code_machine->__dev__destroyGrid();
+	data_machine->__dev__destroyGrid();
+}
+
+/**
+ * Metoda kończy działanie maszyny wirtualnej Salvadora (stan zmieniony na "maszyna zakończyła działanie").
+ */
+void SVirtualMachine::finish()
+{
+	setState(state_finished);
+}
+
+/*==================================================================*/
+/*                                                                  */
+/*                          MERGING PART                            */
+/*                                                                  */
+/*==================================================================*/
+
+bool SVirtualMachine::mergeGridWithImage(std::string filename)
+{
+	// zmienna robocza przechowująca ścieżkę do pliku z kodem
+	QString QSTR_filename(filename.c_str());
+	
+	// stworzenie obiektu obrazu kodu, na który zostanie nałożona siatka instrukcji
+	QImage *image = new QImage(QSTR_filename);
+	
+//	for(
 }
 
 /*==================================================================*/
@@ -231,7 +281,8 @@ void SVirtualMachine::__dev__destroyGrid()
 
 void SVirtualMachine::__dev__printConsole()
 {
-	std::cout << "[STATE: " << __dev__transformBinaryStateToString(getState()) << "]" << std::endl;
+//	std::cout << "[STATE: " << __dev__transformBinaryStateToString(getState()) << "]" << std::endl;
+	std::cout << "krok: " << step << "; ";
 	code_machine->__dev__printConsole();
 	data_machine->__dev__printConsole();
 }

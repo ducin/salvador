@@ -32,13 +32,9 @@ class SAbstractPointer
 	protected:
 
 		int coord_x, coord_y; // współrzędne na które wskazuje głowica
-		int getCoordX();
-		int getCoordY();
 
 		SDirections direction; // kierunek poruszania się głowicy
 		void setDirection(SDirections);
-
-		// w jaki sposób głowica powinna mieć dostęp do samego rysunku
 
 	public:
 
@@ -47,6 +43,9 @@ class SAbstractPointer
 
 		void clear();
 
+		int getCoordX();
+		int getCoordY();
+
 		void moveForward(int);
 
 	// development:
@@ -54,8 +53,6 @@ class SAbstractPointer
 		std::string __dev__transformBinaryDirectionToString(SDirections);
 
 		void __dev__printConsoleCoords();
-		int __dev__getCoordX();
-		int __dev__getCoordY();
 
 };
 

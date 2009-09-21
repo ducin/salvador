@@ -20,14 +20,49 @@ Diagram dziedziczenia dla SDataMachine:\begin{figure}[H]
 \begin{CompactList}\small\item\em konstruktor \item\end{CompactList}\item 
 \hyperlink{classSDataMachine_59bc85b25930729cbe3046e81f49f909}{$\sim$SDataMachine} ()
 \begin{CompactList}\small\item\em destruktor \item\end{CompactList}\item 
-\hypertarget{classSDataMachine_705d76e9ab6ba1c7a0a5b73fd6f3cc2b}{
-void \textbf{clearStats} ()}
-\label{classSDataMachine_705d76e9ab6ba1c7a0a5b73fd6f3cc2b}
-
-\item 
 \hypertarget{classSDataMachine_06c12baf5a7a4f50dd8f43cc9794dafd}{
 void \textbf{clearImage} ()}
 \label{classSDataMachine_06c12baf5a7a4f50dd8f43cc9794dafd}
+
+\item 
+\hypertarget{classSDataMachine_3a191be9cab718274d6bd75e01cc2a26}{
+int \textbf{getPointedValue} ()}
+\label{classSDataMachine_3a191be9cab718274d6bd75e01cc2a26}
+
+\item 
+\hypertarget{classSDataMachine_5b46d50c18bec1bcfd5232bec3875fd5}{
+void \textbf{executeTurnLeft} ()}
+\label{classSDataMachine_5b46d50c18bec1bcfd5232bec3875fd5}
+
+\item 
+\hypertarget{classSDataMachine_fb6f52c7f14afa51eed848f354d57924}{
+void \textbf{executeTurnRight} ()}
+\label{classSDataMachine_fb6f52c7f14afa51eed848f354d57924}
+
+\item 
+\hypertarget{classSDataMachine_27c3e6dfe9ac45f9d5eed7c97f96abd8}{
+void \textbf{executeZero} ()}
+\label{classSDataMachine_27c3e6dfe9ac45f9d5eed7c97f96abd8}
+
+\item 
+\hypertarget{classSDataMachine_85832e07e2fb8ae32160fe0c95a487d2}{
+void \textbf{executeSucc} ()}
+\label{classSDataMachine_85832e07e2fb8ae32160fe0c95a487d2}
+
+\item 
+\hypertarget{classSDataMachine_87cfad868b3ea0a0e60f776ad3773678}{
+void \textbf{executePred} ()}
+\label{classSDataMachine_87cfad868b3ea0a0e60f776ad3773678}
+
+\item 
+\hypertarget{classSDataMachine_9680a908e0343de539ffd7a83d17dd11}{
+void \textbf{\_\-\_\-dev\_\-\_\-initGrid} ()}
+\label{classSDataMachine_9680a908e0343de539ffd7a83d17dd11}
+
+\item 
+\hypertarget{classSDataMachine_66c35c3c879c06903f306825ccaade7f}{
+void \textbf{\_\-\_\-dev\_\-\_\-destroyGrid} ()}
+\label{classSDataMachine_66c35c3c879c06903f306825ccaade7f}
 
 \end{CompactItemize}
 
@@ -35,36 +70,34 @@ void \textbf{clearImage} ()}
 \subsection{Opis szczegółowy}
 maszyna danych, obsługująca obraz danych 
 
-Obiekt klasy \hyperlink{classSDataMachine}{SDataMachine} to tzw. \char`\"{}maszyna danych\char`\"{} która obsługuje dane programu wykonywanego przez Wirtualną Maszynę Salvadora. Maszyna ta posiada swój log (dziennik wszystkich wykonywanych operacji) w obiekcie klasy \hyperlink{classSDataStats}{SDataStats} oraz posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu.
-
-Maszyna danych jest częściowo zależna od maszyny kodu, jakoże to ona wymusza na niej wykonywanie określonych operacji. Maszyna kodu odczytuje z obrazu kodu jaka operacja ma zostać wykonana i - jeśli następuje jakaś zmiana w danych programu - zostaje wysłane polecenie do maszyny danych, by te zmiany wprowadzić. 
+Obiekt klasy \hyperlink{classSDataMachine}{SDataMachine} to tzw. \char`\"{}maszyna danych\char`\"{} która obsługuje dane programu wykonywanego przez Wirtualną Maszynę Salvadora. Maszyna ta posiada swój log (dziennik wszystkich wykonywanych operacji) w obiekcie klasy SDataStats oraz posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu. 
 
 \subsection{Dokumentacja konstruktora i destruktora}
 \hypertarget{classSDataMachine_3d894df00bd2283c717a827e27138812}{
 \index{SDataMachine@{SDataMachine}!SDataMachine@{SDataMachine}}
 \index{SDataMachine@{SDataMachine}!SDataMachine@{SDataMachine}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::SDataMachine ()}}
+\subsubsection[{SDataMachine}]{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::SDataMachine ()}}
 \label{classSDataMachine_3d894df00bd2283c717a827e27138812}
 
 
 konstruktor 
 
 Tworzy 3 obiekty, do których ma zapisane referencje:\begin{itemize}
-\item log operacji maszyny danych (\hyperlink{classSDataStats}{SDataStats})\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) Maszyna danych w trakcie swojego działania będzie z nich cały czas korzystać \end{itemize}
+\item log operacji maszyny danych (SDataStats)\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) Maszyna danych w trakcie swojego działania będzie z nich cały czas korzystać \end{itemize}
 \hypertarget{classSDataMachine_59bc85b25930729cbe3046e81f49f909}{
 \index{SDataMachine@{SDataMachine}!$\sim$SDataMachine@{$\sim$SDataMachine}}
 \index{$\sim$SDataMachine@{$\sim$SDataMachine}!SDataMachine@{SDataMachine}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::$\sim$SDataMachine ()}}
+\subsubsection[{$\sim$SDataMachine}]{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::$\sim$SDataMachine ()}}
 \label{classSDataMachine_59bc85b25930729cbe3046e81f49f909}
 
 
 destruktor 
 
 Niszczy 3 obiekty, niezbędne do działania maszyny:\begin{itemize}
-\item log operacji maszyny danych (\hyperlink{classSDataStats}{SDataStats})\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) \end{itemize}
+\item log operacji maszyny danych (SDataStats)\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) \end{itemize}
 
 
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
 \item 
 src/core/\hyperlink{sdatamachine_8h}{sdatamachine.h}\item 
-src/core/sdatamachine.cpp\end{CompactItemize}
+src/core/\hyperlink{sdatamachine_8cpp}{sdatamachine.cpp}\end{CompactItemize}

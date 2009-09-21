@@ -7,8 +7,6 @@
 #include "senums.h"
 #include "sabstractmachine.h"
 
-#include "sdatastats.h"
-#include "sdataimage.h"
 #include "sdataimagepointer.h"
 
 // C++
@@ -32,17 +30,21 @@ class SDataMachine : public SAbstractMachine
 
 	private:
 
-		SDataStats *stats;
-		SDataImage *image;
+		/**
+		 * Pole logiczne definiujące tryb gadatliwy.
+		 */
+		bool verbose;
 
 	public:
 
-		SDataMachine(); // konstruktor z pustym obrazem danych
-		//// SDataMachine(int); // konstruktor z niepustym obrazem danych
+		SDataMachine();
 		~SDataMachine();
 
-		void clearStats();
-		void clearImage();
+		void setVerbosity(bool);
+
+		void pushPointer();
+
+		void clearData();
 
 		int getPointedValue();
 
@@ -57,6 +59,9 @@ class SDataMachine : public SAbstractMachine
 		void __dev__initGrid(); // TESTOWE // stworzenie nowej, pustej siatki
 		void __dev__destroyGrid(); // TESTOWE // niszczenie grida
 
+		void __dev__printConsole();
+		void __dev__printPointer();
+		void __dev__printGrid();
 };
 
 #endif

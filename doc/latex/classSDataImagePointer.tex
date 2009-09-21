@@ -16,6 +16,10 @@ Diagram dziedziczenia dla SDataImagePointer:\begin{figure}[H]
 \subsection*{Metody publiczne}
 \begin{CompactItemize}
 \item 
+\hyperlink{classSDataImagePointer_2ffb42e886f442004cd21617a6ea034d}{SDataImagePointer} ()
+\item 
+\hyperlink{classSDataImagePointer_8f96c4dc8dc25e0ff5cccb2e693ffcc8}{$\sim$SDataImagePointer} ()
+\item 
 int \hyperlink{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}{moveLeft} ()
 \begin{CompactList}\small\item\em przesuwa głowicę maszyny danych w lewo \item\end{CompactList}\item 
 int \hyperlink{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}{moveRight} ()
@@ -40,13 +44,30 @@ int \textbf{zeroCellValue} ()}
 \subsection{Opis szczegółowy}
 głowica maszyny obsługująca obraz danych 
 
-Obiekt klasy \hyperlink{classSDataImagePointer}{SDataImagePointer} jest swoistym wskaźnikiem na daną komórkę obrazu danych. Maszyna danych (\hyperlink{classSDataMachine}{SDataMachine}) wykorzystuje głowicę, by dzięki niej odczytywać wartości z obrazu danych (SDataImage) oraz by na tym obrazie zapisywać nowe wartości. Dodatkowo, maszyna kodu (SCodeMachine) może zlecić wykonanie instrukcji przesunięcia dowolnej głowicy (czyli również głowicę obrazu danych, \hyperlink{classSDataImagePointer}{SDataImagePointer}, druga głowica, SCodeImagePointer, należy do maszyny kodu, SCodeMachine). 
+Obiekt klasy \hyperlink{classSDataImagePointer}{SDataImagePointer} jest swoistym wskaźnikiem na daną komórkę obrazu danych. Maszyna danych (\hyperlink{classSDataMachine}{SDataMachine}) wykorzystuje głowicę, by dzięki niej odczytywać wartości z obrazu danych (SDataImage) oraz by na tym obrazie zapisywać nowe wartości. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSDataImagePointer_2ffb42e886f442004cd21617a6ea034d}{
+\index{SDataImagePointer@{SDataImagePointer}!SDataImagePointer@{SDataImagePointer}}
+\index{SDataImagePointer@{SDataImagePointer}!SDataImagePointer@{SDataImagePointer}}
+\subsubsection[{SDataImagePointer}]{\setlength{\rightskip}{0pt plus 5cm}SDataImagePointer::SDataImagePointer ()}}
+\label{classSDataImagePointer_2ffb42e886f442004cd21617a6ea034d}
+
+
+Konstruktor głowicy obrazu danych. Nie robi nic szczególnego. \hypertarget{classSDataImagePointer_8f96c4dc8dc25e0ff5cccb2e693ffcc8}{
+\index{SDataImagePointer@{SDataImagePointer}!$\sim$SDataImagePointer@{$\sim$SDataImagePointer}}
+\index{$\sim$SDataImagePointer@{$\sim$SDataImagePointer}!SDataImagePointer@{SDataImagePointer}}
+\subsubsection[{$\sim$SDataImagePointer}]{\setlength{\rightskip}{0pt plus 5cm}SDataImagePointer::$\sim$SDataImagePointer ()}}
+\label{classSDataImagePointer_8f96c4dc8dc25e0ff5cccb2e693ffcc8}
+
+
+Destruktor głowicy obrazu danych. Nie robi nic szczególnego. 
 
 \subsection{Dokumentacja funkcji składowych}
 \hypertarget{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}{
 \index{SDataImagePointer@{SDataImagePointer}!moveLeft@{moveLeft}}
 \index{moveLeft@{moveLeft}!SDataImagePointer@{SDataImagePointer}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveLeft ()}}
+\subsubsection[{moveLeft}]{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveLeft ()}}
 \label{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}
 
 
@@ -57,7 +78,7 @@ Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w lewo, następnie g�
 \hypertarget{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}{
 \index{SDataImagePointer@{SDataImagePointer}!moveRight@{moveRight}}
 \index{moveRight@{moveRight}!SDataImagePointer@{SDataImagePointer}}
-\subsubsection{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveRight ()}}
+\subsubsection[{moveRight}]{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveRight ()}}
 \label{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}
 
 
@@ -70,4 +91,4 @@ Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w prawo, następnie g
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
 \item 
 src/core/\hyperlink{sdataimagepointer_8h}{sdataimagepointer.h}\item 
-src/core/sdataimagepointer.cpp\end{CompactItemize}
+src/core/\hyperlink{sdataimagepointer_8cpp}{sdataimagepointer.cpp}\end{CompactItemize}

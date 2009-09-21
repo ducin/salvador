@@ -2,15 +2,71 @@
 \section{Dokumentacja klasy SCodeGrid}
 \label{classSCodeGrid}\index{SCodeGrid@{SCodeGrid}}
 }
-siatka kodu języka Salvador  
+siatka kodu  
 
 
 {\tt \#include $<$scodegrid.h$>$}
 
+Diagram dziedziczenia dla SCodeGrid:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSCodeGrid}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSCodeGrid_e430762ac9855cd60f8d5a57c46428b9}{SCodeGrid} (std::string, \hyperlink{senums_8h_1a2ae45552936d27425f99e1c187b043}{SCodeTypes})
+\item 
+\hyperlink{classSCodeGrid_c150afdd8f27785b5ddf5669a4d90332}{$\sim$SCodeGrid} ()
+\item 
+\hypertarget{classSCodeGrid_c57d52a49a55c91068fe0eb541e721f8}{
+int \textbf{getValueAt} (int, int)}
+\label{classSCodeGrid_c57d52a49a55c91068fe0eb541e721f8}
+
+\item 
+\hypertarget{classSCodeGrid_c01feeae87539b97aed07d67b975f174}{
+void \textbf{\_\-\_\-dev\_\-\_\-printConsole} (int, int)}
+\label{classSCodeGrid_c01feeae87539b97aed07d67b975f174}
+
+\item 
+\hypertarget{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}{
+int \textbf{\_\-\_\-dev\_\-\_\-transformCharToBinary} (char)}
+\label{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}
+
+\item 
+\hypertarget{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}{
+char \textbf{\_\-\_\-dev\_\-\_\-transformBinaryToChar} (int)}
+\label{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}
+
+\end{CompactItemize}
+\subsection*{Metody chronione}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classSCodeGrid_46ed88ad7346788efb14c40cbd836981}{readFromFile} (std::string)
+\item 
+\hypertarget{classSCodeGrid_f15ba156433f88a40887e5ba72d9201a}{
+void \textbf{constructGrid} ()}
+\label{classSCodeGrid_f15ba156433f88a40887e5ba72d9201a}
+
+\item 
+\hypertarget{classSCodeGrid_6bd4c1bf841bd09c2ffb2e019c08b4ed}{
+void \textbf{destructGrid} ()}
+\label{classSCodeGrid_6bd4c1bf841bd09c2ffb2e019c08b4ed}
+
+\end{CompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSCodeGrid_445b4bd8cca6ddb7100afa621f5722b0}{
+\hyperlink{senums_8h_b1c3fa9dccd3f8afa81e14a98d9a7d1e}{SInstructions} $\ast$$\ast$ \textbf{instruction\_\-grid}}
+\label{classSCodeGrid_445b4bd8cca6ddb7100afa621f5722b0}
+
+\end{CompactItemize}
 
 
 \subsection{Opis szczegółowy}
-siatka kodu języka Salvador 
+siatka kodu 
 
 2 cele:
 
@@ -18,7 +74,36 @@ siatka kodu języka Salvador
 \item testowanie (development)\item nakładanie na obrazek siatki kodu (celem stworzenia obrazka zawierającego program) \end{itemize}
 
 
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSCodeGrid_e430762ac9855cd60f8d5a57c46428b9}{
+\index{SCodeGrid@{SCodeGrid}!SCodeGrid@{SCodeGrid}}
+\index{SCodeGrid@{SCodeGrid}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{SCodeGrid}]{\setlength{\rightskip}{0pt plus 5cm}SCodeGrid::SCodeGrid (std::string {\em filename}, \/  {\bf SCodeTypes} {\em CODE\_\-TYPE})}}
+\label{classSCodeGrid_e430762ac9855cd60f8d5a57c46428b9}
+
+
+Konstruktor siatki kodu. \hypertarget{classSCodeGrid_c150afdd8f27785b5ddf5669a4d90332}{
+\index{SCodeGrid@{SCodeGrid}!$\sim$SCodeGrid@{$\sim$SCodeGrid}}
+\index{$\sim$SCodeGrid@{$\sim$SCodeGrid}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{$\sim$SCodeGrid}]{\setlength{\rightskip}{0pt plus 5cm}SCodeGrid::$\sim$SCodeGrid ()}}
+\label{classSCodeGrid_c150afdd8f27785b5ddf5669a4d90332}
+
+
+Destruktor siatki kodu. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSCodeGrid_46ed88ad7346788efb14c40cbd836981}{
+\index{SCodeGrid@{SCodeGrid}!readFromFile@{readFromFile}}
+\index{readFromFile@{readFromFile}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{readFromFile}]{\setlength{\rightskip}{0pt plus 5cm}int SCodeGrid::readFromFile (std::string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSCodeGrid_46ed88ad7346788efb14c40cbd836981}
+
+
+\begin{Desc}
+\item[Zwraca:]kod błędu: 0: ok 1: nie ma takiego pliku 2: błędny format wejścia \end{Desc}
+
+
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
 \item 
 src/core/\hyperlink{scodegrid_8h}{scodegrid.h}\item 
-src/core/scodegrid.cpp\end{CompactItemize}
+src/core/\hyperlink{scodegrid_8cpp}{scodegrid.cpp}\end{CompactItemize}

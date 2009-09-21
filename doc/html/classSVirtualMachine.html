@@ -1,10 +1,10 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-<title>Salvador Project: Dokumentacja klasy SVirtualMachine</title>
-<link href="doxygen.css" rel="stylesheet" type="text/css">
+<title>Projekt Salvador: Dokumentacja klasy SVirtualMachine</title>
 <link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
 </head><body>
-<!-- Wygenerowano przez Doxygen 1.5.5 -->
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
 <div class="navigation" id="top">
   <div class="tabs">
     <ul>
@@ -32,42 +32,107 @@
 <a href="classSVirtualMachine-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
 <tr><td></td></tr>
 <tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="9aa8763ce9817a6f96152c9bb707b082"></a><!-- doxytag: member="SVirtualMachine::SVirtualMachine" ref="9aa8763ce9817a6f96152c9bb707b082" args="(std::string filename, SMachineSources src_type)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>SVirtualMachine</b> (std::string filename, <a class="el" href="senums_8h.html#77022c8b228fdaa8e10b3843791b7b8c">SMachineSources</a> src_type)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="020a4e9202a688dffed1e0d8951f9164"></a><!-- doxytag: member="SVirtualMachine::SVirtualMachine" ref="020a4e9202a688dffed1e0d8951f9164" args="(std::string, SCodeTypes)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>SVirtualMachine</b> (std::string, <a class="el" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043">SCodeTypes</a>)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f3874f10dac15f27b23dc4b976271413"></a><!-- doxytag: member="SVirtualMachine::executeAllInstr" ref="f3874f10dac15f27b23dc4b976271413" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>executeAllInstr</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="09f1f983396791f84947f80097351862"></a><!-- doxytag: member="SVirtualMachine::isRunning" ref="09f1f983396791f84947f80097351862" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>isRunning</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="86dfbb99cbccd36729253cf34835c805"></a><!-- doxytag: member="SVirtualMachine::isReady" ref="86dfbb99cbccd36729253cf34835c805" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>isReady</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3c530338eaccb6bc585ba689ace469a7"></a><!-- doxytag: member="SVirtualMachine::startMachine" ref="3c530338eaccb6bc585ba689ace469a7" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>startMachine</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6b2dedbf7e71aeb57c89ada07141a2d1"></a><!-- doxytag: member="SVirtualMachine::restartMachine" ref="6b2dedbf7e71aeb57c89ada07141a2d1" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>restartMachine</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="47097e43ad093ef4900df2d888043da6"></a><!-- doxytag: member="SVirtualMachine::stopMachine" ref="47097e43ad093ef4900df2d888043da6" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>stopMachine</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="85f2b4a688a077283010a11145289110"></a><!-- doxytag: member="SVirtualMachine::clean" ref="85f2b4a688a077283010a11145289110" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>clean</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVirtualMachine.html#f3874f10dac15f27b23dc4b976271413">executeAllInstr</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="200c4aae4eedf52ba7a3754295505186"></a><!-- doxytag: member="SVirtualMachine::executeInstr" ref="200c4aae4eedf52ba7a3754295505186" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>executeInstr</b> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="468c60a939cdefc44129d0dcf44adb67"></a><!-- doxytag: member="SVirtualMachine::getCodeImage" ref="468c60a939cdefc44129d0dcf44adb67" args="()" -->
-<a class="el" href="classSImage.html">SImage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getCodeImage</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2a2a23e279ef7df99fbcdd798a5385cf"></a><!-- doxytag: member="SVirtualMachine::revokeInstr" ref="2a2a23e279ef7df99fbcdd798a5385cf" args="()" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>revokeInstr</b> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3c9a0fef8891c18d087ff7c506a090b2"></a><!-- doxytag: member="SVirtualMachine::getCodeStats" ref="3c9a0fef8891c18d087ff7c506a090b2" args="()" -->
-SCodeStats *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getCodeStats</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c8d0c7a837c157b0a1efaf80ffeee486"></a><!-- doxytag: member="SVirtualMachine::goBack" ref="c8d0c7a837c157b0a1efaf80ffeee486" args="(int)" -->
+bool&nbsp;</td><td class="memItemRight" valign="bottom"><b>goBack</b> (int)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="73da810ed568a89a2d1f4ed211efb7e7"></a><!-- doxytag: member="SVirtualMachine::getDataImage" ref="73da810ed568a89a2d1f4ed211efb7e7" args="()" -->
-<a class="el" href="classSImage.html">SImage</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getDataImage</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f8e1ef67bff80a4ce0aa7afc741a1a93"></a><!-- doxytag: member="SVirtualMachine::__dev__transformBinaryStateToString" ref="f8e1ef67bff80a4ce0aa7afc741a1a93" args="(SMachineStates)" -->
+std::string&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transformBinaryStateToString</b> (<a class="el" href="senums_8h.html#c31b206c0c7cd52b9a0b18204f373c7e">SMachineStates</a>)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="dee2d626a3312a4b38b91f5b550b2663"></a><!-- doxytag: member="SVirtualMachine::getDataStats" ref="dee2d626a3312a4b38b91f5b550b2663" args="()" -->
-<a class="el" href="classSDataStats.html">SDataStats</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>getDataStats</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="21b1ac24c7018fd084a553a66f5827ea"></a><!-- doxytag: member="SVirtualMachine::__dev__printConsole" ref="21b1ac24c7018fd084a553a66f5827ea" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printConsole</b> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="cf39eaf295cf709c43b8754aed84286f"></a><!-- doxytag: member="SVirtualMachine::__dev__destroyGrid" ref="cf39eaf295cf709c43b8754aed84286f" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__destroyGrid</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVirtualMachine.html#d07f353daaf626f5efeb8bd34818db75">__dev__runProgram</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">symulacja działania wirtualnej maszyny  <a href="#d07f353daaf626f5efeb8bd34818db75"></a><br></td></tr>
 </table>
 <hr><a name="_details"></a><h2>Opis szczegółowy</h2>
 wirtualna maszyna Salvadora - najbardziej "zewnętrzna" klasa całego projektu 
 <p>
-Wirtualna maszyna Salvadora jest czymś w stylu opakowania, które kryje w sobie wszystkie mechanizmy interpretera. Do działania używa dwóch pozostałych maszyn: maszyny kodu (SCodeMachine) oraz maszyny danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>); zarządza czasem życia obu z nich.<p>
+Wirtualna maszyna Salvadora jest czymś w stylu opakowania, które kryje w sobie wszystkie mechanizmy interpretera. Do działania używa dwóch pozostałych maszyn: maszyny kodu (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>) oraz maszyny danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>); zarządza czasem życia obu z nich.<p>
 Działanie wirtualnej maszyny Salvadora:<p>
 Maszyna musi być ustawiona w stanie 'ready' (SMachineStates, jest to możliwe przy pomocy metody XXX lub od razu po wywołaniu konstruktora). Metoda YYY przełącza wirtualną maszynę w stan działania (SMachineStates, 'running'). Następnie przy pomocy metody ZZZ można zlecać maszynie wykonanie pojedynczej instrukcji intepretera.<p>
 Wykonanie pojedynczej instrukcji:<p>
 <ul>
-<li>wirtualna maszyna zleca maszynie kodu (SCodeMachine) sprawdzenie jaka instrukcja (SCodeInstructions, SDataInstructions) ma zostać wykonana.</li><li>maszyna kodu (SCodeMachine) zwraca maszynie wirtualnej informację o instrukcji</li><li>w zależności od rodzaju instrukcji, maszyna wirtualna zleca jej wykonanie maszynie kodu (SCodeMachine, SCodeInstructions) lub maszynie danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>, SDataInstructions)</li><li>maszyna wykonująca instrukcję, zapisuje ją w swoim logu (SCodeStats, <a class="el" href="classSDataStats.html" title="informacje o działaniu maszyny danych">SDataStats</a>)</li><li>maszyna kodu (SCodeMachine) przesuwa swoją głowicę (SCodeImagePointer) w dotychczasowym kierunku </li></ul>
-<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
-<li>src/core/<a class="el" href="svirtualmachine_8h-source.html">svirtualmachine.h</a><li>src/core/svirtualmachine.cpp</ul>
+<li>wirtualna maszyna zleca maszynie kodu (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>) sprawdzenie jaka instrukcja (SCodeInstructions, SDataInstructions) ma zostać wykonana.</li><li>maszyna kodu (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>) zwraca maszynie wirtualnej informację o instrukcji</li><li>w zależności od rodzaju instrukcji, maszyna wirtualna zleca jej wykonanie maszynie kodu (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>, SCodeInstructions) lub maszynie danych (<a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>, SDataInstructions)</li><li>maszyna wykonująca instrukcję, zapisuje ją w swoim logu (SCodeStats, SDataStats)</li><li>maszyna kodu (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>) przesuwa swoją głowicę (<a class="el" href="classSCodeImagePointer.html" title="głowica maszyny obsługująca obraz kodu">SCodeImagePointer</a>) w dotychczasowym kierunku </li></ul>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="d07f353daaf626f5efeb8bd34818db75"></a><!-- doxytag: member="SVirtualMachine::__dev__runProgram" ref="d07f353daaf626f5efeb8bd34818db75" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVirtualMachine::__dev__runProgram           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Sat Aug 16 12:25:34 2008 dla Salvador Project programem&nbsp;
+<div class="memdoc">
+
+<p>
+symulacja działania wirtualnej maszyny 
+<p>
+DEVELOPMENT<p>
+Konsolowo symyluje przebieg działania maszyny. Najpierw wyświetla dane obu maszyn, następnie po każdym kroku wyświetla wynik na konsoli. Przy każdym kroku użytkownik ma możliwość zastopowania działania maszyny, wpisując frazę "no". Metoda kończy działanie, kiedy maszyna skończy swoje działanie. 
+</div>
+</div><p>
+<a class="anchor" name="f3874f10dac15f27b23dc4b976271413"></a><!-- doxytag: member="SVirtualMachine::executeAllInstr" ref="f3874f10dac15f27b23dc4b976271413" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SVirtualMachine::executeAllInstr           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje wszystkie instrukcje 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/core/<a class="el" href="svirtualmachine_8h-source.html">svirtualmachine.h</a><li>src/core/<a class="el" href="svirtualmachine_8cpp.html">svirtualmachine.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:49 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
-<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.5 </small></address>
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>
 </html>

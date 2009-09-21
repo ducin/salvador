@@ -12,12 +12,12 @@
 // STL
 
 /** \file sabstractgrid.h
- * \brief plik nagłówkowy klasy SAbstractGrid
+ * \brief Plik nagłówkowy klasy SAbstractGrid
  *
  * Plik zawiera definicję klasy SAbstractGrid. Obiekty tej klasy reprezentują abstrakcyjną siatkę wykorzystywaną przez programy języka Salvador
  */
 
-/** \brief abstrakcyjna siatka
+/** \brief Sbstrakcyjna siatka
  *
  * Siatka jest narzędziem które ułatwia przetrzymywanie pewnych danych w pamięci i udostępnia proste metody wyświetlające te dane na konsolę. Po klasie SAbstractGrid dziedziczą dwie klasy: SCodeGrid - siatka kodu oraz SDataGrid - siatka danych.
  */
@@ -40,6 +40,8 @@ class SAbstractGrid
 
 		SAbstractGrid();
 		virtual ~SAbstractGrid();
+
+		bool pointInsideGrid(int, int);
 
 	// development:
 
