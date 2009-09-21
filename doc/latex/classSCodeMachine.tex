@@ -34,24 +34,23 @@ void \hyperlink{classSCodeMachine_f2867d02414db096844e4801f9895650}{executeTurnU
 \item 
 void \hyperlink{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{executeTurnDown} ()
 \item 
-\hypertarget{classSCodeMachine_f83465e2ab7065c7b386a189d57ae9ab}{
-void \textbf{\_\-\_\-dev\_\-\_\-readGridFromTextFile} (std::string)}
-\label{classSCodeMachine_f83465e2ab7065c7b386a189d57ae9ab}
-
+void \hyperlink{classSCodeMachine_2ce54a2d5f6399b501c5260b63317401}{mirrorPointerDirection} ()
 \item 
-\hypertarget{classSCodeMachine_c9345e02c8383585cf1738c653f83cfd}{
-void \textbf{\_\-\_\-dev\_\-\_\-destroyGrid} ()}
-\label{classSCodeMachine_c9345e02c8383585cf1738c653f83cfd}
-
+void \hyperlink{classSCodeMachine_b906d8d6f1faf45d6d01e45e51b7cd65}{readGridFromTextFile} (std::string)
+\item 
+void \hyperlink{classSCodeMachine_6796d55fa4ae7bd8051b92a60d395d2a}{readGridFromImageFile} (std::string)
+\item 
+void \hyperlink{classSCodeMachine_54ad5c55c2afe66dedececed9846e5d1}{destroyGrid} ()
+\item 
+bool \hyperlink{classSCodeMachine_b4f7e9e538a378461a86418ea9dc1d5a}{ImageFitsGrid} (int, int)
+\item 
+void \hyperlink{classSCodeMachine_fdc2ddde59a89a474c7d478a391829ba}{mergeCode} (QImage $\ast$)
 \item 
 void \hyperlink{classSCodeMachine_29892f8f026e8dcd71ec99b9c593e022}{\_\-\_\-dev\_\-\_\-printConsole} ()
 \item 
 void \hyperlink{classSCodeMachine_b4c8492fda9fe21cc2620ede3630d852}{\_\-\_\-dev\_\-\_\-printPointer} ()
 \item 
-\hypertarget{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}{
-void \textbf{\_\-\_\-dev\_\-\_\-printGrid} ()}
-\label{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}
-
+void \hyperlink{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}{\_\-\_\-dev\_\-\_\-printGrid} ()
 \item 
 void \hyperlink{classSCodeMachine_6a725d341bffacccb53431f88c62b713}{\_\-\_\-dev\_\-\_\-printPointedInstruction} ()
 \end{CompactItemize}
@@ -87,7 +86,14 @@ Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kod
 \label{classSCodeMachine_29892f8f026e8dcd71ec99b9c593e022}
 
 
-METODA TESTOWA. Wyświetla informacje o maszynie kodu. \hypertarget{classSCodeMachine_6a725d341bffacccb53431f88c62b713}{
+METODA TESTOWA. Wyświetla informacje o maszynie kodu. \hypertarget{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}{
+\index{SCodeMachine@{SCodeMachine}!\_\-\_\-dev\_\-\_\-printGrid@{\_\-\_\-dev\_\-\_\-printGrid}}
+\index{\_\-\_\-dev\_\-\_\-printGrid@{\_\-\_\-dev\_\-\_\-printGrid}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::\_\-\_\-dev\_\-\_\-printGrid ()}}
+\label{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}
+
+
+METODA TESTOWA. Wyświetla siatkę kodu. \hypertarget{classSCodeMachine_6a725d341bffacccb53431f88c62b713}{
 \index{SCodeMachine@{SCodeMachine}!\_\-\_\-dev\_\-\_\-printPointedInstruction@{\_\-\_\-dev\_\-\_\-printPointedInstruction}}
 \index{\_\-\_\-dev\_\-\_\-printPointedInstruction@{\_\-\_\-dev\_\-\_\-printPointedInstruction}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{\_\-\_\-dev\_\-\_\-printPointedInstruction}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::\_\-\_\-dev\_\-\_\-printPointedInstruction ()}}
@@ -101,7 +107,14 @@ METODA TESTOWA. Wyświetla nazwę wskazywanje przez głowicę instrukcji. \hyper
 \label{classSCodeMachine_b4c8492fda9fe21cc2620ede3630d852}
 
 
-METODA TESTOWA. Wyświetla informacje o głowicy maszyny. \hypertarget{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{
+METODA TESTOWA. Wyświetla informacje o głowicy maszyny. \hypertarget{classSCodeMachine_54ad5c55c2afe66dedececed9846e5d1}{
+\index{SCodeMachine@{SCodeMachine}!destroyGrid@{destroyGrid}}
+\index{destroyGrid@{destroyGrid}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{destroyGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::destroyGrid ()}}
+\label{classSCodeMachine_54ad5c55c2afe66dedececed9846e5d1}
+
+
+Niszczy siatkę kodu Salvadora, która została stworzona podczas wczytywania z pliku: albo tekstowego albo graficznego. \hypertarget{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{
 \index{SCodeMachine@{SCodeMachine}!executeTurnDown@{executeTurnDown}}
 \index{executeTurnDown@{executeTurnDown}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{executeTurnDown}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnDown ()}}
@@ -138,7 +151,40 @@ Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ. \hypertarget{clas
 
 Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. \begin{Desc}
 \item[Zwraca:]instrukcja wskazywana przez głowicę \end{Desc}
-\hypertarget{classSCodeMachine_69a97f71f2a16f69f9daca1bf8433964}{
+\hypertarget{classSCodeMachine_b4f7e9e538a378461a86418ea9dc1d5a}{
+\index{SCodeMachine@{SCodeMachine}!ImageFitsGrid@{ImageFitsGrid}}
+\index{ImageFitsGrid@{ImageFitsGrid}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{ImageFitsGrid}]{\setlength{\rightskip}{0pt plus 5cm}bool SCodeMachine::ImageFitsGrid (int {\em image\_\-width}, \/  int {\em image\_\-height})}}
+\label{classSCodeMachine_b4f7e9e538a378461a86418ea9dc1d5a}
+
+
+Sprawdza, czy siatka kodu zmieści się w obrazie graficznym. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em image\_\-width}]szerokość obrazu na który miałaby zostać nałożona siatka kodu Salvadora \item[{\em image\_\-height}]wysokość obrazu na który miałaby zostać nałożona siatka kodu Salvadora \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]czy siatka kodu zmieści się w obrazie graficznym \end{Desc}
+\hypertarget{classSCodeMachine_fdc2ddde59a89a474c7d478a391829ba}{
+\index{SCodeMachine@{SCodeMachine}!mergeCode@{mergeCode}}
+\index{mergeCode@{mergeCode}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{mergeCode}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::mergeCode (QImage $\ast$ {\em image})}}
+\label{classSCodeMachine_fdc2ddde59a89a474c7d478a391829ba}
+
+
+Nanosi siatkę kodu na obraz graficzny zadany parametrem. Siatka kodu została uprzednio wczytana (w konstruktorze). Po naniesieniu siatki kodu, plik graficzny zostaje zapisany. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em image}]obraz graficzny na który zostanie nałożona siatka kodu \end{description}
+\end{Desc}
+\hypertarget{classSCodeMachine_2ce54a2d5f6399b501c5260b63317401}{
+\index{SCodeMachine@{SCodeMachine}!mirrorPointerDirection@{mirrorPointerDirection}}
+\index{mirrorPointerDirection@{mirrorPointerDirection}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{mirrorPointerDirection}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::mirrorPointerDirection ()}}
+\label{classSCodeMachine_2ce54a2d5f6399b501c5260b63317401}
+
+
+Odbija kierunek ruchu głowicy. \hypertarget{classSCodeMachine_69a97f71f2a16f69f9daca1bf8433964}{
 \index{SCodeMachine@{SCodeMachine}!pushPointer@{pushPointer}}
 \index{pushPointer@{pushPointer}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{pushPointer}]{\setlength{\rightskip}{0pt plus 5cm}bool SCodeMachine::pushPointer ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
@@ -149,7 +195,31 @@ Przesuwa głowicę kodu o jedną komórkę w bieżącym kierunku. \begin{Desc}
 \item[Zwraca:]czy się udało (czy głowica nie wykroczyła poza obraz kodu) \end{Desc}
 
 
-Implementuje \hyperlink{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}{SAbstractMachine}.\hypertarget{classSCodeMachine_4a2d7edca4db9e3bd8942abc13f6c8ec}{
+Implementuje \hyperlink{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}{SAbstractMachine}.\hypertarget{classSCodeMachine_6796d55fa4ae7bd8051b92a60d395d2a}{
+\index{SCodeMachine@{SCodeMachine}!readGridFromImageFile@{readGridFromImageFile}}
+\index{readGridFromImageFile@{readGridFromImageFile}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{readGridFromImageFile}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::readGridFromImageFile (std::string {\em filename})}}
+\label{classSCodeMachine_6796d55fa4ae7bd8051b92a60d395d2a}
+
+
+Tworzy siatkę kodu Salvadora w oparciu o plik graficzny zadany parametrem. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em filename}]nazwa pliku tekstowego zawierającego siatkę kodu Salvadora \end{description}
+\end{Desc}
+\hypertarget{classSCodeMachine_b906d8d6f1faf45d6d01e45e51b7cd65}{
+\index{SCodeMachine@{SCodeMachine}!readGridFromTextFile@{readGridFromTextFile}}
+\index{readGridFromTextFile@{readGridFromTextFile}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{readGridFromTextFile}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::readGridFromTextFile (std::string {\em filename})}}
+\label{classSCodeMachine_b906d8d6f1faf45d6d01e45e51b7cd65}
+
+
+Tworzy siatkę kodu Salvadora w oparciu o plik tekstowy zadany parametrem. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em filename}]nazwa pliku tekstowego zawierającego siatkę kodu Salvadora \end{description}
+\end{Desc}
+\hypertarget{classSCodeMachine_4a2d7edca4db9e3bd8942abc13f6c8ec}{
 \index{SCodeMachine@{SCodeMachine}!setVerbosity@{setVerbosity}}
 \index{setVerbosity@{setVerbosity}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{setVerbosity}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::setVerbosity (bool {\em verbosity})}}

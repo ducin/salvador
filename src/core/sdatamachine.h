@@ -54,10 +54,10 @@ class SDataMachine : public SAbstractMachine
 		void executeSucc();
 		void executePred();
 
-	// development:
+		void initGrid();
+		void destroyGrid();
 
-		void __dev__initGrid(); // TESTOWE // stworzenie nowej, pustej siatki
-		void __dev__destroyGrid(); // TESTOWE // niszczenie grida
+	// development:
 
 		void __dev__printConsole();
 		void __dev__printPointer();

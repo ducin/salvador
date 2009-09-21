@@ -22,20 +22,11 @@ virtual \hyperlink{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}{$\sim$SA
 \item 
 bool \hyperlink{classSAbstractGrid_1e4823efb8b482d44466d8324f63dfb1}{pointInsideGrid} (int, int)
 \item 
-\hypertarget{classSAbstractGrid_1c10a9c322c321b3fc2c9a5195e817ba}{
-virtual int \textbf{\_\-\_\-dev\_\-\_\-transformCharToBinary} (char)=0}
-\label{classSAbstractGrid_1c10a9c322c321b3fc2c9a5195e817ba}
-
+int \hyperlink{classSAbstractGrid_79e2d4403dc5b76fe67e36169bb9f706}{getSizeX} ()
 \item 
-\hypertarget{classSAbstractGrid_6fc913c575c7d1b87b422084129db978}{
-virtual char \textbf{\_\-\_\-dev\_\-\_\-transformBinaryToChar} (int)=0}
-\label{classSAbstractGrid_6fc913c575c7d1b87b422084129db978}
-
+int \hyperlink{classSAbstractGrid_a1b6e5aaf2c870e1ef15a9f93459b820}{getSizeY} ()
 \item 
-\hypertarget{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{
-virtual void \textbf{\_\-\_\-dev\_\-\_\-printConsole} (int, int)=0}
-\label{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}
-
+virtual void \hyperlink{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{\_\-\_\-dev\_\-\_\-printConsole} (int, int)=0
 \end{CompactItemize}
 \subsection*{Metody chronione}
 \begin{CompactItemize}
@@ -91,7 +82,16 @@ Konstruktor abstrakcyjnej siatki. Nie robi nic szczególnego. \hypertarget{class
 Destruktor abstrakcyjnej siatki. Nie robi nic szczególnego. 
 
 \subsection{Dokumentacja funkcji składowych}
-\hypertarget{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}{
+\hypertarget{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{
+\index{SAbstractGrid@{SAbstractGrid}!\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}}
+\index{\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printConsole}]{\setlength{\rightskip}{0pt plus 5cm}virtual void SAbstractGrid::\_\-\_\-dev\_\-\_\-printConsole (int, \/  int)\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}
+
+
+METODA TESTOWA. Wyświetla informacje o siatce. 
+
+Implementowany w \hyperlink{classSCodeGrid_c01feeae87539b97aed07d67b975f174}{SCodeGrid} i \hyperlink{classSDataGrid_8b94af72ddf880b0297baf24ceb2395a}{SDataGrid}.\hypertarget{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}{
 \index{SAbstractGrid@{SAbstractGrid}!constructGrid@{constructGrid}}
 \index{constructGrid@{constructGrid}!SAbstractGrid@{SAbstractGrid}}
 \subsubsection[{constructGrid}]{\setlength{\rightskip}{0pt plus 5cm}virtual void SAbstractGrid::constructGrid ()\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
@@ -109,7 +109,25 @@ Implementowany w \hyperlink{classSCodeGrid_f15ba156433f88a40887e5ba72d9201a}{SCo
 
 Dealokuje pamięć przeznaczoną dla siatki. 
 
-Implementowany w \hyperlink{classSCodeGrid_6bd4c1bf841bd09c2ffb2e019c08b4ed}{SCodeGrid} i \hyperlink{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}{SDataGrid}.\hypertarget{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{
+Implementowany w \hyperlink{classSCodeGrid_6bd4c1bf841bd09c2ffb2e019c08b4ed}{SCodeGrid} i \hyperlink{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}{SDataGrid}.\hypertarget{classSAbstractGrid_79e2d4403dc5b76fe67e36169bb9f706}{
+\index{SAbstractGrid@{SAbstractGrid}!getSizeX@{getSizeX}}
+\index{getSizeX@{getSizeX}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{getSizeX}]{\setlength{\rightskip}{0pt plus 5cm}int SAbstractGrid::getSizeX ()}}
+\label{classSAbstractGrid_79e2d4403dc5b76fe67e36169bb9f706}
+
+
+Zwraca szerokość siatki (rozmiar współrzędnej x). \begin{Desc}
+\item[Zwraca:]szerokość siatki \end{Desc}
+\hypertarget{classSAbstractGrid_a1b6e5aaf2c870e1ef15a9f93459b820}{
+\index{SAbstractGrid@{SAbstractGrid}!getSizeY@{getSizeY}}
+\index{getSizeY@{getSizeY}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{getSizeY}]{\setlength{\rightskip}{0pt plus 5cm}int SAbstractGrid::getSizeY ()}}
+\label{classSAbstractGrid_a1b6e5aaf2c870e1ef15a9f93459b820}
+
+
+Zwraca wysokość siatki (rozmiar współrzędnej y). \begin{Desc}
+\item[Zwraca:]wysokość siatki \end{Desc}
+\hypertarget{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{
 \index{SAbstractGrid@{SAbstractGrid}!getValueAt@{getValueAt}}
 \index{getValueAt@{getValueAt}!SAbstractGrid@{SAbstractGrid}}
 \subsubsection[{getValueAt}]{\setlength{\rightskip}{0pt plus 5cm}virtual int SAbstractGrid::getValueAt (int, \/  int)\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}

@@ -52,13 +52,13 @@ Diagram dziedziczenia dla SAbstractPointer</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractPointer.html#0226e83b6f838f3ee8491915b9ebab74">getCoordY</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">SDirections</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractPointer.html#97b784c62799ff8969483b137bbb2ab5">getDirection</a> ()</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractPointer.html#c4655988c5ae9f94a00e3ccd0ed14863">moveForward</a> (int)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="5d7349c25205be738561fa791a77a3b8"></a><!-- doxytag: member="SAbstractPointer::__dev__transformBinaryDirectionToString" ref="5d7349c25205be738561fa791a77a3b8" args="(SDirections)" -->
-std::string&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transformBinaryDirectionToString</b> (<a class="el" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">SDirections</a>)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">std::string&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractPointer.html#5d7349c25205be738561fa791a77a3b8">__dev__transformBinaryDirectionToString</a> (<a class="el" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">SDirections</a>)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="3faa92c6a0de5ea971a7d32ceb51980f"></a><!-- doxytag: member="SAbstractPointer::__dev__printConsoleCoords" ref="3faa92c6a0de5ea971a7d32ceb51980f" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printConsoleCoords</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractPointer.html#3faa92c6a0de5ea971a7d32ceb51980f">__dev__printConsoleCoords</a> ()</td></tr>
 
 <tr><td colspan="2"><br><h2>Metody chronione</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractPointer.html#e1b27cb6a14cbf77e4499d8ca1ae7c90">setDirection</a> (<a class="el" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">SDirections</a>)</td></tr>
@@ -121,6 +121,51 @@ Destruktor głowicy abstrakcyjnej. Nie robi nic szczególnego.
 </div>
 </div><p>
 <hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="3faa92c6a0de5ea971a7d32ceb51980f"></a><!-- doxytag: member="SAbstractPointer::__dev__printConsoleCoords" ref="3faa92c6a0de5ea971a7d32ceb51980f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SAbstractPointer::__dev__printConsoleCoords           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla współrzędne głowicy. 
+</div>
+</div><p>
+<a class="anchor" name="5d7349c25205be738561fa791a77a3b8"></a><!-- doxytag: member="SAbstractPointer::__dev__transformBinaryDirectionToString" ref="5d7349c25205be738561fa791a77a3b8" args="(SDirections)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string SAbstractPointer::__dev__transformBinaryDirectionToString           </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">SDirections</a>&nbsp;</td>
+          <td class="paramname"> <em>dir</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Konwertuje kierunek poruszanai się głowicy zadany parametrem w napis. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>dir</em>&nbsp;</td><td>kierunek poruszanai się głowicy </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>napis określający kierunek poruszania się głowicy </dd></dl>
+
+</div>
+</div><p>
 <a class="anchor" name="bb15625597bfe9f3927cdc360214bc55"></a><!-- doxytag: member="SAbstractPointer::clear" ref="bb15625597bfe9f3927cdc360214bc55" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -177,6 +222,26 @@ Zwraca pierwszą współrzędną (odciętą) punktu wskazywanego przez głowicę
 
 <p>
 Zwraca drugą współrzędną (rzędną) punktu wskazywanego przez głowicę. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>druga współrzędna (rzędna) głowicy </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="97b784c62799ff8969483b137bbb2ab5"></a><!-- doxytag: member="SAbstractPointer::getDirection" ref="97b784c62799ff8969483b137bbb2ab5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="senums_8h.html#039d4115103dc22e0555ecc968fecbf0">SDirections</a> SAbstractPointer::getDirection           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca bieżący kierunek głowicy. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>bieżący kierunek głowicy </dd></dl>
 
 </div>
 </div><p>
@@ -274,7 +339,7 @@ Kierunek poruszania się głowicy.
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="sabstractpointer_8h-source.html">sabstractpointer.h</a><li>src/core/<a class="el" href="sabstractpointer_8cpp.html">sabstractpointer.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Tue Sep 22 01:44:58 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

@@ -90,6 +90,25 @@ bool SDataMachine::pushPointer()
 	return true;
 }
 
+/////////////////////////
+
+/**
+ * Inicjuje siatkę danych.
+ */
+void SDataMachine::initGrid()
+{
+	grid = new SDataGrid();
+}
+
+/**
+ * Niszczy siatkę danych.
+ */
+void SDataMachine::destroyGrid()
+{
+	(dynamic_cast<SDataGrid *> (grid))->~SDataGrid();
+//	grid->~SDataGrid();
+}
+
 /*==================================================================*/
 /*                                                                  */
 /*                 INSTRUCTION EXECUTION PART                       */
@@ -142,19 +161,9 @@ void SDataMachine::executePred()
 /*                                                                  */
 /*==================================================================*/
 
-void SDataMachine::__dev__initGrid()
-{
-	grid = new SDataGrid();
-}
-
-void SDataMachine::__dev__destroyGrid()
-{
-	(dynamic_cast<SDataGrid *> (grid))->~SDataGrid();
-//	grid->~SDataGrid();
-}
-
-/////////////////////////
-
+/**
+ * METODA TESTOWA. Wyświetla zawartość siatki danych.
+ */
 void SDataMachine::__dev__printGrid()
 {
 //	debug("dev print code grid START\n");
@@ -162,6 +171,9 @@ void SDataMachine::__dev__printGrid()
 //	debug("dev print code grid END\n");
 }
 
+/**
+ * METODA TESTOWA. Wyświetla informacje o głowicy maszyny danych.
+ */
 void SDataMachine::__dev__printPointer()
 {
 //	debug("dev print pointer START\n");
@@ -169,6 +181,9 @@ void SDataMachine::__dev__printPointer()
 //	debug("dev print pointer END\n");
 }
 
+/**
+ * METODA TESTOWA. Wyświetla informacje o maszynie danych.
+ */
 void SDataMachine::__dev__printConsole()
 {
 //	__dev__printPointer();

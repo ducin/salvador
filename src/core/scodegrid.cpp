@@ -12,8 +12,9 @@
 #include <fstream>
 #include <iostream>
 
-// STL
-// none
+// Qt
+#include <QImage>
+#include <QRgb>
 
 /** \file scodegrid.cpp
  * \brief Plik z kodem źródłowym klasy SCodeGrid
@@ -30,10 +31,10 @@ SCodeGrid::SCodeGrid(std::string filename, SCodeTypes CODE_TYPE)
 	switch(CODE_TYPE)
 	{
 		case tp_text:
-			readFromFile(filename);
+			readFromTextFile(filename);
 			break;
 		case tp_graphics:
-			// ???
+			readFromImageFile(filename);
 			break;
 	}
 	debug("CONSTRUCTOR code-grid END\n");
@@ -84,13 +85,11 @@ int SCodeGrid::getValueAt(int coord_x, int coord_y)
 	return instruction_grid[coord_y][coord_x];
 }
 
-/** @return kod błędu:
- * 0: ok
- * 1: nie ma takiego pliku
- * 2: błędny format wejścia
+/**
+ * Wczytuje siatkę kodu Salvadora z pliku tekstowego którego nazwa jest zadana przez parametr.
+ * @param filename plik z siatką kodu Salvadora
  */
-// dorobić bezpieczeństwo - np pliku nie ma itp
-int SCodeGrid::readFromFile(std::string filename)
+void SCodeGrid::readFromTextFile(std::string filename)
 {
 	std::ifstream fin(filename.c_str());
 
@@ -116,12 +115,50 @@ int SCodeGrid::readFromFile(std::string filename)
 	fin.close();
 }
 
+/**
+ * Wczytuje siatkę kodu Salvadora z pliku graficznego którego nazwa jest zadana przez parametr.
+ * @param filename plik z siatką kodu Salvadora
+ */
+void SCodeGrid::readFromImageFile(std::string filename)
+{
+	QString QSTR_filename(filename.c_str());
+	QImage *image = new QImage(QSTR_filename);
+
+	size_x = image->width();
+	size_y = image->height();
+
+	// zaalokowanie pamieci
+	constructGrid();
+
+	// bufor
+	QRgb color;
+	int instr_code;
+
+	// wczytywanie instrukcji
+	for(int y = 0; y < size_y; y++)
+	{
+		for(int x = 0; x < size_x; x++)
+		{
+			color = image->pixel(x, y);
+			instr_code = ( qRed(color) + qGreen(color) + qBlue(color) ) % 16;
+			if (instr_code > 11) instr_code = 9;
+			instruction_grid[y][x] = (SInstructions) instr_code;
+		}
+	}
+	image->~QImage();
+}
+
 /*==================================================================*/
 /*                                                                  */
 /*                        DEVELOPMENT PART                          */
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * METODA TESTOWA. Wyświetla informacje o siatce kodu. Parametry określają współrzędne głowicy.
+ * @param ptr_x pierwsza współrzędna (odcięta) głowicy
+ * @param ptr_y druga współrzędna (rzędna) głowicy
+ */
 void SCodeGrid::__dev__printConsole(int ptr_x, int ptr_y)
 {
 	std::cout << std::endl << "GRID" << std::endl;
@@ -137,6 +174,11 @@ void SCodeGrid::__dev__printConsole(int ptr_x, int ptr_y)
 	}
 }
 
+/**
+ * METODA TESTOWA. Konwertuje znakowy symbol instrukcji w liczbę - element enumeracji SInstructions.
+ * @param code znak symbolujący instrukcję Salvadora
+ * @return liczba symbolizująca instrukcję
+ */
 int SCodeGrid::__dev__transformCharToBinary(char code)
 {
 	switch(code)
@@ -156,6 +198,11 @@ int SCodeGrid::__dev__transformCharToBinary(char code)
 	}
 }
 
+/**
+ * METODA TESTOWA. Konwertuje instrukcje Salvadora w znaki je symbolujące.
+ * @param binary instrukcja zadana elementem enumeracji SInstructions
+ * @return znak symbolujący instrukcję Salvadora
+ */
 char SCodeGrid::__dev__transformBinaryToChar(int binary)
 {
 	switch(binary)

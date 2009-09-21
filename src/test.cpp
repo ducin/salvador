@@ -73,7 +73,7 @@ void runWelcome()
 	std::cout << std::endl;
 	std::cout << "Interpreter języka Salvador" << std::endl;
 	std::cout << "Załącznik do pracy magisterskiej:" << std::endl;
-	std::cout << "\"Języki ezoteryczne Piet i Salvador jako uniwersalne maszyny obliczeniowe\"" << std::endl;
+	std::cout << "\"Graficzne języki programowania na przykładzie języków Piet i Salvador\"" << std::endl;
 	std::cout << "Tomasz Ducin, 2009" << std::endl;
 	setConsoleColor(0);
 	std::cout << std::endl;
@@ -88,9 +88,10 @@ int runMenu()
 	std::cout << "wybierz opcję:" << std::endl;
 	std::cout << "1. uruchom maszynę i wykonuj instrukcje krok po kroku" << std::endl;
 	std::cout << "2. uruchom maszynę i wykonuj zadaną ilość instrukcji w każdym kroku" << std::endl;
-	std::cout << "3. włącz/wyłącz tryb gadatliwy (" << (m->isVerbose() ? "włączony" : "wyłączony" ) << ")" << std::endl;
-	std::cout << "4. przełącz tryb odbijaj/zakończ, gdy głowica wychodzi poza obraz (" << (m->isBehaviorBounce() ? "odbijaj" : "zakończ" ) << ")" << std::endl;
-	std::cout << "5. koniec" << std::endl;
+	std::cout << "3. uruchom maszynę i wykonaj wszystkie instrukcje" << std::endl;
+	std::cout << "4. włącz/wyłącz tryb gadatliwy (" << (m->isVerbose() ? "włączony" : "wyłączony" ) << ")" << std::endl;
+	std::cout << "5. przełącz tryb odbijaj/zakończ, gdy głowica wychodzi poza obraz (" << (m->isBehaviorBounce() ? "odbijaj" : "zakończ" ) << ")" << std::endl;
+	std::cout << "6. koniec" << std::endl;
 
 	std::string answer;
 	std::cout << std::endl << "> "; getline(std::cin, answer); std::cout << std::endl;
@@ -110,7 +111,7 @@ void runProgram()
 	runWelcome();
 	// zmienne robocze sterujące pracą programu
 	int continued = 1, choice;
-	int final_choice = 5;
+	int final_choice = 6;
 	// główna pętla programu
 	std::string confirm_str;
 	while (continued)
@@ -125,29 +126,34 @@ void runProgram()
 				std::cout << "naciskaj enter po każdym kroku" << std::endl << std::endl;
 				while (m->isRunning())
 				{
-					if (m->isVerbose())
-						m->__dev__printConsole();
 					m->executeInstr();
 					getline(std::cin, confirm_str);
 				}
 				break;
 			case 2: // uruchom maszynę i wykonuj zadaną ilość instrukcji w każdym kroku
 				m->startMachine();
-				int C;
-				std::cin >> C;
-				for(int ind = 0; ind < C; ind++)
+				while (m->isRunning())
 				{
-				    m->executeInstr();
-				    m->__dev__printConsole();
+					std::cout << "> "; int C; std::cin >> C;
+					for(int ind = 0; ind < C; ind++)
+					{
+						if (m->isRunning()) 
+							m->executeInstr();
+					}
 				}
 				break;
-			case 3: // włącz/wyłącz tryb gadatliwy
+			case 3: // uruchom maszynę i wykonaj wszystkie instrukcje
+				m->startMachine();
+				while (m->isRunning())
+					m->executeInstr();
+				break;
+			case 4: // włącz/wyłącz tryb gadatliwy
 				m->toggleVerbosity();
 				break;
-			case 4: // koniec
+			case 5: // przełączenie trybu odbijania głowicy
 				m->toggleBehavior();
 				break;
-			case 5: // koniec
+			case 6: // koniec
 				m->stopMachine();
 				break;
 		}
@@ -203,7 +209,7 @@ int main(int argc, char **argv)
 			return 2;
 		}
 		if (m->mergeGridWithImage(image_path.c_str())) {
-			printFormattedMessage("Operacja nie powiodła się. Sprawdź oba pliki lub ich rozmiar");
+			printFormattedMessage("Operacja powiodła się.");
 		} else {
 			printFormattedError("Operacja nie powiodła się. Sprawdź oba pliki lub ich rozmiar");
 			return 4;

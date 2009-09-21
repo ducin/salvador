@@ -113,6 +113,11 @@ void SAbstractPointer::clear()
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * METODA TESTOWA. Konwertuje kierunek poruszanai się głowicy zadany parametrem w napis.
+ * @param dir kierunek poruszanai się głowicy
+ * @return napis określający kierunek poruszania się głowicy
+ */
 std::string SAbstractPointer::__dev__transformBinaryDirectionToString(SDirections dir)
 {
 	switch(dir)
@@ -130,6 +135,9 @@ std::string SAbstractPointer::__dev__transformBinaryDirectionToString(SDirection
 	}
 }
 
+/**
+ * METODA TESTOWA. Wyświetla współrzędne głowicy.
+ */
 void SAbstractPointer::__dev__printConsoleCoords()
 {
 	std::cout << "[X:" << coord_x << ", Y:" << coord_y << "] [DIR:" << __dev__transformBinaryDirectionToString(direction) << "]";

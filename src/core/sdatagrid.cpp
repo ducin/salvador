@@ -27,7 +27,7 @@
 SDataGrid::SDataGrid()
 {
 	debug("CONSTRUCTOR data-grid START\n");
-	size_x = 4;
+	size_x = 8;
 	size_y = 1;
 	constructGrid();
 	zeroGrid();
@@ -137,6 +137,9 @@ void SDataGrid::performPredAt(int coord_x, int coord_y)
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * METODA TESTOWA. Wyświetla siatkę danych.
+ */
 void SDataGrid::__dev__printConsole(int ptr_x, int ptr_y)
 {
 //	std::cout << std::endl << "GRID" << std::endl;
@@ -156,20 +159,3 @@ void SDataGrid::__dev__printConsole(int ptr_x, int ptr_y)
 	}
 }
 
-int SDataGrid::__dev__transformCharToBinary(char code)
-{
-	switch(code)
-	{
-		case '2': return instr_code_down;
-		// ?
-	}
-}
-
-char SDataGrid::__dev__transformBinaryToChar(int binary)
-{
-	switch(binary)
-	{
-		case instr_code_down: return '2';
-		// ?
-	}
-}

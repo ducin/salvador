@@ -43,13 +43,12 @@ class SAbstractGrid
 		virtual ~SAbstractGrid();
 
 		bool pointInsideGrid(int, int);
+		int getSizeX();
+		int getSizeY();
 
 	// development:
 
-		virtual int __dev__transformCharToBinary(char) = 0;
-		virtual char __dev__transformBinaryToChar(int) = 0;
-
-		virtual void __dev__printConsole(int, int) = 0;
+		/** METODA TESTOWA. Wyświetla informacje o siatce. */ virtual void __dev__printConsole(int, int) = 0;
 
 };
 

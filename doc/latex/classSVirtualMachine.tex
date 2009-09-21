@@ -18,6 +18,20 @@ bool \hyperlink{classSVirtualMachine_38d1e09d68d418ce34ae46d6a9dbb6dd}{isVerbose
 \item 
 void \hyperlink{classSVirtualMachine_d099907121223d24b1a599a3518cf3b0}{toggleVerbosity} ()
 \item 
+void \hyperlink{classSVirtualMachine_0b29c76aa5023f0fe0b1237024ca5103}{setBehaviorBounce} ()
+\item 
+void \hyperlink{classSVirtualMachine_6d7c9f2fe223810123062d1c74ae542a}{setBehaviorStop} ()
+\item 
+bool \hyperlink{classSVirtualMachine_51a4d5a2dc91059e261135b150a78034}{isBehaviorBounce} ()
+\item 
+bool \hyperlink{classSVirtualMachine_9e4042e279737a419aa9200f8fe9f961}{isBehaviorStop} ()
+\item 
+void \hyperlink{classSVirtualMachine_0df11160e4aae2743ed39c65ea6d8441}{bounceCodeImagePointerDirection} ()
+\item 
+void \hyperlink{classSVirtualMachine_4d895936a3676ec3226383b3242be1af}{performActionWhenPointerOutside} ()
+\item 
+void \hyperlink{classSVirtualMachine_1d68dbb4416964707c818a550dcb10e9}{toggleBehavior} ()
+\item 
 bool \hyperlink{classSVirtualMachine_09f1f983396791f84947f80097351862}{isRunning} ()
 \item 
 bool \hyperlink{classSVirtualMachine_86dfbb99cbccd36729253cf34835c805}{isReady} ()
@@ -36,20 +50,11 @@ void \hyperlink{classSVirtualMachine_200c4aae4eedf52ba7a3754295505186}{executeIn
 \item 
 bool \hyperlink{classSVirtualMachine_0257c841ecfbb17f2c85ffd2d8764de8}{mergeGridWithImage} (std::string)
 \item 
-\hypertarget{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}{
-std::string \textbf{\_\-\_\-dev\_\-\_\-transformBinaryStateToString} (\hyperlink{senums_8h_c31b206c0c7cd52b9a0b18204f373c7e}{SMachineStates})}
-\label{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}
-
+void \hyperlink{classSVirtualMachine_74f8812f8711a172f9ad3a3f92446af7}{destroyGrid} ()
 \item 
-\hypertarget{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}{
-void \textbf{\_\-\_\-dev\_\-\_\-printConsole} ()}
-\label{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}
-
+std::string \hyperlink{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}{\_\-\_\-dev\_\-\_\-transformBinaryStateToString} (\hyperlink{senums_8h_c31b206c0c7cd52b9a0b18204f373c7e}{SMachineStates})
 \item 
-\hypertarget{classSVirtualMachine_cf39eaf295cf709c43b8754aed84286f}{
-void \textbf{\_\-\_\-dev\_\-\_\-destroyGrid} ()}
-\label{classSVirtualMachine_cf39eaf295cf709c43b8754aed84286f}
-
+void \hyperlink{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}{\_\-\_\-dev\_\-\_\-printConsole} ()
 \item 
 void \hyperlink{classSVirtualMachine_d07f353daaf626f5efeb8bd34818db75}{\_\-\_\-dev\_\-\_\-runProgram} ()
 \begin{CompactList}\small\item\em symulacja działania wirtualnej maszyny \item\end{CompactList}\end{CompactItemize}
@@ -93,7 +98,14 @@ Konstruktor wirtualnej maszyny Salvadora. \hypertarget{classSVirtualMachine_eb72
 Destruktor wirtualnej maszyny Salvadora. 
 
 \subsection{Dokumentacja funkcji składowych}
-\hypertarget{classSVirtualMachine_d07f353daaf626f5efeb8bd34818db75}{
+\hypertarget{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}{
+\index{SVirtualMachine@{SVirtualMachine}!\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}}
+\index{\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printConsole}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::\_\-\_\-dev\_\-\_\-printConsole ()}}
+\label{classSVirtualMachine_21b1ac24c7018fd084a553a66f5827ea}
+
+
+METODA TESTOWA. Wyświetla informacje o wirtualnej maszynie Salvadora. \hypertarget{classSVirtualMachine_d07f353daaf626f5efeb8bd34818db75}{
 \index{SVirtualMachine@{SVirtualMachine}!\_\-\_\-dev\_\-\_\-runProgram@{\_\-\_\-dev\_\-\_\-runProgram}}
 \index{\_\-\_\-dev\_\-\_\-runProgram@{\_\-\_\-dev\_\-\_\-runProgram}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{\_\-\_\-dev\_\-\_\-runProgram}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::\_\-\_\-dev\_\-\_\-runProgram ()}}
@@ -104,14 +116,42 @@ symulacja działania wirtualnej maszyny
 
 DEVELOPMENT
 
-Konsolowo symyluje przebieg działania maszyny. Najpierw wyświetla dane obu maszyn, następnie po każdym kroku wyświetla wynik na konsoli. Przy każdym kroku użytkownik ma możliwość zastopowania działania maszyny, wpisując frazę \char`\"{}no\char`\"{}. Metoda kończy działanie, kiedy maszyna skończy swoje działanie. \hypertarget{classSVirtualMachine_85f2b4a688a077283010a11145289110}{
+Konsolowo symyluje przebieg działania maszyny. Najpierw wyświetla dane obu maszyn, następnie po każdym kroku wyświetla wynik na konsoli. Przy każdym kroku użytkownik ma możliwość zastopowania działania maszyny, wpisując frazę \char`\"{}no\char`\"{}. Metoda kończy działanie, kiedy maszyna skończy swoje działanie. \hypertarget{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}{
+\index{SVirtualMachine@{SVirtualMachine}!\_\-\_\-dev\_\-\_\-transformBinaryStateToString@{\_\-\_\-dev\_\-\_\-transformBinaryStateToString}}
+\index{\_\-\_\-dev\_\-\_\-transformBinaryStateToString@{\_\-\_\-dev\_\-\_\-transformBinaryStateToString}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-transformBinaryStateToString}]{\setlength{\rightskip}{0pt plus 5cm}std::string SVirtualMachine::\_\-\_\-dev\_\-\_\-transformBinaryStateToString ({\bf SMachineStates} {\em state})}}
+\label{classSVirtualMachine_f8e1ef67bff80a4ce0aa7afc741a1a93}
+
+
+METODA TESTOWA. Zwraca nazwę stanu zadanego przez parametr. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em state}]stan maszyny \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]nazwa stanu \end{Desc}
+\hypertarget{classSVirtualMachine_0df11160e4aae2743ed39c65ea6d8441}{
+\index{SVirtualMachine@{SVirtualMachine}!bounceCodeImagePointerDirection@{bounceCodeImagePointerDirection}}
+\index{bounceCodeImagePointerDirection@{bounceCodeImagePointerDirection}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{bounceCodeImagePointerDirection}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::bounceCodeImagePointerDirection ()}}
+\label{classSVirtualMachine_0df11160e4aae2743ed39c65ea6d8441}
+
+
+Nakazuje maszynie kodu odbić kierunek ruchu głowicy kodu. \hypertarget{classSVirtualMachine_85f2b4a688a077283010a11145289110}{
 \index{SVirtualMachine@{SVirtualMachine}!clean@{clean}}
 \index{clean@{clean}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{clean}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::clean ()}}
 \label{classSVirtualMachine_85f2b4a688a077283010a11145289110}
 
 
-Metoda czyści wszystkie tymczasowe dane maszyny. \hypertarget{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}{
+Metoda czyści wszystkie tymczasowe dane maszyny. \hypertarget{classSVirtualMachine_74f8812f8711a172f9ad3a3f92446af7}{
+\index{SVirtualMachine@{SVirtualMachine}!destroyGrid@{destroyGrid}}
+\index{destroyGrid@{destroyGrid}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{destroyGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::destroyGrid ()}}
+\label{classSVirtualMachine_74f8812f8711a172f9ad3a3f92446af7}
+
+
+Rozkazuje podrzędnym maszynom niszczyć ich siatki. \hypertarget{classSVirtualMachine_f3874f10dac15f27b23dc4b976271413}{
 \index{SVirtualMachine@{SVirtualMachine}!executeAllInstr@{executeAllInstr}}
 \index{executeAllInstr@{executeAllInstr}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{executeAllInstr}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::executeAllInstr ()}}
@@ -132,7 +172,25 @@ Wykonuje jedną instrukcję. \hypertarget{classSVirtualMachine_5eb2195ecac5f0bed
 \label{classSVirtualMachine_5eb2195ecac5f0bed11b2318cf8feed2}
 
 
-Metoda kończy działanie maszyny wirtualnej Salvadora (stan zmieniony na \char`\"{}maszyna zakończyła działanie\char`\"{}). \hypertarget{classSVirtualMachine_86dfbb99cbccd36729253cf34835c805}{
+Metoda kończy działanie maszyny wirtualnej Salvadora (stan zmieniony na \char`\"{}maszyna zakończyła działanie\char`\"{}). \hypertarget{classSVirtualMachine_51a4d5a2dc91059e261135b150a78034}{
+\index{SVirtualMachine@{SVirtualMachine}!isBehaviorBounce@{isBehaviorBounce}}
+\index{isBehaviorBounce@{isBehaviorBounce}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{isBehaviorBounce}]{\setlength{\rightskip}{0pt plus 5cm}bool SVirtualMachine::isBehaviorBounce ()}}
+\label{classSVirtualMachine_51a4d5a2dc91059e261135b150a78034}
+
+
+Sprawdza czy zachowaniem wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, jest odbicie kierunku głowicy. \begin{Desc}
+\item[Zwraca:]czy zachowanie maszyny to odbicie kierunku głowicy \end{Desc}
+\hypertarget{classSVirtualMachine_9e4042e279737a419aa9200f8fe9f961}{
+\index{SVirtualMachine@{SVirtualMachine}!isBehaviorStop@{isBehaviorStop}}
+\index{isBehaviorStop@{isBehaviorStop}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{isBehaviorStop}]{\setlength{\rightskip}{0pt plus 5cm}bool SVirtualMachine::isBehaviorStop ()}}
+\label{classSVirtualMachine_9e4042e279737a419aa9200f8fe9f961}
+
+
+Sprawdza czy zachowaniem wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, jest zakończenie pracy maszyny. \begin{Desc}
+\item[Zwraca:]czy zachowanie maszyny to zakończenie pracy maszyny \end{Desc}
+\hypertarget{classSVirtualMachine_86dfbb99cbccd36729253cf34835c805}{
 \index{SVirtualMachine@{SVirtualMachine}!isReady@{isReady}}
 \index{isReady@{isReady}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{isReady}]{\setlength{\rightskip}{0pt plus 5cm}bool SVirtualMachine::isReady ()}}
@@ -173,7 +231,14 @@ Metoda nakłada siatkę kodu (uprzednio wczytaną) na obraz, plik graficzny, prz
 \end{Desc}
 \begin{Desc}
 \item[Zwraca:]czy się udało \end{Desc}
-\hypertarget{classSVirtualMachine_5be1048d2d6f330994a10032d9609277}{
+\hypertarget{classSVirtualMachine_4d895936a3676ec3226383b3242be1af}{
+\index{SVirtualMachine@{SVirtualMachine}!performActionWhenPointerOutside@{performActionWhenPointerOutside}}
+\index{performActionWhenPointerOutside@{performActionWhenPointerOutside}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{performActionWhenPointerOutside}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::performActionWhenPointerOutside ()}}
+\label{classSVirtualMachine_4d895936a3676ec3226383b3242be1af}
+
+
+Metoda reaguje na sytuację, gdy głowica kodu ma za chwilę znaleźć się poza obrazem kodu. Reakcja zależy od \hypertarget{classSVirtualMachine_5be1048d2d6f330994a10032d9609277}{
 \index{SVirtualMachine@{SVirtualMachine}!restartMachine@{restartMachine}}
 \index{restartMachine@{restartMachine}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{restartMachine}]{\setlength{\rightskip}{0pt plus 5cm}bool SVirtualMachine::restartMachine ()}}
@@ -182,7 +247,21 @@ Metoda nakłada siatkę kodu (uprzednio wczytaną) na obraz, plik graficzny, prz
 
 Restartuje maszynę (ustawia odpowiedni stan). \begin{Desc}
 \item[Zwraca:]czy operacja się powiodła \end{Desc}
-\hypertarget{classSVirtualMachine_49e93dd25b48a8dbba896f9b2964c526}{
+\hypertarget{classSVirtualMachine_0b29c76aa5023f0fe0b1237024ca5103}{
+\index{SVirtualMachine@{SVirtualMachine}!setBehaviorBounce@{setBehaviorBounce}}
+\index{setBehaviorBounce@{setBehaviorBounce}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{setBehaviorBounce}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::setBehaviorBounce ()}}
+\label{classSVirtualMachine_0b29c76aa5023f0fe0b1237024ca5103}
+
+
+Ustala zachowanie wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, na odbicie kierunku głowicy. \hypertarget{classSVirtualMachine_6d7c9f2fe223810123062d1c74ae542a}{
+\index{SVirtualMachine@{SVirtualMachine}!setBehaviorStop@{setBehaviorStop}}
+\index{setBehaviorStop@{setBehaviorStop}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{setBehaviorStop}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::setBehaviorStop ()}}
+\label{classSVirtualMachine_6d7c9f2fe223810123062d1c74ae542a}
+
+
+Ustala zachowanie wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, na zakończenie pracy maszyny. \hypertarget{classSVirtualMachine_49e93dd25b48a8dbba896f9b2964c526}{
 \index{SVirtualMachine@{SVirtualMachine}!startMachine@{startMachine}}
 \index{startMachine@{startMachine}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{startMachine}]{\setlength{\rightskip}{0pt plus 5cm}bool SVirtualMachine::startMachine ()}}
@@ -198,7 +277,14 @@ Uruchamia maszynę (ustawia odpowiedni stan). \hypertarget{classSVirtualMachine_
 
 Zatrzymuje maszynę (ustawia odpowiedni stan). \begin{Desc}
 \item[Zwraca:]czy operacja się powiodła \end{Desc}
-\hypertarget{classSVirtualMachine_d099907121223d24b1a599a3518cf3b0}{
+\hypertarget{classSVirtualMachine_1d68dbb4416964707c818a550dcb10e9}{
+\index{SVirtualMachine@{SVirtualMachine}!toggleBehavior@{toggleBehavior}}
+\index{toggleBehavior@{toggleBehavior}!SVirtualMachine@{SVirtualMachine}}
+\subsubsection[{toggleBehavior}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::toggleBehavior ()}}
+\label{classSVirtualMachine_1d68dbb4416964707c818a550dcb10e9}
+
+
+Zmień zachowanie na przeciwne. \hypertarget{classSVirtualMachine_d099907121223d24b1a599a3518cf3b0}{
 \index{SVirtualMachine@{SVirtualMachine}!toggleVerbosity@{toggleVerbosity}}
 \index{toggleVerbosity@{toggleVerbosity}!SVirtualMachine@{SVirtualMachine}}
 \subsubsection[{toggleVerbosity}]{\setlength{\rightskip}{0pt plus 5cm}void SVirtualMachine::toggleVerbosity ()}}

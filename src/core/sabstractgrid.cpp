@@ -50,3 +50,20 @@ bool SAbstractGrid::pointInsideGrid(int X, int Y)
 	return ((X < size_x) && (X >= 0) && (Y < size_y) && (Y >= 0));
 }
 
+/**
+ * Zwraca szerokość siatki (rozmiar współrzędnej x).
+ * @return szerokość siatki
+ */
+int SAbstractGrid::getSizeX()
+{
+	return size_x;
+}
+
+/**
+ * Zwraca wysokość siatki (rozmiar współrzędnej y).
+ * @return wysokość siatki
+ */
+int SAbstractGrid::getSizeY()
+{
+	return size_y;
+}

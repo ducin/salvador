@@ -6,7 +6,6 @@
 // salvador core
 #include "../debug.h"
 #include "senums.h"
-#include "scodeimage.h"
 #include "scodeimagepointer.h"
 
 // C++
@@ -15,6 +14,10 @@
 
 // STL
 // none
+
+// Qt
+#include <QImage>
+#include <QRgb>
 
 /** \file scodemachine.cpp
  * \brief Plik z kodem źródłowym klasy SCodeMachine
@@ -29,7 +32,6 @@ SCodeMachine::SCodeMachine(SCodeTypes CODE_TYPE)
 {
 	debug("CONSTRUCTOR --- code-machine START\n");
 	code_type = CODE_TYPE;
-	image = new SCodeImage();
 	pointer = new SCodeImagePointer();
 	debug("CONSTRUCTOR --- code-machine END\n");
 }
@@ -40,7 +42,6 @@ SCodeMachine::SCodeMachine(SCodeTypes CODE_TYPE)
 SCodeMachine::~SCodeMachine()
 {
 	debug("DESTRUCTOR --- code-machine START\n");
-	image->~SCodeImage();
 // "śmierdzące" rozwiązanie z C
 // ((SCodeImagePointer*) pointer)->~SCodeImagePointer();
 	(dynamic_cast<SCodeImagePointer *> (pointer))->~SCodeImagePointer();
@@ -98,17 +99,94 @@ bool SCodeMachine::pushPointer()
 	}
 }
 
-//////////////////////
-
-void SCodeMachine::__dev__readGridFromTextFile(std::string FILENAME)
+/**
+ * Tworzy siatkę kodu Salvadora w oparciu o plik tekstowy zadany parametrem.
+ * @param filename nazwa pliku tekstowego zawierającego siatkę kodu Salvadora
+ */
+void SCodeMachine::readGridFromTextFile(std::string filename)
 {
-	grid = new SCodeGrid(FILENAME, tp_text);
+	grid = new SCodeGrid(filename, tp_text);
 }
 
-void SCodeMachine::__dev__destroyGrid()
+/**
+ * Tworzy siatkę kodu Salvadora w oparciu o plik graficzny zadany parametrem.
+ * @param filename nazwa pliku tekstowego zawierającego siatkę kodu Salvadora
+ */
+void SCodeMachine::readGridFromImageFile(std::string filename)
+{
+	grid = new SCodeGrid(filename, tp_graphics);
+}
+
+/**
+ * Niszczy siatkę kodu Salvadora, która została stworzona podczas wczytywania z pliku: albo tekstowego albo graficznego.
+ */
+void SCodeMachine::destroyGrid()
 {
 	(dynamic_cast<SCodeGrid *> (grid))->~SCodeGrid();
 	//grid->~SCodeGrid();
+}
+
+/**
+ * Sprawdza, czy siatka kodu zmieści się w obrazie graficznym.
+ * @param image_width szerokość obrazu na który miałaby zostać nałożona siatka kodu Salvadora
+ * @param image_height wysokość obrazu na który miałaby zostać nałożona siatka kodu Salvadora
+ * @return czy siatka kodu zmieści się w obrazie graficznym
+ */
+bool SCodeMachine::ImageFitsGrid(int image_width, int image_height)
+{
+	return ((image_width >= grid->getSizeX()) && (image_height >= grid->getSizeY()));
+}
+
+int SCodeMachine::getPixelRGBCode(QImage *image, int x, int y)
+{
+	QRgb color = image->pixel(x, y);
+	return (qRed(color) + qGreen(color) + qBlue(color));
+}
+
+void SCodeMachine::modifyPixelRGBCode(QImage *image, int x, int y, int dif)
+{
+	QRgb color = image->pixel(x, y);
+	int red_dif, green_dif, blue_dif;
+	red_dif = green_dif = blue_dif = dif / 3;
+	if ((dif % 3) == 2) {
+		red_dif++;
+		green_dif++;
+	} else if ((dif % 3) == 1) {
+		red_dif++;
+	} else if ((dif % 3) == -2) {
+		red_dif--;
+		green_dif--;
+	} else if ((dif % 3) == -1) {
+		red_dif--;
+	}
+	int new_red = qRed(color);
+	int new_green = qGreen(color);
+	int new_blue = qBlue(color);
+	if (new_red < 16) new_red += 16;
+	if (new_green < 16) new_green += 16;
+	if (new_blue < 16) new_blue += 16;
+	new_red -= red_dif;
+	new_green -= green_dif;
+	new_blue -= blue_dif;
+	QRgb new_color = qRgb(new_red, new_green, new_blue);
+	image->setPixel(x, y, new_color);
+}
+
+/**
+ * Nanosi siatkę kodu na obraz graficzny zadany parametrem. Siatka kodu została uprzednio wczytana (w konstruktorze). Po naniesieniu siatki kodu, plik graficzny zostaje zapisany.
+ * @param image obraz graficzny na który zostanie nałożona siatka kodu
+ */
+void SCodeMachine::mergeCode(QImage *image)
+{
+	for (int y = 0; y < grid->getSizeY(); y++) {
+		for (int x = 0; x < grid->getSizeX(); x++) {
+			int pixel_code = getPixelRGBCode(image, x, y);
+			int instruction = grid->getValueAt(x, y);
+			int mod_code = pixel_code % 16;
+			int delta = ((mod_code - instruction + 8) % 16) - 8;
+			modifyPixelRGBCode(image, x, y, delta);
+		}
+	}
 }
 
 /*==================================================================*/
@@ -176,6 +254,9 @@ void SCodeMachine::mirrorPointerDirection()
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * METODA TESTOWA. Wyświetla siatkę kodu.
+ */
 void SCodeMachine::__dev__printGrid()
 {
 //	debug("dev print code grid START\n");

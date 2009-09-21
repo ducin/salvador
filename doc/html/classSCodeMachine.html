@@ -59,18 +59,23 @@ Diagram dziedziczenia dla SCodeMachine</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#26b7ba8981d08d594b0c37617aa85277">executeTurnDown</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f83465e2ab7065c7b386a189d57ae9ab"></a><!-- doxytag: member="SCodeMachine::__dev__readGridFromTextFile" ref="f83465e2ab7065c7b386a189d57ae9ab" args="(std::string)" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__readGridFromTextFile</b> (std::string)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#2ce54a2d5f6399b501c5260b63317401">mirrorPointerDirection</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c9345e02c8383585cf1738c653f83cfd"></a><!-- doxytag: member="SCodeMachine::__dev__destroyGrid" ref="c9345e02c8383585cf1738c653f83cfd" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__destroyGrid</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#b906d8d6f1faf45d6d01e45e51b7cd65">readGridFromTextFile</a> (std::string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#6796d55fa4ae7bd8051b92a60d395d2a">readGridFromImageFile</a> (std::string)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#54ad5c55c2afe66dedececed9846e5d1">destroyGrid</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#b4f7e9e538a378461a86418ea9dc1d5a">ImageFitsGrid</a> (int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#fdc2ddde59a89a474c7d478a391829ba">mergeCode</a> (QImage *)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#29892f8f026e8dcd71ec99b9c593e022">__dev__printConsole</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#b4c8492fda9fe21cc2620ede3630d852">__dev__printPointer</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0ea93dafdabff0ff080a24b6c8ef9ea1"></a><!-- doxytag: member="SCodeMachine::__dev__printGrid" ref="0ea93dafdabff0ff080a24b6c8ef9ea1" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printGrid</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#0ea93dafdabff0ff080a24b6c8ef9ea1">__dev__printGrid</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#6a725d341bffacccb53431f88c62b713">__dev__printPointedInstruction</a> ()</td></tr>
 
@@ -138,6 +143,25 @@ Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kod
 METODA TESTOWA. Wyświetla informacje o maszynie kodu. 
 </div>
 </div><p>
+<a class="anchor" name="0ea93dafdabff0ff080a24b6c8ef9ea1"></a><!-- doxytag: member="SCodeMachine::__dev__printGrid" ref="0ea93dafdabff0ff080a24b6c8ef9ea1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::__dev__printGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla siatkę kodu. 
+</div>
+</div><p>
 <a class="anchor" name="6a725d341bffacccb53431f88c62b713"></a><!-- doxytag: member="SCodeMachine::__dev__printPointedInstruction" ref="6a725d341bffacccb53431f88c62b713" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -174,6 +198,25 @@ METODA TESTOWA. Wyświetla nazwę wskazywanje przez głowicę instrukcji.
 
 <p>
 METODA TESTOWA. Wyświetla informacje o głowicy maszyny. 
+</div>
+</div><p>
+<a class="anchor" name="54ad5c55c2afe66dedececed9846e5d1"></a><!-- doxytag: member="SCodeMachine::destroyGrid" ref="54ad5c55c2afe66dedececed9846e5d1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::destroyGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Niszczy siatkę kodu Salvadora, która została stworzona podczas wczytywania z pliku: albo tekstowego albo graficznego. 
 </div>
 </div><p>
 <a class="anchor" name="26b7ba8981d08d594b0c37617aa85277"></a><!-- doxytag: member="SCodeMachine::executeTurnDown" ref="26b7ba8981d08d594b0c37617aa85277" args="()" -->
@@ -272,6 +315,86 @@ Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. <dl class="return" co
 
 </div>
 </div><p>
+<a class="anchor" name="b4f7e9e538a378461a86418ea9dc1d5a"></a><!-- doxytag: member="SCodeMachine::ImageFitsGrid" ref="b4f7e9e538a378461a86418ea9dc1d5a" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SCodeMachine::ImageFitsGrid           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>image_width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>image_height</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Sprawdza, czy siatka kodu zmieści się w obrazie graficznym. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>image_width</em>&nbsp;</td><td>szerokość obrazu na który miałaby zostać nałożona siatka kodu Salvadora </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>image_height</em>&nbsp;</td><td>wysokość obrazu na który miałaby zostać nałożona siatka kodu Salvadora </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>czy siatka kodu zmieści się w obrazie graficznym </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="fdc2ddde59a89a474c7d478a391829ba"></a><!-- doxytag: member="SCodeMachine::mergeCode" ref="fdc2ddde59a89a474c7d478a391829ba" args="(QImage *)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::mergeCode           </td>
+          <td>(</td>
+          <td class="paramtype">QImage *&nbsp;</td>
+          <td class="paramname"> <em>image</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Nanosi siatkę kodu na obraz graficzny zadany parametrem. Siatka kodu została uprzednio wczytana (w konstruktorze). Po naniesieniu siatki kodu, plik graficzny zostaje zapisany. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>image</em>&nbsp;</td><td>obraz graficzny na który zostanie nałożona siatka kodu </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="2ce54a2d5f6399b501c5260b63317401"></a><!-- doxytag: member="SCodeMachine::mirrorPointerDirection" ref="2ce54a2d5f6399b501c5260b63317401" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::mirrorPointerDirection           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Odbija kierunek ruchu głowicy. 
+</div>
+</div><p>
 <a class="anchor" name="69a97f71f2a16f69f9daca1bf8433964"></a><!-- doxytag: member="SCodeMachine::pushPointer" ref="69a97f71f2a16f69f9daca1bf8433964" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -291,6 +414,56 @@ Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. <dl class="return" co
 Przesuwa głowicę kodu o jedną komórkę w bieżącym kierunku. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>czy się udało (czy głowica nie wykroczyła poza obraz kodu) </dd></dl>
 
 <p>Implementuje <a class="el" href="classSAbstractMachine.html#72a47b72416e0d2f24fcf36415d37404">SAbstractMachine</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="6796d55fa4ae7bd8051b92a60d395d2a"></a><!-- doxytag: member="SCodeMachine::readGridFromImageFile" ref="6796d55fa4ae7bd8051b92a60d395d2a" args="(std::string)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::readGridFromImageFile           </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>filename</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tworzy siatkę kodu Salvadora w oparciu o plik graficzny zadany parametrem. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>nazwa pliku tekstowego zawierającego siatkę kodu Salvadora </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="b906d8d6f1faf45d6d01e45e51b7cd65"></a><!-- doxytag: member="SCodeMachine::readGridFromTextFile" ref="b906d8d6f1faf45d6d01e45e51b7cd65" args="(std::string)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::readGridFromTextFile           </td>
+          <td>(</td>
+          <td class="paramtype">std::string&nbsp;</td>
+          <td class="paramname"> <em>filename</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Tworzy siatkę kodu Salvadora w oparciu o plik tekstowy zadany parametrem. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>filename</em>&nbsp;</td><td>nazwa pliku tekstowego zawierającego siatkę kodu Salvadora </td></tr>
+  </table>
+</dl>
 
 </div>
 </div><p>
@@ -322,7 +495,7 @@ Ustala tryb gadatliwy. <dl compact><dt><b>Parametry:</b></dt><dd>
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="scodemachine_8h-source.html">scodemachine.h</a><li>src/core/<a class="el" href="scodemachine_8cpp.html">scodemachine.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Tue Sep 22 01:45:00 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

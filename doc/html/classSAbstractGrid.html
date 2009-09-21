@@ -48,14 +48,11 @@ Diagram dziedziczenia dla SAbstractGrid</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#1e4823efb8b482d44466d8324f63dfb1">pointInsideGrid</a> (int, int)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1c10a9c322c321b3fc2c9a5195e817ba"></a><!-- doxytag: member="SAbstractGrid::__dev__transformCharToBinary" ref="1c10a9c322c321b3fc2c9a5195e817ba" args="(char)=0" -->
-virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transformCharToBinary</b> (char)=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#79e2d4403dc5b76fe67e36169bb9f706">getSizeX</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6fc913c575c7d1b87b422084129db978"></a><!-- doxytag: member="SAbstractGrid::__dev__transformBinaryToChar" ref="6fc913c575c7d1b87b422084129db978" args="(int)=0" -->
-virtual char&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transformBinaryToChar</b> (int)=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#a1b6e5aaf2c870e1ef15a9f93459b820">getSizeY</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="e36c03b21a96f33d1ace5fd0b1d218f5"></a><!-- doxytag: member="SAbstractGrid::__dev__printConsole" ref="e36c03b21a96f33d1ace5fd0b1d218f5" args="(int, int)=0" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printConsole</b> (int, int)=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#e36c03b21a96f33d1ace5fd0b1d218f5">__dev__printConsole</a> (int, int)=0</td></tr>
 
 <tr><td colspan="2"><br><h2>Metody chronione</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#919248aad138ffb1c969e73c3e637dcd">constructGrid</a> ()=0</td></tr>
@@ -120,6 +117,37 @@ Destruktor abstrakcyjnej siatki. Nie robi nic szczególnego.
 </div>
 </div><p>
 <hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="e36c03b21a96f33d1ace5fd0b1d218f5"></a><!-- doxytag: member="SAbstractGrid::__dev__printConsole" ref="e36c03b21a96f33d1ace5fd0b1d218f5" args="(int, int)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SAbstractGrid::__dev__printConsole           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla informacje o siatce. 
+<p>Implementowany w <a class="el" href="classSCodeGrid.html#c01feeae87539b97aed07d67b975f174">SCodeGrid</a> i <a class="el" href="classSDataGrid.html#8b94af72ddf880b0297baf24ceb2395a">SDataGrid</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="919248aad138ffb1c969e73c3e637dcd"></a><!-- doxytag: member="SAbstractGrid::constructGrid" ref="919248aad138ffb1c969e73c3e637dcd" args="()=0" -->
 <div class="memitem">
 <div class="memproto">
@@ -159,6 +187,46 @@ Alokuje pamięć pod siatkę.
 <p>
 Dealokuje pamięć przeznaczoną dla siatki. 
 <p>Implementowany w <a class="el" href="classSCodeGrid.html#6bd4c1bf841bd09c2ffb2e019c08b4ed">SCodeGrid</a> i <a class="el" href="classSDataGrid.html#c9c0ef298fb96c56f9f9796720a41489">SDataGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="79e2d4403dc5b76fe67e36169bb9f706"></a><!-- doxytag: member="SAbstractGrid::getSizeX" ref="79e2d4403dc5b76fe67e36169bb9f706" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SAbstractGrid::getSizeX           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca szerokość siatki (rozmiar współrzędnej x). <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>szerokość siatki </dd></dl>
+
+</div>
+</div><p>
+<a class="anchor" name="a1b6e5aaf2c870e1ef15a9f93459b820"></a><!-- doxytag: member="SAbstractGrid::getSizeY" ref="a1b6e5aaf2c870e1ef15a9f93459b820" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SAbstractGrid::getSizeY           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca wysokość siatki (rozmiar współrzędnej y). <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>wysokość siatki </dd></dl>
 
 </div>
 </div><p>
@@ -264,7 +332,7 @@ wysokość siatki (rozmiar współrzędnej y)
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="sabstractgrid_8h-source.html">sabstractgrid.h</a><li>src/core/<a class="el" href="sabstractgrid_8cpp.html">sabstractgrid.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Tue Sep 22 01:44:57 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

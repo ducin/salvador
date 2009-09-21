@@ -22,25 +22,18 @@ Diagram dziedziczenia dla SCodeGrid:\begin{figure}[H]
 \item 
 int \hyperlink{classSCodeGrid_c57d52a49a55c91068fe0eb541e721f8}{getValueAt} (int, int)
 \item 
-\hypertarget{classSCodeGrid_c01feeae87539b97aed07d67b975f174}{
-void \textbf{\_\-\_\-dev\_\-\_\-printConsole} (int, int)}
-\label{classSCodeGrid_c01feeae87539b97aed07d67b975f174}
-
+void \hyperlink{classSCodeGrid_c01feeae87539b97aed07d67b975f174}{\_\-\_\-dev\_\-\_\-printConsole} (int, int)
 \item 
-\hypertarget{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}{
-int \textbf{\_\-\_\-dev\_\-\_\-transformCharToBinary} (char)}
-\label{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}
-
+int \hyperlink{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}{\_\-\_\-dev\_\-\_\-transformCharToBinary} (char)
 \item 
-\hypertarget{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}{
-char \textbf{\_\-\_\-dev\_\-\_\-transformBinaryToChar} (int)}
-\label{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}
-
+char \hyperlink{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}{\_\-\_\-dev\_\-\_\-transformBinaryToChar} (int)
 \end{CompactItemize}
 \subsection*{Metody chronione}
 \begin{CompactItemize}
 \item 
-int \hyperlink{classSCodeGrid_46ed88ad7346788efb14c40cbd836981}{readFromFile} (std::string)
+void \hyperlink{classSCodeGrid_9daa13298d0f41c18629f3fbad8b2a85}{readFromTextFile} (std::string)
+\item 
+void \hyperlink{classSCodeGrid_47cd37dd8ae964b4fbec965a9345de61}{readFromImageFile} (std::string)
 \item 
 void \hyperlink{classSCodeGrid_f15ba156433f88a40887e5ba72d9201a}{constructGrid} ()
 \item 
@@ -80,6 +73,48 @@ Konstruktor siatki kodu. \hypertarget{classSCodeGrid_c150afdd8f27785b5ddf5669a4d
 Destruktor siatki kodu. 
 
 \subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSCodeGrid_c01feeae87539b97aed07d67b975f174}{
+\index{SCodeGrid@{SCodeGrid}!\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}}
+\index{\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printConsole}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeGrid::\_\-\_\-dev\_\-\_\-printConsole (int {\em ptr\_\-x}, \/  int {\em ptr\_\-y})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSCodeGrid_c01feeae87539b97aed07d67b975f174}
+
+
+METODA TESTOWA. Wyświetla informacje o siatce kodu. Parametry określają współrzędne głowicy. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em ptr\_\-x}]pierwsza współrzędna (odcięta) głowicy \item[{\em ptr\_\-y}]druga współrzędna (rzędna) głowicy \end{description}
+\end{Desc}
+
+
+Implementuje \hyperlink{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{SAbstractGrid}.\hypertarget{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}{
+\index{SCodeGrid@{SCodeGrid}!\_\-\_\-dev\_\-\_\-transformBinaryToChar@{\_\-\_\-dev\_\-\_\-transformBinaryToChar}}
+\index{\_\-\_\-dev\_\-\_\-transformBinaryToChar@{\_\-\_\-dev\_\-\_\-transformBinaryToChar}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-transformBinaryToChar}]{\setlength{\rightskip}{0pt plus 5cm}char SCodeGrid::\_\-\_\-dev\_\-\_\-transformBinaryToChar (int {\em binary})}}
+\label{classSCodeGrid_75d1d340ee3c5704527e793f2e71e93b}
+
+
+METODA TESTOWA. Konwertuje instrukcje Salvadora w znaki je symbolujące. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em binary}]instrukcja zadana elementem enumeracji SInstructions \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]znak symbolujący instrukcję Salvadora \end{Desc}
+\hypertarget{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}{
+\index{SCodeGrid@{SCodeGrid}!\_\-\_\-dev\_\-\_\-transformCharToBinary@{\_\-\_\-dev\_\-\_\-transformCharToBinary}}
+\index{\_\-\_\-dev\_\-\_\-transformCharToBinary@{\_\-\_\-dev\_\-\_\-transformCharToBinary}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-transformCharToBinary}]{\setlength{\rightskip}{0pt plus 5cm}int SCodeGrid::\_\-\_\-dev\_\-\_\-transformCharToBinary (char {\em code})}}
+\label{classSCodeGrid_c5754181e1266e23935d84f3beeb5979}
+
+
+METODA TESTOWA. Konwertuje znakowy symbol instrukcji w liczbę - element enumeracji SInstructions. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em code}]znak symbolujący instrukcję Salvadora \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]liczba symbolizująca instrukcję \end{Desc}
 \hypertarget{classSCodeGrid_f15ba156433f88a40887e5ba72d9201a}{
 \index{SCodeGrid@{SCodeGrid}!constructGrid@{constructGrid}}
 \index{constructGrid@{constructGrid}!SCodeGrid@{SCodeGrid}}
@@ -114,15 +149,30 @@ Zwraca instrukcję wskazywaną przez punkt współrzędnych zadanych parametrami
 \item[Zwraca:]instrukcja umieszczona na siatce \end{Desc}
 
 
-Implementuje \hyperlink{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{SAbstractGrid}.\hypertarget{classSCodeGrid_46ed88ad7346788efb14c40cbd836981}{
-\index{SCodeGrid@{SCodeGrid}!readFromFile@{readFromFile}}
-\index{readFromFile@{readFromFile}!SCodeGrid@{SCodeGrid}}
-\subsubsection[{readFromFile}]{\setlength{\rightskip}{0pt plus 5cm}int SCodeGrid::readFromFile (std::string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
-\label{classSCodeGrid_46ed88ad7346788efb14c40cbd836981}
+Implementuje \hyperlink{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{SAbstractGrid}.\hypertarget{classSCodeGrid_47cd37dd8ae964b4fbec965a9345de61}{
+\index{SCodeGrid@{SCodeGrid}!readFromImageFile@{readFromImageFile}}
+\index{readFromImageFile@{readFromImageFile}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{readFromImageFile}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeGrid::readFromImageFile (std::string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSCodeGrid_47cd37dd8ae964b4fbec965a9345de61}
 
 
-\begin{Desc}
-\item[Zwraca:]kod błędu: 0: ok 1: nie ma takiego pliku 2: błędny format wejścia \end{Desc}
+Wczytuje siatkę kodu Salvadora z pliku graficznego którego nazwa jest zadana przez parametr. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em filename}]plik z siatką kodu Salvadora \end{description}
+\end{Desc}
+\hypertarget{classSCodeGrid_9daa13298d0f41c18629f3fbad8b2a85}{
+\index{SCodeGrid@{SCodeGrid}!readFromTextFile@{readFromTextFile}}
+\index{readFromTextFile@{readFromTextFile}!SCodeGrid@{SCodeGrid}}
+\subsubsection[{readFromTextFile}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeGrid::readFromTextFile (std::string {\em filename})\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSCodeGrid_9daa13298d0f41c18629f3fbad8b2a85}
+
+
+Wczytuje siatkę kodu Salvadora z pliku tekstowego którego nazwa jest zadana przez parametr. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em filename}]plik z siatką kodu Salvadora \end{description}
+\end{Desc}
 
 
 \subsection{Dokumentacja atrybutów składowych}

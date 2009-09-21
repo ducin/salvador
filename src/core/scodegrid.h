@@ -32,7 +32,8 @@ class SCodeGrid : public SAbstractGrid
 
 		/** Siatka kodu. */ SInstructions **instruction_grid;
 
-		int readFromFile(std::string);
+		void readFromTextFile(std::string);
+		void readFromImageFile(std::string);
 
 		void constructGrid();
 		void destructGrid();

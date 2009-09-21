@@ -7,14 +7,14 @@
 #include "senums.h"
 #include "sabstractmachine.h"
 
-#include "scodeimage.h"
 #include "scodeimagepointer.h"
 #include "scodegrid.h"
 
 // C++
 #include <string>
 
-// STL
+// Qt
+#include <QImage>
 
 /** \file scodemachine.h
  * \brief plik nagłówkowy klasy SCodeMachine
@@ -33,9 +33,11 @@ class SCodeMachine : public SAbstractMachine
 	private:
 
 		SCodeTypes code_type; // czy kod jest z obrazka czy z siatki kodu
-		SCodeImage *image;
 
 		/** Pole logiczne definiujące tryb gadatliwy. */ bool verbose;
+
+		int getPixelRGBCode(QImage *, int, int);
+		void modifyPixelRGBCode(QImage *, int, int, int);
 
 	public:
 
@@ -54,10 +56,14 @@ class SCodeMachine : public SAbstractMachine
 		void executeTurnDown();
 		void mirrorPointerDirection();
 
-	// development:
+		void readGridFromTextFile(std::string);
+		void readGridFromImageFile(std::string);
+		void destroyGrid();
+		
+		bool ImageFitsGrid(int, int);
+		void mergeCode(QImage *);
 
-		void __dev__readGridFromTextFile(std::string);
-		void __dev__destroyGrid();
+	// development:
 
 		void __dev__printConsole();
 		void __dev__printPointer();

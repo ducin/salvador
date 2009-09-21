@@ -50,9 +50,6 @@ class SDataGrid : public SAbstractGrid
 
 		void __dev__printConsole(int, int);
 
-		int __dev__transformCharToBinary(char);
-		char __dev__transformBinaryToChar(int);
-
 };
 
 #endif

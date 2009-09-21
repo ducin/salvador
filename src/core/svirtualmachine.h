@@ -90,11 +90,12 @@ class SVirtualMachine
 
 		bool mergeGridWithImage(std::string);
 
-	// development:
+		void destroyGrid();
+
+// development:
 
 		std::string __dev__transformBinaryStateToString(SMachineStates);
 		void __dev__printConsole();
-		void __dev__destroyGrid();
 		void __dev__runProgram(); // TESTOWE // testowa metoda wykonywania programu dla maszyny, która wczytała już swój kod
 
 };

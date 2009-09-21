@@ -33,18 +33,16 @@ SVirtualMachine::SVirtualMachine(std::string filename, SCodeTypes CODE_TYPE)
 	debug("CONSTRUCTOR - virtual-machine START\n");
 	data_machine = new SDataMachine();
 	code_machine = new SCodeMachine(CODE_TYPE);
-
 	switch(CODE_TYPE)
 	{
 		case tp_text:
-			code_machine->__dev__readGridFromTextFile(filename);
-			data_machine->__dev__initGrid();
+			code_machine->readGridFromTextFile(filename);
 			break;
 		case tp_graphics:
-			// ???
+			code_machine->readGridFromImageFile(filename);
 			break;
 	}
-
+	data_machine->initGrid();
 	prepareToExecute();
 	debug("CONSTRUCTOR - virtual-machine END\n");
 }
@@ -264,6 +262,8 @@ void SVirtualMachine::executeAllInstr()
  */
 void SVirtualMachine::executeInstr()
 {
+	if (isVerbose())
+		__dev__printConsole();
 	switch(code_machine->getPointedInstruction())
 	{
 		case instr_data_left:
@@ -321,8 +321,8 @@ void SVirtualMachine::executeInstr()
  */
 void SVirtualMachine::clean()
 {
-	code_machine->__dev__destroyGrid();
-	data_machine->__dev__destroyGrid();
+	code_machine->destroyGrid();
+	data_machine->destroyGrid();
 }
 
 /**
@@ -365,7 +365,12 @@ bool SVirtualMachine::mergeGridWithImage(std::string filename)
 	// stworzenie obiektu obrazu kodu, na który zostanie nałożona siatka instrukcji
 	QImage *image = new QImage(QSTR_filename);
 	
-//	for(
+	if (!code_machine->ImageFitsGrid(image->width(), image->height())) { // przyszły obraz kodu za mały względem siatki kodu
+		return false;
+	} else {
+		code_machine->mergeCode(image);
+		return image->save(QSTR_filename);
+	}
 }
 
 /*==================================================================*/
@@ -374,6 +379,11 @@ bool SVirtualMachine::mergeGridWithImage(std::string filename)
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * METODA TESTOWA. Zwraca nazwę stanu zadanego przez parametr.
+ * @param state stan maszyny
+ * @return nazwa stanu
+ */
 std::string SVirtualMachine::__dev__transformBinaryStateToString(SMachineStates state)
 {
 	switch(state)
@@ -389,12 +399,18 @@ std::string SVirtualMachine::__dev__transformBinaryStateToString(SMachineStates 
 	}
 }
 
-void SVirtualMachine::__dev__destroyGrid()
+/**
+ * Rozkazuje podrzędnym maszynom niszczyć ich siatki.
+ */
+void SVirtualMachine::destroyGrid()
 {
-	this->data_machine->__dev__destroyGrid();
-	this->code_machine->__dev__destroyGrid();
+	this->data_machine->destroyGrid();
+	this->code_machine->destroyGrid();
 }
 
+/**
+ * METODA TESTOWA. Wyświetla informacje o wirtualnej maszynie Salvadora.
+ */
 void SVirtualMachine::__dev__printConsole()
 {
 //	std::cout << "[STATE: " << __dev__transformBinaryStateToString(getState()) << "]" << std::endl;
@@ -428,6 +444,6 @@ void SVirtualMachine::__dev__runProgram()
 		std::cout << std::endl << "> "; getline(std::cin, answer); std::cout << std::endl;
 	}
 	std::cout << "aborted\n";
-	code_machine->__dev__destroyGrid();
-	data_machine->__dev__destroyGrid();
+	code_machine->destroyGrid();
+	data_machine->destroyGrid();
 }
