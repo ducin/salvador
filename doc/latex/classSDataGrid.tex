@@ -20,25 +20,15 @@ Diagram dziedziczenia dla SDataGrid:\begin{figure}[H]
 \item 
 \hyperlink{classSDataGrid_51645b217b4c668e0e945cdbda1db3ec}{$\sim$SDataGrid} ()
 \item 
-\hypertarget{classSDataGrid_7f9dd63d74e36731875630a96ea8dd07}{
-int \textbf{getValueAt} (int, int)}
-\label{classSDataGrid_7f9dd63d74e36731875630a96ea8dd07}
-
+int \hyperlink{classSDataGrid_7f9dd63d74e36731875630a96ea8dd07}{getValueAt} (int, int)
 \item 
-\hypertarget{classSDataGrid_fb34906c27b14e12fed01747f5763e68}{
-int \textbf{performZeroAt} (int, int)}
-\label{classSDataGrid_fb34906c27b14e12fed01747f5763e68}
-
+void \hyperlink{classSDataGrid_bd825a6b1f64a7410c7c5f2a94af8fb9}{performZeroAt} (int, int)
 \item 
-\hypertarget{classSDataGrid_efb7f5da116641e2be648a6c8ad87643}{
-int \textbf{performSuccAt} (int, int)}
-\label{classSDataGrid_efb7f5da116641e2be648a6c8ad87643}
-
+void \hyperlink{classSDataGrid_33bf85628d27e5d467d4aff0b67ccd79}{performSuccAt} (int, int)
 \item 
-\hypertarget{classSDataGrid_c0b8507ad56abd1cd084e7a0c2218347}{
-int \textbf{performPredAt} (int, int)}
-\label{classSDataGrid_c0b8507ad56abd1cd084e7a0c2218347}
-
+void \hyperlink{classSDataGrid_7085f1322b3ad39fcbaa9ca13ca79866}{performPredAt} (int, int)
+\item 
+void \hyperlink{classSDataGrid_80b67d2da29f99384fb2852828d83b91}{clear} ()
 \item 
 \hypertarget{classSDataGrid_8b94af72ddf880b0297baf24ceb2395a}{
 void \textbf{\_\-\_\-dev\_\-\_\-printConsole} (int, int)}
@@ -58,28 +48,16 @@ char \textbf{\_\-\_\-dev\_\-\_\-transformBinaryToChar} (int)}
 \subsection*{Metody chronione}
 \begin{CompactItemize}
 \item 
-\hypertarget{classSDataGrid_5af888335764c1ba959b6ef964223b6d}{
-void \textbf{constructGrid} ()}
-\label{classSDataGrid_5af888335764c1ba959b6ef964223b6d}
-
+void \hyperlink{classSDataGrid_5af888335764c1ba959b6ef964223b6d}{constructGrid} ()
 \item 
-\hypertarget{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}{
-void \textbf{destructGrid} ()}
-\label{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}
-
+void \hyperlink{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}{destructGrid} ()
 \item 
-\hypertarget{classSDataGrid_df36584ac2e2d38eda1bd06ad8fad355}{
-void \textbf{zeroGrid} ()}
-\label{classSDataGrid_df36584ac2e2d38eda1bd06ad8fad355}
-
+void \hyperlink{classSDataGrid_df36584ac2e2d38eda1bd06ad8fad355}{zeroGrid} ()
 \end{CompactItemize}
 \subsection*{Atrybuty chronione}
 \begin{CompactItemize}
 \item 
-\hypertarget{classSDataGrid_6401d181afc8b06f75fcec860b02e9cb}{
-int $\ast$$\ast$ \textbf{data\_\-grid}}
-\label{classSDataGrid_6401d181afc8b06f75fcec860b02e9cb}
-
+int $\ast$$\ast$ \hyperlink{classSDataGrid_6401d181afc8b06f75fcec860b02e9cb}{data\_\-grid}
 \end{CompactItemize}
 
 
@@ -104,6 +82,103 @@ Konstruktor siatki danych. \hypertarget{classSDataGrid_51645b217b4c668e0e945cdbd
 
 
 Destruktor siatki danych. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSDataGrid_80b67d2da29f99384fb2852828d83b91}{
+\index{SDataGrid@{SDataGrid}!clear@{clear}}
+\index{clear@{clear}!SDataGrid@{SDataGrid}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::clear ()}}
+\label{classSDataGrid_80b67d2da29f99384fb2852828d83b91}
+
+
+Czyści komórki siatki danych. \hypertarget{classSDataGrid_5af888335764c1ba959b6ef964223b6d}{
+\index{SDataGrid@{SDataGrid}!constructGrid@{constructGrid}}
+\index{constructGrid@{constructGrid}!SDataGrid@{SDataGrid}}
+\subsubsection[{constructGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::constructGrid ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSDataGrid_5af888335764c1ba959b6ef964223b6d}
+
+
+Alokuje pamięć pod siatkę kodu. 
+
+Implementuje \hyperlink{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}{SAbstractGrid}.\hypertarget{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}{
+\index{SDataGrid@{SDataGrid}!destructGrid@{destructGrid}}
+\index{destructGrid@{destructGrid}!SDataGrid@{SDataGrid}}
+\subsubsection[{destructGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::destructGrid ()\hspace{0.3cm}{\tt  \mbox{[}protected, virtual\mbox{]}}}}
+\label{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}
+
+
+Dealokuje pamięć przeznaczoną dla siatki kodu. 
+
+Implementuje \hyperlink{classSAbstractGrid_fb63d8cf5210c3606a3b7add19f06833}{SAbstractGrid}.\hypertarget{classSDataGrid_7f9dd63d74e36731875630a96ea8dd07}{
+\index{SDataGrid@{SDataGrid}!getValueAt@{getValueAt}}
+\index{getValueAt@{getValueAt}!SDataGrid@{SDataGrid}}
+\subsubsection[{getValueAt}]{\setlength{\rightskip}{0pt plus 5cm}int SDataGrid::getValueAt (int {\em coord\_\-x}, \/  int {\em coord\_\-y})\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSDataGrid_7f9dd63d74e36731875630a96ea8dd07}
+
+
+Zwraca wartość danej określonej przez współrzędne zadane parametrami. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em coord\_\-x}]odcięta (współrzędna) \item[{\em coord\_\-y}]rzędna (współrzędna) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]wartość danej określonej podanymi współrzędnymi \end{Desc}
+
+
+Implementuje \hyperlink{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{SAbstractGrid}.\hypertarget{classSDataGrid_7085f1322b3ad39fcbaa9ca13ca79866}{
+\index{SDataGrid@{SDataGrid}!performPredAt@{performPredAt}}
+\index{performPredAt@{performPredAt}!SDataGrid@{SDataGrid}}
+\subsubsection[{performPredAt}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::performPredAt (int {\em coord\_\-x}, \/  int {\em coord\_\-y})}}
+\label{classSDataGrid_7085f1322b3ad39fcbaa9ca13ca79866}
+
+
+Wykonuje instrukcję Salvadora ZMNIEJSZ na danej określonej przez współrzędne zadane parametrami. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em coord\_\-x}]odcięta (współrzędna) \item[{\em coord\_\-y}]rzędna (współrzędna) \end{description}
+\end{Desc}
+\hypertarget{classSDataGrid_33bf85628d27e5d467d4aff0b67ccd79}{
+\index{SDataGrid@{SDataGrid}!performSuccAt@{performSuccAt}}
+\index{performSuccAt@{performSuccAt}!SDataGrid@{SDataGrid}}
+\subsubsection[{performSuccAt}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::performSuccAt (int {\em coord\_\-x}, \/  int {\em coord\_\-y})}}
+\label{classSDataGrid_33bf85628d27e5d467d4aff0b67ccd79}
+
+
+Wykonuje instrukcję Salvadora ZWIĘKSZ na danej określonej przez współrzędne zadane parametrami. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em coord\_\-x}]odcięta (współrzędna) \item[{\em coord\_\-y}]rzędna (współrzędna) \end{description}
+\end{Desc}
+\hypertarget{classSDataGrid_bd825a6b1f64a7410c7c5f2a94af8fb9}{
+\index{SDataGrid@{SDataGrid}!performZeroAt@{performZeroAt}}
+\index{performZeroAt@{performZeroAt}!SDataGrid@{SDataGrid}}
+\subsubsection[{performZeroAt}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::performZeroAt (int {\em coord\_\-x}, \/  int {\em coord\_\-y})}}
+\label{classSDataGrid_bd825a6b1f64a7410c7c5f2a94af8fb9}
+
+
+Wykonuje instrukcję Salvadora ZERUJ na danej określonej przez współrzędne zadane parametrami. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em coord\_\-x}]odcięta (współrzędna) \item[{\em coord\_\-y}]rzędna (współrzędna) \end{description}
+\end{Desc}
+\hypertarget{classSDataGrid_df36584ac2e2d38eda1bd06ad8fad355}{
+\index{SDataGrid@{SDataGrid}!zeroGrid@{zeroGrid}}
+\index{zeroGrid@{zeroGrid}!SDataGrid@{SDataGrid}}
+\subsubsection[{zeroGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SDataGrid::zeroGrid ()\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSDataGrid_df36584ac2e2d38eda1bd06ad8fad355}
+
+
+Czyści (zeruje) wszystkie komórki siatkę kodu. 
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classSDataGrid_6401d181afc8b06f75fcec860b02e9cb}{
+\index{SDataGrid@{SDataGrid}!data\_\-grid@{data\_\-grid}}
+\index{data\_\-grid@{data\_\-grid}!SDataGrid@{SDataGrid}}
+\subsubsection[{data\_\-grid}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$$\ast$ {\bf SDataGrid::data\_\-grid}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSDataGrid_6401d181afc8b06f75fcec860b02e9cb}
+
+
+Siatka kodu 
 
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
 \item 

@@ -49,6 +49,9 @@ SCodeGrid::~SCodeGrid()
 	debug("DESTRUCTOR code-grid END\n");
 }
 
+/**
+ * Alokuje pamięć pod siatkę kodu.
+ */
 void SCodeGrid::constructGrid()
 {
 	instruction_grid = new SInstructions* [size_y];
@@ -58,6 +61,9 @@ void SCodeGrid::constructGrid()
 	}
 }
 
+/**
+ * Dealokuje pamięć przeznaczoną dla siatki kodu.
+ */
 void SCodeGrid::destructGrid()
 {
 	for (int ind = 0; ind < size_y; ind++)
@@ -67,7 +73,12 @@ void SCodeGrid::destructGrid()
 	delete [] instruction_grid;
 }
 
-// zwraca instrukcję wskazywaną przez punkt o podanych współrzędnych
+/**
+ * Zwraca instrukcję wskazywaną przez punkt współrzędnych zadanych parametrami.
+ * @param coord_x pierwsza współrzędna (odcięta) punktu
+ * @param coord_y pierwsza współrzędna (rzędna) punktu
+ * @return instrukcja umieszczona na siatce
+ */
 int SCodeGrid::getValueAt(int coord_x, int coord_y)
 {
 	return instruction_grid[coord_y][coord_x];

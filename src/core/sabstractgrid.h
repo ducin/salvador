@@ -29,12 +29,13 @@ class SAbstractGrid
 
 	protected:
 
-		int size_x, size_y;
+		/** szerokość siatki (rozmiar współrzędnej x) */ int size_x;
+		/** wysokość siatki (rozmiar współrzędnej y) */ int size_y;
 
-		virtual void constructGrid() = 0;
-		virtual void destructGrid() = 0;
+		/** Alokuje pamięć pod siatkę. */ virtual void constructGrid() = 0;
+		/** Dealokuje pamięć przeznaczoną dla siatki. */ virtual void destructGrid() = 0;
 
-		virtual int getValueAt(int, int) = 0;
+		/** Zwraca wartość komórki siatki określonej współrzednymi zadanymi parametrami. @return wartość komórki siatki wskazanej parametrami */ virtual int getValueAt(int, int) = 0;
 
 	public:
 

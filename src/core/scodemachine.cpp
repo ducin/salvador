@@ -66,15 +66,41 @@ SInstructions SCodeMachine::getPointedInstruction()
 	return result;
 }
 
-void SCodeMachine::pushPointer()
+/**
+ * Przesuwa głowicę kodu o jedną komórkę w bieżącym kierunku.
+ * @return czy się udało (czy głowica nie wykroczyła poza obraz kodu)
+ */
+bool SCodeMachine::pushPointer()
 {
-//	if (grid->pointInsideGrid())
-	pointer->moveForward(1);
+	// bieżące współrzędne
+	int tmp_x = pointer->getCoordX();
+	int tmp_y = pointer->getCoordY();
+	// współrzędne w następnym ruchu
+	switch (pointer->getDirection()) {
+		case dir_up:
+			tmp_y -= 1;
+			break;
+		case dir_left:
+			tmp_x -= 1;
+			break;
+		case dir_down:
+			tmp_y += 1;
+			break;
+		case dir_right:
+			tmp_x += 1;
+			break;
+	}
+	if (grid->pointInsideGrid(tmp_x, tmp_y)) {
+		pointer->moveForward(1);
+		return true;
+	} else {
+		return false;
+	}
 }
 
 //////////////////////
 
-int SCodeMachine::__dev__readGridFromTextFile(std::string FILENAME)
+void SCodeMachine::__dev__readGridFromTextFile(std::string FILENAME)
 {
 	grid = new SCodeGrid(FILENAME, tp_text);
 }
@@ -121,6 +147,27 @@ void SCodeMachine::executeTurnUp()
 void SCodeMachine::executeTurnDown()
 {
 	(dynamic_cast<SCodeImagePointer *> (pointer))->turnDown();
+}
+
+/**
+ * Odbija kierunek ruchu głowicy.
+ */
+void SCodeMachine::mirrorPointerDirection()
+{
+	switch (pointer->getDirection()) {
+		case dir_up:
+			executeTurnDown();
+			break;
+		case dir_left:
+			executeTurnRight();
+			break;
+		case dir_down:
+			executeTurnUp();
+			break;
+		case dir_right:
+			executeTurnLeft();
+			break;
+	}
 }
 
 /*==================================================================*/

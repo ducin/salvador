@@ -63,29 +63,59 @@ SVirtualMachine::~SVirtualMachine()
 
 //=============================================================================
 
+/**
+ * Sprawdza, czy maszyna wirtualna pracuje (sprawdzany stan maszyny).
+ * @return czy maszyna pracuje
+ */
 bool SVirtualMachine::isRunning()
 {
 	return (state == state_running);
 }
 
+/**
+ * Sprawdza, czy maszyna wirtualna jest gotowa (sprawdzany stan maszyny).
+ * @return czy maszyna jest gotowa
+ */
 bool SVirtualMachine::isReady()
 {
 	return (state == state_ready);
 }
 
-void SVirtualMachine::startMachine()
+/**
+ * Uruchamia maszynę (ustawia odpowiedni stan).
+ */
+bool SVirtualMachine::startMachine()
 {
-	setState(state_running);
+	if (isReady()) {
+		setState(state_running);
+		return true;
+	} else {
+		return false;
+	}
 }
 
-void SVirtualMachine::restartMachine()
+/**
+ * Restartuje maszynę (ustawia odpowiedni stan).
+ * @return czy operacja się powiodła
+ */
+bool SVirtualMachine::restartMachine()
 {
-// 
+	prepareToExecute();
+	return true;
 }
 
-void SVirtualMachine::stopMachine()
+/**
+ * Zatrzymuje maszynę (ustawia odpowiedni stan).
+ * @return czy operacja się powiodła
+ */
+bool SVirtualMachine::stopMachine()
 {
-//
+	if (isRunning()) {
+		setState(state_finished);
+		return true;
+	} else {
+		return false;
+	}
 }
 
 /** \brief przygotowanie do uruchomienia/zresetowania wirtualnej maszyny
@@ -105,7 +135,66 @@ void SVirtualMachine::prepareToExecute()
 	// ustaw stan maszyny na "gotowy"
 	setState(state_ready);
 
+	// domyślna wartość zachowania przy głowicy chcącej wyjść poza obraz kodu - odbijaj kierunek ruchu głowicy
+	beyond_border_behavior = beh_bounce;
+
 	step = 0;
+}
+
+//=============================================================================
+
+/**
+ * Ustala zachowanie wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, na odbicie kierunku głowicy.
+ */
+void SVirtualMachine::setBehaviorBounce()
+{
+	beyond_border_behavior = beh_bounce;
+}
+
+/**
+ * Ustala zachowanie wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, na zakończenie pracy maszyny.
+  */
+void SVirtualMachine::setBehaviorStop()
+{
+	beyond_border_behavior = beh_stop;
+}
+
+/**
+ * Sprawdza czy zachowaniem wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, jest odbicie kierunku głowicy.
+ * @return czy zachowanie maszyny to odbicie kierunku głowicy
+ */
+bool SVirtualMachine::isBehaviorBounce()
+{
+	return (beyond_border_behavior == beh_bounce);
+}
+
+/**
+ * Sprawdza czy zachowaniem wirtualnej maszyny w sytuacji, gdy głowica kodu ma za chwilę opuścić obraz kodu, jest zakończenie pracy maszyny.
+ * @return czy zachowanie maszyny to zakończenie pracy maszyny
+ */
+bool SVirtualMachine::isBehaviorStop()
+{
+	return (beyond_border_behavior == beh_stop);
+}
+
+/**
+ * Zmień zachowanie na przeciwne.
+ */
+void SVirtualMachine::toggleBehavior()
+{
+	if (isBehaviorBounce()) {
+		setBehaviorStop();
+	} else if (isBehaviorStop()) {
+		setBehaviorBounce();
+	}
+}
+
+/**
+ * Nakazuje maszynie kodu odbić kierunek ruchu głowicy kodu.
+ */
+void SVirtualMachine::bounceCodeImagePointerDirection()
+{
+	code_machine->mirrorPointerDirection();
 }
 
 //=============================================================================
@@ -162,7 +251,7 @@ void SVirtualMachine::toggleVerbosity()
 //=============================================================================
 
 /**
- * Wykonuje wszystkie instrukcje
+ * Wykonuje instrukcje aż maszyna zmieni swój stan na "zakończony".
  */
 void SVirtualMachine::executeAllInstr()
 {
@@ -170,6 +259,9 @@ void SVirtualMachine::executeAllInstr()
 		executeInstr();
 }
 
+/**
+ * Wykonuje jedną instrukcję.
+ */
 void SVirtualMachine::executeInstr()
 {
 	switch(code_machine->getPointedInstruction())
@@ -216,15 +308,34 @@ void SVirtualMachine::executeInstr()
 			finish();
 			break;
 	}
-	if (isRunning()) // jeśli maszyna nadal działa, przesuń głowicę maszyny kodu do przodu
-		code_machine->pushPointer();
-	step++;
+	if (isRunning()) { // jeśli maszyna nadal działa, przesuń głowicę maszyny kodu do przodu
+		step++;
+		if (!code_machine->pushPointer()) { // jeśli głowica kodu ma za chwilę wyjść poza obraz kodu
+			performActionWhenPointerOutside();
+		}
+	}
 }
 
+/**
+ * Metoda czyści wszystkie tymczasowe dane maszyny.
+ */
 void SVirtualMachine::clean()
 {
 	code_machine->__dev__destroyGrid();
 	data_machine->__dev__destroyGrid();
+}
+
+/**
+ * Metoda reaguje na sytuację, gdy głowica kodu ma za chwilę znaleźć się poza obrazem kodu. Reakcja zależy od
+ */
+void SVirtualMachine::performActionWhenPointerOutside()
+{
+	if (isBehaviorBounce()) { // jeśli maszyna ma ustawiony tryb 'odbij kierunek w takiej sytuacji'
+		bounceCodeImagePointerDirection();
+	} else { // isBehaviorStop()
+		finish();
+		std::cout << "Głowica wykracza poza obraz danych";
+	}
 }
 
 /**
@@ -241,6 +352,11 @@ void SVirtualMachine::finish()
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * Metoda nakłada siatkę kodu (uprzednio wczytaną) na obraz, plik graficzny, przekazywany przez parametr.
+ * @param filename plik graficzny
+ * @return czy się udało
+ */
 bool SVirtualMachine::mergeGridWithImage(std::string filename)
 {
 	// zmienna robocza przechowująca ścieżkę do pliku z kodem

@@ -44,6 +44,9 @@ SDataGrid::~SDataGrid()
 	debug("DESTRUCTOR data-grid END\n");
 }
 
+/**
+ * Alokuje pamięć pod siatkę kodu.
+ */
 void SDataGrid::constructGrid()
 {
 	data_grid = new int* [size_y];
@@ -53,6 +56,9 @@ void SDataGrid::constructGrid()
 	}
 }
 
+/**
+ * Dealokuje pamięć przeznaczoną dla siatki kodu.
+ */
 void SDataGrid::destructGrid()
 {
 	for (int ind = 0; ind < size_y; ind++)
@@ -62,6 +68,9 @@ void SDataGrid::destructGrid()
 	delete [] data_grid;
 }
 
+/**
+ * Czyści (zeruje) wszystkie komórki siatkę kodu.
+ */
 void SDataGrid::zeroGrid()
 {
 	for (int y = 0; y < size_y; y++)
@@ -73,22 +82,51 @@ void SDataGrid::zeroGrid()
 	}
 }
 
+/**
+ * Czyści komórki siatki danych.
+ */
+void SDataGrid::clear()
+{
+	zeroGrid();
+}
+
+/**
+ * Zwraca wartość danej określonej przez współrzędne zadane parametrami.
+ * @param coord_x odcięta (współrzędna)
+ * @param coord_y rzędna (współrzędna)
+ * @return wartość danej określonej podanymi współrzędnymi
+ */
 int SDataGrid::getValueAt(int coord_x, int coord_y)
 {
 	return data_grid[coord_y][coord_x];
 }
 
-int SDataGrid::performZeroAt(int coord_x, int coord_y)
+/**
+ * Wykonuje instrukcję Salvadora ZERUJ na danej określonej przez współrzędne zadane parametrami.
+ * @param coord_x odcięta (współrzędna)
+ * @param coord_y rzędna (współrzędna)
+ */
+void SDataGrid::performZeroAt(int coord_x, int coord_y)
 {
 	data_grid[coord_y][coord_x] = 0;
 }
 
-int SDataGrid::performSuccAt(int coord_x, int coord_y)
+/**
+ * Wykonuje instrukcję Salvadora ZWIĘKSZ na danej określonej przez współrzędne zadane parametrami.
+ * @param coord_x odcięta (współrzędna)
+ * @param coord_y rzędna (współrzędna)
+ */
+void SDataGrid::performSuccAt(int coord_x, int coord_y)
 {
 	data_grid[coord_y][coord_x] += 1;
 }
 
-int SDataGrid::performPredAt(int coord_x, int coord_y)
+/**
+ * Wykonuje instrukcję Salvadora ZMNIEJSZ na danej określonej przez współrzędne zadane parametrami.
+ * @param coord_x odcięta (współrzędna)
+ * @param coord_y rzędna (współrzędna)
+ */
+void SDataGrid::performPredAt(int coord_x, int coord_y)
 {
 	data_grid[coord_y][coord_x] -= 1;
 }

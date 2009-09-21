@@ -25,38 +25,14 @@ virtual \hyperlink{classSAbstractMachine_2c4c79bd629a2961fb520785ce3adf4b}{$\sim
 \begin{CompactList}\small\item\em Destruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje się niszczeniem głowic, tym zajmują się destruktory klas dziedziczących po \hyperlink{classSAbstractMachine}{SAbstractMachine} (\hyperlink{classSCodeMachine}{SCodeMachine}, \hyperlink{classSDataMachine}{SDataMachine}). \item\end{CompactList}\item 
 void \hyperlink{classSAbstractMachine_87766a003773869a3438e92739d7c9a1}{clearPointer} ()
 \begin{CompactList}\small\item\em ustaw współrzędne głowicy na domyślne \mbox{[}\mbox{[}i kierunek\mbox{]}\mbox{]} \item\end{CompactList}\item 
-\hypertarget{classSAbstractMachine_65a2d69dfa18ead7e26bf8ace4eb356d}{
-void \textbf{pushPointer} ()}
-\label{classSAbstractMachine_65a2d69dfa18ead7e26bf8ace4eb356d}
-
-\item 
-\hypertarget{classSAbstractMachine_f96c7b89921887960bc83516e7784a34}{
-void \textbf{\_\-\_\-dev\_\-\_\-grid\_\-printConsole} ()}
-\label{classSAbstractMachine_f96c7b89921887960bc83516e7784a34}
-
-\item 
-\hypertarget{classSAbstractMachine_fea2851366c3564f67e547b102c195e9}{
-void \textbf{\_\-\_\-dev\_\-\_\-pointer\_\-printConsole} ()}
-\label{classSAbstractMachine_fea2851366c3564f67e547b102c195e9}
-
-\item 
-\hypertarget{classSAbstractMachine_10fea0faba154b2254a33a0ccf865444}{
-void \textbf{\_\-\_\-dev\_\-\_\-printConsole} ()}
-\label{classSAbstractMachine_10fea0faba154b2254a33a0ccf865444}
-
+virtual bool \hyperlink{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}{pushPointer} ()=0
 \end{CompactItemize}
 \subsection*{Atrybuty chronione}
 \begin{CompactItemize}
 \item 
-\hypertarget{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}{
-\hyperlink{classSAbstractPointer}{SAbstractPointer} $\ast$ \textbf{pointer}}
-\label{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}
-
+\hyperlink{classSAbstractPointer}{SAbstractPointer} $\ast$ \hyperlink{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}{pointer}
 \item 
-\hypertarget{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}{
-\hyperlink{classSAbstractGrid}{SAbstractGrid} $\ast$ \textbf{grid}}
-\label{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}
-
+\hyperlink{classSAbstractGrid}{SAbstractGrid} $\ast$ \hyperlink{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}{grid}
 \end{CompactItemize}
 
 
@@ -85,7 +61,33 @@ Konstruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje 
 
 ustaw współrzędne głowicy na domyślne \mbox{[}\mbox{[}i kierunek\mbox{]}\mbox{]} 
 
-Ustawia współrzędne głowicy na wartości domyślne. Wewnątrz klasy \hyperlink{classSAbstractMachine}{SAbstractMachine} nie zostaje tworzony żaden obiekt głowicy (ani \hyperlink{classSCodeImagePointer}{SCodeImagePointer}, ani \hyperlink{classSDataImagePointer}{SDataImagePointer}). Są one tworzone w konstruktorach klas dziedziczących po \hyperlink{classSAbstractMachine}{SAbstractMachine}, czyli odpowiednio: \hyperlink{classSCodeMachine}{SCodeMachine} lub \hyperlink{classSDataMachine}{SDataMachine}. Jakoże obie głowice dziedziczą po klasie \hyperlink{classSAbstractPointer}{SAbstractPointer} (zdefiniowane są w niej współdzędne), możliwe jest użycie wskaźnika na głowicę (teoretycznie bez jej utworzenia, przynajmniej w tej klasie) 
+Ustawia współrzędne głowicy na wartości domyślne. Wewnątrz klasy \hyperlink{classSAbstractMachine}{SAbstractMachine} nie zostaje tworzony żaden obiekt głowicy (ani \hyperlink{classSCodeImagePointer}{SCodeImagePointer}, ani \hyperlink{classSDataImagePointer}{SDataImagePointer}). Są one tworzone w konstruktorach klas dziedziczących po \hyperlink{classSAbstractMachine}{SAbstractMachine}, czyli odpowiednio: \hyperlink{classSCodeMachine}{SCodeMachine} lub \hyperlink{classSDataMachine}{SDataMachine}. Jakoże obie głowice dziedziczą po klasie \hyperlink{classSAbstractPointer}{SAbstractPointer} (zdefiniowane są w niej współdzędne), możliwe jest użycie wskaźnika na głowicę (teoretycznie bez jej utworzenia, przynajmniej w tej klasie) \hypertarget{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}{
+\index{SAbstractMachine@{SAbstractMachine}!pushPointer@{pushPointer}}
+\index{pushPointer@{pushPointer}!SAbstractMachine@{SAbstractMachine}}
+\subsubsection[{pushPointer}]{\setlength{\rightskip}{0pt plus 5cm}virtual bool SAbstractMachine::pushPointer ()\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}
+
+
+Przesuwa głowicę o jedną komórkę w bieżącym kierunku. 
+
+Implementowany w \hyperlink{classSCodeMachine_69a97f71f2a16f69f9daca1bf8433964}{SCodeMachine} i \hyperlink{classSDataMachine_10eb8f56cf6235455a26c5c673b8fe15}{SDataMachine}.
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}{
+\index{SAbstractMachine@{SAbstractMachine}!grid@{grid}}
+\index{grid@{grid}!SAbstractMachine@{SAbstractMachine}}
+\subsubsection[{grid}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SAbstractGrid}$\ast$ {\bf SAbstractMachine::grid}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSAbstractMachine_08b7046c29a7a5f248f324edee91f2dc}
+
+
+Siatka maszyny. Maszyna kodu ma swoją siatkę, a maszyna danych swoją. \hypertarget{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}{
+\index{SAbstractMachine@{SAbstractMachine}!pointer@{pointer}}
+\index{pointer@{pointer}!SAbstractMachine@{SAbstractMachine}}
+\subsubsection[{pointer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SAbstractPointer}$\ast$ {\bf SAbstractMachine::pointer}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSAbstractMachine_7fb67b2cf326fa3176570ca65c573c79}
+
+
+Głowica maszyny. Maszyna kodu ma swoją głowicę, a maszyna danych swoją. 
 
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
 \item 

@@ -37,9 +37,7 @@
 <a name="l00027"></a>00027 {
 <a name="l00028"></a>00028 
 <a name="l00029"></a>00029         <span class="keyword">protected</span>:
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031                 <a class="code" href="classSAbstractPointer.html" title="abstrakcyjna głowica maszyn">SAbstractPointer</a> *pointer; <span class="comment">// maszyna kodu ma swoją głowicę, a maszyna danych swoją</span>
-<a name="l00032"></a>00032                 <a class="code" href="classSAbstractGrid.html" title="Sbstrakcyjna siatka.">SAbstractGrid</a> *grid; <span class="comment">// maszyna kodu ma swoją siatkę, a maszyna danych swoją</span>
+<a name="l00030"></a>00030  <a class="code" href="classSAbstractPointer.html" title="abstrakcyjna głowica maszyn">SAbstractPointer</a> *<a class="code" href="classSAbstractMachine.html#7fb67b2cf326fa3176570ca65c573c79">pointer</a>; <a class="code" href="classSAbstractGrid.html" title="Sbstrakcyjna siatka.">SAbstractGrid</a> *<a class="code" href="classSAbstractMachine.html#08b7046c29a7a5f248f324edee91f2dc">grid</a>;
 <a name="l00033"></a>00033 
 <a name="l00034"></a>00034         <span class="keyword">public</span>:
 <a name="l00035"></a>00035 
@@ -47,20 +45,14 @@
 <a name="l00037"></a>00037                 <span class="keyword">virtual</span> <a class="code" href="classSAbstractMachine.html#2c4c79bd629a2961fb520785ce3adf4b" title="Destruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje się...">~SAbstractMachine</a>();
 <a name="l00038"></a>00038 <span class="comment">// może clearPointer zrobić jako czysto wirtualną??</span>
 <a name="l00039"></a>00039 <span class="comment">//              virtual void clearPointer() = 0; // ustawia głowicę na początkową komórkę</span>
-<a name="l00040"></a>00040                 <span class="keywordtype">void</span> <a class="code" href="classSAbstractMachine.html#87766a003773869a3438e92739d7c9a1" title="ustaw współrzędne głowicy na domyślne [[i kierunek]]">clearPointer</a>(); <span class="comment">// ustawia głowicę na początkową komórkę</span>
-<a name="l00041"></a>00041 
-<a name="l00042"></a>00042                 <span class="keywordtype">void</span> pushPointer(); <span class="comment">// pointer-&gt;moveForward(1)</span>
+<a name="l00040"></a>00040                 <span class="keywordtype">void</span> <a class="code" href="classSAbstractMachine.html#87766a003773869a3438e92739d7c9a1" title="ustaw współrzędne głowicy na domyślne [[i kierunek]]">clearPointer</a>();
+<a name="l00041"></a>00041  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classSAbstractMachine.html#72a47b72416e0d2f24fcf36415d37404">pushPointer</a>() = 0;
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044         <span class="comment">// development:</span>
+<a name="l00044"></a>00044 };
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046                 <span class="keywordtype">void</span> __dev__grid_printConsole(); <span class="comment">// TESTOWE // wyswietlenie siatki</span>
-<a name="l00047"></a>00047                 <span class="keywordtype">void</span> __dev__pointer_printConsole(); <span class="comment">// TESTOWE // wyświetlanie głowicy</span>
-<a name="l00048"></a>00048                 <span class="keywordtype">void</span> __dev__printConsole(); <span class="comment">// TESTOWE</span>
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
-<a name="l00051"></a>00051 <span class="preprocessor">#endif</span>
+<a name="l00046"></a>00046 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:55 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

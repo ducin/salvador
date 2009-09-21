@@ -39,33 +39,40 @@
 <a name="l00030"></a>00030 
 <a name="l00031"></a>00031         <span class="keyword">private</span>:
 <a name="l00032"></a>00032 
-<a name="l00033"></a>00033                 SDataImage *image;
-<a name="l00034"></a>00034 
-<a name="l00035"></a>00035         <span class="keyword">public</span>:
-<a name="l00036"></a>00036 
-<a name="l00037"></a>00037                 <a class="code" href="classSDataMachine.html#3d894df00bd2283c717a827e27138812" title="konstruktor">SDataMachine</a>(); <span class="comment">// konstruktor z pustym obrazem danych</span>
-<a name="l00039"></a>00039 <span class="comment"></span>                <a class="code" href="classSDataMachine.html#59bc85b25930729cbe3046e81f49f909" title="destruktor">~SDataMachine</a>();
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041                 <span class="keywordtype">void</span> clearImage();
+<a name="l00036"></a>00036                 <span class="keywordtype">bool</span> verbose;
+<a name="l00037"></a>00037 
+<a name="l00038"></a>00038         <span class="keyword">public</span>:
+<a name="l00039"></a>00039 
+<a name="l00040"></a>00040                 <a class="code" href="classSDataMachine.html#3d894df00bd2283c717a827e27138812" title="konstruktor">SDataMachine</a>();
+<a name="l00041"></a>00041                 <a class="code" href="classSDataMachine.html#59bc85b25930729cbe3046e81f49f909" title="destruktor">~SDataMachine</a>();
 <a name="l00042"></a>00042 
-<a name="l00043"></a>00043                 <span class="keywordtype">int</span> getPointedValue();
+<a name="l00043"></a>00043                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#38cc38f27606be24fc609d461d25ae2f">setVerbosity</a>(<span class="keywordtype">bool</span>);
 <a name="l00044"></a>00044 
-<a name="l00045"></a>00045                 <span class="keywordtype">void</span> executeTurnLeft();
-<a name="l00046"></a>00046                 <span class="keywordtype">void</span> executeTurnRight();
-<a name="l00047"></a>00047                 <span class="keywordtype">void</span> executeZero();
-<a name="l00048"></a>00048                 <span class="keywordtype">void</span> executeSucc();
-<a name="l00049"></a>00049                 <span class="keywordtype">void</span> executePred();
+<a name="l00045"></a>00045                 <span class="keywordtype">bool</span> <a class="code" href="classSDataMachine.html#10eb8f56cf6235455a26c5c673b8fe15">pushPointer</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#b863ea9a42568d7555cc146ded9f2d88">clearData</a>();
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049                 <span class="keywordtype">int</span> <a class="code" href="classSDataMachine.html#3a191be9cab718274d6bd75e01cc2a26">getPointedValue</a>();
 <a name="l00050"></a>00050 
-<a name="l00051"></a>00051         <span class="comment">// development:</span>
-<a name="l00052"></a>00052 
-<a name="l00053"></a>00053                 <span class="keywordtype">void</span> __dev__initGrid(); <span class="comment">// TESTOWE // stworzenie nowej, pustej siatki</span>
-<a name="l00054"></a>00054                 <span class="keywordtype">void</span> __dev__destroyGrid(); <span class="comment">// TESTOWE // niszczenie grida</span>
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 };
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058 <span class="preprocessor">#endif</span>
+<a name="l00051"></a>00051                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#5b46d50c18bec1bcfd5232bec3875fd5">executeTurnLeft</a>();
+<a name="l00052"></a>00052                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#fb6f52c7f14afa51eed848f354d57924">executeTurnRight</a>();
+<a name="l00053"></a>00053                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#27c3e6dfe9ac45f9d5eed7c97f96abd8">executeZero</a>();
+<a name="l00054"></a>00054                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#85832e07e2fb8ae32160fe0c95a487d2">executeSucc</a>();
+<a name="l00055"></a>00055                 <span class="keywordtype">void</span> <a class="code" href="classSDataMachine.html#87cfad868b3ea0a0e60f776ad3773678">executePred</a>();
+<a name="l00056"></a>00056 
+<a name="l00057"></a>00057         <span class="comment">// development:</span>
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059                 <span class="keywordtype">void</span> __dev__initGrid(); <span class="comment">// TESTOWE // stworzenie nowej, pustej siatki</span>
+<a name="l00060"></a>00060                 <span class="keywordtype">void</span> __dev__destroyGrid(); <span class="comment">// TESTOWE // niszczenie grida</span>
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062                 <span class="keywordtype">void</span> __dev__printConsole();
+<a name="l00063"></a>00063                 <span class="keywordtype">void</span> __dev__printPointer();
+<a name="l00064"></a>00064                 <span class="keywordtype">void</span> __dev__printGrid();
+<a name="l00065"></a>00065 };
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:55 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

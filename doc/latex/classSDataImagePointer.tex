@@ -20,25 +20,10 @@ Diagram dziedziczenia dla SDataImagePointer:\begin{figure}[H]
 \item 
 \hyperlink{classSDataImagePointer_8f96c4dc8dc25e0ff5cccb2e693ffcc8}{$\sim$SDataImagePointer} ()
 \item 
-int \hyperlink{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}{moveLeft} ()
+void \hyperlink{classSDataImagePointer_811380aecd0dc422333dcdcd41f91ba7}{moveLeft} ()
 \begin{CompactList}\small\item\em przesuwa głowicę maszyny danych w lewo \item\end{CompactList}\item 
-int \hyperlink{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}{moveRight} ()
-\begin{CompactList}\small\item\em przesuwa głowicę maszyny danych w prawo \item\end{CompactList}\item 
-\hypertarget{classSDataImagePointer_0cdd7239181d6f12bf6df551defaa769}{
-int \textbf{increaseCellValue} ()}
-\label{classSDataImagePointer_0cdd7239181d6f12bf6df551defaa769}
-
-\item 
-\hypertarget{classSDataImagePointer_0461b9855715a2d296e19865517f7f36}{
-int \textbf{decreaseCellValue} ()}
-\label{classSDataImagePointer_0461b9855715a2d296e19865517f7f36}
-
-\item 
-\hypertarget{classSDataImagePointer_ee071148492c43291fd01fd035f6398a}{
-int \textbf{zeroCellValue} ()}
-\label{classSDataImagePointer_ee071148492c43291fd01fd035f6398a}
-
-\end{CompactItemize}
+void \hyperlink{classSDataImagePointer_b9d61712c0b2bf8b7beab735c0e59f75}{moveRight} ()
+\begin{CompactList}\small\item\em przesuwa głowicę maszyny danych w prawo \item\end{CompactList}\end{CompactItemize}
 
 
 \subsection{Opis szczegółowy}
@@ -64,22 +49,22 @@ Konstruktor głowicy obrazu danych. Nie robi nic szczególnego. \hypertarget{cla
 Destruktor głowicy obrazu danych. Nie robi nic szczególnego. 
 
 \subsection{Dokumentacja funkcji składowych}
-\hypertarget{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}{
+\hypertarget{classSDataImagePointer_811380aecd0dc422333dcdcd41f91ba7}{
 \index{SDataImagePointer@{SDataImagePointer}!moveLeft@{moveLeft}}
 \index{moveLeft@{moveLeft}!SDataImagePointer@{SDataImagePointer}}
-\subsubsection[{moveLeft}]{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveLeft ()}}
-\label{classSDataImagePointer_87bb92d4bb0336b4723c64d03df9987c}
+\subsubsection[{moveLeft}]{\setlength{\rightskip}{0pt plus 5cm}void SDataImagePointer::moveLeft ()}}
+\label{classSDataImagePointer_811380aecd0dc422333dcdcd41f91ba7}
 
 
 przesuwa głowicę maszyny danych w lewo 
 
 Najpierw ustalony jest nowy kierunek ruchu (SDirections) - w lewo, następnie głowica przesuwana jest o jedno pole (w ustalonym kierunku). Efektem przesunięcia głowicy jest zmiana jej współrzędnych względem obrazu danych. \begin{Desc}
 \item[Zwraca:]? \end{Desc}
-\hypertarget{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}{
+\hypertarget{classSDataImagePointer_b9d61712c0b2bf8b7beab735c0e59f75}{
 \index{SDataImagePointer@{SDataImagePointer}!moveRight@{moveRight}}
 \index{moveRight@{moveRight}!SDataImagePointer@{SDataImagePointer}}
-\subsubsection[{moveRight}]{\setlength{\rightskip}{0pt plus 5cm}int SDataImagePointer::moveRight ()}}
-\label{classSDataImagePointer_9cc51881224c9e157e96d5e36189e54a}
+\subsubsection[{moveRight}]{\setlength{\rightskip}{0pt plus 5cm}void SDataImagePointer::moveRight ()}}
+\label{classSDataImagePointer_b9d61712c0b2bf8b7beab735c0e59f75}
 
 
 przesuwa głowicę maszyny danych w prawo 

@@ -63,19 +63,31 @@ void SDataMachine::setVerbosity(bool verbosity)
 	verbose = verbosity;
 }
 
+/**
+ * Czyści dane przechowywane przez maszynę danych.
+ */
 void SDataMachine::clearData()
 {
-	// ?
+	(dynamic_cast<SDataGrid *> (grid))->clear();
 }
 
+/**
+ * Zwraca wartość wskazywaną przez głowicę danych na obrazie danych.
+ * @return wartość wskazywana przez głowicę
+ */
 int SDataMachine::getPointedValue()
 {
 	return grid->getValueAt(pointer->getCoordX(), pointer->getCoordY());
 }
 
-void SDataMachine::pushPointer()
+/**
+ * Przesuwa głowicę danych o jedną komórkę w bieżącym kierunku.
+ * @return czy się udało; w przypadku maszyny danych zawsze się udaje
+ */
+bool SDataMachine::pushPointer()
 {
 	pointer->moveForward(1);
+	return true;
 }
 
 /*==================================================================*/
@@ -84,26 +96,41 @@ void SDataMachine::pushPointer()
 /*                                                                  */
 /*==================================================================*/
 
+/**
+ * Wykonuje instrukcję Salvadora PRZESUŃ GŁOWICĘ DANYCH W LEWO.
+ */
 void SDataMachine::executeTurnLeft()
 {
 	(dynamic_cast<SDataImagePointer *> (pointer))->moveLeft();
 }
 
+/**
+ * Wykonuje instrukcję Salvadora PRZESUŃ GŁOWICĘ DANYCH W PRAWO.
+ */
 void SDataMachine::executeTurnRight()
 {
 	(dynamic_cast<SDataImagePointer *> (pointer))->moveRight();
 }
 
+/**
+ * Wykonuje instrukcję Salvadora ZERUJ.
+ */
 void SDataMachine::executeZero()
 {
 	(dynamic_cast<SDataGrid *> (grid))->performZeroAt(pointer->getCoordX(), pointer->getCoordY());
 }
 
+/**
+ * Wykonuje instrukcję Salvadora ZWIĘKSZ.
+ */
 void SDataMachine::executeSucc()
 {
 	(dynamic_cast<SDataGrid *> (grid))->performSuccAt(pointer->getCoordX(), pointer->getCoordY());
 }
 
+/**
+ * Wykonuje instrukcję Salvadora ZMNIEJSZ.
+ */
 void SDataMachine::executePred()
 {
 	(dynamic_cast<SDataGrid *> (grid))->performPredAt(pointer->getCoordX(), pointer->getCoordY());

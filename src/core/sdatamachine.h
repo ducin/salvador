@@ -42,7 +42,7 @@ class SDataMachine : public SAbstractMachine
 
 		void setVerbosity(bool);
 
-		void pushPointer();
+		bool pushPointer();
 
 		void clearData();
 

@@ -54,6 +54,8 @@ class SVirtualMachine
 
 		int step;
 
+		SBeyondBorderBehavior beyond_border_behavior;
+
 	protected:
 
 		void finish();
@@ -66,15 +68,23 @@ class SVirtualMachine
 		bool isVerbose();
 		void toggleVerbosity();
 
+		void setBehaviorBounce();
+		void setBehaviorStop();
+		bool isBehaviorBounce();
+		bool isBehaviorStop();
+
+		void bounceCodeImagePointerDirection();
+		void performActionWhenPointerOutside();
+		void toggleBehavior();
+
 		bool isRunning(); // czy maszyna działa (sprawdzany stan maszyny)
 		bool isReady(); // czy maszyna jest gotowa do rozpoczęcia pracy
-		void startMachine();
-		void restartMachine();
-		void stopMachine();
-		
+		bool startMachine();
+		bool restartMachine();
+		bool stopMachine();
+
 		void clean(); // czyszczenie danych maszyny (zwalnianie pamięci pod obiekty)
 
-		// TODO zastanowic sie jaki typ ma zwracac
 		void executeAllInstr(); // wykonywanie instrukcji do końca działania programu
 		void executeInstr(); // wykonanie jednej instrukcji
 

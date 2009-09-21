@@ -11,6 +11,7 @@ Plik z kodem źródłowym aplikacji.
 {\tt \#include $<$iostream$>$}\par
 {\tt \#include $<$fstream$>$}\par
 {\tt \#include $<$string$>$}\par
+{\tt \#include $<$cstdlib$>$}\par
 \subsection*{Funkcje}
 \begin{CompactItemize}
 \item 
@@ -24,7 +25,7 @@ void \hyperlink{test_8cpp_4daa93846a5ef739539e10772d176bc1}{runWelcome} ()
 \item 
 int \hyperlink{test_8cpp_a01ef0daafd23a3cca3b70eb23e01151}{runMenu} ()
 \item 
-int \hyperlink{test_8cpp_c45b9dedf9093fa4f29a1ce89df6bca3}{runProgram} ()
+void \hyperlink{test_8cpp_ace6b288e5cbf8113bb8b224b95fc08f}{runProgram} ()
 \item 
 int \hyperlink{test_8cpp_3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
 \end{CompactItemize}
@@ -48,7 +49,7 @@ Plik zawiera kod źródłowy aplikacji testującej interpreter języka Salvador.
 \label{test_8cpp_3c04138a5bfe5d72780bb7e82a18e627}
 
 
-Procedura wejściowa aplikacji, pośrednicząca z linią poleceń (wczytuje nazwę programu z tablicy parametrów). Tworzy wszystkie potrzebne zmienne i wywołuje \hyperlink{test_8cpp_c45b9dedf9093fa4f29a1ce89df6bca3}{runProgram()}. \begin{Desc}
+Procedura wejściowa aplikacji, pośrednicząca z linią poleceń (wczytuje nazwę programu z tablicy parametrów). Tworzy wszystkie potrzebne zmienne i wywołuje \hyperlink{test_8cpp_ace6b288e5cbf8113bb8b224b95fc08f}{runProgram()}. \begin{Desc}
 \item[Parametry:]
 \begin{description}
 \item[{\em argc}]liczba parametrów pobranych z komendy uruchamiającej program \item[{\em argv}]tablica z wartościami parametrów pobranych z komendy uruchamiającej program \end{description}
@@ -86,11 +87,11 @@ Wyświetla standardowy komunikat na konsolę. \begin{Desc}
 
 Wyświetla menu programu, prosi użytkownika o wybór zadania i zwraca ów wybór. \begin{Desc}
 \item[Zwraca:]numer zadania wybrany przez użytkownika \end{Desc}
-\hypertarget{test_8cpp_c45b9dedf9093fa4f29a1ce89df6bca3}{
+\hypertarget{test_8cpp_ace6b288e5cbf8113bb8b224b95fc08f}{
 \index{test.cpp@{test.cpp}!runProgram@{runProgram}}
 \index{runProgram@{runProgram}!test.cpp@{test.cpp}}
-\subsubsection[{runProgram}]{\setlength{\rightskip}{0pt plus 5cm}int runProgram ()}}
-\label{test_8cpp_c45b9dedf9093fa4f29a1ce89df6bca3}
+\subsubsection[{runProgram}]{\setlength{\rightskip}{0pt plus 5cm}void runProgram ()}}
+\label{test_8cpp_ace6b288e5cbf8113bb8b224b95fc08f}
 
 
 Główna procedura całej aplikacji. Wyświetla przywitanie, potem w pętli pobiera od użytkownika numer zadania i wykonuje je. Działanie programu zależy od decyzji użytkownika. \hypertarget{test_8cpp_4daa93846a5ef739539e10772d176bc1}{

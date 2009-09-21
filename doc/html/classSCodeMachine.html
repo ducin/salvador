@@ -45,7 +45,11 @@ Diagram dziedziczenia dla SCodeMachine</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#67d39a3662fc2640aa506a581766a9b8">~SCodeMachine</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#4a2d7edca4db9e3bd8942abc13f6c8ec">setVerbosity</a> (bool)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">SInstructions</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#3c851e80ec35cbebeb78ec8ceed8c5ca">getPointedInstruction</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#69a97f71f2a16f69f9daca1bf8433964">pushPointer</a> ()</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#d8415a221140a08a9383a595336cdf69">executeTurnLeft</a> ()</td></tr>
 
@@ -55,11 +59,20 @@ Diagram dziedziczenia dla SCodeMachine</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#26b7ba8981d08d594b0c37617aa85277">executeTurnDown</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c016cfcdf0700d5a0829d497a79eb259"></a><!-- doxytag: member="SCodeMachine::__dev__readGridFromTextFile" ref="c016cfcdf0700d5a0829d497a79eb259" args="(std::string)" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__readGridFromTextFile</b> (std::string)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f83465e2ab7065c7b386a189d57ae9ab"></a><!-- doxytag: member="SCodeMachine::__dev__readGridFromTextFile" ref="f83465e2ab7065c7b386a189d57ae9ab" args="(std::string)" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__readGridFromTextFile</b> (std::string)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c9345e02c8383585cf1738c653f83cfd"></a><!-- doxytag: member="SCodeMachine::__dev__destroyGrid" ref="c9345e02c8383585cf1738c653f83cfd" args="()" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__destroyGrid</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#29892f8f026e8dcd71ec99b9c593e022">__dev__printConsole</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#b4c8492fda9fe21cc2620ede3630d852">__dev__printPointer</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="0ea93dafdabff0ff080a24b6c8ef9ea1"></a><!-- doxytag: member="SCodeMachine::__dev__printGrid" ref="0ea93dafdabff0ff080a24b6c8ef9ea1" args="()" -->
+void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printGrid</b> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeMachine.html#6a725d341bffacccb53431f88c62b713">__dev__printPointedInstruction</a> ()</td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Opis szczegółowy</h2>
@@ -106,6 +119,63 @@ Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kod
 </div>
 </div><p>
 <hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="29892f8f026e8dcd71ec99b9c593e022"></a><!-- doxytag: member="SCodeMachine::__dev__printConsole" ref="29892f8f026e8dcd71ec99b9c593e022" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::__dev__printConsole           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla informacje o maszynie kodu. 
+</div>
+</div><p>
+<a class="anchor" name="6a725d341bffacccb53431f88c62b713"></a><!-- doxytag: member="SCodeMachine::__dev__printPointedInstruction" ref="6a725d341bffacccb53431f88c62b713" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::__dev__printPointedInstruction           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla nazwę wskazywanje przez głowicę instrukcji. 
+</div>
+</div><p>
+<a class="anchor" name="b4c8492fda9fe21cc2620ede3630d852"></a><!-- doxytag: member="SCodeMachine::__dev__printPointer" ref="b4c8492fda9fe21cc2620ede3630d852" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::__dev__printPointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla informacje o głowicy maszyny. 
+</div>
+</div><p>
 <a class="anchor" name="26b7ba8981d08d594b0c37617aa85277"></a><!-- doxytag: member="SCodeMachine::executeTurnDown" ref="26b7ba8981d08d594b0c37617aa85277" args="()" -->
 <div class="memitem">
 <div class="memproto">
@@ -122,7 +192,7 @@ Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kod
 <div class="memdoc">
 
 <p>
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ 
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ. 
 </div>
 </div><p>
 <a class="anchor" name="d8415a221140a08a9383a595336cdf69"></a><!-- doxytag: member="SCodeMachine::executeTurnLeft" ref="d8415a221140a08a9383a595336cdf69" args="()" -->
@@ -141,7 +211,7 @@ Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ
 <div class="memdoc">
 
 <p>
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO 
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO. 
 </div>
 </div><p>
 <a class="anchor" name="d48065e7bf42eef9e3a0f81fbb17f301"></a><!-- doxytag: member="SCodeMachine::executeTurnRight" ref="d48065e7bf42eef9e3a0f81fbb17f301" args="()" -->
@@ -160,7 +230,7 @@ Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO
 <div class="memdoc">
 
 <p>
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO 
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO. 
 </div>
 </div><p>
 <a class="anchor" name="f2867d02414db096844e4801f9895650"></a><!-- doxytag: member="SCodeMachine::executeTurnUp" ref="f2867d02414db096844e4801f9895650" args="()" -->
@@ -179,7 +249,7 @@ Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO
 <div class="memdoc">
 
 <p>
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ 
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ. 
 </div>
 </div><p>
 <a class="anchor" name="3c851e80ec35cbebeb78ec8ceed8c5ca"></a><!-- doxytag: member="SCodeMachine::getPointedInstruction" ref="3c851e80ec35cbebeb78ec8ceed8c5ca" args="()" -->
@@ -202,10 +272,57 @@ Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. <dl class="return" co
 
 </div>
 </div><p>
+<a class="anchor" name="69a97f71f2a16f69f9daca1bf8433964"></a><!-- doxytag: member="SCodeMachine::pushPointer" ref="69a97f71f2a16f69f9daca1bf8433964" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SCodeMachine::pushPointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Przesuwa głowicę kodu o jedną komórkę w bieżącym kierunku. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>czy się udało (czy głowica nie wykroczyła poza obraz kodu) </dd></dl>
+
+<p>Implementuje <a class="el" href="classSAbstractMachine.html#72a47b72416e0d2f24fcf36415d37404">SAbstractMachine</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="4a2d7edca4db9e3bd8942abc13f6c8ec"></a><!-- doxytag: member="SCodeMachine::setVerbosity" ref="4a2d7edca4db9e3bd8942abc13f6c8ec" args="(bool)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeMachine::setVerbosity           </td>
+          <td>(</td>
+          <td class="paramtype">bool&nbsp;</td>
+          <td class="paramname"> <em>verbosity</em>          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Ustala tryb gadatliwy. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>verbosity</em>&nbsp;</td><td>tryb gadatliwy </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="scodemachine_8h-source.html">scodemachine.h</a><li>src/core/<a class="el" href="scodemachine_8cpp.html">scodemachine.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:49 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

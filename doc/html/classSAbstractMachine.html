@@ -51,24 +51,12 @@ virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="c
 <tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#87766a003773869a3438e92739d7c9a1">clearPointer</a> ()</td></tr>
 
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ustaw współrzędne głowicy na domyślne [[i kierunek]]  <a href="#87766a003773869a3438e92739d7c9a1"></a><br></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="65a2d69dfa18ead7e26bf8ace4eb356d"></a><!-- doxytag: member="SAbstractMachine::pushPointer" ref="65a2d69dfa18ead7e26bf8ace4eb356d" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>pushPointer</b> ()</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f96c7b89921887960bc83516e7784a34"></a><!-- doxytag: member="SAbstractMachine::__dev__grid_printConsole" ref="f96c7b89921887960bc83516e7784a34" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__grid_printConsole</b> ()</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fea2851366c3564f67e547b102c195e9"></a><!-- doxytag: member="SAbstractMachine::__dev__pointer_printConsole" ref="fea2851366c3564f67e547b102c195e9" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__pointer_printConsole</b> ()</td></tr>
-
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="10fea0faba154b2254a33a0ccf865444"></a><!-- doxytag: member="SAbstractMachine::__dev__printConsole" ref="10fea0faba154b2254a33a0ccf865444" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printConsole</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#72a47b72416e0d2f24fcf36415d37404">pushPointer</a> ()=0</td></tr>
 
 <tr><td colspan="2"><br><h2>Atrybuty chronione</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="7fb67b2cf326fa3176570ca65c573c79"></a><!-- doxytag: member="SAbstractMachine::pointer" ref="7fb67b2cf326fa3176570ca65c573c79" args="" -->
-<a class="el" href="classSAbstractPointer.html">SAbstractPointer</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>pointer</b></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSAbstractPointer.html">SAbstractPointer</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#7fb67b2cf326fa3176570ca65c573c79">pointer</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="08b7046c29a7a5f248f324edee91f2dc"></a><!-- doxytag: member="SAbstractMachine::grid" ref="08b7046c29a7a5f248f324edee91f2dc" args="" -->
-<a class="el" href="classSAbstractGrid.html">SAbstractGrid</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><b>grid</b></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSAbstractGrid.html">SAbstractGrid</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#08b7046c29a7a5f248f324edee91f2dc">grid</a></td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Opis szczegółowy</h2>
@@ -116,10 +104,62 @@ ustaw współrzędne głowicy na domyślne [[i kierunek]]
 Ustawia współrzędne głowicy na wartości domyślne. Wewnątrz klasy <a class="el" href="classSAbstractMachine.html" title="Abstrakcyjna maszyna.">SAbstractMachine</a> nie zostaje tworzony żaden obiekt głowicy (ani <a class="el" href="classSCodeImagePointer.html" title="głowica maszyny obsługująca obraz kodu">SCodeImagePointer</a>, ani <a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>). Są one tworzone w konstruktorach klas dziedziczących po <a class="el" href="classSAbstractMachine.html" title="Abstrakcyjna maszyna.">SAbstractMachine</a>, czyli odpowiednio: <a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a> lub <a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>. Jakoże obie głowice dziedziczą po klasie <a class="el" href="classSAbstractPointer.html" title="abstrakcyjna głowica maszyn">SAbstractPointer</a> (zdefiniowane są w niej współdzędne), możliwe jest użycie wskaźnika na głowicę (teoretycznie bez jej utworzenia, przynajmniej w tej klasie) 
 </div>
 </div><p>
+<a class="anchor" name="72a47b72416e0d2f24fcf36415d37404"></a><!-- doxytag: member="SAbstractMachine::pushPointer" ref="72a47b72416e0d2f24fcf36415d37404" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SAbstractMachine::pushPointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Przesuwa głowicę o jedną komórkę w bieżącym kierunku. 
+<p>Implementowany w <a class="el" href="classSCodeMachine.html#69a97f71f2a16f69f9daca1bf8433964">SCodeMachine</a> i <a class="el" href="classSDataMachine.html#10eb8f56cf6235455a26c5c673b8fe15">SDataMachine</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="08b7046c29a7a5f248f324edee91f2dc"></a><!-- doxytag: member="SAbstractMachine::grid" ref="08b7046c29a7a5f248f324edee91f2dc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSAbstractGrid.html">SAbstractGrid</a>* <a class="el" href="classSAbstractMachine.html#08b7046c29a7a5f248f324edee91f2dc">SAbstractMachine::grid</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Siatka maszyny. Maszyna kodu ma swoją siatkę, a maszyna danych swoją. 
+</div>
+</div><p>
+<a class="anchor" name="7fb67b2cf326fa3176570ca65c573c79"></a><!-- doxytag: member="SAbstractMachine::pointer" ref="7fb67b2cf326fa3176570ca65c573c79" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSAbstractPointer.html">SAbstractPointer</a>* <a class="el" href="classSAbstractMachine.html#7fb67b2cf326fa3176570ca65c573c79">SAbstractMachine::pointer</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Głowica maszyny. Maszyna kodu ma swoją głowicę, a maszyna danych swoją. 
+</div>
+</div><p>
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="sabstractmachine_8h-source.html">sabstractmachine.h</a><li>src/core/<a class="el" href="sabstractmachine_8cpp.html">sabstractmachine.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:49 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

@@ -33,13 +33,9 @@ class SCodeMachine : public SAbstractMachine
 	private:
 
 		SCodeTypes code_type; // czy kod jest z obrazka czy z siatki kodu
-
 		SCodeImage *image;
 
-		/**
-		 * Pole logiczne definiujące tryb gadatliwy.
-		 */
-		bool verbose;
+		/** Pole logiczne definiujące tryb gadatliwy. */ bool verbose;
 
 	public:
 
@@ -50,20 +46,18 @@ class SCodeMachine : public SAbstractMachine
 
 		SInstructions getPointedInstruction(); // zwraca wskazywaną wskaxnikiem instrukcję obrazu kodu
 
-		void pushPointer();
+		bool pushPointer();
 
 		void executeTurnLeft();
 		void executeTurnRight();
 		void executeTurnUp();
 		void executeTurnDown();
-		// void executeNull(); // brak instrukcji
-		// void executeJump(); // nadzoruje maszyna wirtualna
-		// void executeBreak(); // brak instrukcji
+		void mirrorPointerDirection();
 
 	// development:
 
-		int __dev__readGridFromTextFile(std::string); // TESTOWE // wczytanie siatki kodu z pliku
-		void __dev__destroyGrid(); // TESTOWE // niszczenie grida
+		void __dev__readGridFromTextFile(std::string);
+		void __dev__destroyGrid();
 
 		void __dev__printConsole();
 		void __dev__printPointer();

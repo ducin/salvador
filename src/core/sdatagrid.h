@@ -27,7 +27,7 @@ class SDataGrid : public SAbstractGrid
 
 	protected:
 
-		int **data_grid;
+		/** Siatka kodu */ int **data_grid;
 
 		void constructGrid();
 		void destructGrid();
@@ -40,9 +40,11 @@ class SDataGrid : public SAbstractGrid
 
 		int getValueAt(int, int);
 
-		int performZeroAt(int, int);
-		int performSuccAt(int, int);
-		int performPredAt(int, int);
+		void performZeroAt(int, int);
+		void performSuccAt(int, int);
+		void performPredAt(int, int);
+
+		void clear();
 
 	// development:
 

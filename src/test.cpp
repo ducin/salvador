@@ -89,7 +89,8 @@ int runMenu()
 	std::cout << "1. uruchom maszynę i wykonuj instrukcje krok po kroku" << std::endl;
 	std::cout << "2. uruchom maszynę i wykonuj zadaną ilość instrukcji w każdym kroku" << std::endl;
 	std::cout << "3. włącz/wyłącz tryb gadatliwy (" << (m->isVerbose() ? "włączony" : "wyłączony" ) << ")" << std::endl;
-	std::cout << "4. koniec" << std::endl;
+	std::cout << "4. przełącz tryb odbijaj/zakończ, gdy głowica wychodzi poza obraz (" << (m->isBehaviorBounce() ? "odbijaj" : "zakończ" ) << ")" << std::endl;
+	std::cout << "5. koniec" << std::endl;
 
 	std::string answer;
 	std::cout << std::endl << "> "; getline(std::cin, answer); std::cout << std::endl;
@@ -109,7 +110,7 @@ void runProgram()
 	runWelcome();
 	// zmienne robocze sterujące pracą programu
 	int continued = 1, choice;
-	int final_choice = 4;
+	int final_choice = 5;
 	// główna pętla programu
 	std::string confirm_str;
 	while (continued)
@@ -124,9 +125,9 @@ void runProgram()
 				std::cout << "naciskaj enter po każdym kroku" << std::endl << std::endl;
 				while (m->isRunning())
 				{
-					m->executeInstr();
 					if (m->isVerbose())
 						m->__dev__printConsole();
+					m->executeInstr();
 					getline(std::cin, confirm_str);
 				}
 				break;
@@ -144,6 +145,9 @@ void runProgram()
 				m->toggleVerbosity();
 				break;
 			case 4: // koniec
+				m->toggleBehavior();
+				break;
+			case 5: // koniec
 				m->stopMachine();
 				break;
 		}

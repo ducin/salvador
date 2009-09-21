@@ -31,9 +31,10 @@ class SAbstractPointer
 
 	protected:
 
-		int coord_x, coord_y; // współrzędne na które wskazuje głowica
+		/** Pierwsza współrzędna (odcięta) na którą wskazuje głowica. */ int coord_x;
+		/** Druga współrzędna (rzędna) na którą wskazuje głowica. */ int coord_y;
 
-		SDirections direction; // kierunek poruszania się głowicy
+		/** Kierunek poruszania się głowicy. */ SDirections direction;
 		void setDirection(SDirections);
 
 	public:
@@ -45,6 +46,7 @@ class SAbstractPointer
 
 		int getCoordX();
 		int getCoordY();
+		SDirections getDirection();
 
 		void moveForward(int);
 

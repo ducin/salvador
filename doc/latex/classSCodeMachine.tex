@@ -20,7 +20,11 @@ Diagram dziedziczenia dla SCodeMachine:\begin{figure}[H]
 \item 
 \hyperlink{classSCodeMachine_67d39a3662fc2640aa506a581766a9b8}{$\sim$SCodeMachine} ()
 \item 
+void \hyperlink{classSCodeMachine_4a2d7edca4db9e3bd8942abc13f6c8ec}{setVerbosity} (bool)
+\item 
 \hyperlink{senums_8h_b1c3fa9dccd3f8afa81e14a98d9a7d1e}{SInstructions} \hyperlink{classSCodeMachine_3c851e80ec35cbebeb78ec8ceed8c5ca}{getPointedInstruction} ()
+\item 
+bool \hyperlink{classSCodeMachine_69a97f71f2a16f69f9daca1bf8433964}{pushPointer} ()
 \item 
 void \hyperlink{classSCodeMachine_d8415a221140a08a9383a595336cdf69}{executeTurnLeft} ()
 \item 
@@ -30,15 +34,26 @@ void \hyperlink{classSCodeMachine_f2867d02414db096844e4801f9895650}{executeTurnU
 \item 
 void \hyperlink{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{executeTurnDown} ()
 \item 
-\hypertarget{classSCodeMachine_c016cfcdf0700d5a0829d497a79eb259}{
-int \textbf{\_\-\_\-dev\_\-\_\-readGridFromTextFile} (std::string)}
-\label{classSCodeMachine_c016cfcdf0700d5a0829d497a79eb259}
+\hypertarget{classSCodeMachine_f83465e2ab7065c7b386a189d57ae9ab}{
+void \textbf{\_\-\_\-dev\_\-\_\-readGridFromTextFile} (std::string)}
+\label{classSCodeMachine_f83465e2ab7065c7b386a189d57ae9ab}
 
 \item 
 \hypertarget{classSCodeMachine_c9345e02c8383585cf1738c653f83cfd}{
 void \textbf{\_\-\_\-dev\_\-\_\-destroyGrid} ()}
 \label{classSCodeMachine_c9345e02c8383585cf1738c653f83cfd}
 
+\item 
+void \hyperlink{classSCodeMachine_29892f8f026e8dcd71ec99b9c593e022}{\_\-\_\-dev\_\-\_\-printConsole} ()
+\item 
+void \hyperlink{classSCodeMachine_b4c8492fda9fe21cc2620ede3630d852}{\_\-\_\-dev\_\-\_\-printPointer} ()
+\item 
+\hypertarget{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}{
+void \textbf{\_\-\_\-dev\_\-\_\-printGrid} ()}
+\label{classSCodeMachine_0ea93dafdabff0ff080a24b6c8ef9ea1}
+
+\item 
+void \hyperlink{classSCodeMachine_6a725d341bffacccb53431f88c62b713}{\_\-\_\-dev\_\-\_\-printPointedInstruction} ()
 \end{CompactItemize}
 
 
@@ -65,35 +80,56 @@ Konstruktor maszyny kodu. Tworzy obiekty głowicy obrazu kodu oraz sam obraz kod
 Destruktor maszyny kodu. Niszczy obiekty głowicy obrazu kodu oraz sam obraz kodu. 
 
 \subsection{Dokumentacja funkcji składowych}
-\hypertarget{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{
+\hypertarget{classSCodeMachine_29892f8f026e8dcd71ec99b9c593e022}{
+\index{SCodeMachine@{SCodeMachine}!\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}}
+\index{\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printConsole}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::\_\-\_\-dev\_\-\_\-printConsole ()}}
+\label{classSCodeMachine_29892f8f026e8dcd71ec99b9c593e022}
+
+
+METODA TESTOWA. Wyświetla informacje o maszynie kodu. \hypertarget{classSCodeMachine_6a725d341bffacccb53431f88c62b713}{
+\index{SCodeMachine@{SCodeMachine}!\_\-\_\-dev\_\-\_\-printPointedInstruction@{\_\-\_\-dev\_\-\_\-printPointedInstruction}}
+\index{\_\-\_\-dev\_\-\_\-printPointedInstruction@{\_\-\_\-dev\_\-\_\-printPointedInstruction}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printPointedInstruction}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::\_\-\_\-dev\_\-\_\-printPointedInstruction ()}}
+\label{classSCodeMachine_6a725d341bffacccb53431f88c62b713}
+
+
+METODA TESTOWA. Wyświetla nazwę wskazywanje przez głowicę instrukcji. \hypertarget{classSCodeMachine_b4c8492fda9fe21cc2620ede3630d852}{
+\index{SCodeMachine@{SCodeMachine}!\_\-\_\-dev\_\-\_\-printPointer@{\_\-\_\-dev\_\-\_\-printPointer}}
+\index{\_\-\_\-dev\_\-\_\-printPointer@{\_\-\_\-dev\_\-\_\-printPointer}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printPointer}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::\_\-\_\-dev\_\-\_\-printPointer ()}}
+\label{classSCodeMachine_b4c8492fda9fe21cc2620ede3630d852}
+
+
+METODA TESTOWA. Wyświetla informacje o głowicy maszyny. \hypertarget{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}{
 \index{SCodeMachine@{SCodeMachine}!executeTurnDown@{executeTurnDown}}
 \index{executeTurnDown@{executeTurnDown}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{executeTurnDown}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnDown ()}}
 \label{classSCodeMachine_26b7ba8981d08d594b0c37617aa85277}
 
 
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ \hypertarget{classSCodeMachine_d8415a221140a08a9383a595336cdf69}{
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W DÓŁ. \hypertarget{classSCodeMachine_d8415a221140a08a9383a595336cdf69}{
 \index{SCodeMachine@{SCodeMachine}!executeTurnLeft@{executeTurnLeft}}
 \index{executeTurnLeft@{executeTurnLeft}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{executeTurnLeft}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnLeft ()}}
 \label{classSCodeMachine_d8415a221140a08a9383a595336cdf69}
 
 
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO \hypertarget{classSCodeMachine_d48065e7bf42eef9e3a0f81fbb17f301}{
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W LEWO. \hypertarget{classSCodeMachine_d48065e7bf42eef9e3a0f81fbb17f301}{
 \index{SCodeMachine@{SCodeMachine}!executeTurnRight@{executeTurnRight}}
 \index{executeTurnRight@{executeTurnRight}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{executeTurnRight}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnRight ()}}
 \label{classSCodeMachine_d48065e7bf42eef9e3a0f81fbb17f301}
 
 
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO \hypertarget{classSCodeMachine_f2867d02414db096844e4801f9895650}{
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W PRAWO. \hypertarget{classSCodeMachine_f2867d02414db096844e4801f9895650}{
 \index{SCodeMachine@{SCodeMachine}!executeTurnUp@{executeTurnUp}}
 \index{executeTurnUp@{executeTurnUp}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{executeTurnUp}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::executeTurnUp ()}}
 \label{classSCodeMachine_f2867d02414db096844e4801f9895650}
 
 
-Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ \hypertarget{classSCodeMachine_3c851e80ec35cbebeb78ec8ceed8c5ca}{
+Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ. \hypertarget{classSCodeMachine_3c851e80ec35cbebeb78ec8ceed8c5ca}{
 \index{SCodeMachine@{SCodeMachine}!getPointedInstruction@{getPointedInstruction}}
 \index{getPointedInstruction@{getPointedInstruction}!SCodeMachine@{SCodeMachine}}
 \subsubsection[{getPointedInstruction}]{\setlength{\rightskip}{0pt plus 5cm}{\bf SInstructions} SCodeMachine::getPointedInstruction ()}}
@@ -102,6 +138,29 @@ Wykonuje instrukcję Salvadora SKRĘĆ GŁOWICE KODU W GÓRĘ \hypertarget{class
 
 Zwraca instrukcję na jaką wskazuje głowica obrazu kodu. \begin{Desc}
 \item[Zwraca:]instrukcja wskazywana przez głowicę \end{Desc}
+\hypertarget{classSCodeMachine_69a97f71f2a16f69f9daca1bf8433964}{
+\index{SCodeMachine@{SCodeMachine}!pushPointer@{pushPointer}}
+\index{pushPointer@{pushPointer}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{pushPointer}]{\setlength{\rightskip}{0pt plus 5cm}bool SCodeMachine::pushPointer ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSCodeMachine_69a97f71f2a16f69f9daca1bf8433964}
+
+
+Przesuwa głowicę kodu o jedną komórkę w bieżącym kierunku. \begin{Desc}
+\item[Zwraca:]czy się udało (czy głowica nie wykroczyła poza obraz kodu) \end{Desc}
+
+
+Implementuje \hyperlink{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}{SAbstractMachine}.\hypertarget{classSCodeMachine_4a2d7edca4db9e3bd8942abc13f6c8ec}{
+\index{SCodeMachine@{SCodeMachine}!setVerbosity@{setVerbosity}}
+\index{setVerbosity@{setVerbosity}!SCodeMachine@{SCodeMachine}}
+\subsubsection[{setVerbosity}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeMachine::setVerbosity (bool {\em verbosity})}}
+\label{classSCodeMachine_4a2d7edca4db9e3bd8942abc13f6c8ec}
+
+
+Ustala tryb gadatliwy. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em verbosity}]tryb gadatliwy \end{description}
+\end{Desc}
 
 
 Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}

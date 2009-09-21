@@ -45,8 +45,7 @@ Diagram dziedziczenia dla SCodeGrid</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeGrid.html#c150afdd8f27785b5ddf5669a4d90332">~SCodeGrid</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c57d52a49a55c91068fe0eb541e721f8"></a><!-- doxytag: member="SCodeGrid::getValueAt" ref="c57d52a49a55c91068fe0eb541e721f8" args="(int, int)" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>getValueAt</b> (int, int)</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeGrid.html#c57d52a49a55c91068fe0eb541e721f8">getValueAt</a> (int, int)</td></tr>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="c01feeae87539b97aed07d67b975f174"></a><!-- doxytag: member="SCodeGrid::__dev__printConsole" ref="c01feeae87539b97aed07d67b975f174" args="(int, int)" -->
 void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printConsole</b> (int, int)</td></tr>
@@ -60,15 +59,12 @@ char&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transformBinar
 <tr><td colspan="2"><br><h2>Metody chronione</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeGrid.html#46ed88ad7346788efb14c40cbd836981">readFromFile</a> (std::string)</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f15ba156433f88a40887e5ba72d9201a"></a><!-- doxytag: member="SCodeGrid::constructGrid" ref="f15ba156433f88a40887e5ba72d9201a" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>constructGrid</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeGrid.html#f15ba156433f88a40887e5ba72d9201a">constructGrid</a> ()</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="6bd4c1bf841bd09c2ffb2e019c08b4ed"></a><!-- doxytag: member="SCodeGrid::destructGrid" ref="6bd4c1bf841bd09c2ffb2e019c08b4ed" args="()" -->
-void&nbsp;</td><td class="memItemRight" valign="bottom"><b>destructGrid</b> ()</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeGrid.html#6bd4c1bf841bd09c2ffb2e019c08b4ed">destructGrid</a> ()</td></tr>
 
 <tr><td colspan="2"><br><h2>Atrybuty chronione</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="445b4bd8cca6ddb7100afa621f5722b0"></a><!-- doxytag: member="SCodeGrid::instruction_grid" ref="445b4bd8cca6ddb7100afa621f5722b0" args="" -->
-<a class="el" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">SInstructions</a> **&nbsp;</td><td class="memItemRight" valign="bottom"><b>instruction_grid</b></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">SInstructions</a> **&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSCodeGrid.html#445b4bd8cca6ddb7100afa621f5722b0">instruction_grid</a></td></tr>
 
 </table>
 <hr><a name="_details"></a><h2>Opis szczegółowy</h2>
@@ -127,6 +123,86 @@ Destruktor siatki kodu.
 </div>
 </div><p>
 <hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="f15ba156433f88a40887e5ba72d9201a"></a><!-- doxytag: member="SCodeGrid::constructGrid" ref="f15ba156433f88a40887e5ba72d9201a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeGrid::constructGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Alokuje pamięć pod siatkę kodu. 
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#919248aad138ffb1c969e73c3e637dcd">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="6bd4c1bf841bd09c2ffb2e019c08b4ed"></a><!-- doxytag: member="SCodeGrid::destructGrid" ref="6bd4c1bf841bd09c2ffb2e019c08b4ed" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SCodeGrid::destructGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Dealokuje pamięć przeznaczoną dla siatki kodu. 
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#fb63d8cf5210c3606a3b7add19f06833">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="c57d52a49a55c91068fe0eb541e721f8"></a><!-- doxytag: member="SCodeGrid::getValueAt" ref="c57d52a49a55c91068fe0eb541e721f8" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SCodeGrid::getValueAt           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca instrukcję wskazywaną przez punkt współrzędnych zadanych parametrami. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>coord_x</em>&nbsp;</td><td>pierwsza współrzędna (odcięta) punktu </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>coord_y</em>&nbsp;</td><td>pierwsza współrzędna (rzędna) punktu </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>instrukcja umieszczona na siatce </dd></dl>
+
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#d8772e08d58f970d885775cb9682bf6d">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
 <a class="anchor" name="46ed88ad7346788efb14c40cbd836981"></a><!-- doxytag: member="SCodeGrid::readFromFile" ref="46ed88ad7346788efb14c40cbd836981" args="(std::string)" -->
 <div class="memitem">
 <div class="memproto">
@@ -148,10 +224,26 @@ Destruktor siatki kodu.
 
 </div>
 </div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="445b4bd8cca6ddb7100afa621f5722b0"></a><!-- doxytag: member="SCodeGrid::instruction_grid" ref="445b4bd8cca6ddb7100afa621f5722b0" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e">SInstructions</a>** <a class="el" href="classSCodeGrid.html#445b4bd8cca6ddb7100afa621f5722b0">SCodeGrid::instruction_grid</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Siatka kodu. 
+</div>
+</div><p>
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="scodegrid_8h-source.html">scodegrid.h</a><li>src/core/<a class="el" href="scodegrid_8cpp.html">scodegrid.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:49 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

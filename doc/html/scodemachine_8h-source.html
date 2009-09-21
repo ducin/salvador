@@ -45,31 +45,42 @@
 <a name="l00036"></a>00036 
 <a name="l00037"></a>00037                 SCodeImage *image;
 <a name="l00038"></a>00038 
-<a name="l00039"></a>00039         <span class="keyword">public</span>:
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041                 <a class="code" href="classSCodeMachine.html#bb85f472be7c8e2112bbe5d6643f99b7">SCodeMachine</a>(<a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043" title="rodzaje kodów wirtualnych maszyn">SCodeTypes</a>);
-<a name="l00042"></a>00042                 <a class="code" href="classSCodeMachine.html#67d39a3662fc2640aa506a581766a9b8">~SCodeMachine</a>();
+<a name="l00042"></a>00042                 <span class="keywordtype">bool</span> verbose;
 <a name="l00043"></a>00043 
-<a name="l00044"></a>00044                 <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e" title="operacje obu maszyn (SCodeMachine i SDataMachine)">SInstructions</a> <a class="code" href="classSCodeMachine.html#3c851e80ec35cbebeb78ec8ceed8c5ca">getPointedInstruction</a>(); <span class="comment">// zwraca wskazywaną wskaxnikiem instrukcję obrazu kodu</span>
+<a name="l00044"></a>00044         <span class="keyword">public</span>:
 <a name="l00045"></a>00045 
-<a name="l00046"></a>00046                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#d8415a221140a08a9383a595336cdf69">executeTurnLeft</a>();
-<a name="l00047"></a>00047                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#d48065e7bf42eef9e3a0f81fbb17f301">executeTurnRight</a>();
-<a name="l00048"></a>00048                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#f2867d02414db096844e4801f9895650">executeTurnUp</a>();
-<a name="l00049"></a>00049                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#26b7ba8981d08d594b0c37617aa85277">executeTurnDown</a>();
-<a name="l00050"></a>00050                 <span class="comment">// void executeNull(); // brak instrukcji</span>
-<a name="l00051"></a>00051                 <span class="comment">// void executeJump(); // nadzoruje maszyna wirtualna</span>
-<a name="l00052"></a>00052                 <span class="comment">// void executeBreak(); // brak instrukcji</span>
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054         <span class="comment">// development:</span>
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056                 <span class="keywordtype">int</span> __dev__readGridFromTextFile(std::string); <span class="comment">// TESTOWE // wczytanie siatki kodu z pliku</span>
-<a name="l00057"></a>00057                 <span class="keywordtype">void</span> __dev__destroyGrid(); <span class="comment">// TESTOWE // niszczenie grida</span>
-<a name="l00058"></a>00058 
-<a name="l00059"></a>00059 };
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061 <span class="preprocessor">#endif</span>
+<a name="l00046"></a>00046                 <a class="code" href="classSCodeMachine.html#bb85f472be7c8e2112bbe5d6643f99b7">SCodeMachine</a>(<a class="code" href="senums_8h.html#1a2ae45552936d27425f99e1c187b043" title="rodzaje kodów wirtualnych maszyn">SCodeTypes</a>);
+<a name="l00047"></a>00047                 <a class="code" href="classSCodeMachine.html#67d39a3662fc2640aa506a581766a9b8">~SCodeMachine</a>();
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#4a2d7edca4db9e3bd8942abc13f6c8ec">setVerbosity</a>(<span class="keywordtype">bool</span>);
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051                 <a class="code" href="senums_8h.html#b1c3fa9dccd3f8afa81e14a98d9a7d1e" title="operacje obu maszyn (SCodeMachine i SDataMachine)">SInstructions</a> <a class="code" href="classSCodeMachine.html#3c851e80ec35cbebeb78ec8ceed8c5ca">getPointedInstruction</a>(); <span class="comment">// zwraca wskazywaną wskaxnikiem instrukcję obrazu kodu</span>
+<a name="l00052"></a>00052 
+<a name="l00053"></a>00053                 <span class="keywordtype">bool</span> <a class="code" href="classSCodeMachine.html#69a97f71f2a16f69f9daca1bf8433964">pushPointer</a>();
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#d8415a221140a08a9383a595336cdf69">executeTurnLeft</a>();
+<a name="l00056"></a>00056                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#d48065e7bf42eef9e3a0f81fbb17f301">executeTurnRight</a>();
+<a name="l00057"></a>00057                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#f2867d02414db096844e4801f9895650">executeTurnUp</a>();
+<a name="l00058"></a>00058                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#26b7ba8981d08d594b0c37617aa85277">executeTurnDown</a>();
+<a name="l00059"></a>00059                 <span class="comment">// void executeNull(); // brak instrukcji</span>
+<a name="l00060"></a>00060                 <span class="comment">// void executeJump(); // nadzoruje maszyna wirtualna</span>
+<a name="l00061"></a>00061                 <span class="comment">// void executeBreak(); // brak instrukcji</span>
+<a name="l00062"></a>00062 
+<a name="l00063"></a>00063         <span class="comment">// development:</span>
+<a name="l00064"></a>00064 
+<a name="l00065"></a>00065                 <span class="keywordtype">void</span> __dev__readGridFromTextFile(std::string); <span class="comment">// TESTOWE // wczytanie siatki kodu z pliku</span>
+<a name="l00066"></a>00066                 <span class="keywordtype">void</span> __dev__destroyGrid(); <span class="comment">// TESTOWE // niszczenie grida</span>
+<a name="l00067"></a>00067 
+<a name="l00068"></a>00068                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#29892f8f026e8dcd71ec99b9c593e022">__dev__printConsole</a>();
+<a name="l00069"></a>00069                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#b4c8492fda9fe21cc2620ede3630d852">__dev__printPointer</a>();
+<a name="l00070"></a>00070                 <span class="keywordtype">void</span> __dev__printGrid();
+<a name="l00071"></a>00071                 <span class="keywordtype">void</span> <a class="code" href="classSCodeMachine.html#6a725d341bffacccb53431f88c62b713">__dev__printPointedInstruction</a>();
+<a name="l00072"></a>00072 
+<a name="l00073"></a>00073 };
+<a name="l00074"></a>00074 
+<a name="l00075"></a>00075 <span class="preprocessor">#endif</span>
 </pre></div></div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:55 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

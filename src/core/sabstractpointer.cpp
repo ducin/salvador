@@ -39,21 +39,45 @@ SAbstractPointer::~SAbstractPointer()
 	debug("DESTRUCTOR ----* abstract-pointer END\n");
 }
 
+/**
+ * Ustala kierunek głowicy na ten zadany parametrem.
+ * @param dir nowy kierunek głowicy
+ */
 void SAbstractPointer::setDirection(SDirections dir)
 {
 	direction = dir;
 }
 
+/**
+ * Zwraca pierwszą współrzędną (odciętą) punktu wskazywanego przez głowicę.
+ * @return pierwsza współrzędna (odcięta) głowicy
+ */
 int SAbstractPointer::getCoordX()
 {
 	return coord_x;
 }
 
+/**
+ * Zwraca drugą współrzędną (rzędną) punktu wskazywanego przez głowicę.
+ * @return druga współrzędna (rzędna) głowicy
+ */
 int SAbstractPointer::getCoordY()
 {
 	return coord_y;
 }
 
+/**
+ * Zwraca bieżący kierunek głowicy.
+ * @return bieżący kierunek głowicy
+ */
+SDirections SAbstractPointer::getDirection()
+{
+	return direction;
+}
+
+/**
+ * Przesuwa głowicę o jedną komórkę do przodu (w zależności od wskazywanego przez nią kierunku).
+ */
 void SAbstractPointer::moveForward(int count)
 {
 	switch(direction)
@@ -73,6 +97,9 @@ void SAbstractPointer::moveForward(int count)
 	}
 }
 
+/**
+ * Ustawia wszystkie atrybuty głowicy na wartości domyślne.
+ */
 void SAbstractPointer::clear()
 {
 	coord_x = INIT_coord_x;

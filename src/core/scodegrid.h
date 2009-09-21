@@ -30,7 +30,7 @@ class SCodeGrid : public SAbstractGrid
 
 	protected:
 
-		SInstructions **instruction_grid;
+		/** Siatka kodu. */ SInstructions **instruction_grid;
 
 		int readFromFile(std::string);
 

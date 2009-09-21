@@ -46,6 +46,8 @@ Diagram dziedziczenia dla SAbstractGrid</div>
 
 <tr><td class="memItemLeft" nowrap align="right" valign="top">virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#7391180cba323fbd0d64d23157c8a6a6">~SAbstractGrid</a> ()</td></tr>
 
+<tr><td class="memItemLeft" nowrap align="right" valign="top">bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#1e4823efb8b482d44466d8324f63dfb1">pointInsideGrid</a> (int, int)</td></tr>
+
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="1c10a9c322c321b3fc2c9a5195e817ba"></a><!-- doxytag: member="SAbstractGrid::__dev__transformCharToBinary" ref="1c10a9c322c321b3fc2c9a5195e817ba" args="(char)=0" -->
 virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transformCharToBinary</b> (char)=0</td></tr>
 
@@ -56,21 +58,16 @@ virtual char&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__transf
 virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>__dev__printConsole</b> (int, int)=0</td></tr>
 
 <tr><td colspan="2"><br><h2>Metody chronione</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="919248aad138ffb1c969e73c3e637dcd"></a><!-- doxytag: member="SAbstractGrid::constructGrid" ref="919248aad138ffb1c969e73c3e637dcd" args="()=0" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>constructGrid</b> ()=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#919248aad138ffb1c969e73c3e637dcd">constructGrid</a> ()=0</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="fb63d8cf5210c3606a3b7add19f06833"></a><!-- doxytag: member="SAbstractGrid::destructGrid" ref="fb63d8cf5210c3606a3b7add19f06833" args="()=0" -->
-virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><b>destructGrid</b> ()=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#fb63d8cf5210c3606a3b7add19f06833">destructGrid</a> ()=0</td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="d8772e08d58f970d885775cb9682bf6d"></a><!-- doxytag: member="SAbstractGrid::getValueAt" ref="d8772e08d58f970d885775cb9682bf6d" args="(int, int)=0" -->
-virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><b>getValueAt</b> (int, int)=0</td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#d8772e08d58f970d885775cb9682bf6d">getValueAt</a> (int, int)=0</td></tr>
 
 <tr><td colspan="2"><br><h2>Atrybuty chronione</h2></td></tr>
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="f0b1916fda47bbd921fc1b5b5abadb72"></a><!-- doxytag: member="SAbstractGrid::size_x" ref="f0b1916fda47bbd921fc1b5b5abadb72" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>size_x</b></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#f0b1916fda47bbd921fc1b5b5abadb72">size_x</a></td></tr>
 
-<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="b9fddbe2004e7242dff69aa20da8a3c3"></a><!-- doxytag: member="SAbstractGrid::size_y" ref="b9fddbe2004e7242dff69aa20da8a3c3" args="" -->
-int&nbsp;</td><td class="memItemRight" valign="bottom"><b>size_y</b></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractGrid.html#b9fddbe2004e7242dff69aa20da8a3c3">size_y</a></td></tr>
 
 <tr><td colspan="2"><br><h2>Przyjaciele</h2></td></tr>
 <tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="13f503f5e1b3625e973ac350880b3a31"></a><!-- doxytag: member="SAbstractGrid::SCodeMachine" ref="13f503f5e1b3625e973ac350880b3a31" args="" -->
@@ -122,10 +119,152 @@ Konstruktor abstrakcyjnej siatki. Nie robi nic szczególnego.
 Destruktor abstrakcyjnej siatki. Nie robi nic szczególnego. 
 </div>
 </div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="919248aad138ffb1c969e73c3e637dcd"></a><!-- doxytag: member="SAbstractGrid::constructGrid" ref="919248aad138ffb1c969e73c3e637dcd" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SAbstractGrid::constructGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Alokuje pamięć pod siatkę. 
+<p>Implementowany w <a class="el" href="classSCodeGrid.html#f15ba156433f88a40887e5ba72d9201a">SCodeGrid</a> i <a class="el" href="classSDataGrid.html#5af888335764c1ba959b6ef964223b6d">SDataGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="fb63d8cf5210c3606a3b7add19f06833"></a><!-- doxytag: member="SAbstractGrid::destructGrid" ref="fb63d8cf5210c3606a3b7add19f06833" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void SAbstractGrid::destructGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Dealokuje pamięć przeznaczoną dla siatki. 
+<p>Implementowany w <a class="el" href="classSCodeGrid.html#6bd4c1bf841bd09c2ffb2e019c08b4ed">SCodeGrid</a> i <a class="el" href="classSDataGrid.html#c9c0ef298fb96c56f9f9796720a41489">SDataGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="d8772e08d58f970d885775cb9682bf6d"></a><!-- doxytag: member="SAbstractGrid::getValueAt" ref="d8772e08d58f970d885775cb9682bf6d" args="(int, int)=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int SAbstractGrid::getValueAt           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [protected, pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca wartość komórki siatki określonej współrzednymi zadanymi parametrami. <dl class="return" compact><dt><b>Zwraca:</b></dt><dd>wartość komórki siatki wskazanej parametrami </dd></dl>
+
+<p>Implementowany w <a class="el" href="classSCodeGrid.html#c57d52a49a55c91068fe0eb541e721f8">SCodeGrid</a> i <a class="el" href="classSDataGrid.html#7f9dd63d74e36731875630a96ea8dd07">SDataGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="1e4823efb8b482d44466d8324f63dfb1"></a><!-- doxytag: member="SAbstractGrid::pointInsideGrid" ref="1e4823efb8b482d44466d8324f63dfb1" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SAbstractGrid::pointInsideGrid           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>X</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>Y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Sprawdza czy punkt o współrzędnych zadanych parametrami mieści się w siatce. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>X</em>&nbsp;</td><td>odcięta (współrzędna) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>Y</em>&nbsp;</td><td>rzędna (współrzędna) </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>czy punkt o zadanych współrzednych mieści się w siatce </dd></dl>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="f0b1916fda47bbd921fc1b5b5abadb72"></a><!-- doxytag: member="SAbstractGrid::size_x" ref="f0b1916fda47bbd921fc1b5b5abadb72" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classSAbstractGrid.html#f0b1916fda47bbd921fc1b5b5abadb72">SAbstractGrid::size_x</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+szerokość siatki (rozmiar współrzędnej x) 
+</div>
+</div><p>
+<a class="anchor" name="b9fddbe2004e7242dff69aa20da8a3c3"></a><!-- doxytag: member="SAbstractGrid::size_y" ref="b9fddbe2004e7242dff69aa20da8a3c3" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="classSAbstractGrid.html#b9fddbe2004e7242dff69aa20da8a3c3">SAbstractGrid::size_y</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+wysokość siatki (rozmiar współrzędnej y) 
+</div>
+</div><p>
 <hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>src/core/<a class="el" href="sabstractgrid_8h-source.html">sabstractgrid.h</a><li>src/core/<a class="el" href="sabstractgrid_8cpp.html">sabstractgrid.cpp</a></ul>
 </div>
-<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Mon Sep 21 03:02:56 2009 dla Projekt Salvador programem&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
 </body>

@@ -39,8 +39,14 @@ SAbstractGrid::~SAbstractGrid()
 	debug("DESTRUCTOR abstract-grid END\n");
 }
 
+/**
+ * Sprawdza czy punkt o współrzędnych zadanych parametrami mieści się w siatce.
+ * @param X odcięta (współrzędna)
+ * @param Y rzędna (współrzędna)
+ * @return czy punkt o zadanych współrzednych mieści się w siatce
+ */
 bool SAbstractGrid::pointInsideGrid(int X, int Y)
 {
-	return ((X <= size_x) && (Y <= size_y));
+	return ((X < size_x) && (X >= 0) && (Y < size_y) && (Y >= 0));
 }
 
