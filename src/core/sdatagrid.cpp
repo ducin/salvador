@@ -27,7 +27,8 @@
 SDataGrid::SDataGrid()
 {
 	debug("CONSTRUCTOR data-grid START\n");
-	size_x = 8;
+	max_index = 0;
+	size_x = 100;
 	size_y = 1;
 	constructGrid();
 	zeroGrid();
@@ -109,6 +110,8 @@ int SDataGrid::getValueAt(int coord_x, int coord_y)
 void SDataGrid::performZeroAt(int coord_x, int coord_y)
 {
 	data_grid[coord_y][coord_x] = 0;
+	if (max_index < coord_x)
+		max_index = coord_x;
 }
 
 /**
@@ -142,20 +145,19 @@ void SDataGrid::performPredAt(int coord_x, int coord_y)
  */
 void SDataGrid::__dev__printConsole(int ptr_x, int ptr_y)
 {
-//	std::cout << std::endl << "GRID" << std::endl;
-//	std::cout << "[X:" << size_x << ", Y:" << size_y << "]" << std::endl;
-	std::cout << "; dane: ";
-	for(int y = 0; y < size_y; y++)
+	ptr_y = 0;
+	std::cout << "dane: ";
+	for(int x = 0; x < max_index + 1; x++)
 	{
-		for(int x = 0; x < size_x; x++)
-		{
-			if (ptr_x == x && ptr_y == y)
-				std::cout << '<' << getValueAt(x,y) << '>';
-			else
-				std::cout << /*'[' <<*/ getValueAt(x,y) /*<< ']'*/;
-			std::cout << ' ';
-		}
-		std::cout << std::endl;
+		if (ptr_x == x)
+			std::cout << '<' << getValueAt(x, ptr_y) << '>';
+		else
+			std::cout << /*'[' <<*/ getValueAt(x, ptr_y) /*<< ']'*/;
+		std::cout << ' ';
+	}
+	if (ptr_x > max_index)
+	{
+		std::cout << "<?>";
 	}
 }
 

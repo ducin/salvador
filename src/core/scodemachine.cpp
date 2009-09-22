@@ -270,10 +270,11 @@ void SCodeMachine::__dev__printGrid()
 void SCodeMachine::__dev__printPointer()
 {
 //	debug("dev print pointer START\n");
-	std::cout << "gł.kodu ";
+	std::cout << "gł.kodu: ";
 	pointer->__dev__printConsoleCoords();
 	std::cout << "; ";
 	__dev__printPointedInstruction();
+	std::cout << "; ";
 //	debug("dev print pointer END\n");
 }
 
@@ -329,5 +330,4 @@ void SCodeMachine::__dev__printPointedInstruction()
 void SCodeMachine::__dev__printConsole()
 {
 	__dev__printPointer();
-//	__dev__printGrid();
 }

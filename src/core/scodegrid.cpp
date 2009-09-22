@@ -161,8 +161,7 @@ void SCodeGrid::readFromImageFile(std::string filename)
  */
 void SCodeGrid::__dev__printConsole(int ptr_x, int ptr_y)
 {
-	std::cout << std::endl << "GRID" << std::endl;
-	std::cout << "[X:" << size_x << ", Y:" << size_y << "]" << std::endl;
+	std::cout << std::endl << "siatka kodu: " << "[X:" << size_x << ", Y:" << size_y << "]" << std::endl;
 	for(int y = 0; y < size_y; y++)
 	{
 		for(int x = 0; x < size_x; x++)
@@ -195,6 +194,7 @@ int SCodeGrid::__dev__transformCharToBinary(char code)
 		case '.': return instr_code_null;
 		case '?': return instr_code_jump;
 		case '#': return instr_code_break;
+		default: return instr_code_null;
 	}
 }
 
@@ -219,5 +219,6 @@ char SCodeGrid::__dev__transformBinaryToChar(int binary)
 		case instr_code_null: return '.';
 		case instr_code_jump: return '?';
 		case instr_code_break: return '#';
+		default: return '.';
 	}
 }

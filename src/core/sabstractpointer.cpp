@@ -123,13 +123,13 @@ std::string SAbstractPointer::__dev__transformBinaryDirectionToString(SDirection
 	switch(dir)
 	{
 		case dir_up:
-			return "up";
+			return "gówa";
 		case dir_right:
-			return "right";
+			return "prawo";
 		case dir_down:
-			return "down";
+			return "dół";
 		case dir_left:
-			return "left";
+			return "lewo";
 		default:
 			return "error";
 	}

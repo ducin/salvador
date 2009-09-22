@@ -49,6 +49,7 @@ class SVirtualMachine
 
 		void prepareToExecute();
 
+		bool visual;
 		bool verbose;
 		void setVerbosityRecursively(bool);
 
@@ -67,6 +68,8 @@ class SVirtualMachine
 
 		bool isVerbose();
 		void toggleVerbosity();
+		bool isVisual();
+		void toggleVisuality();
 
 		void setBehaviorBounce();
 		void setBehaviorStop();

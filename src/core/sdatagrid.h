@@ -24,6 +24,9 @@
  */
 class SDataGrid : public SAbstractGrid
 {
+	private:
+
+		int max_index;
 
 	protected:
 

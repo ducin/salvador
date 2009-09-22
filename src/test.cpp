@@ -90,8 +90,9 @@ int runMenu()
 	std::cout << "2. uruchom maszynę i wykonuj zadaną ilość instrukcji w każdym kroku" << std::endl;
 	std::cout << "3. uruchom maszynę i wykonaj wszystkie instrukcje" << std::endl;
 	std::cout << "4. włącz/wyłącz tryb gadatliwy (" << (m->isVerbose() ? "włączony" : "wyłączony" ) << ")" << std::endl;
-	std::cout << "5. przełącz tryb odbijaj/zakończ, gdy głowica wychodzi poza obraz (" << (m->isBehaviorBounce() ? "odbijaj" : "zakończ" ) << ")" << std::endl;
-	std::cout << "6. koniec" << std::endl;
+	std::cout << "5. włącz/wyłącz tryb wizualny (" << (m->isVisual() ? "włączony" : "wyłączony" ) << ")" << std::endl;
+	std::cout << "6. przełącz tryb odbijaj/zakończ, gdy głowica wychodzi poza obraz (" << (m->isBehaviorBounce() ? "odbijaj" : "zakończ" ) << ")" << std::endl;
+	std::cout << "7. koniec" << std::endl;
 
 	std::string answer;
 	std::cout << std::endl << "> "; getline(std::cin, answer); std::cout << std::endl;
@@ -111,7 +112,7 @@ void runProgram()
 	runWelcome();
 	// zmienne robocze sterujące pracą programu
 	int continued = 1, choice;
-	int final_choice = 6;
+	int final_choice = 7;
 	// główna pętla programu
 	std::string confirm_str;
 	while (continued)
@@ -150,10 +151,13 @@ void runProgram()
 			case 4: // włącz/wyłącz tryb gadatliwy
 				m->toggleVerbosity();
 				break;
-			case 5: // przełączenie trybu odbijania głowicy
+			case 5: // włącz/wyłącz tryb wizualny
+				m->toggleVisuality();
+				break;
+			case 6: // przełączenie trybu odbijania głowicy
 				m->toggleBehavior();
 				break;
-			case 6: // koniec
+			case 7: // koniec
 				m->stopMachine();
 				break;
 		}

@@ -137,6 +137,8 @@ void SVirtualMachine::prepareToExecute()
 	beyond_border_behavior = beh_bounce;
 
 	step = 0;
+	verbose = true;
+	visual = false;
 }
 
 //=============================================================================
@@ -226,7 +228,7 @@ void SVirtualMachine::setVerbosityRecursively(bool verbosity)
 }
 
 /**
- * Sprawdza, czy maszyna ma włączony tryb gadatliwy
+ * Sprawdza, czy maszyna ma włączony tryb gadatliwy.
  * @return tryb gadatliwy
  */
 bool SVirtualMachine::isVerbose()
@@ -246,6 +248,23 @@ void SVirtualMachine::toggleVerbosity()
 	}
 }
 
+/**
+ * Sprawdza, czy maszyna ma włączony tryb wizualny.
+ * @return tryb wizualny
+ */
+bool SVirtualMachine::isVisual()
+{
+	return visual;
+}
+
+/**
+ * Przełącza tryb wizualny na przeciwny.
+ */
+void SVirtualMachine::toggleVisuality()
+{
+	visual = !visual;
+}
+
 //=============================================================================
 
 /**
@@ -262,8 +281,12 @@ void SVirtualMachine::executeAllInstr()
  */
 void SVirtualMachine::executeInstr()
 {
+	std::cout << std::endl << "krok: " << step << "; ";
 	if (isVerbose())
 		__dev__printConsole();
+	data_machine->__dev__printConsole();
+	if (isVisual())
+		code_machine->__dev__printGrid();
 	switch(code_machine->getPointedInstruction())
 	{
 		case instr_data_left:
@@ -414,9 +437,7 @@ void SVirtualMachine::destroyGrid()
 void SVirtualMachine::__dev__printConsole()
 {
 //	std::cout << "[STATE: " << __dev__transformBinaryStateToString(getState()) << "]" << std::endl;
-	std::cout << "krok: " << step << "; ";
 	code_machine->__dev__printConsole();
-	data_machine->__dev__printConsole();
 }
 
 /** \brief symulacja działania wirtualnej maszyny
