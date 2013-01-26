@@ -3,7 +3,8 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = 
+DESTDIR = bin
+TARGET = salvador
 DEPENDPATH += . src src/core
 INCLUDEPATH += . src/core src
 
