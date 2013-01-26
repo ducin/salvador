@@ -1,0 +1,177 @@
+\hypertarget{classSAbstractGrid}{
+\section{Dokumentacja klasy SAbstractGrid}
+\label{classSAbstractGrid}\index{SAbstractGrid@{SAbstractGrid}}
+}
+Sbstrakcyjna siatka.  
+
+
+{\tt \#include $<$sabstractgrid.h$>$}
+
+Diagram dziedziczenia dla SAbstractGrid:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSAbstractGrid}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSAbstractGrid_2df5b6a5bd2a11d9015104f3dd6afc20}{SAbstractGrid} ()
+\item 
+virtual \hyperlink{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}{$\sim$SAbstractGrid} ()
+\item 
+bool \hyperlink{classSAbstractGrid_1e4823efb8b482d44466d8324f63dfb1}{pointInsideGrid} (int, int)
+\item 
+int \hyperlink{classSAbstractGrid_79e2d4403dc5b76fe67e36169bb9f706}{getSizeX} ()
+\item 
+int \hyperlink{classSAbstractGrid_a1b6e5aaf2c870e1ef15a9f93459b820}{getSizeY} ()
+\item 
+virtual void \hyperlink{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{\_\-\_\-dev\_\-\_\-printConsole} (int, int)=0
+\end{CompactItemize}
+\subsection*{Metody chronione}
+\begin{CompactItemize}
+\item 
+virtual void \hyperlink{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}{constructGrid} ()=0
+\item 
+virtual void \hyperlink{classSAbstractGrid_fb63d8cf5210c3606a3b7add19f06833}{destructGrid} ()=0
+\item 
+virtual int \hyperlink{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{getValueAt} (int, int)=0
+\end{CompactItemize}
+\subsection*{Atrybuty chronione}
+\begin{CompactItemize}
+\item 
+int \hyperlink{classSAbstractGrid_f0b1916fda47bbd921fc1b5b5abadb72}{size\_\-x}
+\item 
+int \hyperlink{classSAbstractGrid_b9fddbe2004e7242dff69aa20da8a3c3}{size\_\-y}
+\end{CompactItemize}
+\subsection*{Przyjaciele}
+\begin{CompactItemize}
+\item 
+\hypertarget{classSAbstractGrid_13f503f5e1b3625e973ac350880b3a31}{
+class \hyperlink{classSAbstractGrid_13f503f5e1b3625e973ac350880b3a31}{SCodeMachine}}
+\label{classSAbstractGrid_13f503f5e1b3625e973ac350880b3a31}
+
+\item 
+\hypertarget{classSAbstractGrid_b064517f75c184bae39efba1df818a12}{
+class \hyperlink{classSAbstractGrid_b064517f75c184bae39efba1df818a12}{SDataMachine}}
+\label{classSAbstractGrid_b064517f75c184bae39efba1df818a12}
+
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+Sbstrakcyjna siatka. 
+
+Siatka jest narzędziem które ułatwia przetrzymywanie pewnych danych w pamięci i udostępnia proste metody wyświetlające te dane na konsolę. Po klasie \hyperlink{classSAbstractGrid}{SAbstractGrid} dziedziczą dwie klasy: \hyperlink{classSCodeGrid}{SCodeGrid} - siatka kodu oraz \hyperlink{classSDataGrid}{SDataGrid} - siatka danych. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSAbstractGrid_2df5b6a5bd2a11d9015104f3dd6afc20}{
+\index{SAbstractGrid@{SAbstractGrid}!SAbstractGrid@{SAbstractGrid}}
+\index{SAbstractGrid@{SAbstractGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{SAbstractGrid}]{\setlength{\rightskip}{0pt plus 5cm}SAbstractGrid::SAbstractGrid ()}}
+\label{classSAbstractGrid_2df5b6a5bd2a11d9015104f3dd6afc20}
+
+
+Konstruktor abstrakcyjnej siatki. Nie robi nic szczególnego. \hypertarget{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}{
+\index{SAbstractGrid@{SAbstractGrid}!$\sim$SAbstractGrid@{$\sim$SAbstractGrid}}
+\index{$\sim$SAbstractGrid@{$\sim$SAbstractGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{$\sim$SAbstractGrid}]{\setlength{\rightskip}{0pt plus 5cm}SAbstractGrid::$\sim$SAbstractGrid ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSAbstractGrid_7391180cba323fbd0d64d23157c8a6a6}
+
+
+Destruktor abstrakcyjnej siatki. Nie robi nic szczególnego. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}{
+\index{SAbstractGrid@{SAbstractGrid}!\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}}
+\index{\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printConsole}]{\setlength{\rightskip}{0pt plus 5cm}virtual void SAbstractGrid::\_\-\_\-dev\_\-\_\-printConsole (int, \/  int)\hspace{0.3cm}{\tt  \mbox{[}pure virtual\mbox{]}}}}
+\label{classSAbstractGrid_e36c03b21a96f33d1ace5fd0b1d218f5}
+
+
+METODA TESTOWA. Wyświetla informacje o siatce. 
+
+Implementowany w \hyperlink{classSCodeGrid_c01feeae87539b97aed07d67b975f174}{SCodeGrid} i \hyperlink{classSDataGrid_8b94af72ddf880b0297baf24ceb2395a}{SDataGrid}.\hypertarget{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}{
+\index{SAbstractGrid@{SAbstractGrid}!constructGrid@{constructGrid}}
+\index{constructGrid@{constructGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{constructGrid}]{\setlength{\rightskip}{0pt plus 5cm}virtual void SAbstractGrid::constructGrid ()\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classSAbstractGrid_919248aad138ffb1c969e73c3e637dcd}
+
+
+Alokuje pamięć pod siatkę. 
+
+Implementowany w \hyperlink{classSCodeGrid_f15ba156433f88a40887e5ba72d9201a}{SCodeGrid} i \hyperlink{classSDataGrid_5af888335764c1ba959b6ef964223b6d}{SDataGrid}.\hypertarget{classSAbstractGrid_fb63d8cf5210c3606a3b7add19f06833}{
+\index{SAbstractGrid@{SAbstractGrid}!destructGrid@{destructGrid}}
+\index{destructGrid@{destructGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{destructGrid}]{\setlength{\rightskip}{0pt plus 5cm}virtual void SAbstractGrid::destructGrid ()\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classSAbstractGrid_fb63d8cf5210c3606a3b7add19f06833}
+
+
+Dealokuje pamięć przeznaczoną dla siatki. 
+
+Implementowany w \hyperlink{classSCodeGrid_6bd4c1bf841bd09c2ffb2e019c08b4ed}{SCodeGrid} i \hyperlink{classSDataGrid_c9c0ef298fb96c56f9f9796720a41489}{SDataGrid}.\hypertarget{classSAbstractGrid_79e2d4403dc5b76fe67e36169bb9f706}{
+\index{SAbstractGrid@{SAbstractGrid}!getSizeX@{getSizeX}}
+\index{getSizeX@{getSizeX}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{getSizeX}]{\setlength{\rightskip}{0pt plus 5cm}int SAbstractGrid::getSizeX ()}}
+\label{classSAbstractGrid_79e2d4403dc5b76fe67e36169bb9f706}
+
+
+Zwraca szerokość siatki (rozmiar współrzędnej x). \begin{Desc}
+\item[Zwraca:]szerokość siatki \end{Desc}
+\hypertarget{classSAbstractGrid_a1b6e5aaf2c870e1ef15a9f93459b820}{
+\index{SAbstractGrid@{SAbstractGrid}!getSizeY@{getSizeY}}
+\index{getSizeY@{getSizeY}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{getSizeY}]{\setlength{\rightskip}{0pt plus 5cm}int SAbstractGrid::getSizeY ()}}
+\label{classSAbstractGrid_a1b6e5aaf2c870e1ef15a9f93459b820}
+
+
+Zwraca wysokość siatki (rozmiar współrzędnej y). \begin{Desc}
+\item[Zwraca:]wysokość siatki \end{Desc}
+\hypertarget{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}{
+\index{SAbstractGrid@{SAbstractGrid}!getValueAt@{getValueAt}}
+\index{getValueAt@{getValueAt}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{getValueAt}]{\setlength{\rightskip}{0pt plus 5cm}virtual int SAbstractGrid::getValueAt (int, \/  int)\hspace{0.3cm}{\tt  \mbox{[}protected, pure virtual\mbox{]}}}}
+\label{classSAbstractGrid_d8772e08d58f970d885775cb9682bf6d}
+
+
+Zwraca wartość komórki siatki określonej współrzednymi zadanymi parametrami. \begin{Desc}
+\item[Zwraca:]wartość komórki siatki wskazanej parametrami \end{Desc}
+
+
+Implementowany w \hyperlink{classSCodeGrid_c57d52a49a55c91068fe0eb541e721f8}{SCodeGrid} i \hyperlink{classSDataGrid_7f9dd63d74e36731875630a96ea8dd07}{SDataGrid}.\hypertarget{classSAbstractGrid_1e4823efb8b482d44466d8324f63dfb1}{
+\index{SAbstractGrid@{SAbstractGrid}!pointInsideGrid@{pointInsideGrid}}
+\index{pointInsideGrid@{pointInsideGrid}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{pointInsideGrid}]{\setlength{\rightskip}{0pt plus 5cm}bool SAbstractGrid::pointInsideGrid (int {\em X}, \/  int {\em Y})}}
+\label{classSAbstractGrid_1e4823efb8b482d44466d8324f63dfb1}
+
+
+Sprawdza czy punkt o współrzędnych zadanych parametrami mieści się w siatce. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em X}]odcięta (współrzędna) \item[{\em Y}]rzędna (współrzędna) \end{description}
+\end{Desc}
+\begin{Desc}
+\item[Zwraca:]czy punkt o zadanych współrzednych mieści się w siatce \end{Desc}
+
+
+\subsection{Dokumentacja atrybutów składowych}
+\hypertarget{classSAbstractGrid_f0b1916fda47bbd921fc1b5b5abadb72}{
+\index{SAbstractGrid@{SAbstractGrid}!size\_\-x@{size\_\-x}}
+\index{size\_\-x@{size\_\-x}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{size\_\-x}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SAbstractGrid::size\_\-x}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSAbstractGrid_f0b1916fda47bbd921fc1b5b5abadb72}
+
+
+szerokość siatki (rozmiar współrzędnej x) \hypertarget{classSAbstractGrid_b9fddbe2004e7242dff69aa20da8a3c3}{
+\index{SAbstractGrid@{SAbstractGrid}!size\_\-y@{size\_\-y}}
+\index{size\_\-y@{size\_\-y}!SAbstractGrid@{SAbstractGrid}}
+\subsubsection[{size\_\-y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf SAbstractGrid::size\_\-y}\hspace{0.3cm}{\tt  \mbox{[}protected\mbox{]}}}}
+\label{classSAbstractGrid_b9fddbe2004e7242dff69aa20da8a3c3}
+
+
+wysokość siatki (rozmiar współrzędnej y) 
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{sabstractgrid_8h}{sabstractgrid.h}\item 
+src/core/\hyperlink{sabstractgrid_8cpp}{sabstractgrid.cpp}\end{CompactItemize}

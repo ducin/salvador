@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Projekt Salvador: Dokumentacja klasy SAbstractMachine</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja klasy SAbstractMachine</h1><!-- doxytag: class="SAbstractMachine" -->Abstrakcyjna maszyna.  
+<a href="#_details">Więcej...</a>
+<p>
+<code>#include &lt;<a class="el" href="sabstractmachine_8h-source.html">sabstractmachine.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla SAbstractMachine</div>
+<div class="dynsection">
+
+<p><center><img src="classSAbstractMachine.png" usemap="#SAbstractMachine_map" border="0" alt=""></center>
+<map name="SAbstractMachine_map">
+<area href="classSCodeMachine.html" alt="SCodeMachine" shape="rect" coords="0,56,116,80">
+<area href="classSDataMachine.html" alt="SDataMachine" shape="rect" coords="126,56,242,80">
+</map>
+</div>
+
+<p>
+<a href="classSAbstractMachine-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#f0ffb270de2ea44e89123a873bc5660a">SAbstractMachine</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="anchor" name="2c4c79bd629a2961fb520785ce3adf4b"></a><!-- doxytag: member="SAbstractMachine::~SAbstractMachine" ref="2c4c79bd629a2961fb520785ce3adf4b" args="()" -->
+virtual&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#2c4c79bd629a2961fb520785ce3adf4b">~SAbstractMachine</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Destruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje się niszczeniem głowic, tym zajmują się destruktory klas dziedziczących po <a class="el" href="classSAbstractMachine.html" title="Abstrakcyjna maszyna.">SAbstractMachine</a> (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>, <a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>). <br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#87766a003773869a3438e92739d7c9a1">clearPointer</a> ()</td></tr>
+
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ustaw współrzędne głowicy na domyślne [[i kierunek]]  <a href="#87766a003773869a3438e92739d7c9a1"></a><br></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">virtual bool&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#72a47b72416e0d2f24fcf36415d37404">pushPointer</a> ()=0</td></tr>
+
+<tr><td colspan="2"><br><h2>Atrybuty chronione</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSAbstractPointer.html">SAbstractPointer</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#7fb67b2cf326fa3176570ca65c573c79">pointer</a></td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top"><a class="el" href="classSAbstractGrid.html">SAbstractGrid</a> *&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSAbstractMachine.html#08b7046c29a7a5f248f324edee91f2dc">grid</a></td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+Abstrakcyjna maszyna. 
+<p>
+Po tej klasie dziedzicza dwie klasy (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>, <a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>, jedne z najważniejszych w projekcie). <hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="f0ffb270de2ea44e89123a873bc5660a"></a><!-- doxytag: member="SAbstractMachine::SAbstractMachine" ref="f0ffb270de2ea44e89123a873bc5660a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SAbstractMachine::SAbstractMachine           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor maszyny abstrakcyjnej. Póki co nie robi nic ciekawego. Nie zajmuje się tworzeniem głowic, tym zajmują się konstruktory klas dziedziczących po <a class="el" href="classSAbstractMachine.html" title="Abstrakcyjna maszyna.">SAbstractMachine</a> (<a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a>, <a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>). 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="87766a003773869a3438e92739d7c9a1"></a><!-- doxytag: member="SAbstractMachine::clearPointer" ref="87766a003773869a3438e92739d7c9a1" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SAbstractMachine::clearPointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+ustaw współrzędne głowicy na domyślne [[i kierunek]] 
+<p>
+Ustawia współrzędne głowicy na wartości domyślne. Wewnątrz klasy <a class="el" href="classSAbstractMachine.html" title="Abstrakcyjna maszyna.">SAbstractMachine</a> nie zostaje tworzony żaden obiekt głowicy (ani <a class="el" href="classSCodeImagePointer.html" title="głowica maszyny obsługująca obraz kodu">SCodeImagePointer</a>, ani <a class="el" href="classSDataImagePointer.html" title="głowica maszyny obsługująca obraz danych">SDataImagePointer</a>). Są one tworzone w konstruktorach klas dziedziczących po <a class="el" href="classSAbstractMachine.html" title="Abstrakcyjna maszyna.">SAbstractMachine</a>, czyli odpowiednio: <a class="el" href="classSCodeMachine.html" title="maszyna danych, obsługująca obraz danych">SCodeMachine</a> lub <a class="el" href="classSDataMachine.html" title="maszyna danych, obsługująca obraz danych">SDataMachine</a>. Jakoże obie głowice dziedziczą po klasie <a class="el" href="classSAbstractPointer.html" title="abstrakcyjna głowica maszyn">SAbstractPointer</a> (zdefiniowane są w niej współdzędne), możliwe jest użycie wskaźnika na głowicę (teoretycznie bez jej utworzenia, przynajmniej w tej klasie) 
+</div>
+</div><p>
+<a class="anchor" name="72a47b72416e0d2f24fcf36415d37404"></a><!-- doxytag: member="SAbstractMachine::pushPointer" ref="72a47b72416e0d2f24fcf36415d37404" args="()=0" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SAbstractMachine::pushPointer           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [pure virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Przesuwa głowicę o jedną komórkę w bieżącym kierunku. 
+<p>Implementowany w <a class="el" href="classSCodeMachine.html#69a97f71f2a16f69f9daca1bf8433964">SCodeMachine</a> i <a class="el" href="classSDataMachine.html#10eb8f56cf6235455a26c5c673b8fe15">SDataMachine</a>.</p>
+
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="08b7046c29a7a5f248f324edee91f2dc"></a><!-- doxytag: member="SAbstractMachine::grid" ref="08b7046c29a7a5f248f324edee91f2dc" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSAbstractGrid.html">SAbstractGrid</a>* <a class="el" href="classSAbstractMachine.html#08b7046c29a7a5f248f324edee91f2dc">SAbstractMachine::grid</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Siatka maszyny. Maszyna kodu ma swoją siatkę, a maszyna danych swoją. 
+</div>
+</div><p>
+<a class="anchor" name="7fb67b2cf326fa3176570ca65c573c79"></a><!-- doxytag: member="SAbstractMachine::pointer" ref="7fb67b2cf326fa3176570ca65c573c79" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classSAbstractPointer.html">SAbstractPointer</a>* <a class="el" href="classSAbstractMachine.html#7fb67b2cf326fa3176570ca65c573c79">SAbstractMachine::pointer</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Głowica maszyny. Maszyna kodu ma swoją głowicę, a maszyna danych swoją. 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/core/<a class="el" href="sabstractmachine_8h-source.html">sabstractmachine.h</a><li>src/core/<a class="el" href="sabstractmachine_8cpp.html">sabstractmachine.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Tue Sep 22 04:19:36 2009 dla Projekt Salvador programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

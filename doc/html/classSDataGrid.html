@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Projekt Salvador: Dokumentacja klasy SDataGrid</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li class="current"><a href="annotated.html"><span>Klasy</span></a></li>
+      <li><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="annotated.html"><span>Lista&nbsp;klas</span></a></li>
+      <li><a href="hierarchy.html"><span>Hierarchia&nbsp;klas</span></a></li>
+      <li><a href="functions.html"><span>Składowe&nbsp;klas</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="contents">
+<h1>Dokumentacja klasy SDataGrid</h1><!-- doxytag: class="SDataGrid" --><!-- doxytag: inherits="SAbstractGrid" -->siatka danych  
+<a href="#_details">Więcej...</a>
+<p>
+<code>#include &lt;<a class="el" href="sdatagrid_8h-source.html">sdatagrid.h</a>&gt;</code>
+<p>
+<div class="dynheader">
+Diagram dziedziczenia dla SDataGrid</div>
+<div class="dynsection">
+
+<p><center><img src="classSDataGrid.png" usemap="#SDataGrid_map" border="0" alt=""></center>
+<map name="SDataGrid_map">
+<area href="classSAbstractGrid.html" alt="SAbstractGrid" shape="rect" coords="0,0,91,24">
+</map>
+</div>
+
+<p>
+<a href="classSDataGrid-members.html">Lista wszystkich składowych.</a><table border="0" cellpadding="0" cellspacing="0">
+<tr><td></td></tr>
+<tr><td colspan="2"><br><h2>Metody publiczne</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#741ea12ba0eec8c00fec30c8730f2192">SDataGrid</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#51645b217b4c668e0e945cdbda1db3ec">~SDataGrid</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#7f9dd63d74e36731875630a96ea8dd07">getValueAt</a> (int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#bd825a6b1f64a7410c7c5f2a94af8fb9">performZeroAt</a> (int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#33bf85628d27e5d467d4aff0b67ccd79">performSuccAt</a> (int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#7085f1322b3ad39fcbaa9ca13ca79866">performPredAt</a> (int, int)</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#80b67d2da29f99384fb2852828d83b91">clear</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#8b94af72ddf880b0297baf24ceb2395a">__dev__printConsole</a> (int, int)</td></tr>
+
+<tr><td colspan="2"><br><h2>Metody chronione</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#5af888335764c1ba959b6ef964223b6d">constructGrid</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#c9c0ef298fb96c56f9f9796720a41489">destructGrid</a> ()</td></tr>
+
+<tr><td class="memItemLeft" nowrap align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#df36584ac2e2d38eda1bd06ad8fad355">zeroGrid</a> ()</td></tr>
+
+<tr><td colspan="2"><br><h2>Atrybuty chronione</h2></td></tr>
+<tr><td class="memItemLeft" nowrap align="right" valign="top">int **&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSDataGrid.html#6401d181afc8b06f75fcec860b02e9cb">data_grid</a></td></tr>
+
+</table>
+<hr><a name="_details"></a><h2>Opis szczegółowy</h2>
+siatka danych 
+<p>
+Klasa ta umożliwia reprezentację obrazu danych w pamięci komputera. <hr><h2>Dokumentacja konstruktora i destruktora</h2>
+<a class="anchor" name="741ea12ba0eec8c00fec30c8730f2192"></a><!-- doxytag: member="SDataGrid::SDataGrid" ref="741ea12ba0eec8c00fec30c8730f2192" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDataGrid::SDataGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Konstruktor siatki danych. 
+</div>
+</div><p>
+<a class="anchor" name="51645b217b4c668e0e945cdbda1db3ec"></a><!-- doxytag: member="SDataGrid::~SDataGrid" ref="51645b217b4c668e0e945cdbda1db3ec" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SDataGrid::~SDataGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Destruktor siatki danych. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja funkcji składowych</h2>
+<a class="anchor" name="8b94af72ddf880b0297baf24ceb2395a"></a><!-- doxytag: member="SDataGrid::__dev__printConsole" ref="8b94af72ddf880b0297baf24ceb2395a" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::__dev__printConsole           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ptr_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>ptr_y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+METODA TESTOWA. Wyświetla siatkę danych. 
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#e36c03b21a96f33d1ace5fd0b1d218f5">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="80b67d2da29f99384fb2852828d83b91"></a><!-- doxytag: member="SDataGrid::clear" ref="80b67d2da29f99384fb2852828d83b91" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::clear           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Czyści komórki siatki danych. 
+</div>
+</div><p>
+<a class="anchor" name="5af888335764c1ba959b6ef964223b6d"></a><!-- doxytag: member="SDataGrid::constructGrid" ref="5af888335764c1ba959b6ef964223b6d" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::constructGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Alokuje pamięć pod siatkę kodu. 
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#919248aad138ffb1c969e73c3e637dcd">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="c9c0ef298fb96c56f9f9796720a41489"></a><!-- doxytag: member="SDataGrid::destructGrid" ref="c9c0ef298fb96c56f9f9796720a41489" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::destructGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Dealokuje pamięć przeznaczoną dla siatki kodu. 
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#fb63d8cf5210c3606a3b7add19f06833">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="7f9dd63d74e36731875630a96ea8dd07"></a><!-- doxytag: member="SDataGrid::getValueAt" ref="7f9dd63d74e36731875630a96ea8dd07" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SDataGrid::getValueAt           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td><code> [virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Zwraca wartość danej określonej przez współrzędne zadane parametrami. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>coord_x</em>&nbsp;</td><td>odcięta (współrzędna) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>coord_y</em>&nbsp;</td><td>rzędna (współrzędna) </td></tr>
+  </table>
+</dl>
+<dl class="return" compact><dt><b>Zwraca:</b></dt><dd>wartość danej określonej podanymi współrzędnymi </dd></dl>
+
+<p>Implementuje <a class="el" href="classSAbstractGrid.html#d8772e08d58f970d885775cb9682bf6d">SAbstractGrid</a>.</p>
+
+</div>
+</div><p>
+<a class="anchor" name="7085f1322b3ad39fcbaa9ca13ca79866"></a><!-- doxytag: member="SDataGrid::performPredAt" ref="7085f1322b3ad39fcbaa9ca13ca79866" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::performPredAt           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora ZMNIEJSZ na danej określonej przez współrzędne zadane parametrami. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>coord_x</em>&nbsp;</td><td>odcięta (współrzędna) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>coord_y</em>&nbsp;</td><td>rzędna (współrzędna) </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="33bf85628d27e5d467d4aff0b67ccd79"></a><!-- doxytag: member="SDataGrid::performSuccAt" ref="33bf85628d27e5d467d4aff0b67ccd79" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::performSuccAt           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora ZWIĘKSZ na danej określonej przez współrzędne zadane parametrami. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>coord_x</em>&nbsp;</td><td>odcięta (współrzędna) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>coord_y</em>&nbsp;</td><td>rzędna (współrzędna) </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="bd825a6b1f64a7410c7c5f2a94af8fb9"></a><!-- doxytag: member="SDataGrid::performZeroAt" ref="bd825a6b1f64a7410c7c5f2a94af8fb9" args="(int, int)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::performZeroAt           </td>
+          <td>(</td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&nbsp;</td>
+          <td class="paramname"> <em>coord_y</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Wykonuje instrukcję Salvadora ZERUJ na danej określonej przez współrzędne zadane parametrami. <dl compact><dt><b>Parametry:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>coord_x</em>&nbsp;</td><td>odcięta (współrzędna) </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>coord_y</em>&nbsp;</td><td>rzędna (współrzędna) </td></tr>
+  </table>
+</dl>
+
+</div>
+</div><p>
+<a class="anchor" name="df36584ac2e2d38eda1bd06ad8fad355"></a><!-- doxytag: member="SDataGrid::zeroGrid" ref="df36584ac2e2d38eda1bd06ad8fad355" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SDataGrid::zeroGrid           </td>
+          <td>(</td>
+          <td class="paramname">          </td>
+          <td>&nbsp;)&nbsp;</td>
+          <td><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Czyści (zeruje) wszystkie komórki siatkę kodu. 
+</div>
+</div><p>
+<hr><h2>Dokumentacja atrybutów składowych</h2>
+<a class="anchor" name="6401d181afc8b06f75fcec860b02e9cb"></a><!-- doxytag: member="SDataGrid::data_grid" ref="6401d181afc8b06f75fcec860b02e9cb" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int** <a class="el" href="classSDataGrid.html#6401d181afc8b06f75fcec860b02e9cb">SDataGrid::data_grid</a><code> [protected]</code>          </td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>
+Siatka kodu 
+</div>
+</div><p>
+<hr>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>src/core/<a class="el" href="sdatagrid_8h-source.html">sdatagrid.h</a><li>src/core/<a class="el" href="sdatagrid_8cpp.html">sdatagrid.cpp</a></ul>
+</div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Tue Sep 22 04:19:39 2009 dla Projekt Salvador programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

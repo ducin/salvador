@@ -1,0 +1,198 @@
+\hypertarget{classSDataMachine}{
+\section{Dokumentacja klasy SDataMachine}
+\label{classSDataMachine}\index{SDataMachine@{SDataMachine}}
+}
+maszyna danych, obsługująca obraz danych  
+
+
+{\tt \#include $<$sdatamachine.h$>$}
+
+Diagram dziedziczenia dla SDataMachine:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSDataMachine}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSDataMachine_3d894df00bd2283c717a827e27138812}{SDataMachine} ()
+\begin{CompactList}\small\item\em konstruktor \item\end{CompactList}\item 
+\hyperlink{classSDataMachine_59bc85b25930729cbe3046e81f49f909}{$\sim$SDataMachine} ()
+\begin{CompactList}\small\item\em destruktor \item\end{CompactList}\item 
+void \hyperlink{classSDataMachine_38cc38f27606be24fc609d461d25ae2f}{setVerbosity} (bool)
+\item 
+bool \hyperlink{classSDataMachine_10eb8f56cf6235455a26c5c673b8fe15}{pushPointer} ()
+\item 
+void \hyperlink{classSDataMachine_b863ea9a42568d7555cc146ded9f2d88}{clearData} ()
+\item 
+int \hyperlink{classSDataMachine_3a191be9cab718274d6bd75e01cc2a26}{getPointedValue} ()
+\item 
+void \hyperlink{classSDataMachine_5b46d50c18bec1bcfd5232bec3875fd5}{executeTurnLeft} ()
+\item 
+void \hyperlink{classSDataMachine_fb6f52c7f14afa51eed848f354d57924}{executeTurnRight} ()
+\item 
+void \hyperlink{classSDataMachine_27c3e6dfe9ac45f9d5eed7c97f96abd8}{executeZero} ()
+\item 
+void \hyperlink{classSDataMachine_85832e07e2fb8ae32160fe0c95a487d2}{executeSucc} ()
+\item 
+void \hyperlink{classSDataMachine_87cfad868b3ea0a0e60f776ad3773678}{executePred} ()
+\item 
+void \hyperlink{classSDataMachine_7957d23c5b2fdae9249fb6e1e0c55982}{initGrid} ()
+\item 
+void \hyperlink{classSDataMachine_194dc73769d08eaccc158e2786b7059f}{destroyGrid} ()
+\item 
+void \hyperlink{classSDataMachine_da92c5d20a64279ff191059705c3070f}{\_\-\_\-dev\_\-\_\-printConsole} ()
+\item 
+void \hyperlink{classSDataMachine_3d2383297382e73c4f61f7fc231c34b7}{\_\-\_\-dev\_\-\_\-printPointer} ()
+\item 
+void \hyperlink{classSDataMachine_ec760b755d01ea8c9ef3d37aa8f749d2}{\_\-\_\-dev\_\-\_\-printGrid} ()
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+maszyna danych, obsługująca obraz danych 
+
+Obiekt klasy \hyperlink{classSDataMachine}{SDataMachine} to tzw. \char`\"{}maszyna danych\char`\"{} która obsługuje dane programu wykonywanego przez Wirtualną Maszynę Salvadora. Maszyna ta posiada swój log (dziennik wszystkich wykonywanych operacji) w obiekcie klasy SDataStats oraz posiada sam obraz danych, będący graficzną reprezentacją danych wykonywanego programu. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSDataMachine_3d894df00bd2283c717a827e27138812}{
+\index{SDataMachine@{SDataMachine}!SDataMachine@{SDataMachine}}
+\index{SDataMachine@{SDataMachine}!SDataMachine@{SDataMachine}}
+\subsubsection[{SDataMachine}]{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::SDataMachine ()}}
+\label{classSDataMachine_3d894df00bd2283c717a827e27138812}
+
+
+konstruktor 
+
+Tworzy 3 obiekty, do których ma zapisane referencje:\begin{itemize}
+\item log operacji maszyny danych (SDataStats)\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) Maszyna danych w trakcie swojego działania będzie z nich cały czas korzystać \end{itemize}
+\hypertarget{classSDataMachine_59bc85b25930729cbe3046e81f49f909}{
+\index{SDataMachine@{SDataMachine}!$\sim$SDataMachine@{$\sim$SDataMachine}}
+\index{$\sim$SDataMachine@{$\sim$SDataMachine}!SDataMachine@{SDataMachine}}
+\subsubsection[{$\sim$SDataMachine}]{\setlength{\rightskip}{0pt plus 5cm}SDataMachine::$\sim$SDataMachine ()}}
+\label{classSDataMachine_59bc85b25930729cbe3046e81f49f909}
+
+
+destruktor 
+
+Niszczy 3 obiekty, niezbędne do działania maszyny:\begin{itemize}
+\item log operacji maszyny danych (SDataStats)\item obraz danych (SDataImage)\item głowica maszyny danych (\hyperlink{classSDataImagePointer}{SDataImagePointer}) \end{itemize}
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSDataMachine_da92c5d20a64279ff191059705c3070f}{
+\index{SDataMachine@{SDataMachine}!\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}}
+\index{\_\-\_\-dev\_\-\_\-printConsole@{\_\-\_\-dev\_\-\_\-printConsole}!SDataMachine@{SDataMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printConsole}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::\_\-\_\-dev\_\-\_\-printConsole ()}}
+\label{classSDataMachine_da92c5d20a64279ff191059705c3070f}
+
+
+METODA TESTOWA. Wyświetla informacje o maszynie danych. \hypertarget{classSDataMachine_ec760b755d01ea8c9ef3d37aa8f749d2}{
+\index{SDataMachine@{SDataMachine}!\_\-\_\-dev\_\-\_\-printGrid@{\_\-\_\-dev\_\-\_\-printGrid}}
+\index{\_\-\_\-dev\_\-\_\-printGrid@{\_\-\_\-dev\_\-\_\-printGrid}!SDataMachine@{SDataMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::\_\-\_\-dev\_\-\_\-printGrid ()}}
+\label{classSDataMachine_ec760b755d01ea8c9ef3d37aa8f749d2}
+
+
+METODA TESTOWA. Wyświetla zawartość siatki danych. \hypertarget{classSDataMachine_3d2383297382e73c4f61f7fc231c34b7}{
+\index{SDataMachine@{SDataMachine}!\_\-\_\-dev\_\-\_\-printPointer@{\_\-\_\-dev\_\-\_\-printPointer}}
+\index{\_\-\_\-dev\_\-\_\-printPointer@{\_\-\_\-dev\_\-\_\-printPointer}!SDataMachine@{SDataMachine}}
+\subsubsection[{\_\-\_\-dev\_\-\_\-printPointer}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::\_\-\_\-dev\_\-\_\-printPointer ()}}
+\label{classSDataMachine_3d2383297382e73c4f61f7fc231c34b7}
+
+
+METODA TESTOWA. Wyświetla informacje o głowicy maszyny danych. \hypertarget{classSDataMachine_b863ea9a42568d7555cc146ded9f2d88}{
+\index{SDataMachine@{SDataMachine}!clearData@{clearData}}
+\index{clearData@{clearData}!SDataMachine@{SDataMachine}}
+\subsubsection[{clearData}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::clearData ()}}
+\label{classSDataMachine_b863ea9a42568d7555cc146ded9f2d88}
+
+
+Czyści dane przechowywane przez maszynę danych. \hypertarget{classSDataMachine_194dc73769d08eaccc158e2786b7059f}{
+\index{SDataMachine@{SDataMachine}!destroyGrid@{destroyGrid}}
+\index{destroyGrid@{destroyGrid}!SDataMachine@{SDataMachine}}
+\subsubsection[{destroyGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::destroyGrid ()}}
+\label{classSDataMachine_194dc73769d08eaccc158e2786b7059f}
+
+
+Niszczy siatkę danych. \hypertarget{classSDataMachine_87cfad868b3ea0a0e60f776ad3773678}{
+\index{SDataMachine@{SDataMachine}!executePred@{executePred}}
+\index{executePred@{executePred}!SDataMachine@{SDataMachine}}
+\subsubsection[{executePred}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::executePred ()}}
+\label{classSDataMachine_87cfad868b3ea0a0e60f776ad3773678}
+
+
+Wykonuje instrukcję Salvadora ZMNIEJSZ. \hypertarget{classSDataMachine_85832e07e2fb8ae32160fe0c95a487d2}{
+\index{SDataMachine@{SDataMachine}!executeSucc@{executeSucc}}
+\index{executeSucc@{executeSucc}!SDataMachine@{SDataMachine}}
+\subsubsection[{executeSucc}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::executeSucc ()}}
+\label{classSDataMachine_85832e07e2fb8ae32160fe0c95a487d2}
+
+
+Wykonuje instrukcję Salvadora ZWIĘKSZ. \hypertarget{classSDataMachine_5b46d50c18bec1bcfd5232bec3875fd5}{
+\index{SDataMachine@{SDataMachine}!executeTurnLeft@{executeTurnLeft}}
+\index{executeTurnLeft@{executeTurnLeft}!SDataMachine@{SDataMachine}}
+\subsubsection[{executeTurnLeft}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::executeTurnLeft ()}}
+\label{classSDataMachine_5b46d50c18bec1bcfd5232bec3875fd5}
+
+
+Wykonuje instrukcję Salvadora PRZESUŃ GŁOWICĘ DANYCH W LEWO. \hypertarget{classSDataMachine_fb6f52c7f14afa51eed848f354d57924}{
+\index{SDataMachine@{SDataMachine}!executeTurnRight@{executeTurnRight}}
+\index{executeTurnRight@{executeTurnRight}!SDataMachine@{SDataMachine}}
+\subsubsection[{executeTurnRight}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::executeTurnRight ()}}
+\label{classSDataMachine_fb6f52c7f14afa51eed848f354d57924}
+
+
+Wykonuje instrukcję Salvadora PRZESUŃ GŁOWICĘ DANYCH W PRAWO. \hypertarget{classSDataMachine_27c3e6dfe9ac45f9d5eed7c97f96abd8}{
+\index{SDataMachine@{SDataMachine}!executeZero@{executeZero}}
+\index{executeZero@{executeZero}!SDataMachine@{SDataMachine}}
+\subsubsection[{executeZero}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::executeZero ()}}
+\label{classSDataMachine_27c3e6dfe9ac45f9d5eed7c97f96abd8}
+
+
+Wykonuje instrukcję Salvadora ZERUJ. \hypertarget{classSDataMachine_3a191be9cab718274d6bd75e01cc2a26}{
+\index{SDataMachine@{SDataMachine}!getPointedValue@{getPointedValue}}
+\index{getPointedValue@{getPointedValue}!SDataMachine@{SDataMachine}}
+\subsubsection[{getPointedValue}]{\setlength{\rightskip}{0pt plus 5cm}int SDataMachine::getPointedValue ()}}
+\label{classSDataMachine_3a191be9cab718274d6bd75e01cc2a26}
+
+
+Zwraca wartość wskazywaną przez głowicę danych na obrazie danych. \begin{Desc}
+\item[Zwraca:]wartość wskazywana przez głowicę \end{Desc}
+\hypertarget{classSDataMachine_7957d23c5b2fdae9249fb6e1e0c55982}{
+\index{SDataMachine@{SDataMachine}!initGrid@{initGrid}}
+\index{initGrid@{initGrid}!SDataMachine@{SDataMachine}}
+\subsubsection[{initGrid}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::initGrid ()}}
+\label{classSDataMachine_7957d23c5b2fdae9249fb6e1e0c55982}
+
+
+Inicjuje siatkę danych. \hypertarget{classSDataMachine_10eb8f56cf6235455a26c5c673b8fe15}{
+\index{SDataMachine@{SDataMachine}!pushPointer@{pushPointer}}
+\index{pushPointer@{pushPointer}!SDataMachine@{SDataMachine}}
+\subsubsection[{pushPointer}]{\setlength{\rightskip}{0pt plus 5cm}bool SDataMachine::pushPointer ()\hspace{0.3cm}{\tt  \mbox{[}virtual\mbox{]}}}}
+\label{classSDataMachine_10eb8f56cf6235455a26c5c673b8fe15}
+
+
+Przesuwa głowicę danych o jedną komórkę w bieżącym kierunku. \begin{Desc}
+\item[Zwraca:]czy się udało; w przypadku maszyny danych zawsze się udaje \end{Desc}
+
+
+Implementuje \hyperlink{classSAbstractMachine_72a47b72416e0d2f24fcf36415d37404}{SAbstractMachine}.\hypertarget{classSDataMachine_38cc38f27606be24fc609d461d25ae2f}{
+\index{SDataMachine@{SDataMachine}!setVerbosity@{setVerbosity}}
+\index{setVerbosity@{setVerbosity}!SDataMachine@{SDataMachine}}
+\subsubsection[{setVerbosity}]{\setlength{\rightskip}{0pt plus 5cm}void SDataMachine::setVerbosity (bool {\em verbosity})}}
+\label{classSDataMachine_38cc38f27606be24fc609d461d25ae2f}
+
+
+Ustala tryb gadatliwy. \begin{Desc}
+\item[Parametry:]
+\begin{description}
+\item[{\em verbosity}]tryb gadatliwy \end{description}
+\end{Desc}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{sdatamachine_8h}{sdatamachine.h}\item 
+src/core/\hyperlink{sdatamachine_8cpp}{sdatamachine.cpp}\end{CompactItemize}

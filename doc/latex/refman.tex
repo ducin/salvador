@@ -1,0 +1,96 @@
+\documentclass[a4paper]{book}
+\usepackage{a4wide}
+\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{alltt}
+\usepackage{times}
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\else
+\usepackage[ps2pdf,
+            pagebackref=true,
+            colorlinks=true,
+            linkcolor=blue,
+            unicode
+           ]{hyperref}
+\usepackage{pspicture}
+\fi
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage[T1]{fontenc}
+
+\usepackage{doxygen}
+\makeindex
+\setcounter{tocdepth}{3}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\begin{titlepage}
+\vspace*{7cm}
+\begin{center}
+{\Large Projekt Salvador \\[1ex]\large wersja 1.0 }\\
+\vspace*{1cm}
+{\large Wygenerowano przez Doxygen 1.5.8}\\
+\vspace*{0.5cm}
+{\small Tue Sep 22 04:19:34 2009}\\
+\end{center}
+\end{titlepage}
+\clearemptydoublepage
+\pagenumbering{roman}
+\tableofcontents
+\clearemptydoublepage
+\pagenumbering{arabic}
+\chapter{Dokumentacja kodu projektu Salvador}
+\label{index}\hypertarget{index}{}\input{main}
+\chapter{Indeks klas}
+\input{hierarchy}
+\chapter{Indeks klas}
+\input{annotated}
+\chapter{Indeks plików}
+\input{files}
+\chapter{Dokumentacja klas}
+\input{classSAbstractGrid}
+\include{classSAbstractMachine}
+\include{classSAbstractPointer}
+\include{classSCodeGrid}
+\include{classSCodeImagePointer}
+\include{classSCodeMachine}
+\include{classSDataGrid}
+\include{classSDataImagePointer}
+\include{classSDataMachine}
+\include{classSVirtualMachine}
+\chapter{Dokumentacja plików}
+\input{sabstractgrid_8cpp}
+\include{sabstractgrid_8h}
+\include{sabstractmachine_8cpp}
+\include{sabstractmachine_8h}
+\include{sabstractpointer_8cpp}
+\include{sabstractpointer_8h}
+\include{scodegrid_8cpp}
+\include{scodegrid_8h}
+\include{scodeimagepointer_8cpp}
+\include{scodeimagepointer_8h}
+\include{scodemachine_8cpp}
+\include{scodemachine_8h}
+\include{sdatagrid_8cpp}
+\include{sdatagrid_8h}
+\include{sdataimagepointer_8cpp}
+\include{sdataimagepointer_8h}
+\include{sdatamachine_8cpp}
+\include{sdatamachine_8h}
+\include{senums_8h}
+\include{svirtualmachine_8cpp}
+\include{svirtualmachine_8h}
+\include{debug_8h}
+\include{test_8cpp}
+\printindex
+\end{document}

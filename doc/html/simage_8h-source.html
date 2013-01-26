@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+<title>Projekt Salvador: Plik źródłowy src/core/simage.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css">
+<link href="doxygen.css" rel="stylesheet" type="text/css">
+</head><body>
+<!-- Wygenerowano przez Doxygen 1.5.8 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul>
+      <li><a href="main.html"><span>Strona&nbsp;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs">
+    <ul>
+      <li><a href="files.html"><span>Lista&nbsp;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&nbsp;plików</span></a></li>
+    </ul>
+  </div>
+<h1>src/core/simage.h</h1><a href="simage_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="preprocessor">#ifndef S_IMAGE</span>
+<a name="l00002"></a>00002 <span class="preprocessor"></span><span class="preprocessor">#define S_IMAGE</span>
+<a name="l00003"></a>00003 <span class="preprocessor"></span>
+<a name="l00005"></a>00005 
+<a name="l00006"></a>00006 <span class="comment">// salvador core</span>
+<a name="l00007"></a>00007 <span class="preprocessor">#include "<a class="code" href="senums_8h.html" title="wszystkie enumeracje">senums.h</a>"</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a>00009 <span class="comment">// C++</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;string&gt;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="comment">// STL</span>
+<a name="l00013"></a>00013 <span class="comment">// none</span>
+<a name="l00014"></a>00014 
+<a name="l00015"></a>00015 <span class="comment">// Qt</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;QImage&gt;</span>
+<a name="l00017"></a>00017 
+<a name="l00028"></a><a class="code" href="classSImage.html">00028</a> <span class="keyword">class </span><a class="code" href="classSImage.html" title="rozbudowa QImage o odpowiednie metody rysowania kształtów na bitmapie">SImage</a> : <span class="keyword">public</span> QImage
+<a name="l00029"></a>00029 {
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031         <span class="keyword">public</span>:
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033                 <a class="code" href="classSImage.html#76e408c8c9d80017ab4bcdcb4788de15" title="konstruktor">SImage</a>();
+<a name="l00034"></a>00034                 <a class="code" href="classSImage.html#615b1cbc644a5d8b88fd6ec1efa8c732" title="destruktor">~SImage</a>();
+<a name="l00035"></a>00035 
+<a name="l00036"></a>00036                 <span class="keywordtype">void</span> <a class="code" href="classSImage.html#d5707899d17b97884f85d3ea42bd548d" title="wyświetla niewypełniony prostokąt">paintRectangle</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, QColor);
+<a name="l00037"></a>00037                 <span class="keywordtype">void</span> <a class="code" href="classSImage.html#dc89f8b2607722f6fbf52f481103bf71" title="wyświetla wypełniony prostokąt">paintFilledRectangle</a>(<span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, <span class="keywordtype">int</span>, QColor, QColor);
+<a name="l00038"></a>00038 
+<a name="l00039"></a>00039 };
+<a name="l00040"></a>00040 
+<a name="l00041"></a>00041 <span class="preprocessor">#endif</span>
+</pre></div></div>
+<hr size="1"><address style="text-align: right;"><small>Wygenerowano Fri Sep 18 04:23:48 2009 dla Projekt Salvador programem&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img src="doxygen.png" alt="doxygen" align="middle" border="0"></a> 1.5.8 </small></address>
+</body>
+</html>

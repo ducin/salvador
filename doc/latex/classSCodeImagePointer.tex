@@ -1,0 +1,89 @@
+\hypertarget{classSCodeImagePointer}{
+\section{Dokumentacja klasy SCodeImagePointer}
+\label{classSCodeImagePointer}\index{SCodeImagePointer@{SCodeImagePointer}}
+}
+głowica maszyny obsługująca obraz kodu  
+
+
+{\tt \#include $<$scodeimagepointer.h$>$}
+
+Diagram dziedziczenia dla SCodeImagePointer:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2cm]{classSCodeImagePointer}
+\end{center}
+\end{figure}
+\subsection*{Metody publiczne}
+\begin{CompactItemize}
+\item 
+\hyperlink{classSCodeImagePointer_bcef321f6fed2e37ca660978d86a3ecb}{SCodeImagePointer} ()
+\item 
+\hyperlink{classSCodeImagePointer_65cc13e9ddfa6b12ff7ef24f658b5015}{$\sim$SCodeImagePointer} ()
+\item 
+void \hyperlink{classSCodeImagePointer_01367459d424aa6155f98c8cd8b930d5}{turnUp} ()
+\item 
+void \hyperlink{classSCodeImagePointer_fd353f45c3b71bfd402bbef5f9248752}{turnDown} ()
+\item 
+void \hyperlink{classSCodeImagePointer_a3e17be0016265dfb389d64fe63c24ac}{turnLeft} ()
+\item 
+void \hyperlink{classSCodeImagePointer_352a2e1c0039812322ce48e183e246de}{turnRight} ()
+\end{CompactItemize}
+
+
+\subsection{Opis szczegółowy}
+głowica maszyny obsługująca obraz kodu 
+
+Obiekt klasy \hyperlink{classSCodeImagePointer}{SCodeImagePointer} jest swoistym wskaźnikiem na daną komórkę obrazu kodu. Maszyna danych (\hyperlink{classSCodeMachine}{SCodeMachine}) wykorzystuje głowicę, by dzięki niej odczytywać wartości z obrazu kodu (SCodeImage) oraz by na tym obrazie zapisywać nowe wartości. 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{classSCodeImagePointer_bcef321f6fed2e37ca660978d86a3ecb}{
+\index{SCodeImagePointer@{SCodeImagePointer}!SCodeImagePointer@{SCodeImagePointer}}
+\index{SCodeImagePointer@{SCodeImagePointer}!SCodeImagePointer@{SCodeImagePointer}}
+\subsubsection[{SCodeImagePointer}]{\setlength{\rightskip}{0pt plus 5cm}SCodeImagePointer::SCodeImagePointer ()}}
+\label{classSCodeImagePointer_bcef321f6fed2e37ca660978d86a3ecb}
+
+
+Konstruktor głowicy obrazu kodu. Nie robi nic szczególnego. \hypertarget{classSCodeImagePointer_65cc13e9ddfa6b12ff7ef24f658b5015}{
+\index{SCodeImagePointer@{SCodeImagePointer}!$\sim$SCodeImagePointer@{$\sim$SCodeImagePointer}}
+\index{$\sim$SCodeImagePointer@{$\sim$SCodeImagePointer}!SCodeImagePointer@{SCodeImagePointer}}
+\subsubsection[{$\sim$SCodeImagePointer}]{\setlength{\rightskip}{0pt plus 5cm}SCodeImagePointer::$\sim$SCodeImagePointer ()}}
+\label{classSCodeImagePointer_65cc13e9ddfa6b12ff7ef24f658b5015}
+
+
+Destruktor głowicy obrazu kodu. Nie robi nic szczególnego. 
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{classSCodeImagePointer_fd353f45c3b71bfd402bbef5f9248752}{
+\index{SCodeImagePointer@{SCodeImagePointer}!turnDown@{turnDown}}
+\index{turnDown@{turnDown}!SCodeImagePointer@{SCodeImagePointer}}
+\subsubsection[{turnDown}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeImagePointer::turnDown ()}}
+\label{classSCodeImagePointer_fd353f45c3b71bfd402bbef5f9248752}
+
+
+Ustawia kierunek poruszania się głowicy kodu na dół. \hypertarget{classSCodeImagePointer_a3e17be0016265dfb389d64fe63c24ac}{
+\index{SCodeImagePointer@{SCodeImagePointer}!turnLeft@{turnLeft}}
+\index{turnLeft@{turnLeft}!SCodeImagePointer@{SCodeImagePointer}}
+\subsubsection[{turnLeft}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeImagePointer::turnLeft ()}}
+\label{classSCodeImagePointer_a3e17be0016265dfb389d64fe63c24ac}
+
+
+Ustawia kierunek poruszania się głowicy kodu na lewo. \hypertarget{classSCodeImagePointer_352a2e1c0039812322ce48e183e246de}{
+\index{SCodeImagePointer@{SCodeImagePointer}!turnRight@{turnRight}}
+\index{turnRight@{turnRight}!SCodeImagePointer@{SCodeImagePointer}}
+\subsubsection[{turnRight}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeImagePointer::turnRight ()}}
+\label{classSCodeImagePointer_352a2e1c0039812322ce48e183e246de}
+
+
+Ustawia kierunek poruszania się głowicy kodu na prawo. \hypertarget{classSCodeImagePointer_01367459d424aa6155f98c8cd8b930d5}{
+\index{SCodeImagePointer@{SCodeImagePointer}!turnUp@{turnUp}}
+\index{turnUp@{turnUp}!SCodeImagePointer@{SCodeImagePointer}}
+\subsubsection[{turnUp}]{\setlength{\rightskip}{0pt plus 5cm}void SCodeImagePointer::turnUp ()}}
+\label{classSCodeImagePointer_01367459d424aa6155f98c8cd8b930d5}
+
+
+Ustawia kierunek poruszania się głowicy kodu na górę. 
+
+Dokumentacja dla tej klasy została wygenerowana z plików:\begin{CompactItemize}
+\item 
+src/core/\hyperlink{scodeimagepointer_8h}{scodeimagepointer.h}\item 
+src/core/\hyperlink{scodeimagepointer_8cpp}{scodeimagepointer.cpp}\end{CompactItemize}
