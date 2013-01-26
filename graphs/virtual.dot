@@ -1,0 +1,41 @@
+digraph pointers
+{
+
+	node [shape=rectangle];
+	edge [arrowhead="diamond"];
+
+    // nodes
+
+	virtual_machine[label="SVirtualMachine"];
+	
+	code_machine[label="SCodeMachine"];
+	
+	code_stats[label="SCodeStats"];
+	code_image[label="SCodeImage"];
+	code_pointer[label="SCodeImagePointer"];
+	
+	data_machine[label="SDataMachine"];
+
+	data_stats[label="SDataStats"];
+	data_image[label="SDataImage"];
+	data_pointer[label="SDataImagePointer"];
+	
+    // edges
+	
+	code_machine -> virtual_machine;
+
+	code_stats -> code_machine;
+	code_image -> code_machine;
+	code_pointer -> code_machine;
+
+	code_pointer -> code_image[style=dotted,arrowhead=vee];
+
+	data_machine -> virtual_machine;
+	
+	data_stats -> data_machine;
+	data_image -> data_machine;
+	data_pointer -> data_machine;
+
+	data_pointer -> data_image[style=dotted,arrowhead=vee];
+
+}

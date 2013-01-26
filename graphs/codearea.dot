@@ -1,0 +1,17 @@
+digraph pointers
+{
+
+	node [shape=record];
+	edge [arrowhead="onormal"];
+
+    // nodes
+
+	q_widget[label="{QTableWidget||}"];
+	s_widget[label="{SCodeAreaWidget||}"];
+	s_abstract[label="{SAbstractCodeArea||}"];
+
+    // edges
+	
+	s_widget -> q_widget;
+
+}

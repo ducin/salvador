@@ -1,0 +1,18 @@
+digraph pointers
+{
+
+	node [shape=record];
+	edge [arrowhead="onormal"];
+
+    // nodes
+
+	abstract[label="{SAbstractPointer||}"];
+	code[label="{SCodeImagePointer||}"];
+	data[label="{SDataImagePointer||}"];
+
+    // edges
+	
+	data -> abstract;
+	code -> abstract;
+
+}

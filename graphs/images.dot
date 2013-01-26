@@ -1,0 +1,20 @@
+digraph pointers
+{
+
+	node [shape=record];
+	edge [arrowhead="onormal"];
+
+    // nodes
+
+	qimage[label="{QImage}"]
+	image[label="{SImage||}"];
+	code[label="{SCodeImage||}"];
+	data[label="{SDataImage||}"];
+	
+    // edges
+	
+	image -> qimage;
+	data -> image;
+	code -> image;
+
+}
