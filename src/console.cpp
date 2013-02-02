@@ -29,8 +29,9 @@
  */
 
 /**
- * Ustawia kolor czcionki konsoli Unix.
- * @param color liczba definiująca kolor czcionki pod konsolą (escape string)
+ * Sets Unix console font color.
+ * 
+ * @param color console font color defining number (escape string)
  */
 void setConsoleColor(int color)
 {
@@ -38,19 +39,21 @@ void setConsoleColor(int color)
 }
 
 /**
- * Wyświetla komunikat błędu na konsolę.
- * @param error tekst komunikatu błędu
+ * Displays error message on the console.
+ * 
+ * @param message error message
  */
-void printFormattedError(std::string error)
+void printFormattedError(std::string message)
 {
 	setConsoleColor(31);
-	std::cout << error << std::endl;
+	std::cout << message << std::endl;
 	setConsoleColor(0);
 }
 
 /**
- * Wyświetla standardowy komunikat na konsolę.
- * @param message tekst standardowego komunikatu
+ * Displays standard message on the console.
+ * 
+ * @param message standard message
  */
 void printFormattedMessage(std::string message)
 {
@@ -60,39 +63,35 @@ void printFormattedMessage(std::string message)
 }
 
 /**
- * Wirtualna maszyna Salvadora - globalna zmienna
- */
-SVirtualMachine *m;
-
-/**
- * Wyświetla tekst powitalny programu.
+ * Displays program welcome message
  */
 void runWelcome()
 {
 	setConsoleColor(33);
 	std::cout << std::endl;
-	std::cout << "Interpreter języka Salvador" << std::endl;
-	std::cout << "Załącznik do pracy magisterskiej:" << std::endl;
-	std::cout << "\"Graficzne języki programowania na przykładzie języków Piet i Salvador\"" << std::endl;
-	std::cout << "Tomasz Ducin, 2009" << std::endl;
+	std::cout << "Salvador graphical programming language interpreter" << std::endl;
+	std::cout << "Originally based on the thesis:" << std::endl;
+	std::cout << "\"Graphical programming languages Piet and Salvador as universal computing machines\"" << std::endl;
+	std::cout << "(C) Tomasz Ducin, 2009-2013" << std::endl;
 	setConsoleColor(0);
 	std::cout << std::endl;
 }
 
 /**
- * Wyświetla menu programu, prosi użytkownika o wybór zadania i zwraca ów wybór.
- * @return numer zadania wybrany przez użytkownika
+ * Displays program menu, asks the user for his choice and returns it.
+ * 
+ * @return number of the task chosen by the user.
  */
-int runMenu()
+int runMenu(SVirtualMachine *salvador)
 {
-	std::cout << "wybierz opcję:" << std::endl;
-	std::cout << "1. uruchom maszynę i wykonuj instrukcje krok po kroku" << std::endl;
-	std::cout << "2. uruchom maszynę i wykonuj zadaną ilość instrukcji w każdym kroku" << std::endl;
-	std::cout << "3. uruchom maszynę i wykonaj wszystkie instrukcje" << std::endl;
-	std::cout << "4. włącz/wyłącz tryb gadatliwy (" << (m->isVerbose() ? "włączony" : "wyłączony" ) << ")" << std::endl;
-	std::cout << "5. włącz/wyłącz tryb wizualny (" << (m->isVisual() ? "włączony" : "wyłączony" ) << ")" << std::endl;
-	std::cout << "6. przełącz tryb odbijaj/zakończ, gdy głowica wychodzi poza obraz (" << (m->isBehaviorBounce() ? "odbijaj" : "zakończ" ) << ")" << std::endl;
-	std::cout << "7. koniec" << std::endl;
+	std::cout << "choose option:" << std::endl;
+	std::cout << "1. run machine and execute single instruction step by step" << std::endl;
+	std::cout << "2. run machine and execute given number of instructions step by step" << std::endl;
+	std::cout << "3. run machine and execute all instructions" << std::endl;
+	std::cout << "4. toggle verbose mode (" << (salvador->isVerbose() ? "on" : "off" ) << ")" << std::endl;
+	std::cout << "5. toggle visual mode (" << (salvador->isVisual() ? "on" : "off" ) << ")" << std::endl;
+	std::cout << "6. toggle pointer behavior, when the pointer goes beyond the image (" << (salvador->isBehaviorBounce() ? "bounce" : "stop" ) << ")" << std::endl;
+	std::cout << "7. exit" << std::endl;
 
 	std::string answer;
 	std::cout << std::endl << "> "; getline(std::cin, answer); std::cout << std::endl;
@@ -104,123 +103,129 @@ int runMenu()
 }
 
 /**
- * Główna procedura całej aplikacji. Wyświetla przywitanie, potem w pętli pobiera od użytkownika numer zadania i wykonuje je. Działanie programu zależy od decyzji użytkownika.
+ * The main procedure of console application. Displays program welcome. Then
+ * asks the user for the task to be performed in a loop (until program
+ * termination is chosen).
+ * 
+ * @param SVirtualMachine* salvador virtual machine
  */
-void runProgram()
+void runProgram(SVirtualMachine *salvador)
 {
-	// wyświetlanie informacji o programie
+	// dispay program welcome
 	runWelcome();
-	// zmienne robocze sterujące pracą programu
+	// program runtime control variables
 	int continued = 1, choice;
 	int final_choice = 7;
-	// główna pętla programu
+	// main program loop
 	std::string confirm_str;
 	while (continued)
 	{
-		// wyświetlanie menu programu i pobranie odpowiedzi od użytkownika
-		choice = runMenu();
-		// wykonanie danego zadania w zależności od odpowiedzi użytkownika
+		// display the program menu and fetch user choice
+		choice = runMenu(salvador);
+		// execute the task chosen by the user
 		switch (choice)
 		{
-			case 1: // uruchom maszynę i wykonuj instrukcje krok po kroku
-				m->startMachine();
-				std::cout << "naciskaj enter po każdym kroku" << std::endl << std::endl;
-				while (m->isRunning())
+			case 1: // run machine and execute single instruction step by step
+				salvador->startMachine();
+				std::cout << "hit enter after each step" << std::endl << std::endl;
+				while (salvador->isRunning())
 				{
-					m->executeInstr();
+					salvador->executeInstr();
 					getline(std::cin, confirm_str);
 				}
 				break;
-			case 2: // uruchom maszynę i wykonuj zadaną ilość instrukcji w każdym kroku
-				m->startMachine();
-				while (m->isRunning())
+			case 2: // run machine and execute given number of instructions step by step
+				salvador->startMachine();
+				while (salvador->isRunning())
 				{
 					std::cout << "> "; int C; std::cin >> C;
 					for(int ind = 0; ind < C; ind++)
 					{
-						if (m->isRunning()) 
-							m->executeInstr();
+						if (salvador->isRunning()) 
+							salvador->executeInstr();
 					}
 				}
 				break;
-			case 3: // uruchom maszynę i wykonaj wszystkie instrukcje
-				m->startMachine();
-				while (m->isRunning())
-					m->executeInstr();
+			case 3: // run machine and execute all instructions
+				salvador->startMachine();
+				while (salvador->isRunning())
+					salvador->executeInstr();
 				break;
-			case 4: // włącz/wyłącz tryb gadatliwy
-				m->toggleVerbosity();
+			case 4: // toggle verbosity mode
+				salvador->toggleVerbosity();
 				break;
-			case 5: // włącz/wyłącz tryb wizualny
-				m->toggleVisuality();
+			case 5: // toggle visuality mode
+				salvador->toggleVisuality();
 				break;
-			case 6: // przełączenie trybu odbijania głowicy
-				m->toggleBehavior();
+			case 6: // toggle pointer behavior mode
+				salvador->toggleBehavior();
 				break;
-			case 7: // koniec
-				m->stopMachine();
+			case 7: // finish
+				salvador->stopMachine();
 				break;
 		}
-		continued = (choice != final_choice) && (m->isRunning() || m->isReady());
+		continued = (choice != final_choice) && (salvador->isRunning() || salvador->isReady());
 	}
 	if (choice != final_choice)
-		printFormattedMessage("\r\nPraca programu zakończona");
+		printFormattedMessage("\r\nProgram execution finished");
 	else
-		printFormattedError("Praca programu przerwana");
+		printFormattedError("Program execution interrupted");
 }
 
 /**
- * Procedura wejściowa aplikacji, pośrednicząca z linią poleceń (wczytuje nazwę programu z tablicy parametrów). Tworzy wszystkie potrzebne zmienne i wywołuje runProgram().
- * @param argc liczba parametrów pobranych z komendy uruchamiającej program
- * @param argv tablica z wartościami parametrów pobranych z komendy uruchamiającej program
+ * Main application procedure
+ *
+ * @param argc parameters count
+ * @param argv parameter value array
  */
 int main(int argc, char **argv)
 {
 	debug("MAIN HELLO\n");
-	if ( argc != 3 ) // źle wywołany program
+	if ( argc != 3 ) // wrong program parameters
 	{
-		printFormattedError("Podaj dwa parametry - tryb pracy oraz plik");
+		printFormattedError("Pass two parameters: mode [grid|image|merge] and file (salvador program)");
 		return 1;
 	}
 	std::string mode = std::string(argv[1]);
 	std::string code_file = std::string(argv[2]);
 	std::string code_path = "data/" + code_file;
 	std::ifstream fin_code(code_path.c_str());
+	SVirtualMachine *salvador;
 	if ( !fin_code )
 	{
-		printFormattedError("Plik nie istnieje, sprawdź przyczynę błędu i spróbuj ponownie");
+		printFormattedError("The file doesn't exist. Check the problem and try again");
 		return 2;
 	}
-	// kaskada selekcji trybu pracy programu
+	// program mode if-cascade selection
 	if (mode == "grid") {
-		m = new SVirtualMachine(code_path.c_str(), tp_text);
-		runProgram();
-		m->~SVirtualMachine();
+		salvador = new SVirtualMachine(code_path.c_str(), tp_text);
+		runProgram(salvador);
+		delete salvador;
 	} else if (mode == "image") {
-		m = new SVirtualMachine(code_path.c_str(), tp_graphics);
-		runProgram();
-		m->~SVirtualMachine();
+		salvador = new SVirtualMachine(code_path.c_str(), tp_graphics);
+		runProgram(salvador);
+		delete salvador;
 	} else if (mode == "merge") {
-		m = new SVirtualMachine(code_path.c_str(), tp_text);
+		salvador = new SVirtualMachine(code_path.c_str(), tp_text);
 		std::string image_file;
-		printFormattedMessage("Proszę podać obraz na który zostanie nałożona siatka: ");
+		printFormattedMessage("Enter the source image filepath, where the code grid will be applied: ");
 		std::cin >> image_file;
 		std::string image_path = "data/" + image_file;
 		std::ifstream fin_image(image_path.c_str());
 		if ( !fin_code )
 		{
-			printFormattedError("Plik nie istnieje, sprawdź przyczynę błędu i spróbuj ponownie");
+			printFormattedError("File doesn't exist. Check the problem and try again");
 			return 2;
 		}
-		if (m->mergeGridWithImage(image_path.c_str())) {
-			printFormattedMessage("Operacja powiodła się.");
+		if (salvador->mergeGridWithImage(image_path.c_str())) {
+			printFormattedMessage("Operation successful");
 		} else {
-			printFormattedError("Operacja nie powiodła się. Sprawdź oba pliki lub ich rozmiar");
+			printFormattedError("Operation failed. Check both files and their size");
 			return 4;
 		}
-		m->~SVirtualMachine();
+		delete salvador;
 	} else {
-		printFormattedError("Nieprawidłowy tryb pracy programu. Dozwolone: grid, image lub merge\r\n");
+		printFormattedError("Wrong program mode. Choose one from [grid|image|merge]\r\n");
 		return 3;
 	}
 	debug("MAIN BYE\n");
