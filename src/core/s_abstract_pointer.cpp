@@ -1,11 +1,11 @@
 // header file
-#include "sabstractpointer.h"
+#include "s_abstract_pointer.h"
 
 //// includes
 
 // salvador core
 #include "../debug.h"
-#include "senums.h"
+#include "s_enums.h"
 
 // C++
 #include <iostream>

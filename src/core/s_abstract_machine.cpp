@@ -1,12 +1,12 @@
 //// includes
 
 // header file
-#include "sabstractmachine.h"
+#include "s_abstract_machine.h"
 
 // salvador core
 #include "../debug.h"
-#include "senums.h"
-#include "sabstractgrid.h"
+#include "s_enums.h"
+#include "s_abstract_grid.h"
 
 // C++
 #include <string>

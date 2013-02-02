@@ -1,5 +1,5 @@
-#include "core/svirtualmachine.h"
-#include "core/senums.h"
+#include "core/s_virtual_machine.h"
+#include "core/s_enums.h"
 #include "debug.h"
 
 #include <iostream>

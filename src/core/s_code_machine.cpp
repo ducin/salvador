@@ -1,12 +1,12 @@
 //// includes
 
 // header file
-#include "scodemachine.h"
+#include "s_code_machine.h"
 
 // salvador core
 #include "../debug.h"
-#include "senums.h"
-#include "scodeimagepointer.h"
+#include "s_enums.h"
+#include "s_code_image_pointer.h"
 
 // C++
 #include <string>

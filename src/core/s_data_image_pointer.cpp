@@ -1,11 +1,11 @@
 // header file
-#include "sdataimagepointer.h"
+#include "s_data_image_pointer.h"
 
 //// includes
 
 // salvador core
 #include "../debug.h"
-#include "senums.h"
+#include "s_enums.h"
 
 /** \file sdataimagepointer.cpp
  * \brief Plik z kodem źródłowym klasy SDataImagePointer

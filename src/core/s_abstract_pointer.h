@@ -4,7 +4,7 @@
 //// includes
 
 // salvador core
-#include "senums.h"
+#include "s_enums.h"
 
 // C++
 #include <string>

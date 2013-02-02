@@ -4,8 +4,8 @@
 //// includes
 
 // salvador core
-#include "senums.h"
-#include "sabstractpointer.h"
+#include "s_enums.h"
+#include "s_abstract_pointer.h"
 
 // C++
 #include <string>

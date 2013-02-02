@@ -4,10 +4,10 @@
 //// includes
 
 // salvador core
-#include "senums.h"
-#include "sabstractmachine.h"
+#include "s_enums.h"
+#include "s_abstract_machine.h"
 
-#include "sdataimagepointer.h"
+#include "s_data_image_pointer.h"
 
 // C++
 #include <string>

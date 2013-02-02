@@ -1,13 +1,13 @@
 //// includes
 
 // header file
-#include "svirtualmachine.h"
+#include "s_virtual_machine.h"
 
 // salvador core
 #include "../debug.h"
-#include "senums.h"
-#include "sdatamachine.h"
-#include "scodemachine.h"
+#include "s_enums.h"
+#include "s_data_machine.h"
+#include "s_code_machine.h"
 
 // C++
 #include <iostream>
