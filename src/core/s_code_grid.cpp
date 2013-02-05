@@ -145,7 +145,7 @@ void SCodeGrid::readFromImageFile(std::string filename)
 			instruction_grid[y][x] = (SInstructions) instr_code;
 		}
 	}
-	image->~QImage();
+	delete image;
 }
 
 /*==================================================================*/

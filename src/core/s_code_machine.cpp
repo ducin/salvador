@@ -42,9 +42,7 @@ SCodeMachine::SCodeMachine(SCodeTypes CODE_TYPE)
 SCodeMachine::~SCodeMachine()
 {
 	debug("DESTRUCTOR --- code-machine START\n");
-// "śmierdzące" rozwiązanie z C
-// ((SCodeImagePointer*) pointer)->~SCodeImagePointer();
-	(dynamic_cast<SCodeImagePointer *> (pointer))->~SCodeImagePointer();
+	delete pointer;
 	debug("DESTRUCTOR --- code-machine END\n");
 }
 
@@ -122,8 +120,7 @@ void SCodeMachine::readGridFromImageFile(std::string filename)
  */
 void SCodeMachine::destroyGrid()
 {
-	(dynamic_cast<SCodeGrid *> (grid))->~SCodeGrid();
-	//grid->~SCodeGrid();
+	delete grid;
 }
 
 /**

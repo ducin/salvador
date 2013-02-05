@@ -28,8 +28,11 @@ class SAbstractMachine
 
 	protected:
 
-		/** Głowica maszyny. Maszyna kodu ma swoją głowicę, a maszyna danych swoją. */ SAbstractPointer *pointer;
-		/** Siatka maszyny. Maszyna kodu ma swoją siatkę, a maszyna danych swoją. */ SAbstractGrid *grid;
+		/** Głowica maszyny. Maszyna kodu ma swoją głowicę, a maszyna danych swoją. */
+		SAbstractPointer *pointer;
+
+		/** Siatka maszyny. Maszyna kodu ma swoją siatkę, a maszyna danych swoją. */
+		SAbstractGrid *grid;
 
 	public:
 
@@ -39,7 +42,8 @@ class SAbstractMachine
 //		virtual void clearPointer() = 0; // ustawia głowicę na początkową komórkę
 		void clearPointer();
 
-		/** Przesuwa głowicę o jedną komórkę w bieżącym kierunku. */ virtual bool pushPointer() = 0;
+		/** Przesuwa głowicę o jedną komórkę w bieżącym kierunku. */
+		virtual bool pushPointer() = 0;
 
 };
 

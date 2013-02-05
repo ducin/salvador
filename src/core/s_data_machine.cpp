@@ -30,7 +30,6 @@
  * Maszyna danych w trakcie swojego działania będzie z nich cały czas korzystać
  */
 SDataMachine::SDataMachine()
-// constructor
 {
 	debug("CONSTRUCTOR --- data-machine START\n");
 	pointer = new SDataImagePointer();
@@ -45,12 +44,9 @@ SDataMachine::SDataMachine()
  *   - głowica maszyny danych (SDataImagePointer)
  */
 SDataMachine::~SDataMachine()
-// destructor
 {
 	debug("DESTRUCTOR --- data-machine START\n");
-// śmierdzące rozwiązanie z C
-// ((SDataImagePointer*) pointer)->~SDataImagePointer();
-	(dynamic_cast<SDataImagePointer *> (pointer))->~SDataImagePointer();
+	delete pointer;
 	debug("DESTRUCTOR --- data-machine END\n");
 }
 
@@ -105,8 +101,7 @@ void SDataMachine::initGrid()
  */
 void SDataMachine::destroyGrid()
 {
-	(dynamic_cast<SDataGrid *> (grid))->~SDataGrid();
-//	grid->~SDataGrid();
+	delete grid;
 }
 
 /*==================================================================*/

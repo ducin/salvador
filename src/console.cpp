@@ -188,7 +188,7 @@ int main(int argc, char **argv)
 	}
 	std::string mode = std::string(argv[1]);
 	std::string code_file = std::string(argv[2]);
-	std::string code_path = "data/" + code_file;
+	std::string code_path = code_file;
 	std::ifstream fin_code(code_path.c_str());
 	SVirtualMachine *salvador;
 	if ( !fin_code )
@@ -210,7 +210,7 @@ int main(int argc, char **argv)
 		std::string image_file;
 		printFormattedMessage("Enter the source image filepath, where the code grid will be applied: ");
 		std::cin >> image_file;
-		std::string image_path = "data/" + image_file;
+		std::string image_path = image_file;
 		std::ifstream fin_image(image_path.c_str());
 		if ( !fin_code )
 		{

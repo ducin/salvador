@@ -28,7 +28,6 @@
  * Konstruktor wirtualnej maszyny Salvadora.
  */
 SVirtualMachine::SVirtualMachine(std::string filename, SCodeTypes CODE_TYPE)
-// constructor
 {
 	debug("CONSTRUCTOR - virtual-machine START\n");
 	data_machine = new SDataMachine();
@@ -51,11 +50,12 @@ SVirtualMachine::SVirtualMachine(std::string filename, SCodeTypes CODE_TYPE)
  * Destruktor wirtualnej maszyny Salvadora.
  */
 SVirtualMachine::~SVirtualMachine()
-// destructor
 {
 	debug("DESTRUCTOR - virtual-machine START\n");
-	data_machine->~SDataMachine();
-	code_machine->~SCodeMachine();
+	data_machine->destroyGrid();
+	delete data_machine;
+	code_machine->destroyGrid();
+	delete code_machine;
 	debug("DESTRUCTOR - virtual-machine END\n");
 }
 
